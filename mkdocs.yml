@@ -1,0 +1,348 @@
+site_name: BOSH Documentation
+repo_name: 'cloudfoundry/docs-bosh'
+repo_url: 'https://github.com/cloudfoundry/docs-bosh'
+edit_uri: edit/master/
+pages:
+- Getting Started:
+  - Architecture: about.md
+  - Goals: problems.md
+  - Components: bosh-components.md
+  - Basic Workflow: basic-workflow.md
+#  - Roles: todo.md
+  - Terminology: terminology.md
+  - Bootstrapping BOSH:
+    - Overview: init.md
+    - Clouds:
+      - Amazon Web Services: init-aws.md
+      - Google Cloud Platform: init-google.md
+      - Microsoft Azure: init-azure.md
+      - OpenStack: init-openstack.md
+      - SoftLayer: init-softlayer.md
+      - VirtualBox: bosh-lite.md
+      - VMware vCloud: init-vcloud.md
+      - VMware vSphere:
+        - Usage: init-vsphere.md
+        - Using a Resource Pool: init-vsphere-rp.md
+    - Jumpbox: jumpbox.md
+    - Using External IPs: init-external-ip.md
+- CLI:
+  - Installation: cli-v2.md
+  - Global Flags: cli-global-flags.md
+  - Dependencies: cli-env-deps.md
+  - Environments: cli-envs.md
+  - Interpolation:
+    - Variables: cli-int.md
+    - Operation Files: cli-ops-files.md
+  - Tunneling: cli-tunnel.md
+  - Command Reference:
+#    - add-blob: todo.md
+#    - alias-env: todo.md
+#    - attach-disk: todo.md
+#    - blobs: todo.md
+#    - cancel-task: todo.md
+#    - clean-up: todo.md
+    - cloud-check: cck.md
+#    - cloud-config: todo.md
+#    - config: todo.md
+#    - configs: todo.md
+#    - cpi-config: todo.md
+#    - create-env: todo.md
+#    - create-release: todo.md
+#    - delete-config: todo.md
+#    - delete-deployment: todo.md
+#    - delete-disk: todo.md
+#    - delete-env: todo.md
+#    - delete-release: todo.md
+#    - delete-snapshot: todo.md
+#    - delete-snapshots: todo.md
+#    - delete-stemcell: todo.md
+#    - delete-vm: todo.md
+#    - deploy: todo.md
+#    - deployment: todo.md
+#    - deployments: todo.md
+#    - diff-config: todo.md
+#    - disks: todo.md
+#    - environment: todo.md
+#    - environments: todo.md
+#    - errands: todo.md
+#    - event: todo.md
+    - events: events.md
+#    - export-release: todo.md
+#    - finalize-release: todo.md
+#    - generate-job: todo.md
+#    - generate-package: todo.md
+#    - help: todo.md
+#    - ignore: todo.md
+#    - init-release: todo.md
+#    - inspect-release: todo.md
+#    - instances: todo.md
+#    - interpolate: todo.md
+#    - locks: todo.md
+#    - log-in: todo.md
+#    - log-out: todo.md
+#    - logs: todo.md
+#    - manifest: todo.md
+#    - orphan-disk: todo.md
+#    - recreate: todo.md
+#    - releases: todo.md
+#    - remove-blob: todo.md
+    - repack-stemcell: repack-stemcell.md
+#    - reset-release: todo.md
+#    - restart: todo.md
+#    - run-errand: todo.md
+#    - runtime-config: todo.md
+#    - scp: todo.md
+#    - snapshots: todo.md
+#    - ssh: todo.md
+#    - start: todo.md
+#    - stemcells: todo.md
+#    - stop: todo.md
+#    - sync-blobs: todo.md
+#    - take-snapshot: todo.md
+#    - task: todo.md
+#    - tasks: todo.md
+#    - unignore: todo.md
+    - update-cloud-config: update-cloud-config.md
+#    - update-config: todo.md
+#    - update-cpi-config: todo.md
+#    - update-resurrection: todo.md
+#    - update-runtime-config: todo.md
+#    - upload-blobs: todo.md
+    - upload-release: uploading-releases.md #upload
+    - upload-stemcell: uploading-stemcells.md #upload
+#    - variables: todo.md
+#    - vendor-package: todo.md
+#    - vms: todo.md
+  - Migrating from v1: cli-v2-diff.md
+- Releases:
+  - Overview: release.md
+  - Managing: managing-releases.md
+  - Compiled Releases: compiled-releases.md
+  - Referencing Releases: release-urls.md
+  - Authoring:
+    - Creating Releases: create-release.md
+    - Blobs: release-blobs.md
+    - Blobstore:
+      - Amazon S3:
+        - Usage: release-blobstore.md #s3-config
+        - Environment Setup: s3-release-blobstore.md
+      - Google Cloud Storage: release-blobstore.md #gcs-config
+      - Local Filesystem: release-blobstore.md #local-config
+    - Jobs:
+      - Spec File: jobs.md #spec
+      - Properties:
+        - Usage: jobs.md #properties
+        - Conventions: props-common.md
+      - Templates:
+        - Usage: job-templates.md
+        - Unit Testing: job-templates.md #testing
+      - Processes (Linux):
+        - Monit: jobs.md #monit
+        # - BPM: bpm.md # TODO
+      - Processes (Windows): windows.md #jobs
+      - Links:
+        - About: links.md
+        - Properties: links-properties.md
+        - Common Types: links-common-types.md
+      - Errands: errands.md
+      - Lifecycle Scripts:
+        - Overview: job-lifecycle.md
+        - drain: drain.md
+        - post-deploy: post-deploy.md
+        - post-start: post-start.md
+        - pre-start: pre-start.md
+      - Scheduled Processes: scheduled-procs.md
+    - Packages:
+      - Overview: packages.md
+      - Spec File: packages.md #spec
+      - Vendoring Packages: package-vendoring.md
+    - Sample Windows Release: windows-sample-release.md
+- Deployments:
+  - Overview: deployment.md
+  - Basics: deployment-basics.md
+  - Deployment Steps: deploying-step-by-step.md
+  - Manifest:
+    - Overview: manifest-v2.md
+    - Releases: uploading-releases.md #using
+    - Instance Groups:
+      - Migrating to AZs: migrated-from.md
+      - Manual Links: links-manual.md
+      - Anti-affinity: vm-anti-affinity.md
+    - Stemcells: uploading-stemcells.md #using
+    - Variables: variable-types.md
+  - Resources:
+    - Persistent Disks:
+      - Overview: persistent-disks.md
+      - Filesystem: persistent-disk-fs.md
+      - Snapshots: snapshots.md
+    - Virtual Machines:
+      - Overview: vm-struct.md
+      - Instance Metadata: instance-metadata.md
+      - Development Tools: remove-dev-tools.md
+      - Configuration: vm-config.md
+      - Logs: job-logs.md
+      - Process Management (Linux): vm-monit.md
+- Director:
+  - Components:
+    - API Server:
+      - API: director-api-v1.md
+      - Certificates: director-certs.md
+    - DNS Server: dns.md
+    - Health Monitor:
+      - Overview: hm-config.md
+      - Resurrector: resurrector.md
+    - Blobstore: director-configure-blobstore.md
+      # - Amazon S3: director-configure-blobstore.md #default
+      # - Google Cloud Storage: director-configure-blobstore.md #gcs
+      # - WebDAV: director-configure-blobstore.md #included
+#    - Config Server: todo.md
+    - Database:
+      - Built-in (PostgreSQL): director-configure-db.md #included
+      - PostgreSQL: director-configure-db.md #external
+      - MySQL: director-configure-db.md #external
+  - Access Control:
+    - Cloud Foundry UAA: director-users-uaa.md
+    - Teams: director-users-uaa-perms.md
+  - Features:
+    - Explicit ARP Flushing: flush-arp.md
+    - Trusted Certificates: trusted-certs.md
+  - Operations:
+    - Tasks: director-tasks.md
+    - Events: director-access-events.md
+    - Monitoring: monitoring.md
+  - Cloud Config:
+    - Usage: cloud-config.md
+    - Availability Zones: azs.md
+    - Networks: networks.md
+  - CPI Config: cpi-config.md
+  - Runtime Configuration:
+    - Usage: runtime-config.md
+    - Common Addons: addons-common.md
+  - Generic Configs: configs.md
+- Clouds:
+#  - Introduction: todo.md
+  - Providers:
+    - Amazon Web Services:
+      - Usage: aws-cpi.md
+      - IAM Users: aws-iam-users.md
+      - IAM Profiles: aws-iam-instance-profiles.md
+      - Using Instance Storage: aws-instance-storage.md
+#      - Troubleshooting: aws-cpi.md #troubleshooting
+    - Google Cloud Platform:
+      - Usage: google-cpi.md
+      - Required Permissions: google-required-permissions.md
+#      - Troubleshooting: google-cpi.md #troubleshooting
+    - Microsoft Azure:
+      - Usage: azure-cpi.md
+      - Creating Resources: azure-resources.md
+#      - Troubleshooting: azure-cpi.md #troubleshooting
+    - OpenStack:
+      - Usage: openstack-cpi.md
+      - Using Auto-anti-affinity: openstack-auto-anti-affinity.md
+      - Using Human-readable VM names: openstack-human-readable-vm-names.md
+      - Using Keystone API v2: openstack-keystonev2.md
+      - Using Light Stemcells: openstack-light-stemcells.md
+      - Using nova-networking: openstack-nova-networking.md
+      - Multi-homed VMs: openstack-multiple-networks.md
+      - Extended Registry configuration: openstack-registry.md
+      - Self-signed Endpoints: openstack-self-signed-endpoints.md
+#      - Troubleshooting: openstack-cpi.md #troubleshooting
+    - RackHD:
+      - Usage: rackhd-cpi.md
+#      - Troubleshooting: rackhd-cpi.md #troubleshooting
+    - SoftLayer:
+      - Usage: softlayer-cpi.md
+#      - Troubleshooting: softlayer-cpi.md #troubleshooting
+    - VirtualBox:
+      - Usage: virtualbox-cpi.md
+#      - Troubleshooting: virtualbox-cpi.md #troubleshooting
+    - VMware vCloud:
+      - Usage: vcloud-cpi.md
+#      - Troubleshooting: vcloud-cpi.md #troubleshooting
+    - VMware vSphere:
+      - Usage: vsphere-cpi.md
+      - Recovery from an ESXi Host Failure: vsphere-esxi-host-failure.md
+      - vSphere High Availability: vsphere-ha.md
+      - Migrating Datastores: vsphere-migrate-datastores.md
+      - Recovery from a vSphere Network Partitioning Fault: vsphere-network-partition.md
+      - Storage DRS and vMotion Support: vsphere-vmotion-support.md
+#      - Troubleshooting: vsphere-cpi.md #troubleshooting
+    - Warden / Garden:
+      - Usage: warden-cpi.md
+#      - Troubleshooting: warden-cpi.md #troubleshooting
+  - Stemcells:
+    - Overview: stemcell.md
+    - Building Stemcells: build-stemcell.md
+    - Managing Stemcells: managing-stemcells.md
+  - Development:
+    - Building a CPI: build-cpi.md
+    - API Reference:
+      - attach_disk: cpi-api-v1.md # attach_disk
+      - calculate_vm_cloud_properties: cpi-api-v1.md # calculate_vm_cloud_properties
+      - configure_networks: cpi-api-v1.md # configure_networks
+      - create_disk: cpi-api-v1.md # create_disk
+      - create_stemcell: cpi-api-v1.md # create_stemcell
+      - create_vm: cpi-api-v1.md # create_vm
+      - current_vm_id: cpi-api-v1.md # current_vm_id
+      - delete_disk: cpi-api-v1.md # delete_disk
+      - delete_snapshot: cpi-api-v1.md # delete_snapshot
+      - delete_stemcell: cpi-api-v1.md # delete_stemcell
+      - delete_vm: cpi-api-v1.md # delete_vm
+      - detach_disk: cpi-api-v1.md # detach_disk
+      - get_disks: cpi-api-v1.md # get_disks
+      - has_disk: cpi-api-v1.md # has_disk
+      - has_vm: cpi-api-v1.md # has_vm
+      - info: cpi-api-v1.md # info
+      - reboot_vm: cpi-api-v1.md # reboot_vm
+      - resize_disk: cpi-api-v1.md # resize_disk
+      - set_disk_metadata: cpi-api-v1.md # set_disk_metadata
+      - set_vm_metadata: cpi-api-v1.md # set_vm_metadata
+      - snapshot_disk: cpi-api-v1.md # snapshot_disk
+    - Agent Interactions: agent-cpi-interactions.md
+- Guides:
+  - Deploying with BOSH: deploying.md
+  - Multi-CPI on AWS: guide-multi-cpi-aws.md
+  - IPv6 on vSphere: guide-ipv6-on-vsphere.md
+  - Pure IPv6 on vSphere: guide-ipv6-pure-on-vsphere.md
+- Legacy:
+  - Table of Contents: index.md
+  - CLI (Ruby): bosh-cli.md
+  - Deployment Manifests (pre-Cloud Config): deployment-manifest.md
+  - Director Backup: director-backup.md
+  - Director Certificate Generation: director-certs-openssl.md
+  - User management on the Director: director-users.md
+  - Sysadmin CLI Commands: sysadmin-commands.md
+  - Sample Deployment Manifest: sample-manifest.md
+  - Abandoned:
+    - Recent Additions and Updates: recent.md # doesn't make sense to try and keep this up to date
+    - Troubleshooting: tips.md # tips should be inlined to the processes which are being documented
+theme:
+  name: 'material'
+  feature:
+    tabs: true
+markdown_extensions: # based on docs-cfcr
+- markdown.extensions.admonition
+- markdown.extensions.codehilite
+- markdown.extensions.def_list
+- markdown.extensions.footnotes
+- markdown.extensions.meta
+- markdown.extensions.toc(permalink=true)
+- pymdownx.arithmatex
+- pymdownx.betterem(smart_enable=all)
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.emoji:
+    emoji_generator: !!python/name:pymdownx.emoji.to_svg
+- pymdownx.inlinehilite
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tasklist(custom_checkbox=true)
+- pymdownx.tilde
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/cloudfoundry/bosh'
+    - type: 'slack'
+      link: 'https://cloudfoundry.slack.com/messages/C02HPPYQ2/'
