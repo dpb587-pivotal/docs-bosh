@@ -223,11 +223,18 @@ pages:
 #  - Introduction: todo.md
   - Providers:
     - Amazon Web Services:
+      - Overview: clouds/aws/index.md
+      - Configuration: clouds/aws/config.md
+      - Cloud Properties:
+        - Availability Zones: clouds/aws/cloud-properties/azs.md
+        - Persistent Disks: clouds/aws/cloud-properties/disks.md
+        - Networks: clouds/aws/cloud-properties/networks.md
+        - Virtual Machines: clouds/aws/cloud-properties/vms.md
       - Usage: aws-cpi.md
       - IAM Users: aws-iam-users.md
       - IAM Profiles: aws-iam-instance-profiles.md
       - Using Instance Storage: aws-instance-storage.md
-#      - Troubleshooting: aws-cpi.md #troubleshooting
+      - Common Errors: clouds/aws/common-errors.md
     - Google Cloud Platform:
       - Usage: google-cpi.md
       - Required Permissions: google-required-permissions.md
