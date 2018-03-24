@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#via-erb-templates" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -1853,9 +1857,43 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Instance Metadata
+      </label>
+    
     <a href="./" title="Instance Metadata" class="md-nav__link md-nav__link--active">
       Instance Metadata
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#via-erb-templates" title="Via ERB templates " class="md-nav__link">
+    Via ERB templates 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-filesystem" title="Via filesystem " class="md-nav__link">
+    Via filesystem 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2502,6 +2540,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2540,6 +2674,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3694,6 +3840,42 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#via-erb-templates" title="Via ERB templates " class="md-nav__link">
+    Via ERB templates 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-filesystem" title="Via filesystem " class="md-nav__link">
+    Via filesystem 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3707,9 +3889,9 @@
                 <p class="note">Note: This feature is available with bosh-release v255.4+ and on 3213+ stemcell series.</p>
 
 <p>It's common for software to need to know where it was deployed so that it can make application level decisions or propagate location information in logs and metrics. Director instance specific information in multiple ways:</p>
-<h2 id="via-erb-templates"><a id="erb"></a> Via ERB templates<a class="headerlink" href="#via-erb-templates" title="Permanent link">&para;</a></h2>
+<h2 id="via-erb-templates">Via ERB templates <a id="erb"></a><a class="headerlink" href="#via-erb-templates" title="Permanent link">&para;</a></h2>
 <p>Use <a href="../jobs/#properties-spec"><code class="codehilite">spec</code> variable</a> in ERB templates to get access to AZ, deployment name, ID, etc.</p>
-<h2 id="via-filesystem"><a id="fs"></a> Via filesystem<a class="headerlink" href="#via-filesystem" title="Permanent link">&para;</a></h2>
+<h2 id="via-filesystem">Via filesystem <a id="fs"></a><a class="headerlink" href="#via-filesystem" title="Permanent link">&para;</a></h2>
 <p>Accessing information over filesystem might be useful when building core libraries so that explicit configuration is not required. Each VM has a <code class="codehilite">/var/vcap/instance</code> directory that contains following files:</p>
 <div class="codehilite"><pre><span></span>vcap@7e87e912-35cc-4b43-9645-5a7d7d6f2caa:~$ ls -la /var/vcap/instance/
 total <span class="m">24</span>

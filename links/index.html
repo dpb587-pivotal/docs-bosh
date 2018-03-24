@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#overview" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -1322,9 +1326,104 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        About
+      </label>
+    
     <a href="./" title="About" class="md-nav__link md-nav__link--active">
       About
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview " class="md-nav__link">
+    Overview 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-definitions" title="Release Definitions " class="md-nav__link">
+    Release Definitions 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-accessors" title="Template Accessors " class="md-nav__link">
+    Template Accessors 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="Properties " class="md-nav__link">
+    Properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-configuration" title="Deployment Configuration " class="md-nav__link">
+    Deployment Configuration 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicit-linking" title="Implicit linking " class="md-nav__link">
+    Implicit linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-linking" title="Self linking " class="md-nav__link">
+    Self linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-network-linking" title="Custom network linking " class="md-nav__link">
+    Custom network linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-deployment-linking" title="Cross-deployment linking " class="md-nav__link">
+    Cross-deployment linking 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2504,6 +2603,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2542,6 +2737,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3696,6 +3903,103 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview " class="md-nav__link">
+    Overview 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-definitions" title="Release Definitions " class="md-nav__link">
+    Release Definitions 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-accessors" title="Template Accessors " class="md-nav__link">
+    Template Accessors 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="Properties " class="md-nav__link">
+    Properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-configuration" title="Deployment Configuration " class="md-nav__link">
+    Deployment Configuration 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implicit-linking" title="Implicit linking " class="md-nav__link">
+    Implicit linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-linking" title="Self linking " class="md-nav__link">
+    Self linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-network-linking" title="Custom network linking " class="md-nav__link">
+    Custom network linking 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-deployment-linking" title="Cross-deployment linking " class="md-nav__link">
+    Cross-deployment linking 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3711,7 +4015,7 @@
 <p>Previously, if network communication was required between jobs, release authors had to add job properties to accept other job's network addresses (e.g. a <code class="codehilite">db_ips</code> property). Operators then had to explicitly assign static IPs or DNS names for each instance group and fill out network address properties. Such configuration typically relied on some helper tool like spiff or careful manual configuration. It also led to inconsistent network configuration as different jobs named their properties differently. All of that did not make it easy to automate and operate multiple environments.</p>
 <p>Links provide a solution to the above problem by making the Director responsible for the IP management. Release authors get a consistent way of retrieving networking (and topology) configuration, and operators have a way to consistently connect components.</p>
 <hr />
-<h2 id="overview"><a id="overview"></a> Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<h2 id="overview">Overview <a id="overview"></a><a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>First, we provide an overview of the capabilities and logistics of links through a simple example. Here, we have two jobs: an application job and a database job. The database provides its connection information through a link, which the application consumes.</p>
 <p>In the database job's spec file, it declares that it provides the connection information:</p>
 <div class="codehilite"><pre><span></span><span class="c1"># Database job spec file.</span>
@@ -3791,7 +4095,7 @@
 </pre></div>
 
 <hr />
-<h2 id="release-definitions"><a id="definition"></a> Release Definitions<a class="headerlink" href="#release-definitions" title="Permanent link">&para;</a></h2>
+<h2 id="release-definitions">Release Definitions <a id="definition"></a><a class="headerlink" href="#release-definitions" title="Permanent link">&para;</a></h2>
 <p>Instead of defining properties for every instance group, a job can declare links. (The job either 'consumes' a link provided by another job, or it can 'provide' itself so that any jobs, <a href="#self">including itself</a> can 'consume' it).</p>
 <p>In the below yaml snippet the <code class="codehilite">name</code> field is used to differentiate between two links of the same <code class="codehilite">type</code> (<code class="codehilite">db</code>). Both the <code class="codehilite">name</code> and <code class="codehilite">type</code> that are provided can be arbitrarily defined by release authors. Other releases which consume these links must match the <code class="codehilite">type</code> specified.</p>
 <p>For example, here is how a <code class="codehilite">web</code> job which receives HTTP traffic and talks to at least one database server may be defined. To connect to a database, it consumes <code class="codehilite">primary_db</code> and <code class="codehilite">secondary_db</code> links of type <code class="codehilite">db</code>. It also exposes an "incoming" link of type <code class="codehilite">http</code> so that other services can connect to it.</p>
@@ -3827,7 +4131,7 @@
 <span class="l l-Scalar l-Scalar-Plain">properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">...</span><span class="p p-Indicator">}</span>
 </pre></div>
 
-<h3 id="template-accessors"><a id="templates"></a> Template Accessors<a class="headerlink" href="#template-accessors" title="Permanent link">&para;</a></h3>
+<h3 id="template-accessors">Template Accessors <a id="templates"></a><a class="headerlink" href="#template-accessors" title="Permanent link">&para;</a></h3>
 <p>Once a release is configured to consume links, the <code class="codehilite">link</code> template accessor allows access to link information such as instance names, AZs, IDs, network addresses, etc.</p>
 <ul>
 <li><code class="codehilite">link(&quot;...&quot;)</code> allows access to linked instances and their properties</li>
@@ -3881,10 +4185,10 @@
 <li><strong>address</strong> [String, non-empty]: IPv4, IPv6 or DNS address. See <a href="../dns/#links">Native DNS Support</a> for more details.</li>
 <li><strong>bootstrap</strong> [Boolean]: Whether or not this instance is a bootstrap instance.</li>
 </ul>
-<h3 id="properties"><a id="properties"></a> Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<h3 id="properties">Properties <a id="properties"></a><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
 <p>See <a href="../links-properties/">link properties</a> for including additional link information.</p>
 <hr />
-<h2 id="deployment-configuration"><a id="deployment"></a> Deployment Configuration<a class="headerlink" href="#deployment-configuration" title="Permanent link">&para;</a></h2>
+<h2 id="deployment-configuration">Deployment Configuration <a id="deployment"></a><a class="headerlink" href="#deployment-configuration" title="Permanent link">&para;</a></h2>
 <p>Given the <code class="codehilite">web</code> and <code class="codehilite">postgres</code> job examples above, one can configure a deployment that connects a web app to the database. The following example demonstrates linking defined explicitly in the manifest by saying which jobs provide and consume a link <code class="codehilite">data_db</code>.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">instance_groups</span><span class="p p-Indicator">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">app</span>
@@ -3903,7 +4207,7 @@
       <span class="l l-Scalar l-Scalar-Plain">conn</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">as</span><span class="p p-Indicator">:</span> <span class="nv">data_db</span><span class="p p-Indicator">}</span>
 </pre></div>
 
-<h3 id="implicit-linking"><a id="implicit"></a> Implicit linking<a class="headerlink" href="#implicit-linking" title="Permanent link">&para;</a></h3>
+<h3 id="implicit-linking">Implicit linking <a id="implicit"></a><a class="headerlink" href="#implicit-linking" title="Permanent link">&para;</a></h3>
 <p>If a link type is provided by only one job within a deployment, all release jobs in that deployment that consume links of that type will be implicitly connected to that provider.</p>
 <p>Optional links are also implicitly connected; however, if no provider can be found, they continue to be <code class="codehilite">nil</code>.</p>
 <p>Implicit linking does not happen across deployments.</p>
@@ -3925,7 +4229,7 @@
 <ul>
 <li>deployment contains multiple components that are expected to communicate between each other and there is no benefit for the operator to configure these connections explicitly</li>
 </ul>
-<h3 id="self-linking"><a id="self"></a> Self linking<a class="headerlink" href="#self-linking" title="Permanent link">&para;</a></h3>
+<h3 id="self-linking">Self linking <a id="self"></a><a class="headerlink" href="#self-linking" title="Permanent link">&para;</a></h3>
 <p>A job can consume a link that it provides. This could be used to determine a job's own peers.</p>
 <p>Implicit linking also applies.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">instance_groups</span><span class="p p-Indicator">:</span>
@@ -3944,7 +4248,7 @@
 <ul>
 <li>job is deployed across multiple instances and each node needs to communicate with other nodes</li>
 </ul>
-<h3 id="custom-network-linking"><a id="custom-network"></a> Custom network linking<a class="headerlink" href="#custom-network-linking" title="Permanent link">&para;</a></h3>
+<h3 id="custom-network-linking">Custom network linking <a id="custom-network"></a><a class="headerlink" href="#custom-network-linking" title="Permanent link">&para;</a></h3>
 <p>By default, links include network addresses on the producer's default link network. The default link network is a network marked with <code class="codehilite">default: [gateway]</code>. A release job can also consume a link over a different network.</p>
 <p>For example, this <code class="codehilite">web</code> job will receive <code class="codehilite">data_db</code>'s network addresses on its <code class="codehilite">vip</code> network, instead of receiving network addresses from the <code class="codehilite">private</code> network.</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">instance_groups</span><span class="p p-Indicator">:</span>
@@ -3974,7 +4278,7 @@
 <ul>
 <li>job is deployed on two networks, and each network can only route to other particular network; consuming job deployed on a particular network needs to receive specific addresses so that it can connect to providing job.</li>
 </ul>
-<h3 id="cross-deployment-linking"><a id="cross-deployment"></a> Cross-deployment linking<a class="headerlink" href="#cross-deployment-linking" title="Permanent link">&para;</a></h3>
+<h3 id="cross-deployment-linking">Cross-deployment linking <a id="cross-deployment"></a><a class="headerlink" href="#cross-deployment-linking" title="Permanent link">&para;</a></h3>
 <p>Links can be formed between jobs from different deployments as long as the link is marked as <code class="codehilite">shared</code>.</p>
 <p>Unlike links within a deployment, updating a link producing job in one deployment does not affect a link consuming job in another deployment <em>until</em> that deployment is redeployed. To do so, run the <code class="codehilite">bosh deploy</code> command.</p>
 <p>Implicit linking does not happen across deployments.</p>

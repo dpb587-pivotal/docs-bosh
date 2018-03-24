@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#generate-ssl-certificates-with-openssl" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -2489,6 +2493,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2527,6 +2627,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3587,9 +3699,50 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Director Certificate Generation
+      </label>
+    
     <a href="./" title="Director Certificate Generation" class="md-nav__link md-nav__link--active">
       Director Certificate Generation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generate-ssl-certificates-with-openssl" title="Generate SSL certificates (with OpenSSL) " class="md-nav__link">
+    Generate SSL certificates (with OpenSSL) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-director-to-use-certificates" title="Configure the Director to use certificates " class="md-nav__link">
+    Configure the Director to use certificates 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-the-director" title="Target the Director " class="md-nav__link">
+    Target the Director 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -3690,6 +3843,49 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generate-ssl-certificates-with-openssl" title="Generate SSL certificates (with OpenSSL) " class="md-nav__link">
+    Generate SSL certificates (with OpenSSL) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-director-to-use-certificates" title="Configure the Director to use certificates " class="md-nav__link">
+    Configure the Director to use certificates 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-the-director" title="Target the Director " class="md-nav__link">
+    Target the Director 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3705,7 +3901,7 @@
 
 <p class="note">Note: Unless you are using a configuration server, your SSL certificates will be stored in the Director's database.</p>
 
-<h2 id="generate-ssl-certificates-with-openssl"><a id="generate"></a> Generate SSL certificates (with OpenSSL)<a class="headerlink" href="#generate-ssl-certificates-with-openssl" title="Permanent link">&para;</a></h2>
+<h2 id="generate-ssl-certificates-with-openssl">Generate SSL certificates (with OpenSSL) <a id="generate"></a><a class="headerlink" href="#generate-ssl-certificates-with-openssl" title="Permanent link">&para;</a></h2>
 <p>You can use the following script to generate a root CA certificate and use it to sign three generated SSL certificates:</p>
 <div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -3761,7 +3957,7 @@ ls -la .
 </pre></div>
 
 <hr />
-<h2 id="configure-the-director-to-use-certificates"><a id="configure"></a> Configure the Director to use certificates<a class="headerlink" href="#configure-the-director-to-use-certificates" title="Permanent link">&para;</a></h2>
+<h2 id="configure-the-director-to-use-certificates">Configure the Director to use certificates <a id="configure"></a><a class="headerlink" href="#configure-the-director-to-use-certificates" title="Permanent link">&para;</a></h2>
 <p>Update the Director deployment manifest:</p>
 <ul>
 <li><code class="codehilite">director.ssl.key</code><ul>
@@ -3819,7 +4015,7 @@ ls -la .
 </li>
 </ul>
 <hr />
-<h2 id="target-the-director"><a id="target"></a> Target the Director<a class="headerlink" href="#target-the-director" title="Permanent link">&para;</a></h2>
+<h2 id="target-the-director">Target the Director <a id="target"></a><a class="headerlink" href="#target-the-director" title="Permanent link">&para;</a></h2>
 <p>After you deployed your Director with the above changes, you need to specify <code class="codehilite">--ca-cert</code> when targeting the Director:</p>
 <div class="codehilite"><pre><span></span>$ bosh --ca-cert certs/rootCA.pem target <span class="m">10</span>.244.4.2
 </pre></div>

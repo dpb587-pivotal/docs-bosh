@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#updating-and-retrieving-cpi-config" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -2363,9 +2367,57 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CPI Config
+      </label>
+    
     <a href="./" title="CPI Config" class="md-nav__link md-nav__link--active">
       CPI Config
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-and-retrieving-cpi-config" title="Updating and retrieving CPI config " class="md-nav__link">
+    Updating and retrieving CPI config 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpis-block" title="CPIs Block " class="md-nav__link">
+    CPIs Block 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example " class="md-nav__link">
+    Example 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpi-specific-stemcells" title="CPI Specific Stemcells " class="md-nav__link">
+    CPI Specific Stemcells 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2498,6 +2550,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2536,6 +2684,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3690,6 +3850,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-and-retrieving-cpi-config" title="Updating and retrieving CPI config " class="md-nav__link">
+    Updating and retrieving CPI config 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpis-block" title="CPIs Block " class="md-nav__link">
+    CPIs Block 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example " class="md-nav__link">
+    Example 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpi-specific-stemcells" title="CPI Specific Stemcells " class="md-nav__link">
+    CPI Specific Stemcells 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3705,7 +3915,7 @@
 <p>In most cases having single Director use a single CPI and hence a single IaaS section (for example one AWS account, vSphere datacenter, or OpenStack tenant) is enough. But in some cases operator may want to rely on multiple IaaS sections to achieve necessary isolation, availability, capacity, scalability, security, and/or management needs. To address such configuration scenarios  Director can be configured with multiple CPIs at runtime (instead of only allowing single CPI configuration at the deploy time).</p>
 <p>The CPI config is a YAML file that defines multiple CPIs and properties necessary for each CPI to communicate with an appropriate IaaS section. Once CPIs are specified, operator can associate particular AZ in their cloud config to a particular CPI.</p>
 <hr />
-<h2 id="updating-and-retrieving-cpi-config"><a id='update'></a> Updating and retrieving CPI config<a class="headerlink" href="#updating-and-retrieving-cpi-config" title="Permanent link">&para;</a></h2>
+<h2 id="updating-and-retrieving-cpi-config">Updating and retrieving CPI config <a id='update'></a><a class="headerlink" href="#updating-and-retrieving-cpi-config" title="Permanent link">&para;</a></h2>
 <p>To update CPI config on the Director use <a href="../cli-v2/#update-cpi-config"><code class="codehilite">bosh update-cpi-config</code></a> CLI command.</p>
 <p class="note">Note: See <a href="#example">example CPI config</a> below.</p>
 
@@ -3727,7 +3937,7 @@ cpis:
 
 <p>Once CPI config is updated AZs in the cloud config can reference specific CPI to be used during a deploy. Unlike runtime and cloud configs, CPI config is not tracked directly by the deployments and can be updated separately (useful for updating CPI credentials without forcing redeploy of all the deployments).</p>
 <hr />
-<h2 id="cpis-block"><a id='cpis'></a> CPIs Block<a class="headerlink" href="#cpis-block" title="Permanent link">&para;</a></h2>
+<h2 id="cpis-block">CPIs Block <a id='cpis'></a><a class="headerlink" href="#cpis-block" title="Permanent link">&para;</a></h2>
 <p><strong>cpis</strong> [Array, required]: Specifies the CPIs.</p>
 <ul>
 <li><strong>name</strong> [String, required]: Unique name for a CPI. Example: <code class="codehilite">openstack-1a</code>.</li>
@@ -3773,7 +3983,7 @@ cpis:
 
 <p>For vSphere, if your datacenter and cluster names have spaces in them, there is no need to put quotes around them when updating your cpi-config.</p>
 <hr />
-<h2 id="example"><a id='example'></a> Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<h2 id="example">Example <a id='example'></a><a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <p>Example of a CPI config referencing two separate OpenStack installations:</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">cpis</span><span class="p p-Indicator">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">openstack-1a</span>
@@ -3845,7 +4055,7 @@ cpis:
 </pre></div>
 
 <hr />
-<h2 id="cpi-specific-stemcells"><a id='stemcells'></a> CPI Specific Stemcells<a class="headerlink" href="#cpi-specific-stemcells" title="Permanent link">&para;</a></h2>
+<h2 id="cpi-specific-stemcells">CPI Specific Stemcells <a id='stemcells'></a><a class="headerlink" href="#cpi-specific-stemcells" title="Permanent link">&para;</a></h2>
 <p>Stemcells need to be assigned to a specific CPI and it occurs on upload. If you've already uploaded an appropriate stemcell you'll need to re-upload with <code class="codehilite">--fix</code></p>
 <div class="codehilite"><pre><span></span>bosh upload-stemcell .tgz --fix
 </pre></div>

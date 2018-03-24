@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#updating-and-retrieving-cloud-config" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -2324,9 +2328,137 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Usage
+      </label>
+    
     <a href="./" title="Usage" class="md-nav__link md-nav__link--active">
       Usage
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-and-retrieving-cloud-config" title="Updating and retrieving cloud config " class="md-nav__link">
+    Updating and retrieving cloud config 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example " class="md-nav__link">
+    Example 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azs-block" title="AZs Block " class="md-nav__link">
+    AZs Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networks-block" title="Networks Block " class="md-nav__link">
+    Networks Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_1" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-types-block" title="VM Types Block " class="md-nav__link">
+    VM Types Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_2" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-extensions-block" title="VM Extensions Block " class="md-nav__link">
+    VM Extensions Block 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-types-block" title="Disk Types Block " class="md-nav__link">
+    Disk Types Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_3" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-block" title="Compilation Block " class="md-nav__link">
+    Compilation Block 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2500,6 +2632,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2538,6 +2766,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3692,6 +3932,136 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-and-retrieving-cloud-config" title="Updating and retrieving cloud config " class="md-nav__link">
+    Updating and retrieving cloud config 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example " class="md-nav__link">
+    Example 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azs-block" title="AZs Block " class="md-nav__link">
+    AZs Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networks-block" title="Networks Block " class="md-nav__link">
+    Networks Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_1" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-types-block" title="VM Types Block " class="md-nav__link">
+    VM Types Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_2" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-extensions-block" title="VM Extensions Block " class="md-nav__link">
+    VM Extensions Block 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-types-block" title="Disk Types Block " class="md-nav__link">
+    Disk Types Block 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpi-specific-cloud_properties_3" title="CPI Specific cloud_properties " class="md-nav__link">
+    CPI Specific cloud_properties 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-block" title="Compilation Block " class="md-nav__link">
+    Compilation Block 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3707,7 +4077,7 @@
 <p>Previously each deployment manifest specified IaaS and IaaS agnostic configuration in a single file. As more deployments are managed by the Director, it becomes inconvenient to keep shared IaaS configuration in sync in all deployment manifests. In addition, multiple deployments typically want to use the same network subnet, hence IP ranges need to be separated and reserved.</p>
 <p>The cloud config is a YAML file that defines IaaS specific configuration used by the Director and all deployments. It allows us to separate IaaS specific configuration into its own file and keep deployment manifests IaaS agnostic.</p>
 <hr />
-<h2 id="updating-and-retrieving-cloud-config"><a id='update'></a> Updating and retrieving cloud config<a class="headerlink" href="#updating-and-retrieving-cloud-config" title="Permanent link">&para;</a></h2>
+<h2 id="updating-and-retrieving-cloud-config">Updating and retrieving cloud config <a id='update'></a><a class="headerlink" href="#updating-and-retrieving-cloud-config" title="Permanent link">&para;</a></h2>
 <p>To update cloud config on the Director use <a href="../cli-v2/#update-cloud-config"><code class="codehilite">bosh update-cloud-config</code> command</a>.</p>
 <p class="note">Note: See <a href="#example">example cloud config</a> for AWS below.</p>
 
@@ -3739,7 +4109,7 @@ Succeeded
 </pre></div>
 
 <hr />
-<h2 id="example"><a id='example'></a> Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<h2 id="example">Example <a id='example'></a><a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">azs</span><span class="p p-Indicator">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z1</span>
   <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">availability_zone</span><span class="p p-Indicator">:</span> <span class="nv">us-east-1a</span><span class="p p-Indicator">}</span>
@@ -3800,7 +4170,7 @@ Succeeded
 <li><a href="../vsphere-cpi/#cloud-config">See vSphere CPI example</a></li>
 </ul>
 <hr />
-<h2 id="azs-block"><a id='azs'></a> AZs Block<a class="headerlink" href="#azs-block" title="Permanent link">&para;</a></h2>
+<h2 id="azs-block">AZs Block <a id='azs'></a><a class="headerlink" href="#azs-block" title="Permanent link">&para;</a></h2>
 <p><strong>azs</strong> [Array, required]: Specifies the AZs available to deployments. At least one should be specified.</p>
 <ul>
 <li><strong>name</strong> [String, required]: Name of an AZ within the Director.</li>
@@ -3817,7 +4187,7 @@ Succeeded
     <span class="l l-Scalar l-Scalar-Plain">availability_zone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">us-east-1d</span>
 </pre></div>
 
-<h3 id="cpi-specific-cloud_properties"><a id='azs-cloud-properties'></a> CPI Specific <code class="codehilite">cloud_properties</code><a class="headerlink" href="#cpi-specific-cloud_properties" title="Permanent link">&para;</a></h3>
+<h3 id="cpi-specific-cloud_properties">CPI Specific <code class="codehilite">cloud_properties</code> <a id='azs-cloud-properties'></a><a class="headerlink" href="#cpi-specific-cloud_properties" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../aws-cpi/#azs">See AWS CPI AZ cloud properties</a></li>
 <li><a href="../azure-cpi/#azs">See Azure CPI AZ cloud properties</a></li>
@@ -3828,10 +4198,10 @@ Succeeded
 <li><a href="../vcloud-cpi/#azs">See vCloud CPI AZ cloud properties</a></li>
 </ul>
 <hr />
-<h2 id="networks-block"><a id='networks'></a> Networks Block<a class="headerlink" href="#networks-block" title="Permanent link">&para;</a></h2>
+<h2 id="networks-block">Networks Block <a id='networks'></a><a class="headerlink" href="#networks-block" title="Permanent link">&para;</a></h2>
 <p><strong>networks</strong> [Array, required]: Each sub-block listed in the Networks block specifies a network configuration that jobs can reference. There are three different network types: <code class="codehilite">manual</code>, <code class="codehilite">dynamic</code>, and <code class="codehilite">vip</code>. At least one should be specified.</p>
 <p>See <a href="../networks/">networks</a> for more details.</p>
-<h3 id="cpi-specific-cloud_properties_1"><a id='networks-cloud-properties'></a> CPI Specific <code class="codehilite">cloud_properties</code><a class="headerlink" href="#cpi-specific-cloud_properties_1" title="Permanent link">&para;</a></h3>
+<h3 id="cpi-specific-cloud_properties_1">CPI Specific <code class="codehilite">cloud_properties</code> <a id='networks-cloud-properties'></a><a class="headerlink" href="#cpi-specific-cloud_properties_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../aws-cpi/#networks">See AWS CPI network cloud properties</a></li>
 <li><a href="../azure-cpi/#networks">See Azure CPI network cloud properties</a></li>
@@ -3842,7 +4212,7 @@ Succeeded
 <li><a href="../vcloud-cpi/#networks">See vCloud CPI network cloud properties</a></li>
 </ul>
 <hr />
-<h2 id="vm-types-block"><a id='vm-types'></a> VM Types Block<a class="headerlink" href="#vm-types-block" title="Permanent link">&para;</a></h2>
+<h2 id="vm-types-block">VM Types Block <a id='vm-types'></a><a class="headerlink" href="#vm-types-block" title="Permanent link">&para;</a></h2>
 <p><strong>vm_types</strong> [Array, required]: Specifies the <a href="../terminology.html#vm-type">VM types</a> available to deployments. At least one should be specified.</p>
 <ul>
 <li><strong>name</strong> [String, required]: A unique name used to identify and reference the VM type</li>
@@ -3855,7 +4225,7 @@ Succeeded
     <span class="l l-Scalar l-Scalar-Plain">instance_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">m1.small</span>
 </pre></div>
 
-<h3 id="cpi-specific-cloud_properties_2"><a id='vm-types-cloud-properties'></a> CPI Specific <code class="codehilite">cloud_properties</code><a class="headerlink" href="#cpi-specific-cloud_properties_2" title="Permanent link">&para;</a></h3>
+<h3 id="cpi-specific-cloud_properties_2">CPI Specific <code class="codehilite">cloud_properties</code> <a id='vm-types-cloud-properties'></a><a class="headerlink" href="#cpi-specific-cloud_properties_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../aws-cpi/#resource-pools">See AWS CPI VM types cloud properties</a></li>
 <li><a href="../azure-cpi/#resource-pools">See Azure CPI VM types cloud properties</a></li>
@@ -3866,7 +4236,7 @@ Succeeded
 <li><a href="../vcloud-cpi/#resource-pools">See vCloud CPI VM types cloud properties</a></li>
 </ul>
 <hr />
-<h2 id="vm-extensions-block"><a id='vm-extensions'></a> VM Extensions Block<a class="headerlink" href="#vm-extensions-block" title="Permanent link">&para;</a></h2>
+<h2 id="vm-extensions-block">VM Extensions Block <a id='vm-extensions'></a><a class="headerlink" href="#vm-extensions-block" title="Permanent link">&para;</a></h2>
 <p class="note">Note: This feature is available with bosh-release v255.4+.</p>
 
 <p><strong>vm_extensions</strong> [Array, optional]: Specifies the <a href="../terminology.html#vm-extension">VM extensions</a> available to deployments.</p>
@@ -3883,7 +4253,7 @@ Succeeded
 
 <p>Any IaaS specific configuration could be placed into a VM extension's <code class="codehilite">cloud_properties</code>.</p>
 <hr />
-<h2 id="disk-types-block"><a id='disk-types'></a> Disk Types Block<a class="headerlink" href="#disk-types-block" title="Permanent link">&para;</a></h2>
+<h2 id="disk-types-block">Disk Types Block <a id='disk-types'></a><a class="headerlink" href="#disk-types-block" title="Permanent link">&para;</a></h2>
 <p><strong>disk_types</strong> [Array, required]: Specifies the <a href="../terminology.html#disk-types">disk types</a> available to deployments. At least one should be specified.</p>
 <ul>
 <li><strong>name</strong> [String, required]: A unique name used to identify and reference the disk type</li>
@@ -3898,7 +4268,7 @@ Succeeded
     <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gp2</span>
 </pre></div>
 
-<h3 id="cpi-specific-cloud_properties_3"><a id='disk-types-cloud-properties'></a> CPI Specific <code class="codehilite">cloud_properties</code><a class="headerlink" href="#cpi-specific-cloud_properties_3" title="Permanent link">&para;</a></h3>
+<h3 id="cpi-specific-cloud_properties_3">CPI Specific <code class="codehilite">cloud_properties</code> <a id='disk-types-cloud-properties'></a><a class="headerlink" href="#cpi-specific-cloud_properties_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../aws-cpi/#disk-pools">See AWS CPI disk type cloud properties</a></li>
 <li><a href="../azure-cpi/#disk-pools">See Azure CPI disk type cloud properties</a></li>
@@ -3909,7 +4279,7 @@ Succeeded
 <li><a href="../vcloud-cpi/#disk-pools">See vCloud CPI disk type cloud properties</a></li>
 </ul>
 <hr />
-<h2 id="compilation-block"><a id='compilation'></a> Compilation Block<a class="headerlink" href="#compilation-block" title="Permanent link">&para;</a></h2>
+<h2 id="compilation-block">Compilation Block <a id='compilation'></a><a class="headerlink" href="#compilation-block" title="Permanent link">&para;</a></h2>
 <p>The Director creates compilation VMs for release compilation. The Director will compile each release on every necessary stemcell used in a deployment. A compilation definition allows to specify VM characteristics.</p>
 <p><strong>compilation</strong> [Hash, required]: Properties of compilation VMs.</p>
 <ul>

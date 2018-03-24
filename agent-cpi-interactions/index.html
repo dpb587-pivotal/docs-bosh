@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#agent-config-file-formats" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -2491,6 +2495,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2529,6 +2629,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3428,9 +3540,90 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Agent Interactions
+      </label>
+    
     <a href="./" title="Agent Interactions" class="md-nav__link md-nav__link--active">
       Agent Interactions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-config-file-formats" title="Agent config file formats " class="md-nav__link">
+    Agent config file formats 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agentjson-file" title="agent.json file " class="md-nav__link">
+    agent.json file 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-server" title="Metadata server " class="md-nav__link">
+    Metadata server 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" title="Registry " class="md-nav__link">
+    Registry 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registry-http-protocol" title="Registry HTTP protocol " class="md-nav__link">
+    Registry HTTP protocol 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry-settings-format" title="Registry settings format " class="md-nav__link">
+    Registry settings format 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settingsjson-file" title="settings.json file " class="md-nav__link">
+    settings.json file 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -3692,6 +3885,89 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-config-file-formats" title="Agent config file formats " class="md-nav__link">
+    Agent config file formats 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agentjson-file" title="agent.json file " class="md-nav__link">
+    agent.json file 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-server" title="Metadata server " class="md-nav__link">
+    Metadata server 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" title="Registry " class="md-nav__link">
+    Registry 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registry-http-protocol" title="Registry HTTP protocol " class="md-nav__link">
+    Registry HTTP protocol 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry-settings-format" title="Registry settings format " class="md-nav__link">
+    Registry settings format 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settingsjson-file" title="settings.json file " class="md-nav__link">
+    settings.json file 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3760,11 +4036,11 @@ Render it online http://plantuml.com/plantuml/ or from a private plantuml instan
 -->
 
 <hr />
-<h2 id="agent-config-file-formats"><a id="agent-config"></a> Agent config file formats<a class="headerlink" href="#agent-config-file-formats" title="Permanent link">&para;</a></h2>
+<h2 id="agent-config-file-formats">Agent config file formats <a id="agent-config"></a><a class="headerlink" href="#agent-config-file-formats" title="Permanent link">&para;</a></h2>
 <p>This section details the configuration and protocols supported by the Agent.</p>
 <p><a href="../vm-config.html#agent">VM Configuration Locations</a> provides a list of Agent configuration files and their roles.</p>
 <hr />
-<h3 id="agentjson-file"><a id="agent-json"></a> <code class="codehilite">agent.json</code> file<a class="headerlink" href="#agentjson-file" title="Permanent link">&para;</a></h3>
+<h3 id="agentjson-file"><code class="codehilite">agent.json</code> file <a id="agent-json"></a><a class="headerlink" href="#agentjson-file" title="Permanent link">&para;</a></h3>
 <p><code class="codehilite">/var/vcap/bosh/agent.json</code>: Start up settings for the Agent that describe how to find bootstrap settings, and disable certain Agent functionality.</p>
 <p>The loading agent.json file is described into <a href="https://github.com/cloudfoundry/bosh-agent/blob/master/app/config_test.go">config_test.go</a></p>
 <p>The Platform part of the file is documented into <a href="https://godoc.org/github.com/cloudfoundry/bosh-agent/platform#LinuxOptions">LinuxOptions</a></p>
@@ -3835,7 +4111,7 @@ Render it online http://plantuml.com/plantuml/ or from a private plantuml instan
 </pre></div>
 
 <hr />
-<h3 id="metadata-server"><a id="metadata"></a> Metadata server<a class="headerlink" href="#metadata-server" title="Permanent link">&para;</a></h3>
+<h3 id="metadata-server">Metadata server <a id="metadata"></a><a class="headerlink" href="#metadata-server" title="Permanent link">&para;</a></h3>
 <p>The metadata server initially serves the registry URL and DNS server list.</p>
 <p>Following is a sample content of the user-data part of the HTTP metadata</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -3847,21 +4123,21 @@ Render it online http://plantuml.com/plantuml/ or from a private plantuml instan
 
 <p>The supported format of the metadata server by the bosh-agent is documented in <a href="https://godoc.org/github.com/cloudfoundry/bosh-agent/infrastructure#UserDataContentsType">UserDataContentsType</a> and <a href="https://github.com/cloudfoundry/bosh-agent/blob/1dca3244702c18bf2c36483c529d4e7b3fb92b2e/infrastructure/http_metadata_service_test.go">http_metadata_service_test.go</a>, along with the expected behavior of the bosh agent when reading this config.</p>
 <hr />
-<h3 id="registry"><a id="registry"></a> Registry<a class="headerlink" href="#registry" title="Permanent link">&para;</a></h3>
+<h3 id="registry">Registry <a id="registry"></a><a class="headerlink" href="#registry" title="Permanent link">&para;</a></h3>
 <p>The registry provides bosh-side metadata to the bosh agent.</p>
 <p>From the <a href="https://github.com/cppforlife/bosh-warden-cpi-release/blob/be1869737c0bfba96662dde3499c9181863f91a7/docs/bosh-micro-usage.md">Warden CPI documentation</a>:</p>
 <ul>
 <li>The registry is used by the CPI to pass data to the Agent. The registry is started on a server specified by registry properties.</li>
 <li>If SSH tunnel options are provided, a reverse ssh tunnel is created from the MicroBOSH VM to the registry, making the registry available to the agent on remote machine.</li>
 </ul>
-<h4 id="registry-http-protocol"><a id="registry-protocol"></a> Registry HTTP protocol<a class="headerlink" href="#registry-http-protocol" title="Permanent link">&para;</a></h4>
+<h4 id="registry-http-protocol">Registry HTTP protocol <a id="registry-protocol"></a><a class="headerlink" href="#registry-http-protocol" title="Permanent link">&para;</a></h4>
 <p>The Agent expects to communicate with the bosh registry over a REST API documented in <a href="https://github.com/cloudfoundry/bosh/blob/2f73281f1a2a155ee807e7c0c9b8187c5a742f78/bosh-registry/spec/unit/bosh/registry/api_controller_spec.rb">api_controller_spec.rb</a></p>
 <p>Reference registry client and servers implementations are available in:</p>
 <ul>
 <li>go-lang through <a href="https://github.com/frodenas/bosh-registry">frodenas/bosh-registry</a></li>
 <li>java through <a href="https://github.com/cloudfoundry-community/bosh-cloudstack-cpi-core/tree/44d14a5f184d2d5e8f1f2fcd6344e734d3344673/src/main/java/com/orange/oss/cloudfoundry/cscpi/boshregistry">cloudfoundry-community/bosh-cloudstack-cpi-core</a></li>
 </ul>
-<h4 id="registry-settings-format"><a id="registry-format"></a> Registry settings format<a class="headerlink" href="#registry-settings-format" title="Permanent link">&para;</a></h4>
+<h4 id="registry-settings-format">Registry settings format <a id="registry-format"></a><a class="headerlink" href="#registry-settings-format" title="Permanent link">&para;</a></h4>
 <p>The JSON payload of the settings stored in the registry, and its format supported by the Agent are documented in <a href="https://github.com/cloudfoundry/bosh-agent/blob/ebf9a36dfddf783ffae5ae3748787d259a29374a/settings/settings_test.go">settings_test.go</a></p>
 <p>Sample registry content:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -3903,7 +4179,7 @@ Render it online http://plantuml.com/plantuml/ or from a private plantuml instan
 </pre></div>
 
 <hr />
-<h3 id="settingsjson-file"><a id="settings_json"></a> settings.json file<a class="headerlink" href="#settingsjson-file" title="Permanent link">&para;</a></h3>
+<h3 id="settingsjson-file">settings.json file <a id="settings_json"></a><a class="headerlink" href="#settingsjson-file" title="Permanent link">&para;</a></h3>
 <p><code class="codehilite">/var/vcap/bosh/settings.json</code>: Local copy of the bootstrap settings used by the Agent to configure network and system properties for the VM. They are refreshed every time Agent is restarted.</p>
 <p>The <code class="codehilite">settings.json</code> payload format is the same as the settings format initially returned by the registry.</p>
 <hr />

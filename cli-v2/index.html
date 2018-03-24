@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#install" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -695,9 +699,189 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Installation
+      </label>
+    
     <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
       Installation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install " class="md-nav__link">
+    Install 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-flags" title="Global Flags " class="md-nav__link">
+    Global Flags 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands " class="md-nav__link">
+    Commands 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments " class="md-nav__link">
+    Environments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" title="Session " class="md-nav__link">
+    Session 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemcells" title="Stemcells " class="md-nav__link">
+    Stemcells 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-creation" title="Release creation " class="md-nav__link">
+    Release creation 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-blobs" title="Release blobs " class="md-nav__link">
+    Release blobs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" title="Releases " class="md-nav__link">
+    Releases 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configs" title="Configs " class="md-nav__link">
+    Configs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-config" title="Cloud config " class="md-nav__link">
+    Cloud config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-config" title="Runtime config " class="md-nav__link">
+    Runtime config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpi-config" title="CPI config " class="md-nav__link">
+    CPI config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="Deployments " class="md-nav__link">
+    Deployments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" title="VMs " class="md-nav__link">
+    VMs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disks" title="Disks " class="md-nav__link">
+    Disks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH " class="md-nav__link">
+    SSH 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errands" title="Errands " class="md-nav__link">
+    Errands 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" title="Tasks " class="md-nav__link">
+    Tasks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" title="Snapshots " class="md-nav__link">
+    Snapshots 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-recovery" title="Deployment recovery " class="md-nav__link">
+    Deployment recovery 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc " class="md-nav__link">
+    Misc 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2498,6 +2682,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2536,6 +2816,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3690,6 +3982,188 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install " class="md-nav__link">
+    Install 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-flags" title="Global Flags " class="md-nav__link">
+    Global Flags 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands " class="md-nav__link">
+    Commands 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments " class="md-nav__link">
+    Environments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" title="Session " class="md-nav__link">
+    Session 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemcells" title="Stemcells " class="md-nav__link">
+    Stemcells 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-creation" title="Release creation " class="md-nav__link">
+    Release creation 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-blobs" title="Release blobs " class="md-nav__link">
+    Release blobs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" title="Releases " class="md-nav__link">
+    Releases 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configs" title="Configs " class="md-nav__link">
+    Configs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-config" title="Cloud config " class="md-nav__link">
+    Cloud config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-config" title="Runtime config " class="md-nav__link">
+    Runtime config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpi-config" title="CPI config " class="md-nav__link">
+    CPI config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="Deployments " class="md-nav__link">
+    Deployments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" title="VMs " class="md-nav__link">
+    VMs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disks" title="Disks " class="md-nav__link">
+    Disks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH " class="md-nav__link">
+    SSH 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errands" title="Errands " class="md-nav__link">
+    Errands 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" title="Tasks " class="md-nav__link">
+    Tasks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" title="Snapshots " class="md-nav__link">
+    Snapshots 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-recovery" title="Deployment recovery " class="md-nav__link">
+    Deployment recovery 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc " class="md-nav__link">
+    Misc 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3704,7 +4178,7 @@
 
 <p>The BOSH Command Line Interface (CLI) is what you use to run BOSH commands. CLI v2 is a new major version of CLI.</p>
 <hr />
-<h2 id="install"><a id="install"></a> Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<h2 id="install">Install <a id="install"></a><a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Download the binary for your platform and place it on your <code class="codehilite">PATH</code>:</p>
@@ -3734,11 +4208,11 @@ version <span class="m">3</span>.0.1-712bfd7-2018-03-13T23:26:42Z
 </ol>
 <p>Alternatively, refer to <a href="https://github.com/cloudfoundry/homebrew-tap">cloudfoundry/homebrew-tap</a> to install CLI via Homebrew on OS X. We currently do not publish CLI via apt or yum repositories.</p>
 <hr />
-<h2 id="global-flags"><a id="global-flags"></a> Global Flags<a class="headerlink" href="#global-flags" title="Permanent link">&para;</a></h2>
+<h2 id="global-flags">Global Flags <a id="global-flags"></a><a class="headerlink" href="#global-flags" title="Permanent link">&para;</a></h2>
 <p>See <a href="../cli-global-flags/">Global flags</a> for more details on how to enable different output formats, debug logging, etc.</p>
 <hr />
-<h2 id="commands"><a id="cmds"></a> Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<h3 id="environments"><a id="env-mgmt"></a> Environments<a class="headerlink" href="#environments" title="Permanent link">&para;</a></h3>
+<h2 id="commands">Commands <a id="cmds"></a><a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h3 id="environments">Environments <a id="env-mgmt"></a><a class="headerlink" href="#environments" title="Permanent link">&para;</a></h3>
 <p>See <a href="../cli-envs/">Environments</a>.</p>
 <ul>
 <li>
@@ -3824,7 +4298,7 @@ Succeeded
 </li>
 </ul>
 <hr />
-<h3 id="session"><a id="session-mgmt"></a> Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h3>
+<h3 id="session">Session <a id="session-mgmt"></a><a class="headerlink" href="#session" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="log-in"></a> <code class="codehilite">bosh log-in</code> (Alias: <code class="codehilite">l</code>, <code class="codehilite">login</code>)</p>
@@ -3842,7 +4316,7 @@ Password <span class="o">()</span>:
 </li>
 </ul>
 <hr />
-<h3 id="stemcells"><a id="stemcell-mgmt"></a> Stemcells<a class="headerlink" href="#stemcells" title="Permanent link">&para;</a></h3>
+<h3 id="stemcells">Stemcells <a id="stemcell-mgmt"></a><a class="headerlink" href="#stemcells" title="Permanent link">&para;</a></h3>
 <p>See <a href="../uploading-stemcells/">Uploading Stemcells</a>.</p>
 <ul>
 <li>
@@ -3888,7 +4362,7 @@ $ bosh -e my-env us https://bosh.io/d/stemcells/bosh-stemcell-warden-boshlite-ub
 </li>
 </ul>
 <hr />
-<h3 id="release-creation"><a id="release-creation"></a> Release creation<a class="headerlink" href="#release-creation" title="Permanent link">&para;</a></h3>
+<h3 id="release-creation">Release creation <a id="release-creation"></a><a class="headerlink" href="#release-creation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="init-release"></a> <code class="codehilite">bosh init-release [--git] [--dir=dir]</code></p>
@@ -3953,7 +4427,7 @@ $ git push origin master
 </li>
 </ul>
 <hr />
-<h3 id="release-blobs"><a id="blob-mgmt"></a> Release blobs<a class="headerlink" href="#release-blobs" title="Permanent link">&para;</a></h3>
+<h3 id="release-blobs">Release blobs <a id="blob-mgmt"></a><a class="headerlink" href="#release-blobs" title="Permanent link">&para;</a></h3>
 <p>See <a href="../release-blobs/">Release Blobs</a> for a detailed workflow.</p>
 <ul>
 <li>
@@ -4005,7 +4479,7 @@ $ bosh sync-blobs
 </li>
 </ul>
 <hr />
-<h3 id="releases"><a id="release-mgmt"></a> Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h3>
+<h3 id="releases">Releases <a id="release-mgmt"></a><a class="headerlink" href="#releases" title="Permanent link">&para;</a></h3>
 <p>See <a href="../uploading-releases/">Uploading Releases</a>.</p>
 <ul>
 <li>
@@ -4108,7 +4582,7 @@ Succeeded
 </li>
 </ul>
 <hr />
-<h3 id="configs"><a id="configs-mgmt"></a> Configs<a class="headerlink" href="#configs" title="Permanent link">&para;</a></h3>
+<h3 id="configs">Configs <a id="configs-mgmt"></a><a class="headerlink" href="#configs" title="Permanent link">&para;</a></h3>
 <p>See <a href="../configs/">Configs</a>.</p>
 <ul>
 <li>
@@ -4163,7 +4637,7 @@ $ bosh -e my-env delete-config --type<span class="o">=</span>my-type --name<span
 </li>
 </ul>
 <hr />
-<h3 id="cloud-config"><a id="cloud-config-mgmt"></a> Cloud config<a class="headerlink" href="#cloud-config" title="Permanent link">&para;</a></h3>
+<h3 id="cloud-config">Cloud config <a id="cloud-config-mgmt"></a><a class="headerlink" href="#cloud-config" title="Permanent link">&para;</a></h3>
 <p>See <a href="../cloud-config/">Cloud config</a>.</p>
 <ul>
 <li>
@@ -4179,7 +4653,7 @@ $ bosh -e my-env delete-config --type<span class="o">=</span>my-type --name<span
 </li>
 </ul>
 <hr />
-<h3 id="runtime-config"><a id="runtime-config-mgmt"></a> Runtime config<a class="headerlink" href="#runtime-config" title="Permanent link">&para;</a></h3>
+<h3 id="runtime-config">Runtime config <a id="runtime-config-mgmt"></a><a class="headerlink" href="#runtime-config" title="Permanent link">&para;</a></h3>
 <p>See <a href="../runtime-config/">Runtime config</a>.</p>
 <ul>
 <li>
@@ -4195,7 +4669,7 @@ $ bosh -e my-env delete-config --type<span class="o">=</span>my-type --name<span
 </li>
 </ul>
 <hr />
-<h3 id="cpi-config"><a id="cpi-config-mgmt"></a> CPI config<a class="headerlink" href="#cpi-config" title="Permanent link">&para;</a></h3>
+<h3 id="cpi-config">CPI config <a id="cpi-config-mgmt"></a><a class="headerlink" href="#cpi-config" title="Permanent link">&para;</a></h3>
 <p>See <a href="../cpi-config/">CPI config</a>.</p>
 <ul>
 <li>
@@ -4211,7 +4685,7 @@ $ bosh -e my-env delete-config --type<span class="o">=</span>my-type --name<span
 </li>
 </ul>
 <hr />
-<h3 id="deployments"><a id="deployment-mgmt"></a> Deployments<a class="headerlink" href="#deployments" title="Permanent link">&para;</a></h3>
+<h3 id="deployments">Deployments <a id="deployment-mgmt"></a><a class="headerlink" href="#deployments" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="deployments"></a> <code class="codehilite">bosh -e my-env deployments</code> (Alias: <code class="codehilite">ds</code>)</p>
@@ -4417,7 +4891,7 @@ $ bosh -e vbox events --before<span class="o">=</span><span class="s2">&quot;201
 </li>
 </ul>
 <hr />
-<h3 id="vms"><a id="vm-mgmt"></a> VMs<a class="headerlink" href="#vms" title="Permanent link">&para;</a></h3>
+<h3 id="vms">VMs <a id="vm-mgmt"></a><a class="headerlink" href="#vms" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="vms"></a> <code class="codehilite">bosh -e my-env [-d my-dep] vms [--vitals]</code></p>
@@ -4438,7 +4912,7 @@ $ bosh -e vbox -d cf vms --vitals
 </li>
 </ul>
 <hr />
-<h3 id="disks"><a id="disk-mgmt"></a> Disks<a class="headerlink" href="#disks" title="Permanent link">&para;</a></h3>
+<h3 id="disks">Disks <a id="disk-mgmt"></a><a class="headerlink" href="#disks" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="disks"></a> <code class="codehilite">bosh -e my-env -d my-dep disks [--orphaned]</code></p>
@@ -4460,7 +4934,7 @@ $ bosh -e vbox -d cf vms --vitals
 </li>
 </ul>
 <hr />
-<h3 id="ssh"><a id="ssh-mgmt"></a> SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<h3 id="ssh">SSH <a id="ssh-mgmt"></a><a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="ssh"></a> <code class="codehilite">bosh -e my-env -d my-dep ssh [destination] [-r] [-c=cmd] [--opts=opts] [--gw-* ...]</code></p>
@@ -4515,7 +4989,7 @@ $ bosh -e vbox -d cf scp diego-cell:/tmp/logs/ /tmp/logs/<span class="o">((</spa
 </li>
 </ul>
 <hr />
-<h3 id="errands"><a id="errand-mgmt"></a> Errands<a class="headerlink" href="#errands" title="Permanent link">&para;</a></h3>
+<h3 id="errands">Errands <a id="errand-mgmt"></a><a class="headerlink" href="#errands" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="errands"></a> <code class="codehilite">bosh -e my-env -d my-dep errands</code> (Alias: <code class="codehilite">es</code>)</p>
@@ -4570,7 +5044,7 @@ $ bosh -e vbox -d zookeeper run-errand status <span class="se">\</span>
 </li>
 </ul>
 <hr />
-<h3 id="tasks"><a id="task-mgmt"></a> Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<h3 id="tasks">Tasks <a id="task-mgmt"></a><a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="tasks"></a> <code class="codehilite">bosh -e my-env tasks [--recent[=num]] [--all]</code> (Alias: <code class="codehilite">ts</code>)</p>
@@ -4620,7 +5094,7 @@ $ bosh -e vbox t <span class="m">281</span> --debug
 </li>
 </ul>
 <hr />
-<h3 id="snapshots"><a id="snapshot-mgmt"></a> Snapshots<a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h3>
+<h3 id="snapshots">Snapshots <a id="snapshot-mgmt"></a><a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="snapshots"></a> <code class="codehilite">bosh -e my-env -d my-dep snapshots</code></p>
@@ -4643,7 +5117,7 @@ $ bosh -e vbox t <span class="m">281</span> --debug
 </li>
 </ul>
 <hr />
-<h3 id="deployment-recovery"><a id="deployment-recovery"></a> Deployment recovery<a class="headerlink" href="#deployment-recovery" title="Permanent link">&para;</a></h3>
+<h3 id="deployment-recovery">Deployment recovery <a id="deployment-recovery"></a><a class="headerlink" href="#deployment-recovery" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="update-resurrection"></a> <code class="codehilite">bosh -e my-env update-resurrection on/off</code></p>
@@ -4661,7 +5135,7 @@ $ bosh -e vbox t <span class="m">281</span> --debug
 </li>
 </ul>
 <hr />
-<h3 id="misc"><a id="misc"></a> Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h3>
+<h3 id="misc">Misc <a id="misc"></a><a class="headerlink" href="#misc" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a id="clean-up"></a> <code class="codehilite">bosh -e my-env clean-up [--all]</code></p>

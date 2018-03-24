@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#persistent-disk-declaration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -1781,9 +1785,71 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Overview
+      </label>
+    
     <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-disk-declaration" title="Persistent Disk Declaration " class="md-nav__link">
+    Persistent Disk Declaration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-disk-pool-declaration" title="Persistent Disk Pool Declaration " class="md-nav__link">
+    Persistent Disk Pool Declaration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-stats" title="Checking Stats " class="md-nav__link">
+    Checking Stats 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-persistent-disks" title="Accessing Persistent Disks " class="md-nav__link">
+    Accessing Persistent Disks 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-disk-properties" title="Changing Disk Properties " class="md-nav__link">
+    Changing Disk Properties 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orphaned-disks" title="Orphaned Disks " class="md-nav__link">
+    Orphaned Disks 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2502,6 +2568,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2540,6 +2702,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3694,6 +3868,70 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-disk-declaration" title="Persistent Disk Declaration " class="md-nav__link">
+    Persistent Disk Declaration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-disk-pool-declaration" title="Persistent Disk Pool Declaration " class="md-nav__link">
+    Persistent Disk Pool Declaration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-stats" title="Checking Stats " class="md-nav__link">
+    Checking Stats 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-persistent-disks" title="Accessing Persistent Disks " class="md-nav__link">
+    Accessing Persistent Disks 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-disk-properties" title="Changing Disk Properties " class="md-nav__link">
+    Changing Disk Properties 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orphaned-disks" title="Orphaned Disks " class="md-nav__link">
+    Orphaned Disks 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3730,7 +3968,7 @@
 <li><a href="#persistent-disk-pool">Persistent Disk Pool declaration</a></li>
 </ul>
 <hr />
-<h2 id="persistent-disk-declaration"><a id='persistent-disk'></a> Persistent Disk Declaration<a class="headerlink" href="#persistent-disk-declaration" title="Permanent link">&para;</a></h2>
+<h2 id="persistent-disk-declaration">Persistent Disk Declaration <a id='persistent-disk'></a><a class="headerlink" href="#persistent-disk-declaration" title="Permanent link">&para;</a></h2>
 <p>To specify that an instance group needs an attached persistent disk, add a <code class="codehilite">persistent_disk</code> key-value pair to the instance group in the <a href="../deployment-manifest/#jobs">Jobs</a> block of your deployment manifest.</p>
 <p>The <code class="codehilite">persistent_disk</code> key-value pair specifies the persistent disk size, and defaults to 0 (no persistent disk). If the <code class="codehilite">persistent_disk</code> value is a positive integer, BOSH creates a persistent disk of that size in megabytes and attaches it to each instance VM for the job.</p>
 <p>Example:</p>
@@ -3748,7 +3986,7 @@
 <p class="note">Note: If you use persistent disk declaration, you cannot specify the persistent disk type or size that the CPI attaches to your job VMs. Instead, the CPI uses its default disk configuration when deploying the VMs.</p>
 
 <hr />
-<h2 id="persistent-disk-pool-declaration"><a id='persistent-disk-pool'></a> Persistent Disk Pool Declaration<a class="headerlink" href="#persistent-disk-pool-declaration" title="Permanent link">&para;</a></h2>
+<h2 id="persistent-disk-pool-declaration">Persistent Disk Pool Declaration <a id='persistent-disk-pool'></a><a class="headerlink" href="#persistent-disk-pool-declaration" title="Permanent link">&para;</a></h2>
 <p>To specify that an instance group needs an attached persistent disk, add a <a href="../deployment-manifest/#disk-pools">Disk Pool</a> block to your deployment manifest.</p>
 <p>The persistent disk pool declaration allows you to specify the precise type and size of the persistent disks attached to your instance group VMs.</p>
 <ul>
@@ -3786,21 +4024,21 @@
 </pre></div>
 
 <hr />
-<h2 id="checking-stats"><a id='checking-stats'></a> Checking Stats<a class="headerlink" href="#checking-stats" title="Permanent link">&para;</a></h2>
+<h2 id="checking-stats">Checking Stats <a id='checking-stats'></a><a class="headerlink" href="#checking-stats" title="Permanent link">&para;</a></h2>
 <p>After your deployment completes, run <code class="codehilite">bosh vms --vitals</code> from a terminal window to view persistent disk usage percentage values under <code class="codehilite">Persistent Disk Usage</code>.</p>
 <hr />
-<h2 id="accessing-persistent-disks"><a id='accessing-persistent-disk'></a> Accessing Persistent Disks<a class="headerlink" href="#accessing-persistent-disks" title="Permanent link">&para;</a></h2>
+<h2 id="accessing-persistent-disks">Accessing Persistent Disks <a id='accessing-persistent-disk'></a><a class="headerlink" href="#accessing-persistent-disks" title="Permanent link">&para;</a></h2>
 <p>The CPI mounts persistent disks <code class="codehilite">/var/vcap/store</code> on deployed VMs, and persists any files stored in <code class="codehilite">/var/vcap/store</code>.</p>
 <p>You specify jobs using the <code class="codehilite">jobs</code> key when defining a instance group. By convention, each job creates a self-named directory in <code class="codehilite">/var/vcap/store</code> and sets the correct permissions on this directory.</p>
 <p>For example, a <code class="codehilite">redis</code> job creates the following directory: <code class="codehilite">/var/vcap/store/redis</code></p>
 <hr />
-<h2 id="changing-disk-properties"><a id='changing-persistent-disk'></a> Changing Disk Properties<a class="headerlink" href="#changing-disk-properties" title="Permanent link">&para;</a></h2>
+<h2 id="changing-disk-properties">Changing Disk Properties <a id='changing-persistent-disk'></a><a class="headerlink" href="#changing-disk-properties" title="Permanent link">&para;</a></h2>
 <p>BOSH allows you to change disk types and sizes by modifying the deployment manifest. As long as the instance group name stays the same, data on existing persistent disks will be migrated onto new persistent disks. Old persistent disks will be marked as orphaned.</p>
 <p>During the disk migration from one disk type and size to another, the Director communicates with the Agent to attach both existing and newly created disk to the same VM and copy over any existing data. After the transfer successfully completes, the Director deletes the original disk and keeps the new disk attached to the VM instance.</p>
 <p class="note">Note: An IaaS might disallow attaching particular disk types and sizes to certain VM types. Consult your IaaS documentation for more information.</p>
 
 <hr />
-<h2 id="orphaned-disks"><a id='orphaned-disks'></a> Orphaned Disks<a class="headerlink" href="#orphaned-disks" title="Permanent link">&para;</a></h2>
+<h2 id="orphaned-disks">Orphaned Disks <a id='orphaned-disks'></a><a class="headerlink" href="#orphaned-disks" title="Permanent link">&para;</a></h2>
 <p>Orphaned persistent disks are not attached to any VM and are not associated with any deployment. You can list orphaned disks known to the Director via <a href="../sysadmin-commands/#disks"><code class="codehilite">bosh disks --orphaned</code> command</a>. If deployment changes were done erroneously and you would like to reattach specific orphaned persistent disk to an instance follow these steps:</p>
 <ul>
 <li>run <code class="codehilite">bosh stop name/id</code> command to stop instance (or multiple instances) for repair</li>

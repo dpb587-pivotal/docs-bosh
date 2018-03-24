@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#general" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -899,9 +903,43 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Migrating from v1
+      </label>
+    
     <a href="./" title="Migrating from v1" class="md-nav__link md-nav__link--active">
       Migrating from v1
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" title="General " class="md-nav__link">
+    General 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-differences-per-command" title="Notable differences per command " class="md-nav__link">
+    Notable differences per command 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2498,6 +2536,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2536,6 +2670,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3690,6 +3836,42 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" title="General " class="md-nav__link">
+    General 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notable-differences-per-command" title="Notable differences per command " class="md-nav__link">
+    Notable differences per command 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3702,7 +3884,7 @@
                 
                 <p class="note">Note: Applies to CLI v2 v2.0.13+.</p>
 
-<h2 id="general"><a id="general"></a> General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
+<h2 id="general">General <a id="general"></a><a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <p>The BOSH CLI v2 differs from v1 in two main ways: it is stateless, and it hyphenates single commands.</p>
 <p><strong>Statelessness</strong></p>
 <p>The BOSH CLI v2 does not store values for a current environment or configuration. 
@@ -3797,7 +3979,7 @@ For example, <code class="codehilite">bosh delete deployment</code> in v1 corres
 <li>Most of the output formatting have changed</li>
 </ul>
 <hr />
-<h2 id="notable-differences-per-command"><a id="cmd"></a> Notable differences per command<a class="headerlink" href="#notable-differences-per-command" title="Permanent link">&para;</a></h2>
+<h2 id="notable-differences-per-command">Notable differences per command <a id="cmd"></a><a class="headerlink" href="#notable-differences-per-command" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code class="codehilite">bosh alias-env</code> and all commands</li>
 <li>only allows connections to Director configured with verifiable certificates</li>

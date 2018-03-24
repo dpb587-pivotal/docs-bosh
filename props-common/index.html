@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#tls-configuration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -279,7 +283,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws-cpi/" title="Clouds" class="md-tabs__link">
+        <a href="../clouds/aws/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
@@ -1190,9 +1194,43 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Conventions
+      </label>
+    
     <a href="./" title="Conventions" class="md-nav__link md-nav__link--active">
       Conventions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tls-configuration" title="TLS configuration " class="md-nav__link">
+    TLS configuration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-proxy-configuration" title="Environment proxy configuration " class="md-nav__link">
+    Environment proxy configuration 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -2504,6 +2542,102 @@
 
 
   <li class="md-nav__item">
+    <a href="../clouds/aws/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+    
+    <label class="md-nav__link" for="nav-6-1-1-3">
+      Cloud Properties
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-1-3">
+        Cloud Properties
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+      Persistent Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../aws-cpi/" title="Usage" class="md-nav__link">
       Usage
     </a>
@@ -2542,6 +2676,18 @@
   <li class="md-nav__item">
     <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
+      Common Errors
     </a>
   </li>
 
@@ -3696,6 +3842,42 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tls-configuration" title="TLS configuration " class="md-nav__link">
+    TLS configuration 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-proxy-configuration" title="Environment proxy configuration " class="md-nav__link">
+    Environment proxy configuration 
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -3706,7 +3888,7 @@
                 
                   <h1>Conventions</h1>
                 
-                <h2 id="tls-configuration"><a id="tls"></a> TLS configuration<a class="headerlink" href="#tls-configuration" title="Permanent link">&para;</a></h2>
+                <h2 id="tls-configuration">TLS configuration <a id="tls"></a><a class="headerlink" href="#tls-configuration" title="Permanent link">&para;</a></h2>
 <p>Following is a <em>suggested</em> set of properties for TLS configuration:</p>
 <ul>
 <li><strong>tls</strong> [Hash]: TLS configuration section.<ul>
@@ -3795,7 +3977,7 @@
 </pre></div>
 
 <hr />
-<h2 id="environment-proxy-configuration"><a id="env-proxy"></a> Environment proxy configuration<a class="headerlink" href="#environment-proxy-configuration" title="Permanent link">&para;</a></h2>
+<h2 id="environment-proxy-configuration">Environment proxy configuration <a id="env-proxy"></a><a class="headerlink" href="#environment-proxy-configuration" title="Permanent link">&para;</a></h2>
 <p>Following is a <em>suggested</em> set of properties for environment proxy configuration:</p>
 <ul>
 <li><strong>env</strong> [Hash]<ul>
