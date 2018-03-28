@@ -2,9 +2,6 @@
 title: Managing releases
 ---
 
-(See [What is a Release?](release.md) and [Uploading releases](uploading-releases.md) for an introduction.)
-
----
 ## Jobs and Packages <a id="jobs-and-packages"></a>
 
 Each job and package is uniquely identified by its name and fingerprint. A fingerprint is calculated based on the contents of all associated files, their permissions. A release captures set of job and package versions that depend on each other and gives it a name and a version. The CLI also records additional metadata when creating releases such as Git SHA.
