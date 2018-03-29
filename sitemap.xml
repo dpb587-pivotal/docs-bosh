@@ -154,14 +154,14 @@
     </url>
         
     <url>
-     <loc>/release-blobs/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
+     <loc>/release-blobs/</loc>
+     <lastmod>2018-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -272,6 +272,40 @@
     <url>
      <loc></loc>
      <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/bpm/</loc>
+     <lastmod>2018-03-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/bpm/config/</loc>
+     <lastmod>2018-03-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/bpm/runtime/</loc>
+     <lastmod>2018-03-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/bpm/transitioning/</loc>
+     <lastmod>2018-03-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/bpm/undefined/</loc>
+     <lastmod>2018-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

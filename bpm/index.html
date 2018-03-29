@@ -36,7 +36,7 @@
     
     
       
-        <title>Setting up an S3 Release Blobstore</title>
+        <title>Overview - BOSH Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#creating-s3-bucket" tabindex="1" class="md-skip">
+      <a href="#entities" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +115,7 @@
                 BOSH Documentation
               </span>
               <span class="md-header-nav__topic">
-                Environment Setup
+                Overview
               </span>
             
           
@@ -237,7 +237,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../release/authoring/overview/" title="Release Authors" class="md-tabs__link md-tabs__link--active">
+        <a href="../release/authoring/overview/" title="Release Authors" class="md-tabs__link">
           Release Authors
         </a>
       
@@ -277,6 +277,19 @@
       
         <a href="../clouds/overview/" title="Clouds" class="md-tabs__link">
           Clouds
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="BPM" class="md-tabs__link md-tabs__link--active">
+          BPM
         </a>
       
     </li>
@@ -1354,12 +1367,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Release Authors
@@ -1388,9 +1399,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Configuration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../release-blobs/" title="Blobs" class="md-nav__link">
-      Blobs
+    <a href="../release/authoring/config/settings/" title="Settings" class="md-nav__link">
+      Settings
     </a>
   </li>
 
@@ -1399,18 +1429,16 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2">
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-4-2-2">
       Blobstore
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
         Blobstore
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1420,90 +1448,11 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" checked>
-    
-    <label class="md-nav__link" for="nav-4-3-1">
-      Amazon S3
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-3-1">
-        Amazon S3
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../release-blobstore/" title="Usage" class="md-nav__link">
-      Usage
+    <a href="../release/authoring/config/s3-blobstore/" title="Amazon S3" class="md-nav__link">
+      Amazon S3
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Environment Setup
-      </label>
-    
-    <a href="./" title="Environment Setup" class="md-nav__link md-nav__link--active">
-      Environment Setup
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creating-s3-bucket" title="Creating S3 Bucket " class="md-nav__link">
-    Creating S3 Bucket 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-iam-user-for-the-maintainer" title="Creating IAM User for the Maintainer " class="md-nav__link">
-    Creating IAM User for the Maintainer 
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1533,6 +1482,23 @@
         
       </ul>
     </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-blobs/" title="Blobs" class="md-nav__link">
+      Blobs
+    </a>
   </li>
 
         
@@ -3729,16 +3695,156 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
-      Guides
+      BPM
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
+        BPM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Overview
+      </label>
+    
+    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+      Overview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entities" title="Entities" class="md-nav__link">
+    Entities
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" title="Jobs" class="md-nav__link">
+    Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processes" title="Processes" class="md-nav__link">
+    Processes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="runtime/" title="Runtime Environment" class="md-nav__link">
+      Runtime Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="transitioning/" title="Transitioning to BPM" class="md-nav__link">
+      Transitioning to BPM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="undefined/" title="Undefined Things" class="md-nav__link">
+      Undefined Things
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3816,13 +3922,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Appendix
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Appendix
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3943,13 +4049,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-10" type="checkbox" id="nav-8-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-10" type="checkbox" id="nav-9-10">
     
-    <label class="md-nav__link" for="nav-8-10">
+    <label class="md-nav__link" for="nav-9-10">
       Abandoned
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-10">
+      <label class="md-nav__title" for="nav-9-10">
         Abandoned
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4008,16 +4114,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-s3-bucket" title="Creating S3 Bucket " class="md-nav__link">
-    Creating S3 Bucket 
+  <a href="#entities" title="Entities" class="md-nav__link">
+    Entities
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs" title="Jobs" class="md-nav__link">
+    Jobs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-iam-user-for-the-maintainer" title="Creating IAM User for the Maintainer " class="md-nav__link">
-    Creating IAM User for the Maintainer 
+        
+          <li class="md-nav__item">
+  <a href="#processes" title="Processes" class="md-nav__link">
+    Processes
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4037,93 +4156,46 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/s3-release-blobstore.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/bpm/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Environment Setup</h1>
+                  <h1>Overview</h1>
                 
-                <p class="note">Note: Examples require CLI v2.</p>
-
-<p>This topic is written for release maintainers and describes how to set up a S3 bucket for storing release artifacts.</p>
-<h2 id="creating-s3-bucket">Creating S3 Bucket <a id="bucket"></a><a class="headerlink" href="#creating-s3-bucket" title="Permanent link">&para;</a></h2>
-<p>S3 bucket is used for storing release blobs and generated final release blobs. It's configured to be readable by everyone.</p>
-<ul>
-<li>
-<p>Create S3 bucket with a descriptive name. For example choose <code class="codehilite">redis-blobs</code> for <code class="codehilite">redis-release</code> release.</p>
-</li>
-<li>
-<p>Under the bucket properties, click <code class="codehilite">Add bucket policies</code> and add the following entry to make blobs publicly downloadable. Be sure to change <code class="codehilite">&lt;blobs_bucket_name&gt;</code> to a name you want to call your blobstore bucket.</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;Statement&quot;</span><span class="p">:</span> <span class="p">[{</span>
-    <span class="nt">&quot;Action&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;s3:GetObject&quot;</span> <span class="p">],</span>
-    <span class="nt">&quot;Effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;Resource&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:s3:::&lt;blobs_bucket_name&gt;/*&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;Principal&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;AWS&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span> <span class="p">}</span>
-  <span class="p">}]</span>
-<span class="p">}</span>
-</pre></div>
-
-<p class="note"><strong>Note</strong>: S3 buckets have a global namespace. If you create a bucket, that name has been forever consumed for everyone using S3. If you choose to delete that bucket, the name will not be added back to the global pool of names. It is gone forever.</p>
-
-<h2 id="creating-iam-user-for-the-maintainer">Creating IAM User for the Maintainer <a id="iam-user"></a><a class="headerlink" href="#creating-iam-user-for-the-maintainer" title="Permanent link">&para;</a></h2>
-<p>An IAM user is used to download and upload blobs to a created S3 bucket.</p>
-<ul>
-<li>
-<p>Create an AWS IAM user with a name that describes a specific purpose for this user -- uploading release blobs. For example: <code class="codehilite">redis-blobs-upload</code>.</p>
-</li>
-<li>
-<p>Make sure to save the credentials provided in the last step of user creation. These will need to be put in the <code class="codehilite">config/private.yml</code> file of your BOSH release. This file will look something like:</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">blobstore</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">access_key_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;access_key_id&gt;</span>
-    <span class="l l-Scalar l-Scalar-Plain">secret_access_key</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;secret_access_key&gt;</span>
-</pre></div>
-
-<ul>
-<li>Remember to also create/update <code class="codehilite">config/final.yml</code>:</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">blobstore</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">s3</span>
-  <span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">bucket_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;blobs_bucket_name&gt;</span>
-</pre></div>
-
-<p class="note"><strong>Note</strong>: The <code>.gitignore</code> file in the BOSH release should include <code>config/private.yml</code>. This file should <strong>not</strong> be committed to the release repo. It is only meant for the release maintainers. <code>config/final.yml</code>, on the other hand, should not be in the <code>.gitignore</code> file, and should be committed to the repository, as it is for users consuming and deploying the release.</p>
-
-<ul>
-<li>Attach a <em>user</em> policy that would limit the user to permissions to read/write to the bucket that was just created:</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;Statement&quot;</span><span class="p">:</span> <span class="p">[{</span>
-    <span class="nt">&quot;Effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;Action&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;s3:PutObject&quot;</span> <span class="p">],</span>
-    <span class="nt">&quot;Resource&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;arn:aws:s3:::&lt;blobs_bucket_name&gt;/*&quot;</span> <span class="p">]</span>
-  <span class="p">}]</span>
-<span class="p">}</span>
-</pre></div>
-
-<p class="note"><strong>Note</strong>: When you first create a bucket, it might take a little while for Amazon to be able to route requests correctly to the bucket and so downloads may fail with an obscure "Broken Pipe" error. The solution is to wait for some time before trying.
-
-## Setting S3 region <a id="setting-region"></a>
-
-By default, Amazon S3 buckets resolve to the `us-east-1` (North Virginia) region. If your blobstore bucket resides in a different region, override the region and endpoint settings in `config/final.yml`. For example, a bucket in `eu-west-1` would be as follows:
-
-wzxhzdk:4
-
-A full list of S3 regions and endpoints is available [here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
-
-See [S3 CLI Usage](https://github.com/pivotal-golang/s3cli#usage) for additional configuration options.
-
-## Usage <a id="usage"></a>
-
-Once the S3 bucket and IAM user are configured with correct access rules, `bosh upload blobs` should succeed and the S3 bucket should contain uploaded blobs. Running `bosh create release --final` will also place additional blobs into the bucket.
+                <p>bpm, as the README outlines, is a stepping stone to isolate collocated BOSH
+jobs from one another. Ideally this project should not exist and instead we
+would use an existing container scheduler but we have a huge number of existing
+BOSH releases which would benefit from this isolation. bpm provides a
+straightforward but opinionated runtime for existing BOSH jobs.</p>
+<p>This document, along with the others in the same directory, is the de-facto
+source of documentation for bpm. This file in particular introduces some of the
+nouns and semantics used by bpm.</p>
+<h2 id="entities">Entities<a class="headerlink" href="#entities" title="Permanent link">&para;</a></h2>
+<h3 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h3>
+<p>Jobs in bpm are identical semantically to those in BOSH. A job is an
+independently schedule-able server or collection of servers which provide some
+kind of service. Jobs can be collocated with other jobs but should not require
+this. They should be able to speak over the network abstractly to wherever the
+other job is located. However, a tiny minority jobs are designed to be deployed
+as a sidecar to other jobs so this definition isn't perfect.</p>
+<p>bpm isolates collocated jobs from one another. Namespaces are applied to the
+host filesystem and process tables such that jobs are not aware of each other.
+Performance isolation can be enabled on jobs to prevent them starving their
+neighbors of shared physical resources.</p>
+<p>Notably, the network is not namespaced due to complexities it would introduce
+around service discovery. For example, if a process ends up listening on a
+different port externally than in its namespace then how does it know what to
+advertise to its service discovery registry? This pattern of allowing traffic
+over <code class="codehilite">localhost</code> also allows for the use of the popular sidecar proxy pattern
+i.e. Envoy, linkerd, Istio.</p>
+<h3 id="processes">Processes<a class="headerlink" href="#processes" title="Permanent link">&para;</a></h3>
+<p>Jobs are made up of multiple processes though most jobs will only have a single
+process. Processes are isolated from one another via process table and can have
+independent performance restrictions imposed upon them but, importantly,
+processes can share portions of the filesystem. Processes are <em>always</em>
+collocated on the same machine as each other.</p>
+<p>Due to how common the case of a single process per job is you can generally
+omit the process argument from many of the <code class="codehilite">bpm</code> commands. In this case the job
+name is reused as the process name.</p>
                 
                   
                 
@@ -4144,7 +4216,7 @@ Once the S3 bucket and IAM user are configured with correct access rules, `bosh 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../release-blobstore/" title="Usage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../agent-cpi-interactions/" title="Agent Interactions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -4153,19 +4225,19 @@ Once the S3 bucket and IAM user are configured with correct access rules, `bosh 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Usage
+                Agent Interactions
               </span>
             </div>
           </a>
         
         
-          <a href="../release-blobstore/" title="Google Cloud Storage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="config/" title="Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Google Cloud Storage
+                Configuration
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
