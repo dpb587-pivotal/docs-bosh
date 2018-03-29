@@ -36,7 +36,7 @@
     
     
       
-        <title>Index</title>
+        <title>BOSH Documentation</title>
       
     
     
@@ -89,16 +89,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#introduction" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="about/" title="BOSH Documentation" class="md-header-nav__button md-logo">
+        <a href="." title="BOSH Documentation" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -115,7 +111,7 @@
                 BOSH Documentation
               </span>
               <span class="md-header-nav__topic">
-                Table of Contents
+                Experimental Docs
               </span>
             
           
@@ -198,8 +194,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="about/" title="Getting Started" class="md-tabs__link">
-          Getting Started
+        <a href="." title="Overview" class="md-tabs__link md-tabs__link--active">
+          Overview
         </a>
       
     </li>
@@ -211,21 +207,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="cli-v2/" title="CLI" class="md-tabs__link">
+        <a href="cli/" title="CLI" class="md-tabs__link">
           CLI
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="release/" title="Releases" class="md-tabs__link">
-          Releases
         </a>
       
     </li>
@@ -239,6 +222,19 @@
       
         <a href="deployment/" title="Deployments" class="md-tabs__link">
           Deployments
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="release/authoring/overview/" title="Release Authors" class="md-tabs__link">
+          Release Authors
         </a>
       
     </li>
@@ -273,25 +269,13 @@
         
   
   
-    
-    
-  
-  
-    
-    
-  
-  
     <li class="md-tabs__item">
       
-        <a href="clouds/aws/" title="Clouds" class="md-tabs__link">
+        <a href="clouds/overview/" title="Clouds" class="md-tabs__link">
           Clouds
         </a>
       
     </li>
-  
-
-  
-
   
 
       
@@ -300,7 +284,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="deploying/" title="Guides" class="md-tabs__link">
+        <a href="create-release/" title="Guides" class="md-tabs__link">
           Guides
         </a>
       
@@ -313,8 +297,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="." title="Legacy" class="md-tabs__link md-tabs__link--active">
-          Legacy
+        <a href="old-index/" title="Appendix" class="md-tabs__link">
+          Appendix
         </a>
       
     </li>
@@ -370,17 +354,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
-      Getting Started
+      Overview
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
-        Getting Started
+        Overview
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -389,10 +375,29 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="." title="Experimental Docs" class="md-nav__link md-nav__link--active">
+      Experimental Docs
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="about/" title="Architecture" class="md-nav__link">
-      Architecture
+    <a href="getting-started/" title="Welcome" class="md-nav__link">
+      Welcome
     </a>
   </li>
 
@@ -403,8 +408,8 @@
 
 
   <li class="md-nav__item">
-    <a href="problems/" title="Goals" class="md-nav__link">
-      Goals
+    <a href="getting-started/what-is-bosh/" title="What is BOSH?" class="md-nav__link">
+      What is BOSH?
     </a>
   </li>
 
@@ -415,8 +420,8 @@
 
 
   <li class="md-nav__item">
-    <a href="bosh-components/" title="Components" class="md-nav__link">
-      Components
+    <a href="bosh-components/" title="Components of BOSH" class="md-nav__link">
+      Components of BOSH
     </a>
   </li>
 
@@ -427,20 +432,8 @@
 
 
   <li class="md-nav__item">
-    <a href="basic-workflow/" title="Basic Workflow" class="md-nav__link">
-      Basic Workflow
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="terminology/" title="Terminology" class="md-nav__link">
-      Terminology
+    <a href="bosh-lite/" title="Try it out" class="md-nav__link">
+      Try it out
     </a>
   </li>
 
@@ -691,8 +684,32 @@
 
 
   <li class="md-nav__item">
-    <a href="cli-v2/" title="Installation" class="md-nav__link">
+    <a href="cli/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cli/installation/" title="Installation" class="md-nav__link">
       Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cli-v2/" title="Legacy" class="md-nav__link">
+      Legacy
     </a>
   </li>
 
@@ -740,13 +757,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
     
-    <label class="md-nav__link" for="nav-2-5">
+    <label class="md-nav__link" for="nav-2-7">
       Interpolation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-5">
+      <label class="md-nav__title" for="nav-2-7">
         Interpolation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -800,13 +817,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-9" type="checkbox" id="nav-2-9">
     
-    <label class="md-nav__link" for="nav-2-7">
+    <label class="md-nav__link" for="nav-2-9">
       Command Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-7">
+      <label class="md-nav__title" for="nav-2-9">
         Command Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -916,10 +933,65 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Releases
+      Deployments
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Deployments
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="deployment/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="deployment-basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="deploying-step-by-step/" title="Deployment Steps" class="md-nav__link">
+      Deployment Steps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Releases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
         Releases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -955,21 +1027,14 @@
 
 
   <li class="md-nav__item">
-    <a href="compiled-releases/" title="Compiled Releases" class="md-nav__link">
-      Compiled Releases
+    <a href="release-urls/" title="Referencing Releases" class="md-nav__link">
+      Referencing Releases
     </a>
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="release-urls/" title="Referencing Releases" class="md-nav__link">
-      Referencing Releases
-    </a>
+      </ul>
+    </nav>
   </li>
 
         
@@ -983,11 +1048,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
-      Authoring
+      Manifest
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-5">
-        Authoring
+        Manifest
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -998,8 +1063,325 @@
 
 
   <li class="md-nav__item">
-    <a href="create-release/" title="Creating Releases" class="md-nav__link">
-      Creating Releases
+    <a href="manifest-v2/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="deployments/manifest/releases/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      Instance Groups
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        Instance Groups
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="migrated-from/" title="Migrating to AZs" class="md-nav__link">
+      Migrating to AZs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="links-manual/" title="Manual Links" class="md-nav__link">
+      Manual Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vm-anti-affinity/" title="Anti-affinity" class="md-nav__link">
+      Anti-affinity
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="uploading-stemcells/" title="Stemcells" class="md-nav__link">
+      Stemcells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="variable-types/" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Resources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Resources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-1" type="checkbox" id="nav-3-6-1">
+    
+    <label class="md-nav__link" for="nav-3-6-1">
+      Persistent Disks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-1">
+        Persistent Disks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="persistent-disks/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="persistent-disk-fs/" title="Filesystem" class="md-nav__link">
+      Filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="snapshots/" title="Snapshots" class="md-nav__link">
+      Snapshots
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6-2" type="checkbox" id="nav-3-6-2">
+    
+    <label class="md-nav__link" for="nav-3-6-2">
+      Virtual Machines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-6-2">
+        Virtual Machines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vm-struct/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="instance-metadata/" title="Instance Metadata" class="md-nav__link">
+      Instance Metadata
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="remove-dev-tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vm-config/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="job-logs/" title="Logs" class="md-nav__link">
+      Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vm-monit/" title="Process Management (Linux)" class="md-nav__link">
+      Process Management (Linux)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Release Authors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Release Authors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="release/authoring/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -1023,13 +1405,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-3-5-3">
+    <label class="md-nav__link" for="nav-4-3">
       Blobstore
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
         Blobstore
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1042,13 +1424,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3-1" type="checkbox" id="nav-3-5-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
     
-    <label class="md-nav__link" for="nav-3-5-3-1">
+    <label class="md-nav__link" for="nav-4-3-1">
       Amazon S3
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-3-1">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
         Amazon S3
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1119,13 +1501,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
-    <label class="md-nav__link" for="nav-3-5-4">
+    <label class="md-nav__link" for="nav-4-4">
       Jobs
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
         Jobs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1150,13 +1532,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4-2" type="checkbox" id="nav-3-5-4-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-2" type="checkbox" id="nav-4-4-2">
     
-    <label class="md-nav__link" for="nav-3-5-4-2">
+    <label class="md-nav__link" for="nav-4-4-2">
       Properties
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-4-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-2">
         Properties
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1198,13 +1580,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4-3" type="checkbox" id="nav-3-5-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
     
-    <label class="md-nav__link" for="nav-3-5-4-3">
+    <label class="md-nav__link" for="nav-4-4-3">
       Templates
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-4-3">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
         Templates
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1246,13 +1628,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4-4" type="checkbox" id="nav-3-5-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-4" type="checkbox" id="nav-4-4-4">
     
-    <label class="md-nav__link" for="nav-3-5-4-4">
+    <label class="md-nav__link" for="nav-4-4-4">
       Processes (Linux)
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-4-4">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-4">
         Processes (Linux)
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1294,13 +1676,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4-6" type="checkbox" id="nav-3-5-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-6" type="checkbox" id="nav-4-4-6">
     
-    <label class="md-nav__link" for="nav-3-5-4-6">
+    <label class="md-nav__link" for="nav-4-4-6">
       Links
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-4-6">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-6">
         Links
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1366,13 +1748,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4-8" type="checkbox" id="nav-3-5-4-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-8" type="checkbox" id="nav-4-4-8">
     
-    <label class="md-nav__link" for="nav-3-5-4-8">
+    <label class="md-nav__link" for="nav-4-4-8">
       Lifecycle Scripts
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-3-5-4-8">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-8">
         Lifecycle Scripts
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1467,13 +1849,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-5" type="checkbox" id="nav-3-5-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
     
-    <label class="md-nav__link" for="nav-3-5-5">
+    <label class="md-nav__link" for="nav-4-5">
       Packages
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-5-5">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
         Packages
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1532,380 +1914,15 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Deployments
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Deployments
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="deployment/" title="Overview" class="md-nav__link">
-      Overview
+    <a href="compiled-releases/" title="Compiled Releases" class="md-nav__link">
+      Compiled Releases
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="deployment-basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="deploying-step-by-step/" title="Deployment Steps" class="md-nav__link">
-      Deployment Steps
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
-    
-    <label class="md-nav__link" for="nav-4-4">
-      Manifest
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        Manifest
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="manifest-v2/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="uploading-releases/" title="Releases" class="md-nav__link">
-      Releases
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
-    
-    <label class="md-nav__link" for="nav-4-4-3">
-      Instance Groups
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-4-3">
-        Instance Groups
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="migrated-from/" title="Migrating to AZs" class="md-nav__link">
-      Migrating to AZs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="links-manual/" title="Manual Links" class="md-nav__link">
-      Manual Links
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="vm-anti-affinity/" title="Anti-affinity" class="md-nav__link">
-      Anti-affinity
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="uploading-stemcells/" title="Stemcells" class="md-nav__link">
-      Stemcells
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="variable-types/" title="Variables" class="md-nav__link">
-      Variables
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
-    
-    <label class="md-nav__link" for="nav-4-5">
-      Resources
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
-        Resources
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-1" type="checkbox" id="nav-4-5-1">
-    
-    <label class="md-nav__link" for="nav-4-5-1">
-      Persistent Disks
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-5-1">
-        Persistent Disks
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="persistent-disks/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="persistent-disk-fs/" title="Filesystem" class="md-nav__link">
-      Filesystem
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="snapshots/" title="Snapshots" class="md-nav__link">
-      Snapshots
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5-2" type="checkbox" id="nav-4-5-2">
-    
-    <label class="md-nav__link" for="nav-4-5-2">
-      Virtual Machines
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-5-2">
-        Virtual Machines
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="vm-struct/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="instance-metadata/" title="Instance Metadata" class="md-nav__link">
-      Instance Metadata
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="remove-dev-tools/" title="Development Tools" class="md-nav__link">
-      Development Tools
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="vm-config/" title="Configuration" class="md-nav__link">
-      Configuration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="job-logs/" title="Logs" class="md-nav__link">
-      Logs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="vm-monit/" title="Process Management (Linux)" class="md-nav__link">
-      Process Management (Linux)
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -2454,15 +2471,39 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="clouds/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="clouds/resources/" title="Resources" class="md-nav__link">
+      Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
-    <label class="md-nav__link" for="nav-6-1">
+    <label class="md-nav__link" for="nav-6-3">
       Providers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-1">
+      <label class="md-nav__title" for="nav-6-3">
         Providers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2475,13 +2516,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1" type="checkbox" id="nav-6-1-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-1" type="checkbox" id="nav-6-3-1">
     
-    <label class="md-nav__link" for="nav-6-1-1">
+    <label class="md-nav__link" for="nav-6-3-1">
       Amazon Web Services
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-1">
+      <label class="md-nav__title" for="nav-6-3-1">
         Amazon Web Services
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2518,14 +2559,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-1-3" type="checkbox" id="nav-6-1-1-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-1-3" type="checkbox" id="nav-6-3-1-3">
     
-    <label class="md-nav__link" for="nav-6-1-1-3">
-      Cloud Properties
+    <label class="md-nav__link" for="nav-6-3-1-3">
+      Resources
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-6-1-1-3">
-        Cloud Properties
+      <label class="md-nav__title" for="nav-6-3-1-3">
+        Resources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -2536,7 +2577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clouds/aws/cloud-properties/azs/" title="Availability Zones" class="md-nav__link">
+    <a href="clouds/aws/resources/azs/" title="Availability Zones" class="md-nav__link">
       Availability Zones
     </a>
   </li>
@@ -2548,7 +2589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clouds/aws/cloud-properties/disks/" title="Persistent Disks" class="md-nav__link">
+    <a href="clouds/aws/resources/disks/" title="Persistent Disks" class="md-nav__link">
       Persistent Disks
     </a>
   </li>
@@ -2560,7 +2601,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clouds/aws/cloud-properties/networks/" title="Networks" class="md-nav__link">
+    <a href="clouds/aws/resources/networks/" title="Networks" class="md-nav__link">
       Networks
     </a>
   </li>
@@ -2572,7 +2613,7 @@
 
 
   <li class="md-nav__item">
-    <a href="clouds/aws/cloud-properties/vms/" title="Virtual Machines" class="md-nav__link">
+    <a href="clouds/aws/resources/vms/" title="Virtual Machines" class="md-nav__link">
       Virtual Machines
     </a>
   </li>
@@ -2637,6 +2678,18 @@
 
 
   <li class="md-nav__item">
+    <a href="init-aws/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="clouds/aws/common-errors/" title="Common Errors" class="md-nav__link">
       Common Errors
     </a>
@@ -2655,13 +2708,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-2" type="checkbox" id="nav-6-1-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-2" type="checkbox" id="nav-6-3-2">
     
-    <label class="md-nav__link" for="nav-6-1-2">
+    <label class="md-nav__link" for="nav-6-3-2">
       Google Cloud Platform
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-2">
+      <label class="md-nav__title" for="nav-6-3-2">
         Google Cloud Platform
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2691,6 +2744,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-google/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2703,13 +2768,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-3" type="checkbox" id="nav-6-1-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-3" type="checkbox" id="nav-6-3-3">
     
-    <label class="md-nav__link" for="nav-6-1-3">
+    <label class="md-nav__link" for="nav-6-3-3">
       Microsoft Azure
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-3">
+      <label class="md-nav__title" for="nav-6-3-3">
         Microsoft Azure
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2739,6 +2804,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-azure/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2751,13 +2828,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-4" type="checkbox" id="nav-6-1-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-4" type="checkbox" id="nav-6-3-4">
     
-    <label class="md-nav__link" for="nav-6-1-4">
+    <label class="md-nav__link" for="nav-6-3-4">
       OpenStack
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-4">
+      <label class="md-nav__title" for="nav-6-3-4">
         OpenStack
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2871,6 +2948,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-openstack/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2883,13 +2972,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-5" type="checkbox" id="nav-6-1-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-5" type="checkbox" id="nav-6-3-5">
     
-    <label class="md-nav__link" for="nav-6-1-5">
+    <label class="md-nav__link" for="nav-6-3-5">
       RackHD
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-5">
+      <label class="md-nav__title" for="nav-6-3-5">
         RackHD
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2919,13 +3008,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-6" type="checkbox" id="nav-6-1-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-6" type="checkbox" id="nav-6-3-6">
     
-    <label class="md-nav__link" for="nav-6-1-6">
+    <label class="md-nav__link" for="nav-6-3-6">
       SoftLayer
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-6">
+      <label class="md-nav__title" for="nav-6-3-6">
         SoftLayer
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2943,6 +3032,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-softlayer/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2955,13 +3056,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-7" type="checkbox" id="nav-6-1-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-7" type="checkbox" id="nav-6-3-7">
     
-    <label class="md-nav__link" for="nav-6-1-7">
+    <label class="md-nav__link" for="nav-6-3-7">
       VirtualBox
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-7">
+      <label class="md-nav__title" for="nav-6-3-7">
         VirtualBox
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2979,6 +3080,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bosh-lite/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2991,13 +3104,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-8" type="checkbox" id="nav-6-1-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-8" type="checkbox" id="nav-6-3-8">
     
-    <label class="md-nav__link" for="nav-6-1-8">
+    <label class="md-nav__link" for="nav-6-3-8">
       VMware vCloud
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-8">
+      <label class="md-nav__title" for="nav-6-3-8">
         VMware vCloud
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3015,6 +3128,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-vcloud/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3027,13 +3152,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-9" type="checkbox" id="nav-6-1-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-9" type="checkbox" id="nav-6-3-9">
     
-    <label class="md-nav__link" for="nav-6-1-9">
+    <label class="md-nav__link" for="nav-6-3-9">
       VMware vSphere
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-9">
+      <label class="md-nav__title" for="nav-6-3-9">
         VMware vSphere
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3111,6 +3236,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="init-vsphere/" title="Bootstrapping BOSH" class="md-nav__link">
+      Bootstrapping BOSH
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3123,13 +3260,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-10" type="checkbox" id="nav-6-1-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-10" type="checkbox" id="nav-6-3-10">
     
-    <label class="md-nav__link" for="nav-6-1-10">
+    <label class="md-nav__link" for="nav-6-3-10">
       Warden / Garden
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-1-10">
+      <label class="md-nav__title" for="nav-6-3-10">
         Warden / Garden
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3164,13 +3301,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
-    <label class="md-nav__link" for="nav-6-2">
+    <label class="md-nav__link" for="nav-6-4">
       Stemcells
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-2">
+      <label class="md-nav__title" for="nav-6-4">
         Stemcells
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3224,13 +3361,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
     
-    <label class="md-nav__link" for="nav-6-3">
+    <label class="md-nav__link" for="nav-6-5">
       Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-3">
+      <label class="md-nav__title" for="nav-6-5">
         Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3255,13 +3392,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-2" type="checkbox" id="nav-6-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-2" type="checkbox" id="nav-6-5-2">
     
-    <label class="md-nav__link" for="nav-6-3-2">
+    <label class="md-nav__link" for="nav-6-5-2">
       API Reference
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-3-2">
+      <label class="md-nav__title" for="nav-6-5-2">
         API Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3571,6 +3708,18 @@
 
 
   <li class="md-nav__item">
+    <a href="create-release/" title="Creating a Release" class="md-nav__link">
+      Creating a Release
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="deploying/" title="Deploying with BOSH" class="md-nav__link">
       Deploying with BOSH
     </a>
@@ -3622,19 +3771,17 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
-      Legacy
+      Appendix
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
-        Legacy
+        Appendix
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -3643,168 +3790,23 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Table of Contents
-      </label>
-    
-    <a href="." title="Table of Contents" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="old-index/" title="Table of Contents" class="md-nav__link">
       Table of Contents
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction " class="md-nav__link">
-    Introduction 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-bosh" title="Install BOSH " class="md-nav__link">
-    Install BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-software-with-bosh" title="Deploy software with BOSH " class="md-nav__link">
-    Deploy software with BOSH 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+  </li>
+
         
-          <li class="md-nav__item">
-  <a href="#cli-v2" title="CLI v2+ " class="md-nav__link">
-    CLI v2+ 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-director" title="Running Director " class="md-nav__link">
-    Running Director 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#misc" title="Misc" class="md-nav__link">
-    Misc
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#detailed-deployment-configuration" title="Detailed deployment configuration " class="md-nav__link">
-    Detailed deployment configuration 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#detailed-cpi-configuration-troubleshooting" title="Detailed CPI configuration &amp; troubleshooting " class="md-nav__link">
-    Detailed CPI configuration &amp; troubleshooting 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#health-management-of-vms-and-processes" title="Health management of VMs and processes " class="md-nav__link">
-    Health management of VMs and processes 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vm-configuration-looking-inside-a-deployment" title="VM configuration (looking inside a deployment) " class="md-nav__link">
-    VM configuration (looking inside a deployment) 
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guides" title="Guides " class="md-nav__link">
-    Guides 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#package-software-with-bosh" title="Package software with BOSH " class="md-nav__link">
-    Package software with BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extend-bosh" title="Extend BOSH " class="md-nav__link">
-    Extend BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other" title="Other " class="md-nav__link">
-    Other 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli-v1-superseded-by-cli-v2" title="CLI v1 (superseded by CLI v2) " class="md-nav__link">
-    CLI v1 (superseded by CLI v2) 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manifest-v1" title="Manifest v1 " class="md-nav__link">
-    Manifest v1 
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="terminology/" title="Glossary of Terms" class="md-nav__link">
+      Glossary of Terms
+    </a>
   </li>
 
         
@@ -3899,13 +3901,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-9" type="checkbox" id="nav-8-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-10" type="checkbox" id="nav-8-10">
     
-    <label class="md-nav__link" for="nav-8-9">
+    <label class="md-nav__link" for="nav-8-10">
       Abandoned
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-9">
+      <label class="md-nav__title" for="nav-8-10">
         Abandoned
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3952,158 +3954,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction " class="md-nav__link">
-    Introduction 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-bosh" title="Install BOSH " class="md-nav__link">
-    Install BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-software-with-bosh" title="Deploy software with BOSH " class="md-nav__link">
-    Deploy software with BOSH 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli-v2" title="CLI v2+ " class="md-nav__link">
-    CLI v2+ 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-director" title="Running Director " class="md-nav__link">
-    Running Director 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#misc" title="Misc" class="md-nav__link">
-    Misc
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#detailed-deployment-configuration" title="Detailed deployment configuration " class="md-nav__link">
-    Detailed deployment configuration 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#detailed-cpi-configuration-troubleshooting" title="Detailed CPI configuration &amp; troubleshooting " class="md-nav__link">
-    Detailed CPI configuration &amp; troubleshooting 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#health-management-of-vms-and-processes" title="Health management of VMs and processes " class="md-nav__link">
-    Health management of VMs and processes 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vm-configuration-looking-inside-a-deployment" title="VM configuration (looking inside a deployment) " class="md-nav__link">
-    VM configuration (looking inside a deployment) 
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guides" title="Guides " class="md-nav__link">
-    Guides 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#package-software-with-bosh" title="Package software with BOSH " class="md-nav__link">
-    Package software with BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extend-bosh" title="Extend BOSH " class="md-nav__link">
-    Extend BOSH 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other" title="Other " class="md-nav__link">
-    Other 
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli-v1-superseded-by-cli-v2" title="CLI v1 (superseded by CLI v2) " class="md-nav__link">
-    CLI v1 (superseded by CLI v2) 
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manifest-v1" title="Manifest v1 " class="md-nav__link">
-    Manifest v1 
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -4112,267 +3962,41 @@
                   <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Table of Contents</h1>
+                  <h1>Experimental Docs</h1>
                 
-                <p>See <a href="recent/">Recent Additions and Updates</a>.</p>
-<h2 id="introduction">Introduction <a id="intro"></a><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+                <p>This is an experiment for some things around updating BOSH documentation. There are many possible changes, so to be able to try a few things, I've been keeping most of the existing content except in cases where I'd like to test a change in a small section.</p>
+<p>Some of the experiments and goals where feedback would be particularly appreciated...</p>
 <ul>
-<li><a href="about/">What is BOSH?</a><ul>
-<li><a href="problems/">What problems does BOSH solve?</a><ul>
-<li><a href="stemcell/">Stemcell</a></li>
-<li><a href="release/">Release</a></li>
-<li><a href="deployment/">Deployment</a></li>
+<li>Information navigation - with the goal of segmenting content with a balance between personas, larger concepts, readable/self-sufficient pages...<ul>
+<li>Old Sample - single table of contents on the docs <a href="http://bosh.io/docs/index">home page</a></li>
+<li>Proposed Sample</li>
+<li>the top, primary navigation represents those personas and larger topics</li>
+<li>the left, secondary navigation represents a content breakdown of topics within the section</li>
+<li>the right, page navigation is the table of contents from page headers</li>
 </ul>
 </li>
-<li>Comparison to other tools</li>
+<li>Breadth vs depth content - I'd like to see shorter, targeted pages rather than lengthy reference manual type pages<ul>
+<li>Old Sample - lengthy CPI reference for <a href="http://bosh.io/docs/aws-cpi.html">AWS CPI</a></li>
+<li>Old Sample - <a href="http://localhost:8000/aws-cpi/">new layout</a></li>
+<li>Proposed Sample - <a href="http://localhost:8000/clouds/aws/config/">configuration-specific page</a></li>
+<li>Proposed Sample - <a href="http://localhost:8000/clouds/aws/resources/azs/">resource-specific pages</a></li>
+<li>Proposed Sample - <a href="http://localhost:8000/clouds/aws/common-errors/">separate errors page</a></li>
 </ul>
 </li>
-<li><a href="bosh-components/">General architecture</a></li>
-<li><a href="terminology/">Terminology</a></li>
-</ul>
-<hr />
-<h2 id="install-bosh">Install BOSH <a id="install"></a><a class="headerlink" href="#install-bosh" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="init/">Create an environment</a><ul>
-<li><a href="bosh-lite/">On Local machine (BOSH Lite)</a></li>
-<li><a href="init-aws/">On AWS</a></li>
-<li><a href="init-external-ip/">Expose Director on a Public IP</a></li>
-<li><a href="init-azure/">On Azure</a></li>
-<li><a href="init-openstack/">On OpenStack</a></li>
-<li><a href="init-vsphere/">On vSphere</a></li>
-<li><a href="init-vcloud/">On vCloud</a></li>
-<li><a href="init-softlayer/">On SoftLayer</a></li>
-<li><a href="init-google/">On Google Compute Platform</a></li>
-<li><a href="rackhd-cpi/">On RackHD</a></li>
+<li>Property schemas - we have many pages which try to document properties or manifest configuration which are in lengthy bullet point lists. I'd like an easier to read, more linkable solution.<ul>
+<li>Old Sample - lengthy CPI reference for <a href="http://bosh.io/docs/aws-cpi.html">AWS CPI</a></li>
+<li>Old Sample - <a href="http://localhost:8000/aws-cpi/">new layout</a></li>
+<li>New Sample - listed, but new-line descriptions <a href="http://localhost:8000/clouds/aws/resources/vms/">link</a></li>
+<li>New Sample - header-based <a href="http://localhost:8000/clouds/aws/resources/disks/">link</a></li>
+<li>New Sample - more verbose, header-based <a href="http://localhost:8000/deployments/manifest/releases/">link</a></li>
 </ul>
 </li>
-</ul>
-<hr />
-<h2 id="deploy-software-with-bosh">Deploy software with BOSH <a id="basic-deploy"></a><a class="headerlink" href="#deploy-software-with-bosh" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="basic-workflow/">Deploy workflow</a><ul>
-<li><a href="update-cloud-config/">Update cloud config</a></li>
-<li><a href="deployment-basics/">Build deployment manifest</a></li>
-<li><a href="uploading-stemcells/">Upload stemcells</a></li>
-<li><a href="uploading-releases/">Upload releases</a></li>
-<li><a href="deploying/">Deploy</a></li>
-<li>Run one-off tasks</li>
-<li>Update deployment</li>
+<li>Content ordering - within topics, the goal is to present an overview of information, and provide the user a choice on going deeper into a topic, or moving on to a different, related topic.</li>
+<li>Guide vs Reference - guides are for showing people specific examples of how to apply a concept; reference is for describing and defining functionality. They should cross-reference each other. Guides should have annotations for "learn more about cloud-configs here" and references should have annotations for "try using multiple azs here"<ul>
+<li>There are a few existing guides, but need more</li>
+<li>BOSH 101 content should become guides here</li>
 </ul>
 </li>
-</ul>
-<h3 id="cli-v2">CLI v2+ <a id="cli-v2"></a><a class="headerlink" href="#cli-v2" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="cli-v2/">Command reference</a><ul>
-<li><a href="cli-env-deps/"><code class="codehilite">create-env</code> Dependencies</a></li>
-<li><a href="cli-v2-diff/">Differences between CLI v2+ vs v1</a></li>
-<li><a href="cli-global-flags/">Global Flags</a></li>
-<li><a href="cli-envs/">Environments</a></li>
-<li><a href="cli-ops-files/">Operations files</a></li>
-<li><a href="cli-int/">Variable Interpolation</a></li>
-<li><a href="cli-tunnel/">Tunneling</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="running-director">Running Director <a id="director-config"></a><a class="headerlink" href="#running-director" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="tips/">Troubleshooting</a></li>
-<li><a href="events/">Events</a></li>
-<li><a href="director-tasks/">Director tasks</a></li>
-<li><a href="managing-releases/">Managing releases</a></li>
-<li><a href="managing-stemcells/">Managing stemcells</a></li>
-<li><a href="director-users/">User management</a><ul>
-<li><a href="director-users-uaa/">UAA Integration</a></li>
-<li><a href="director-users-uaa-perms/">UAA Permissions</a></li>
-</ul>
-</li>
-<li>CredHub Integration<ul>
-<li><a href="variable-types/">Variable Types</a></li>
-</ul>
-</li>
-<li><a href="director-backup/">Backup and restore</a></li>
-</ul>
-<h4 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="deploying-step-by-step/">Deploying step-by-step</a></li>
-<li><a href="director-certs/">SSL certificate configuration</a></li>
-<li><a href="remove-dev-tools/">Removal of compilers</a></li>
-<li><a href="director-access-events/">Access event logging</a></li>
-<li><a href="flush-arp/">Explicit ARP Flushing</a></li>
-<li><a href="director-configure-db/">Configuring external database</a></li>
-<li><a href="director-configure-blobstore/">Configuring external blobstore</a></li>
-</ul>
-<h3 id="detailed-deployment-configuration">Detailed deployment configuration <a id="deployment-config"></a><a class="headerlink" href="#detailed-deployment-configuration" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="manifest-v2/">Manifest v2 schema</a><ul>
-<li><a href="links/">Links</a></li>
-<li><a href="links-properties/">Link properties</a></li>
-<li><a href="links-manual/">Manual linking</a></li>
-<li><a href="migrated-from/">Renaming/migrating instance groups</a></li>
-</ul>
-</li>
-<li><a href="persistent-disks/">Persistent and orphaned disks</a><ul>
-<li><a href="persistent-disk-fs/">Customizing persistent disk FS</a></li>
-</ul>
-</li>
-<li><a href="configs/">Configs</a></li>
-<li><a href="cloud-config/">Cloud config</a><ul>
-<li><a href="azs/">AZs</a></li>
-<li><a href="networks/">Networks</a></li>
-<li><a href="vm-anti-affinity/">VM anti-affinity</a></li>
-</ul>
-</li>
-<li><a href="runtime-config/">Runtime config</a><ul>
-<li><a href="runtime-config/#addons">Addons</a></li>
-<li><a href="addons-common/">Common addons</a></li>
-</ul>
-</li>
-<li><a href="cpi-config/">CPI config</a></li>
-<li><a href="trusted-certs/">Trusted certificates</a></li>
-<li><a href="dns/">Native DNS Support</a></li>
-</ul>
-<h3 id="detailed-cpi-configuration-troubleshooting">Detailed CPI configuration &amp; troubleshooting <a id="cpi-config"></a><a class="headerlink" href="#detailed-cpi-configuration-troubleshooting" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="aws-cpi/">AWS</a><ul>
-<li><a href="aws-iam-instance-profiles/">Using IAM instance profiles</a></li>
-<li><a href="aws-instance-storage/">Using instance storage</a></li>
-<li><a href="aws-iam-users/">Creating IAM users</a></li>
-</ul>
-</li>
-<li><a href="azure-cpi/">Azure</a><ul>
-<li><a href="azure-resources/">Creating resources</a></li>
-</ul>
-</li>
-<li><a href="openstack-cpi/">OpenStack</a><ul>
-<li><a href="openstack-auto-anti-affinity/">Using Auto-anti-affinity</a></li>
-<li><a href="openstack-keystonev2/">Using Keystone v2 API</a></li>
-<li><a href="openstack-nova-networking/">Using nova-networking</a></li>
-<li><a href="openstack-registry/">Extended Registry configuration</a></li>
-<li><a href="openstack-human-readable-vm-names/">Human-readable VM names</a></li>
-<li><a href="openstack-self-signed-endpoints/">Validating self-signed OpenStack endpoints</a></li>
-<li><a href="openstack-multiple-networks/">Multi-homed VMs</a></li>
-<li><a href="openstack-light-stemcells/">Using Light Stemcells</a></li>
-</ul>
-</li>
-<li><a href="vsphere-cpi/">vSphere</a><ul>
-<li><a href="vsphere-ha/">vSphere HA</a></li>
-<li><a href="vsphere-migrate-datastores/">Migrating from one datastore to another</a></li>
-<li><a href="vsphere-vmotion-support/">Storage DRS and vMotion Support</a></li>
-</ul>
-</li>
-<li><a href="vcloud-cpi/">vCloud</a></li>
-<li><a href="softlayer-cpi/">SoftLayer</a></li>
-<li><a href="google-cpi/">Google Compute Engine</a><ul>
-<li><a href="google-required-permissions/">Required service account permissions</a></li>
-</ul>
-</li>
-<li><a href="rackhd-cpi/">RackHD</a></li>
-<li><a href="warden-cpi/">Warden/Garden</a></li>
-<li><a href="virtualbox-cpi/">VirtualBox</a></li>
-</ul>
-<h3 id="health-management-of-vms-and-processes">Health management of VMs and processes <a id="hm"></a><a class="headerlink" href="#health-management-of-vms-and-processes" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="monitoring/">Monitoring</a><ul>
-<li><a href="hm-config/">Configuring Health Monitor</a></li>
-</ul>
-</li>
-<li><a href="vm-monit/">Process monitoring with Monit</a></li>
-<li><a href="cck/">Manual repair with Cloud Check</a></li>
-<li><a href="resurrector/">Automatic repair with Resurrector</a></li>
-<li><a href="snapshots/">Persistent disk snapshotting</a></li>
-</ul>
-<h3 id="vm-configuration-looking-inside-a-deployment">VM configuration (looking inside a deployment) <a id="vm-config"></a><a class="headerlink" href="#vm-configuration-looking-inside-a-deployment" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="vm-struct/">Structure of a managed VM</a><ul>
-<li><a href="vm-config/">VM configuration locations</a></li>
-</ul>
-</li>
-<li><a href="job-logs/">Location and use of logs</a></li>
-<li><a href="instance-metadata/">Instance metadata</a></li>
-<li>Debugging issues with jobs</li>
-</ul>
-<hr />
-<h2 id="guides">Guides <a id="guides"></a><a class="headerlink" href="#guides" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="guide-ipv6-on-vsphere/">IPv6 on vSphere</a></li>
-<li>Multi-CPI</li>
-<li><a href="guide-multi-cpi-aws/">On AWS</a></li>
-</ul>
-<hr />
-<h2 id="package-software-with-bosh">Package software with BOSH <a id="release"></a><a class="headerlink" href="#package-software-with-bosh" title="Permanent link">&para;</a></h2>
-<ul>
-<li>What is a release?<ul>
-<li><a href="create-release/">Creating a release</a></li>
-<li>Testing with dev releases</li>
-<li>Cutting final releases</li>
-<li><a href="compiled-releases/">Compiled releases</a></li>
-</ul>
-</li>
-<li><a href="jobs/">What is a job?</a><ul>
-<li>Creating a job<ul>
-<li><a href="job-templates/">Job Templates</a></li>
-</ul>
-</li>
-<li><a href="errands/">Errands</a></li>
-<li><a href="props-common/">Properties: Suggested configurations</a></li>
-<li><a href="links-common-types/">Links: Common types</a></li>
-<li><a href="job-lifecycle/">Job lifecycle</a><ul>
-<li><a href="pre-start/">Pre-start script</a></li>
-<li><a href="post-start/">Post-start script</a></li>
-<li><a href="post-deploy/">Post-deploy script</a></li>
-<li><a href="drain/">Drain script</a></li>
-</ul>
-</li>
-<li><a href="scheduled-procs/">Scheduled processes</a></li>
-</ul>
-</li>
-<li><a href="windows/">Releases and Jobs in Windows</a><ul>
-<li><a href="windows/#releases">Releases</a></li>
-<li><a href="windows/#jobs">Jobs</a></li>
-<li><a href="windows-sample-release/">Sample BOSH Windows Release</a></li>
-</ul>
-</li>
-<li>What is a package?<ul>
-<li><a href="packages/">Creating a package</a></li>
-<li>Relationship to release blobs</li>
-<li><a href="package-vendoring/">Vendoring packages</a></li>
-<li><a href="release-blobs/">Release blobs</a></li>
-</ul>
-</li>
-<li>How do releases, jobs, and packages interact?</li>
-<li>Managing release repository<ul>
-<li><a href="release-blobstore/">Release blobstore</a><ul>
-<li><a href="s3-release-blobstore/">Configuring S3 release blobstore</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="extend-bosh">Extend BOSH <a id="extend"></a><a class="headerlink" href="#extend-bosh" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="director-api-v1/">Director API v1</a></li>
-<li>What is a CPI?</li>
-<li><a href="build-cpi/">Building a CPI</a><ul>
-<li><a href="cpi-api-v1/">CPI API v1</a></li>
-<li><a href="./agent-cpi-interactions.html">Agent-CPI interactions</a></li>
-</ul>
-</li>
-<li><a href="build-stemcell/">Building a stemcell</a><ul>
-<li><a href="repack-stemcell/">Repacking Stemcells</a></li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="other">Other <a id="other"></a><a class="headerlink" href="#other" title="Permanent link">&para;</a></h2>
-<h3 id="cli-v1-superseded-by-cli-v2">CLI v1 (superseded by <a href="#cli-v2">CLI v2</a>) <a id="cli-v1"></a><a class="headerlink" href="#cli-v1-superseded-by-cli-v2" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="bosh-cli/">Install BOSH CLI v1</a></li>
-<li><a href="sysadmin-commands/">CLI v1</a></li>
-</ul>
-<h3 id="manifest-v1">Manifest v1 <a id="manifest-v1"></a><a class="headerlink" href="#manifest-v1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="deployment-manifest/">Manifest v1 schema</a></li>
 </ul>
                 
                   
@@ -4394,28 +4018,14 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="guide-ipv6-pure-on-vsphere/" title="Pure IPv6 on vSphere" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Pure IPv6 on vSphere
-              </span>
-            </div>
-          </a>
         
-        
-          <a href="bosh-cli/" title="CLI (Ruby)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="getting-started/" title="Welcome" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CLI (Ruby)
+                Welcome
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
