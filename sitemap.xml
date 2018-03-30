@@ -5,31 +5,41 @@
         
     <url>
      <loc>/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/getting-started/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <loc>/overview/</loc>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/getting-started/what-is-bosh/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <loc>/goals/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/projects/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/todo/</loc>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/bosh-components/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bosh-lite/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -38,160 +48,6 @@
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/cli/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli/installation/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-v2/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-global-flags/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-env-deps/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-envs/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-tunnel/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/cli-v2-diff/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/deployment/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/deployment-basics/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/deploying-step-by-step/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/release/authoring/overview/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/release-blobs/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/windows-sample-release/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/compiled-releases/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
         
     <url>
      <loc></loc>
@@ -225,7 +81,7 @@
         
     <url>
      <loc>/cpi-config/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -237,7 +93,127 @@
         
     <url>
      <loc>/configs/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/cli/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli/installation/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli-v2/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli-global-flags/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli-envs/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli-tunnel/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/cli-v2-diff/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/deployment/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/deployment-basics/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/deploying-step-by-step/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/release/overview/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/managing-releases/</loc>
+     <lastmod>2018-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -247,13 +223,13 @@
         
     <url>
      <loc>/clouds/overview/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clouds/resources/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -272,40 +248,6 @@
     <url>
      <loc></loc>
      <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/bpm/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bpm/config/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bpm/runtime/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bpm/transitioning/</loc>
-     <lastmod>2018-03-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/bpm/undefined/</loc>
-     <lastmod>2018-03-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -315,31 +257,31 @@
         
     <url>
      <loc>/create-release/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/deploying/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide-multi-cpi-aws/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide-ipv6-on-vsphere/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/guide-ipv6-pure-on-vsphere/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -349,55 +291,55 @@
         
     <url>
      <loc>/old-index/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/terminology/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/bosh-cli/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/deployment-manifest/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/director-backup/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/director-certs-openssl/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/director-users/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/sysadmin-commands/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/sample-manifest/</loc>
-     <lastmod>2018-03-29</lastmod>
+     <lastmod>2018-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
