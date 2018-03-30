@@ -155,9 +155,9 @@ pages:
   - Configuration:
     - Settings: release/authoring/config/settings.md
     - Blobstore:
-      - Amazon S3: release/authoring/config/s3-blobstore.md
-        # - Usage: release-blobstore.md #s3-config
-        # - Environment Setup: s3-release-blobstore.md
+      - Amazon S3:
+        - Usage: release/authoring/config/s3-blobstore.md #s3-config
+        - IAM Setup: release/authoring/config/s3-iam-configuration.md
       - Google Cloud Storage: release-blobstore.md #gcs-config
       - Local Filesystem: release-blobstore.md #local-config
   - Blobs: release-blobs.md
@@ -325,7 +325,7 @@ pages:
       - snapshot_disk: cpi-api-v1.md # snapshot_disk
     - Agent Interactions: agent-cpi-interactions.md
 - BPM:
-  - Overview: bpm/index.md
+  - Overview: bpm/bpm.md
   - Configuration: bpm/config.md
   - Runtime Environment: bpm/runtime.md
   - Transitioning to BPM: bpm/transitioning.md
