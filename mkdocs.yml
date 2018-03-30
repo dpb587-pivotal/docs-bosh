@@ -4,6 +4,7 @@ repo_url: 'https://github.com/cloudfoundry/docs-bosh'
 edit_uri: edit/master/
 pages:
 - Overview:
+  - Experimental Docs: index.md
   - Welcome: getting-started/index.md
   - What is BOSH?: getting-started/what-is-bosh.md
   - Components of BOSH: bosh-components.md
@@ -130,7 +131,8 @@ pages:
   - Manifest:
     - Overview: manifest-v2.md
     - Releases: deployments/manifest/releases.md # uploading-releases.md #using
-    - Instance Groups:
+    - Instance Groups: deployments/manifest/instance-groups.md # uploading-releases.md #using
+    - Instance Groups (old):
       - Migrating to AZs: migrated-from.md
       - Manual Links: links-manual.md
       - Anti-affinity: vm-anti-affinity.md
@@ -150,13 +152,15 @@ pages:
       - Process Management (Linux): vm-monit.md
 - Release Authors:
   - Overview: release/authoring/overview.md
+  - Configuration:
+    - Settings: release/authoring/config/settings.md
+    - Blobstore:
+      - Amazon S3: release/authoring/config/s3-blobstore.md
+        # - Usage: release-blobstore.md #s3-config
+        # - Environment Setup: s3-release-blobstore.md
+      - Google Cloud Storage: release-blobstore.md #gcs-config
+      - Local Filesystem: release-blobstore.md #local-config
   - Blobs: release-blobs.md
-  - Blobstore:
-    - Amazon S3:
-      - Usage: release-blobstore.md #s3-config
-      - Environment Setup: s3-release-blobstore.md
-    - Google Cloud Storage: release-blobstore.md #gcs-config
-    - Local Filesystem: release-blobstore.md #local-config
   - Jobs:
     - Spec File: jobs.md #spec
     - Properties:
@@ -320,6 +324,12 @@ pages:
       - set_vm_metadata: cpi-api-v1.md # set_vm_metadata
       - snapshot_disk: cpi-api-v1.md # snapshot_disk
     - Agent Interactions: agent-cpi-interactions.md
+- BPM:
+  - Overview: bpm/index.md
+  - Configuration: bpm/config.md
+  - Runtime Environment: bpm/runtime.md
+  - Transitioning to BPM: bpm/transitioning.md
+  - Undefined Things: bpm/undefined.md
 - Guides:
   - Creating a Release: create-release.md
   - Deploying with BOSH: deploying.md
@@ -327,7 +337,7 @@ pages:
   - IPv6 on vSphere: guide-ipv6-on-vsphere.md
   - Pure IPv6 on vSphere: guide-ipv6-pure-on-vsphere.md
 - Appendix:
-  - Table of Contents: index.md
+  - Table of Contents: old-index.md
   - Glossary of Terms: terminology.md
   - CLI (Ruby): bosh-cli.md
   - Deployment Manifests (pre-Cloud Config): deployment-manifest.md
