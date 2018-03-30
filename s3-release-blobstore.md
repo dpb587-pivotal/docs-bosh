@@ -70,22 +70,6 @@ blobstore:
 
 <p class="note"><strong>Note</strong>: When you first create a bucket, it might take a little while for Amazon to be able to route requests correctly to the bucket and so downloads may fail with an obscure "Broken Pipe" error. The solution is to wait for some time before trying.
 
-## Setting S3 region <a id="setting-region"></a>
-
-By default, Amazon S3 buckets resolve to the `us-east-1` (North Virginia) region. If your blobstore bucket resides in a different region, override the region and endpoint settings in `config/final.yml`. For example, a bucket in `eu-west-1` would be as follows:
-
-```yaml
----
-blobstore:
-  provider: s3
-  options:
-    bucket_name: <blobs_bucket_name>
-    region: eu-west-1
-    endpoint: https://s3-eu-west-1.amazonaws.com
-```
-
-A full list of S3 regions and endpoints is available [here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
-
 See [S3 CLI Usage](https://github.com/pivotal-golang/s3cli#usage) for additional configuration options.
 
 ## Usage <a id="usage"></a>

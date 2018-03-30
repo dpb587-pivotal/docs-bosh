@@ -17,7 +17,7 @@ The follow options may be used in the `blobstore` section of `options`.
 
 ### **`region`**
 
-The AWS Region name where the bucket is located. *Default `us-east-1`*.
+The [AWS Region](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) name where the bucket is located. *Default `us-east-1`*.
 
 
 ### **`credentials_source`**
@@ -43,7 +43,7 @@ The Secret Access Key to use in authentication.
 ## Examples
 
 
-### Using Hard-coded Credentials
+### Using Static Credentials
 
 **`config/final.yml`**:
 
@@ -51,7 +51,7 @@ The Secret Access Key to use in authentication.
 blobstore:
   provider: s3
   options:
-    bucket_name: <bucket_name>
+    bucket_name: acme-exemplar-release-us-east-1
 ```
 
 **`config/private.yml`**:
@@ -59,11 +59,23 @@ blobstore:
 ```yaml
 blobstore:
   options:
-    access_key_id: <access_key_id>
-    secret_access_key: <secret_access_key>
+    access_key_id: AKIAA1B2C3D4E5F6G7H8
+    secret_access_key: a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0
 ```
 
 
-### TODO hostname
+### Using a Non-Default Region
+
+**`config/final.yml`**:
+
+```yaml
+blobstore:
+  provider: s3
+  options:
+    bucket_name: acme-exemplar-release-eu-west-1
+    region: eu-west-1
+    host: s3-eu-west-1.amazonaws.com
+```
+
 
 See [Configuring S3 release blobstore](s3-release-blobstore.md) for details and [S3 CLI Usage](https://github.com/pivotal-golang/s3cli#usage) for additional configuration options.

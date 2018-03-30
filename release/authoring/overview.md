@@ -31,7 +31,7 @@ The directory structure of a release should look something like the following:
  * `LICENSE` - a license for the release
  * `README` - human-friendly readme about the release
 
-Traditionally, every release should be a git repository. This allows changes to be tracked over time and for releases to be maintained by a larger team. To learn more about how repository workflows relate to release management, see [Creating Final Releases](../../../todo.md).
+Traditionally, every release is a git repository. This allows changes to be tracked over time and for releases to be maintained by a larger team.
 
 !!! tip
     To automatically initialize a release and these files, use the [init-release](../../../todo.md) command.
@@ -39,3 +39,6 @@ Traditionally, every release should be a git repository. This allows changes to 
     ```shell
     $ bosh init-release --dir=exemplar-release
     ```
+
+!!! note
+    To learn more about how repository workflows relate to release management, see [Creating Final Releases](../../../todo.md).
