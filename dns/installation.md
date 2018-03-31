@@ -1,27 +1,6 @@
----
-title: Native DNS Support [beta]
----
+## DNS release
 
-
----
-
----
-
-## Types of DNS addresses <a id='dns-addresses'></a>
-
-There are two types of DNS addresses that native DNS supports:
-
-- instance specific queries that resolve to a single instance
-  - provided by `spec.address` or `link("...").instances[...].address` ERB accessors
-- group specific queries that resolve to multiple instances
-  - provided by `link("...").address` ERB accessor
-
-Since BOSH DNS is automatically managed, DNS addresses are not meant to be constructed manually by operators or scripts. To obtain a DNS address you can use upcoming Links API or job template accessors within your jobs.
-
----
-## DNS release <a id='dns-release'></a>
-
-To take advantage of native DNS functionality, it's expected that [DNS release](https://bosh.io/releases/github.com/cloudfoundry/bosh-dns-release?all=1) runs on each VM. We recommend to colocate DNS release by definiting it in an [addon](runtime-config.md#addons).
+To take advantage of native DNS functionality, it's expected that [DNS release](https://bosh.io/releases/github.com/cloudfoundry/bosh-dns-release?all=1) runs on each VM. We recommend to colocate DNS release by definiting it in an [addon](../runtime-config.md#addons).
 
 DNS release provides two jobs: `bosh-dns` (for Linux) and `bosh-dns-windows` (for Windows) which start a simple DNS server bound to a [link local address](https://bosh.io/jobs/bosh-dns?source=github.com/cloudfoundry/bosh-dns-release#p=address).
 
@@ -42,7 +21,7 @@ To enable caching, use `cache.enabled` property. Canonical DNS runtime config wi
 DNS release provides a way to delegate certain domains via [`handlers` property](https://bosh.io/jobs/bosh-dns?source=github.com/cloudfoundry/bosh-dns-release#p=handlers) to different DNS or HTTP servers. This functionality can be used as an alternative to configuring upstream DNS servers with custom zone configurations.
 
 ---
-## Enabling DNS <a id='enable'></a>
+## Enabling DNS
 
 To enable native BOSH functionality, you must first enable [`local_dns.enabled` property](https://bosh.io/jobs/director?source=github.com/cloudfoundry/bosh#p=director.local_dns.enabled) in the Director job. See [bosh-deployment's local-dns.yml](https://github.com/cloudfoundry/bosh-deployment/blob/master/local-dns.yml) as an example.
 
@@ -52,8 +31,8 @@ If you were relying on instance index based DNS records, you must enable [`local
 
 Additionally you should colocate DNS release via an addon in all your deployments. See [bosh-deployment's runtime-configs/dns.yml](https://github.com/cloudfoundry/bosh-deployment/blob/master/runtime-configs/dns.yml) as an example.
 
----
-## Impact on links <a id='links'></a>
+
+### Impact on links <a id='links'></a>
 
 Each link includes some networking information about its provider. Addresses returned by a link may be either IP addresses or DNS addresses.
 
@@ -63,7 +42,7 @@ You can control type of addresses returned at three different levels:
 
 - for the entire Director via Director job configuration [`director.local_dns.use_dns_addresses` property](https://bosh.io/jobs/director?source=github.com/cloudfoundry/bosh#p=director.local_dns.use_dns_addresses) that if enabled affects all deployments by default. We are planning to eventually change this configuration to true by default.
 
-- for a specific deployment via [`features.use_dns_addresses` deployment manifest property](manifest-v2.md#features) that if enabled affects links within this deployment
+- for a specific deployment via [`features.use_dns_addresses` deployment manifest property](../manifest-v2.md#features) that if enabled affects links within this deployment
 
 - for a specific link via its `ip_addresses` configuration
 
@@ -92,28 +71,17 @@ link("db").address => "q-s0.db.default.db.bosh"
 link("db").instances[0].address => "ef489dd9-48f6-45f0-b7af-7f3437919b17.db.default.db.bosh"
 ```
 
----
-## Impact on job's address (`spec.address`) <a id='job-address'></a>
+### Impact on job's address (`spec.address`) <a id='job-address'></a>
 
-Similar to how [links are affected](dns.md#links), `spec.address` will start returning DNS address once `use_dns_addresses` feature is enabled.
+Similar to how [links are affected](#links), `spec.address` will start returning DNS address once `use_dns_addresses` feature is enabled.
 
----
-## Migrating from PowerDNS <a id='migrate-powerdns'></a>
+### Types of DNS addresses <a id='dns-addresses'></a>
 
-Historically BOSH users did not have an easy highly available solution to enable DNS for their deployments. PowerDNS was a possible choice; however, it required more advanced configuration that we felt comfortable recommending to everyone. We are planning to deprecate and remove PowerDNS integration. To migrate from PowerDNS to native DNS:
+There are two types of DNS addresses that native DNS supports:
 
-1. continue deploying Director with `powerdns` job
-1. enable native DNS (follow [Enabling DNS](dns.md#enable) section above) with proper recursors configured
-1. redeploy all deployments and make sure that native DNS is in use
-1. redeploy Director without `powerdns` job
+- instance specific queries that resolve to a single instance
+  - provided by `spec.address` or `link("...").instances[...].address` ERB accessors
+- group specific queries that resolve to multiple instances
+  - provided by `link("...").address` ERB accessor
 
----
-## Migrating from Consul <a id='migrate-consul'></a>
-
-To ease migration from Consul DNS entries, DNS release provides [aliases feature](dns.md#aliases). It allows operators to define custom DNS entries that can map to BOSH generated DNS entries. To migrate off of Consul to native DNS:
-
-1. enable native DNS (follow [Enabling DNS](dns.md#enable) section above) with proper recursors configured
-1. continue deploying `consul_agent` job
-1. define native DNS aliases that match existing Consul DNS entries
-1. redeploy all deployments that use Consul
-1. redeploy all deployments without `consul_agent` job
+Since BOSH DNS is automatically managed, DNS addresses are not meant to be constructed manually by operators or scripts. To obtain a DNS address you can use upcoming Links API or job template accessors within your jobs.

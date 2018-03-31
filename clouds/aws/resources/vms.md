@@ -5,7 +5,7 @@
 * **`availability_zone`** &mdash; string  
   Availability zone to use for creating instances. Example: `us-east-1a`.
 * `security_groups` &mdash; []string  
-  See description under [networks](#networks). Available in v46+.
+  See description under [networks.md](#networks). Available in v46+.
 * `key_name` &mdash; string  
   Key pair name. Defaults to key pair name specified by `default_key_name` in global CPI settings. Example: `bosh`.
 * `spot_bid_price` &mdash; float  
@@ -17,13 +17,13 @@
 * `lb_target_groups` &mdash; []string  
   Array of Load Balancer Target Groups to which created VMs should be attached. Example: `[prod-group1, prod-group2]`. Default is `[]`. Available in v63 or newer.
 * `iam_instance_profile` &mdash; string  
-  Name of an [IAM instance profile](aws-iam-instance-profiles.md). Example: `director`.
+  Name of an [IAM instance profile](../../../aws-iam-instance-profiles.md). Example: `director`.
 * `placement_group` &mdash; string  
   Name of a [placement group](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html). Example: `my-group`.
 * `tenancy` &mdash; string  
   VM [tenancy](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/dedicated-instance.html) configuration. Example: `dedicated`. Default is `default`.
 * `auto_assign_public_ip` &mdash; boolean  
-  Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an [Elastic IP](networks.md#vip) instead for a persistent address. Defaults to `false`. Available in v55+.
+  Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an [Elastic IP](../../../networks.md#vip) instead for a persistent address. Defaults to `false`. Available in v55+.
 * `advertised_routes` &mdash; []string  
   Creates routes in an [AWS Route Table](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) with the created BOSH VM as the target. Requires IAM action `ec2:CreateRoute`, `ec2:DescribeRouteTables`, `ec2:ReplaceRoute`.
    * **`table_id`** &mdash; string  
@@ -31,7 +31,7 @@
    * **`destination`** &mdash; string  
      Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.
 * `raw_instance_storage` &mdash; boolean  
-  Exposes all available [instance storage via labeled disks](aws-instance-storage.md). Defaults to `false`.
+  Exposes all available [instance storage via labeled disks](../../../aws-instance-storage.md). Defaults to `false`.
 * `source_dest_check` &mdash; boolean  
   Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to `false`, the instance does *not* need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to `true`. Requires IAM action `ec2:ModifyInstanceAttribute`. Available in v59+.
 * `ephemeral_disk`  

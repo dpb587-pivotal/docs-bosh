@@ -16,9 +16,9 @@ If you are interested in using this release...
 Development for this release occurs on GitHub in [cloudfoundry-incubator/bosh-aws-cpi-release](https://github.com/cloudfoundry-incubator/bosh-aws-cpi-release).
 
 
-## Support
+## Help and Support
 
-If you are having issues, please create a [GitHub issue](https://github.com/cloudfoundry-incubator/bosh-aws-cpi-release/issues) or ask for help in the [`#bosh`](https://cloudfoundry.slack.com/messages/C02HPPYQ2/) channel of [Cloud Foundry slack](todo.md).
+If you are having issues, please create a [GitHub issue](https://github.com/cloudfoundry-incubator/bosh-aws-cpi-release/issues) or ask for help in the [`#bosh`](https://cloudfoundry.slack.com/messages/C02HPPYQ2/) channel of [Cloud Foundry slack](../../todo.md).
 
 
 ## Terminology
@@ -31,3 +31,15 @@ If you are more familiar with AWS, the following table maps AWS resources to BOS
 | Disk Snapshot    | [EC2 EBS Snapshot](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html) |
 | Stemcell         | [EC2 AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)                  |
 | Virtual Machine  | [EC2 Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html)        |
+
+
+## Feature Support
+
+The following describes the scope of support for some specialized features within BOSH:
+
+| Feature           | Support                                                                                      |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| Manual Networks   | Single IP per instance                                                                       |
+| Dynamic Networks  | Single IP per instance                                                                       |
+| VIP Networks      | Single IP per instance                                                                       |
+| Computed VM Sizes | Since [v56](https://github.com/cloudfoundry-incubator/bosh-aws-cpi-release/releases/tag/v56) |

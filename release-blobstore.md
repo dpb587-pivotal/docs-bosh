@@ -37,7 +37,7 @@ blobstore:
     secret_access_key: <secret_access_key>
 ```
 
-See [Configuring S3 release blobstore](s3-release-blobstore.md) for details and [S3 CLI Usage](https://github.com/pivotal-golang/s3cli#usage) for additional configuration options.
+See [Configuring S3 release blobstore](release/authoring/config/s3-blobstore.md) for details and [S3 CLI Usage](https://github.com/pivotal-golang/s3cli#usage) for additional configuration options.
 
 ## GCS Configuration <a id="gcs-config"></a>
 
