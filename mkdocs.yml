@@ -3,38 +3,86 @@ repo_name: 'cloudfoundry/docs-bosh'
 repo_url: 'https://github.com/cloudfoundry/docs-bosh'
 edit_uri: edit/master/
 pages:
-- Overview:
+- Welcome:
   - Experimental Docs: index.md
-  - Welcome: getting-started/index.md
-  - What is BOSH?: getting-started/what-is-bosh.md
-  - Components of BOSH: bosh-components.md
-  - Try it out: bosh-lite.md
+  - Overview: overview.md
+  - Goals: goals.md
+  - Projects: projects.md
+
   # - Architecture: about.md
   # - Goals: problems.md
   # - Components: bosh-components.md
   # - Basic Workflow: basic-workflow.md
 #  - Roles: todo.md
-  - Bootstrapping BOSH:
+- Director:
+  - Overview: todo.md
+  - Architecture: bosh-components.md
+  - Installation:
     - Overview: init.md
-    - Clouds:
-      - Amazon Web Services: init-aws.md
-      - Google Cloud Platform: init-google.md
-      - Microsoft Azure: init-azure.md
-      - OpenStack: init-openstack.md
-      - SoftLayer: init-softlayer.md
-      - VirtualBox: bosh-lite.md
-      - VMware vCloud: init-vcloud.md
-      - VMware vSphere:
-        - Usage: init-vsphere.md
-        - Using a Resource Pool: init-vsphere-rp.md
-    - Jumpbox: jumpbox.md
-    - Using External IPs: init-external-ip.md
+    - Amazon Web Services: init-aws.md
+    - Google Cloud Platform: init-google.md
+    - Microsoft Azure: init-azure.md
+    - OpenStack: init-openstack.md
+    - SoftLayer: init-softlayer.md
+    - VirtualBox: bosh-lite.md
+    - VMware vCloud: init-vcloud.md
+    - VMware vSphere:
+      - Usage: init-vsphere.md
+      - Using a Resource Pool: init-vsphere-rp.md
+    - Optional Configurations:
+      - Jumpbox: jumpbox.md
+      - Using External IPs: init-external-ip.md
+  - Components:
+    - API Server:
+      - API: director-api-v1.md
+      - Certificates: director-certs.md
+    - DNS:
+      - Overview: dns/overview.md
+      - Architecture: dns/architecture.md
+      - Installation: dns/installation.md
+      - Extensions:
+        - Aliases: dns/extensions/aliases.md
+        - Handlers: dns/extensions/handlers.md
+      - Migrating from:
+        - PowerDNS: dns/migrating/powerdns.md
+        - Consul: dns/migrating/consul.md
+    - Health Monitor:
+      - Overview: hm-config.md
+      - Resurrector: resurrector.md
+    - Blobstore: director-configure-blobstore.md
+      # - Amazon S3: director-configure-blobstore.md #default
+      # - Google Cloud Storage: director-configure-blobstore.md #gcs
+      # - WebDAV: director-configure-blobstore.md #included
+#    - Config Server: todo.md
+    - Database:
+      - Built-in (PostgreSQL): director-configure-db.md #included
+      - PostgreSQL: director-configure-db.md #external
+      - MySQL: director-configure-db.md #external
+  - Access Control:
+    - Cloud Foundry UAA: director-users-uaa.md
+    - Teams: director-users-uaa-perms.md
+  - Features:
+    - Explicit ARP Flushing: flush-arp.md
+    - Trusted Certificates: trusted-certs.md
+  - Operations:
+    - Tasks: director-tasks.md
+    - Events: director-access-events.md
+    - Monitoring: monitoring.md
+  - Cloud Config:
+    - Usage: cloud-config.md
+    - Availability Zones: azs.md
+    - Networks: networks.md
+  - CPI Config: cpi-config.md
+  - Runtime Configuration:
+    - Usage: runtime-config.md
+    - Common Addons: addons-common.md
+  - Generic Configs: configs.md
 - CLI:
   - Overview: cli/index.md
   - Installation: cli/installation.md
   - Legacy: cli-v2.md
   - Global Flags: cli-global-flags.md
-  - Dependencies: cli-env-deps.md
+  # - Dependencies: cli-env-deps.md
   - Environments: cli-envs.md
   - Interpolation:
     - Variables: cli-int.md
@@ -124,10 +172,6 @@ pages:
   - Overview: deployment.md
   - Basics: deployment-basics.md
   - Deployment Steps: deploying-step-by-step.md
-  - Releases:
-    - Overview: release.md
-    - Managing: managing-releases.md
-    - Referencing Releases: release-urls.md
   - Manifest:
     - Overview: manifest-v2.md
     - Releases: deployments/manifest/releases.md # uploading-releases.md #using
@@ -150,84 +194,56 @@ pages:
       - Configuration: vm-config.md
       - Logs: job-logs.md
       - Process Management (Linux): vm-monit.md
-- Release Authors:
-  - Overview: release/authoring/overview.md
-  - Configuration:
-    - Settings: release/authoring/config/settings.md
-    - Blobstore:
-      - Amazon S3:
-        - Usage: release/authoring/config/s3-blobstore.md #s3-config
-        - IAM Setup: release/authoring/config/s3-iam-configuration.md
-      - Google Cloud Storage: release-blobstore.md #gcs-config
-      - Local Filesystem: release-blobstore.md #local-config
-  - Blobs: release-blobs.md
-  - Jobs:
-    - Spec File: jobs.md #spec
-    - Properties:
-      - Usage: jobs.md #properties
-      - Conventions: props-common.md
-    - Templates:
-      - Usage: job-templates.md
-      - Unit Testing: job-templates.md #testing
-    - Processes (Linux):
-      - Monit: jobs.md #monit
-      # - BPM: bpm.md # TODO
-    - Processes (Windows): windows.md #jobs
-    - Links:
-      - About: links.md
-      - Properties: links-properties.md
-      - Common Types: links-common-types.md
-    - Errands: errands.md
-    - Lifecycle Scripts:
-      - Overview: job-lifecycle.md
-      - drain: drain.md
-      - post-deploy: post-deploy.md
-      - post-start: post-start.md
-      - pre-start: pre-start.md
-    - Scheduled Processes: scheduled-procs.md
-  - Packages:
-    - Overview: packages.md
-    - Spec File: packages.md #spec
-    - Vendoring Packages: package-vendoring.md
-  - Sample Windows Release: windows-sample-release.md
-  - Compiled Releases: compiled-releases.md
-- Director:
-  - Components:
-    - API Server:
-      - API: director-api-v1.md
-      - Certificates: director-certs.md
-    - DNS Server: dns.md
-    - Health Monitor:
-      - Overview: hm-config.md
-      - Resurrector: resurrector.md
-    - Blobstore: director-configure-blobstore.md
-      # - Amazon S3: director-configure-blobstore.md #default
-      # - Google Cloud Storage: director-configure-blobstore.md #gcs
-      # - WebDAV: director-configure-blobstore.md #included
-#    - Config Server: todo.md
-    - Database:
-      - Built-in (PostgreSQL): director-configure-db.md #included
-      - PostgreSQL: director-configure-db.md #external
-      - MySQL: director-configure-db.md #external
-  - Access Control:
-    - Cloud Foundry UAA: director-users-uaa.md
-    - Teams: director-users-uaa-perms.md
-  - Features:
-    - Explicit ARP Flushing: flush-arp.md
-    - Trusted Certificates: trusted-certs.md
-  - Operations:
-    - Tasks: director-tasks.md
-    - Events: director-access-events.md
-    - Monitoring: monitoring.md
-  - Cloud Config:
-    - Usage: cloud-config.md
-    - Availability Zones: azs.md
-    - Networks: networks.md
-  - CPI Config: cpi-config.md
-  - Runtime Configuration:
-    - Usage: runtime-config.md
-    - Common Addons: addons-common.md
-  - Generic Configs: configs.md
+- Releases:
+  - Overview: release/overview.md
+  - Managing: managing-releases.md
+  - Authoring:
+    - Overview: release/authoring/overview.md
+    - Configuration:
+      - Settings: release/authoring/config/settings.md
+      - Blobstore:
+        - Amazon S3:
+          - Usage: release/authoring/config/s3-blobstore.md #s3-config
+          - IAM Setup: release/authoring/config/s3-iam-configuration.md
+        - Google Cloud Storage: release/authoring/config/gcs-blobstore.md #gcs-config
+        - Local Filesystem: release-blobstore.md #local-config
+    - Blobs: release-blobs.md
+    - Jobs:
+      - Spec File: release/authoring/jobs/spec.md #spec
+      - Properties:
+        - Usage: jobs.md #properties
+        - Conventions: props-common.md
+      - Templates:
+        - Usage: release/authoring/jobs/templates/usage.md
+        - Unit Testing: job-templates.md #testing
+      - Processes (Linux):
+        - Monit: jobs.md #monit
+        # - BPM: bpm.md # TODO
+      - Processes (Windows): windows.md #jobs
+      - Links:
+        - About: links.md
+        - Properties: links-properties.md
+        - Common Types: links-common-types.md
+      - Errands: errands.md
+      - Lifecycle Scripts:
+        - Overview: job-lifecycle.md
+        - drain: drain.md
+        - post-deploy: post-deploy.md
+        - post-start: post-start.md
+        - pre-start: pre-start.md
+      - Scheduled Processes: scheduled-procs.md
+    - Packages:
+      - Overview: packages.md
+      - Spec File: packages.md #spec
+      - Vendoring Packages: package-vendoring.md
+    - Sample Windows Release: windows-sample-release.md
+    - Compiled Releases: compiled-releases.md
+  - BPM:
+    - Overview: bpm/bpm.md
+    - Configuration: bpm/config.md
+    - Runtime Environment: bpm/runtime.md
+    - Transitioning to BPM: bpm/transitioning.md
+    - Undefined Things: bpm/undefined.md
 - Clouds:
   - Overview: clouds/overview.md
   - Resources: clouds/resources.md
@@ -244,17 +260,14 @@ pages:
       - IAM Users: aws-iam-users.md
       - IAM Profiles: aws-iam-instance-profiles.md
       - Using Instance Storage: aws-instance-storage.md
-      - Bootstrapping BOSH: init-aws.md
       - Common Errors: clouds/aws/common-errors.md
     - Google Cloud Platform:
       - Usage: google-cpi.md
       - Required Permissions: google-required-permissions.md
-      - Bootstrapping BOSH: init-google.md
 #      - Troubleshooting: google-cpi.md #troubleshooting
     - Microsoft Azure:
       - Usage: azure-cpi.md
       - Creating Resources: azure-resources.md
-      - Bootstrapping BOSH: init-azure.md
 #      - Troubleshooting: azure-cpi.md #troubleshooting
     - OpenStack:
       - Usage: openstack-cpi.md
@@ -266,22 +279,14 @@ pages:
       - Multi-homed VMs: openstack-multiple-networks.md
       - Extended Registry configuration: openstack-registry.md
       - Self-signed Endpoints: openstack-self-signed-endpoints.md
-      - Bootstrapping BOSH: init-openstack.md
 #      - Troubleshooting: openstack-cpi.md #troubleshooting
-    - RackHD:
-      - Usage: rackhd-cpi.md
+    - RackHD: rackhd-cpi.md
 #      - Troubleshooting: rackhd-cpi.md #troubleshooting
-    - SoftLayer:
-      - Usage: softlayer-cpi.md
-      - Bootstrapping BOSH: init-softlayer.md
+    - SoftLayer: softlayer-cpi.md
 #      - Troubleshooting: softlayer-cpi.md #troubleshooting
-    - VirtualBox:
-      - Usage: virtualbox-cpi.md
-      - Bootstrapping BOSH: bosh-lite.md
+    - VirtualBox: virtualbox-cpi.md
 #      - Troubleshooting: virtualbox-cpi.md #troubleshooting
-    - VMware vCloud:
-      - Usage: vcloud-cpi.md
-      - Bootstrapping BOSH: init-vcloud.md
+    - VMware vCloud: vcloud-cpi.md
 #      - Troubleshooting: vcloud-cpi.md #troubleshooting
     - VMware vSphere:
       - Usage: vsphere-cpi.md
@@ -290,10 +295,8 @@ pages:
       - Migrating Datastores: vsphere-migrate-datastores.md
       - Recovery from a vSphere Network Partitioning Fault: vsphere-network-partition.md
       - Storage DRS and vMotion Support: vsphere-vmotion-support.md
-      - Bootstrapping BOSH: init-vsphere.md
 #      - Troubleshooting: vsphere-cpi.md #troubleshooting
-    - Warden / Garden:
-      - Usage: warden-cpi.md
+    - Warden / Garden: warden-cpi.md
 #      - Troubleshooting: warden-cpi.md #troubleshooting
   - Stemcells:
     - Overview: stemcell.md
@@ -324,12 +327,6 @@ pages:
       - set_vm_metadata: cpi-api-v1.md # set_vm_metadata
       - snapshot_disk: cpi-api-v1.md # snapshot_disk
     - Agent Interactions: agent-cpi-interactions.md
-- BPM:
-  - Overview: bpm/bpm.md
-  - Configuration: bpm/config.md
-  - Runtime Environment: bpm/runtime.md
-  - Transitioning to BPM: bpm/transitioning.md
-  - Undefined Things: bpm/undefined.md
 - Guides:
   - Creating a Release: create-release.md
   - Deploying with BOSH: deploying.md
@@ -353,6 +350,10 @@ theme:
   name: 'material'
   feature:
     tabs: true
+  palette:
+    primary: blue
+    accent: blue
+  logo: images/logo.png
 markdown_extensions: # based on docs-cfcr
 - markdown.extensions.admonition
 - markdown.extensions.codehilite
