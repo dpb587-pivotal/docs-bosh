@@ -4,19 +4,13 @@
     
         
     <url>
-     <loc>/what-is-bosh/</loc>
+     <loc>/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/goals-of-bosh/</loc>
-     <lastmod>2018-04-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/existing-docs/bosh-components/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -102,8 +96,14 @@
     </url>
         
     <url>
-     <loc>/todo/</loc>
-     <lastmod>2018-04-03</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -112,13 +112,7 @@
     
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/todo/</loc>
+     <loc>/existing-docs/manifest-v2/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -132,18 +126,24 @@
     <url>
      <loc>/todo/</loc>
      <lastmod>2018-04-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc></loc>
-     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/existing-docs/director-api-v1/</loc>
      <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -246,19 +246,25 @@
     
         
     <url>
-     <loc>/community/releases/</loc>
+     <loc>/ecosystem/official-repositories/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/community/contributing/</loc>
+     <loc>/ecosystem/releases/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/community/additional-resources/</loc>
+     <loc>/ecosystem/contributing/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ecosystem/additional-resources/</loc>
      <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
