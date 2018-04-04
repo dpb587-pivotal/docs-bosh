@@ -1,0 +1,4896 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
+    
+    
+      
+        <title>CLI v2+</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#install" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Cloud Foundry BOSH" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Cloud Foundry BOSH
+              </span>
+              <span class="md-header-nav__topic">
+                Commands
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." title="About" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../cli-v2-install/" title="Installation" class="md-tabs__link">
+          Installation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../update-cloud-config/" title="Guides" class="md-tabs__link">
+          Guides
+        </a>
+      
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../terminology/" title="Reference" class="md-tabs__link">
+          Reference
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../stemcells/" title="Stemcells" class="md-tabs__link">
+          Stemcells
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../releases/" title="Releases" class="md-tabs__link">
+          Releases
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../images/logo.png" width="48" height="48">
+      
+    </span>
+    Cloud Foundry BOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../goals-of-bosh/" title="Project Goals" class="md-nav__link">
+      Project Goals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ecosystem/community/" title="Community" class="md-nav__link">
+      Community
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-v2-install/" title="Installing the CLI" class="md-nav__link">
+      Installing the CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick-start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-aws/" title="Amazon Web Services" class="md-nav__link">
+      Amazon Web Services
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-google/" title="Google Cloud Platform" class="md-nav__link">
+      Google Cloud Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-azure/" title="Microsoft Azure" class="md-nav__link">
+      Microsoft Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-openstack/" title="OpenStack" class="md-nav__link">
+      OpenStack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-softlayer/" title="SoftLayer" class="md-nav__link">
+      SoftLayer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bosh-lite/" title="VirtualBox" class="md-nav__link">
+      VirtualBox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-vcloud/" title="VMware vCloud" class="md-nav__link">
+      VMware vCloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-vsphere/" title="VMware vSphere" class="md-nav__link">
+      VMware vSphere
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Deploying Software
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Deploying Software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-1">
+      Core Concepts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-1">
+        Core Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../update-cloud-config/" title="Updating Cloud Config" class="md-nav__link">
+      Updating Cloud Config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deployment-basics/" title="Building a Manifest" class="md-nav__link">
+      Building a Manifest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uploading-stemcells/" title="Uploading Stemcells" class="md-nav__link">
+      Uploading Stemcells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uploading-releases/" title="Uploading Releases" class="md-nav__link">
+      Uploading Releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploying/" title="Deploying" class="md-nav__link">
+      Deploying
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Using Persistent Disks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        Using Persistent Disks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../persistent-disks/" title="Manually Attaching Disks" class="md-nav__link">
+      Manually Attaching Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../persistent-disks/" title="Orphan Disks" class="md-nav__link">
+      Orphan Disks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../snapshots/" title="Taking Snapshots" class="md-nav__link">
+      Taking Snapshots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../persistent-disk-fs/" title="Using XFS" class="md-nav__link">
+      Using XFS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-3" type="checkbox" id="nav-3-1-3">
+    
+    <label class="md-nav__link" for="nav-3-1-3">
+      Using Links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-3">
+        Using Links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../links/" title="Using Implicit Links" class="md-nav__link">
+      Using Implicit Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../links/" title="Sharing Links" class="md-nav__link">
+      Sharing Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../links-manual/" title="Manually Configuring Links" class="md-nav__link">
+      Manually Configuring Links
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../errands/" title="Running Errands" class="md-nav__link">
+      Running Errands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vm-anti-affinity/" title="VM Anti-Affinity" class="md-nav__link">
+      VM Anti-Affinity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-6" type="checkbox" id="nav-3-1-6">
+    
+    <label class="md-nav__link" for="nav-3-1-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../monitoring/" title="Monitoring" class="md-nav__link">
+      Monitoring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vm-monit/" title="Process Monitoring with Monit" class="md-nav__link">
+      Process Monitoring with Monit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cck/" title="IaaS Reconciliation" class="md-nav__link">
+      IaaS Reconciliation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-7" type="checkbox" id="nav-3-1-7">
+    
+    <label class="md-nav__link" for="nav-3-1-7">
+      Migrating
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-7">
+        Migrating
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../migrated-from/" title="To Availability Zones" class="md-nav__link">
+      To Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-v2-diff/" title="From the Ruby CLI" class="md-nav__link">
+      From the Ruby CLI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Packaging Software
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Packaging Software
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Core Concepts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        Core Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../create-release/" title="Creating a Release" class="md-nav__link">
+      Creating a Release
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      Using Links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        Using Links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../links-properties/" title="Sharing Properties" class="md-nav__link">
+      Sharing Properties
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      Configuring the Blobstore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        Configuring the Blobstore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-blobstore/" title="Release Blobstore" class="md-nav__link">
+      Release Blobstore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../s3-release-blobstore/" title="Using S3 & IAM Policies" class="md-nav__link">
+      Using S3 & IAM Policies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-blobs/" title="Working with Blobs" class="md-nav__link">
+      Working with Blobs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5">
+    
+    <label class="md-nav__link" for="nav-3-2-5">
+      Testing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../job-templates/" title="Unit Testing Job Templates" class="md-nav__link">
+      Unit Testing Job Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scheduled-procs/" title="Scheduled Processes" class="md-nav__link">
+      Scheduled Processes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compiled-releases/" title="Creating Compiled Releases" class="md-nav__link">
+      Creating Compiled Releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../errands/" title="Using Errands" class="md-nav__link">
+      Using Errands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-9" type="checkbox" id="nav-3-2-9">
+    
+    <label class="md-nav__link" for="nav-3-2-9">
+      Configuring Processes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-9">
+        Configuring Processes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../props-common/" title="Recommended Property Types" class="md-nav__link">
+      Recommended Property Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-10" type="checkbox" id="nav-3-2-10">
+    
+    <label class="md-nav__link" for="nav-3-2-10">
+      Packaging and Compiling
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-10">
+        Packaging and Compiling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../packages/" title="Creating Packages" class="md-nav__link">
+      Creating Packages
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../package-vendoring/" title="Reusing Packages" class="md-nav__link">
+      Reusing Packages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-11" type="checkbox" id="nav-3-2-11">
+    
+    <label class="md-nav__link" for="nav-3-2-11">
+      Windows Compatibility
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-11">
+        Windows Compatibility
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows-sample-release/" title="Sample Release" class="md-nav__link">
+      Sample Release
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Operating Director
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Operating Director
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-1" type="checkbox" id="nav-3-3-1">
+    
+    <label class="md-nav__link" for="nav-3-3-1">
+      Monitoring
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-1">
+        Monitoring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../events/" title="Auditing Events" class="md-nav__link">
+      Auditing Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-tasks/" title="Reviewing Tasks" class="md-nav__link">
+      Reviewing Tasks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-access-events/" title="Logging API Access" class="md-nav__link">
+      Logging API Access
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2">
+    
+    <label class="md-nav__link" for="nav-3-3-2">
+      Securing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-2">
+        Securing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-users/" title="Using Basic Users" class="md-nav__link">
+      Using Basic Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-2-2" type="checkbox" id="nav-3-3-2-2">
+    
+    <label class="md-nav__link" for="nav-3-3-2-2">
+      Integrating with UAA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-3-2-2">
+        Integrating with UAA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-users-uaa/" title="Configuring Director" class="md-nav__link">
+      Configuring Director
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-users-uaa-perms/" title="Using Teams" class="md-nav__link">
+      Using Teams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-certs/" title="Configuring SSL Certificates" class="md-nav__link">
+      Configuring SSL Certificates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3-3">
+      Configuring the Database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-3">
+        Configuring the Database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-configure-db/" title="Builtin PostgreSQL" class="md-nav__link">
+      Builtin PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-configure-db/" title="External MySQL" class="md-nav__link">
+      External MySQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-4" type="checkbox" id="nav-3-3-4">
+    
+    <label class="md-nav__link" for="nav-3-3-4">
+      Configuring the Blobstore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-4">
+        Configuring the Blobstore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-configure-blobstore/" title="Builtin DAV Server" class="md-nav__link">
+      Builtin DAV Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-configure-blobstore/" title="Amazon S3" class="md-nav__link">
+      Amazon S3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-configure-blobstore/" title="Google Cloud Storage" class="md-nav__link">
+      Google Cloud Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../managing-releases/" title="Managing Releases" class="md-nav__link">
+      Managing Releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../managing-stemcells/" title="Managing Stemcells" class="md-nav__link">
+      Managing Stemcells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resurrector/" title="Auto-healing Capabilities" class="md-nav__link">
+      Auto-healing Capabilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hm-config/" title="Using Health Monitor" class="md-nav__link">
+      Using Health Monitor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../addons-common/" title="Common Addons" class="md-nav__link">
+      Common Addons
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-10" type="checkbox" id="nav-3-3-10">
+    
+    <label class="md-nav__link" for="nav-3-3-10">
+      Integrating with CredHub
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-10">
+        Integrating with CredHub
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variable-types/" title="Variable Types" class="md-nav__link">
+      Variable Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-11" type="checkbox" id="nav-3-3-11">
+    
+    <label class="md-nav__link" for="nav-3-3-11">
+      Optional Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-11">
+        Optional Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flush-arp/" title="Explicit ARP Flushing" class="md-nav__link">
+      Explicit ARP Flushing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../remove-dev-tools/" title="Removing Dev Tools from VMs" class="md-nav__link">
+      Removing Dev Tools from VMs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trusted-certs/" title="Installing Certificates on VMs" class="md-nav__link">
+      Installing Certificates on VMs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tips/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Using the CLI
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Using the CLI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Commands
+      </label>
+    
+    <a href="./" title="Commands" class="md-nav__link md-nav__link--active">
+      Commands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install " class="md-nav__link">
+    Install 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes" title="Release Notes " class="md-nav__link">
+    Release Notes 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-flags" title="Global Flags " class="md-nav__link">
+    Global Flags 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands " class="md-nav__link">
+    Commands 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments " class="md-nav__link">
+    Environments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" title="Session " class="md-nav__link">
+    Session 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemcells" title="Stemcells " class="md-nav__link">
+    Stemcells 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-creation" title="Release creation " class="md-nav__link">
+    Release creation 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-blobs" title="Release blobs " class="md-nav__link">
+    Release blobs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" title="Releases " class="md-nav__link">
+    Releases 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configs" title="Configs " class="md-nav__link">
+    Configs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-config" title="Cloud config " class="md-nav__link">
+    Cloud config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-config" title="Runtime config " class="md-nav__link">
+    Runtime config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpi-config" title="CPI config " class="md-nav__link">
+    CPI config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="Deployments " class="md-nav__link">
+    Deployments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" title="VMs " class="md-nav__link">
+    VMs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disks" title="Disks " class="md-nav__link">
+    Disks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH " class="md-nav__link">
+    SSH 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errands" title="Errands " class="md-nav__link">
+    Errands 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" title="Tasks " class="md-nav__link">
+    Tasks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" title="Snapshots " class="md-nav__link">
+    Snapshots 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-recovery" title="Deployment recovery " class="md-nav__link">
+    Deployment recovery 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc " class="md-nav__link">
+    Misc 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-global-flags/" title="Global Flags" class="md-nav__link">
+      Global Flags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-envs/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-tunnel/" title="Tunneling" class="md-nav__link">
+      Tunneling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-5" type="checkbox" id="nav-3-4-5">
+    
+    <label class="md-nav__link" for="nav-3-4-5">
+      Composing YAML
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-4-5">
+        Composing YAML
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-int/" title="Interpolating Variables" class="md-nav__link">
+      Interpolating Variables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli-ops-files/" title="Creating Ops Files" class="md-nav__link">
+      Creating Ops Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Advanced Networking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Advanced Networking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      Multi-Cloud Support
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        Multi-Cloud Support
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpi-config/" title="Using CPI Config" class="md-nav__link">
+      Using CPI Config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide-multi-cpi-aws/" title="Using AWS" class="md-nav__link">
+      Using AWS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guide-ipv6-on-vsphere/" title="Using IPv6 on vSphere" class="md-nav__link">
+      Using IPv6 on vSphere
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Advanced Bootstrapping
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        Advanced Bootstrapping
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-external-ip/" title="Using a Public IP" class="md-nav__link">
+      Using a Public IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jumpbox/" title="Enabling SSH Access" class="md-nav__link">
+      Enabling SSH Access
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bosh-cli/guide/recovering-env-state/" title="Recovering a State File" class="md-nav__link">
+      Recovering a State File
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      In-depth Topics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        In-depth Topics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dns/" title="Native DNS Support" class="md-nav__link">
+      Native DNS Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bosh-components/" title="Components of BOSH" class="md-nav__link">
+      Components of BOSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploying-step-by-step/" title="Deploying Step by Step" class="md-nav__link">
+      Deploying Step by Step
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../agent-cpi-interactions/" title="Agent Interactions" class="md-nav__link">
+      Agent Interactions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7-5" type="checkbox" id="nav-3-7-5">
+    
+    <label class="md-nav__link" for="nav-3-7-5">
+      Virtual Machines
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-7-5">
+        Virtual Machines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vm-struct/" title="Structure of a VM" class="md-nav__link">
+      Structure of a VM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vm-config/" title="Configuration Locations" class="md-nav__link">
+      Configuration Locations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../job-logs/" title="Using Logs" class="md-nav__link">
+      Using Logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../instance-metadata/" title="Instance Metadata" class="md-nav__link">
+      Instance Metadata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build-cpi/" title="Building a CPI" class="md-nav__link">
+      Building a CPI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build-stemcell/" title="Building a Stemcell" class="md-nav__link">
+      Building a Stemcell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../repack-stemcell/" title="Repacking Stemcells" class="md-nav__link">
+      Repacking Stemcells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../personas/" title="Target Personas" class="md-nav__link">
+      Target Personas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terminology/" title="Terminology" class="md-nav__link">
+      Terminology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      Ubuntu Trusty Stemcell
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        Ubuntu Trusty Stemcell
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bosh-linux-stemcell-builder/release-notes/3541.x/" title="3541.x" class="md-nav__link">
+      3541.x
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manifest-v2/" title="Deployment Config" class="md-nav__link">
+      Deployment Config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Director Cloud Config
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Director Cloud Config
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-config/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azs/" title="Availability Zones" class="md-nav__link">
+      Availability Zones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../networks/" title="Networks" class="md-nav__link">
+      Networks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-api-v1/" title="Director HTTP API" class="md-nav__link">
+      Director HTTP API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Director Runtime Config
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        Director Runtime Config
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../runtime-config/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configs/" title="Generic Configs" class="md-nav__link">
+      Generic Configs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpi-api-v1/" title="Cloud Provider Interface" class="md-nav__link">
+      Cloud Provider Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-9" type="checkbox" id="nav-4-9">
+    
+    <label class="md-nav__link" for="nav-4-9">
+      Release Management
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-9">
+        Release Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-urls/" title="Release URLs" class="md-nav__link">
+      Release URLs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-9-3" type="checkbox" id="nav-4-9-3">
+    
+    <label class="md-nav__link" for="nav-4-9-3">
+      Jobs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-9-3">
+        Jobs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jobs/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../job-lifecycle/" title="Update Lifecycle" class="md-nav__link">
+      Update Lifecycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-9-3-3" type="checkbox" id="nav-4-9-3-3">
+    
+    <label class="md-nav__link" for="nav-4-9-3-3">
+      Lifecycle Hooks
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-9-3-3">
+        Lifecycle Hooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../drain/" title="Drain" class="md-nav__link">
+      Drain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pre-start/" title="Pre-start" class="md-nav__link">
+      Pre-start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../post-start/" title="Post-start" class="md-nav__link">
+      Post-start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../post-deploy/" title="Post-deploy" class="md-nav__link">
+      Post-deploy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-9-4" type="checkbox" id="nav-4-9-4">
+    
+    <label class="md-nav__link" for="nav-4-9-4">
+      Links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-9-4">
+        Links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../links-common-types/" title="Common Types" class="md-nav__link">
+      Common Types
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-10" type="checkbox" id="nav-4-10">
+    
+    <label class="md-nav__link" for="nav-4-10">
+      Amazon Web Services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-10">
+        Amazon Web Services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws-iam-users/" title="IAM Users" class="md-nav__link">
+      IAM Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws-iam-instance-profiles/" title="IAM Profiles" class="md-nav__link">
+      IAM Profiles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-nav__link">
+      Using Instance Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11" type="checkbox" id="nav-4-11">
+    
+    <label class="md-nav__link" for="nav-4-11">
+      Google Cloud Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-11">
+        Google Cloud Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-required-permissions/" title="Required Permissions" class="md-nav__link">
+      Required Permissions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
+    
+    <label class="md-nav__link" for="nav-4-12">
+      Microsoft Azure
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-12">
+        Microsoft Azure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure-resources/" title="Creating Resources" class="md-nav__link">
+      Creating Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13">
+    
+    <label class="md-nav__link" for="nav-4-13">
+      OpenStack
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-13">
+        OpenStack
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-auto-anti-affinity/" title="Using Auto-anti-affinity" class="md-nav__link">
+      Using Auto-anti-affinity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-human-readable-vm-names/" title="Using Human-readable VM names" class="md-nav__link">
+      Using Human-readable VM names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-keystonev2/" title="Using Keystone API v2" class="md-nav__link">
+      Using Keystone API v2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-light-stemcells/" title="Using Light Stemcells" class="md-nav__link">
+      Using Light Stemcells
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-nova-networking/" title="Using nova-networking" class="md-nav__link">
+      Using nova-networking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-multiple-networks/" title="Multi-homed VMs" class="md-nav__link">
+      Multi-homed VMs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-registry/" title="Extended Registry configuration" class="md-nav__link">
+      Extended Registry configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openstack-self-signed-endpoints/" title="Self-signed Endpoints" class="md-nav__link">
+      Self-signed Endpoints
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-14" type="checkbox" id="nav-4-14">
+    
+    <label class="md-nav__link" for="nav-4-14">
+      RackHD
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-14">
+        RackHD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rackhd-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      SoftLayer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
+        SoftLayer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../softlayer-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
+    
+    <label class="md-nav__link" for="nav-4-16">
+      VirtualBox
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-16">
+        VirtualBox
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../virtualbox-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-17" type="checkbox" id="nav-4-17">
+    
+    <label class="md-nav__link" for="nav-4-17">
+      VMware vCloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-17">
+        VMware vCloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vcloud-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-18" type="checkbox" id="nav-4-18">
+    
+    <label class="md-nav__link" for="nav-4-18">
+      VMware vSphere
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-18">
+        VMware vSphere
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-esxi-host-failure/" title="Recovery from an ESXi Host Failure" class="md-nav__link">
+      Recovery from an ESXi Host Failure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-ha/" title="vSphere High Availability" class="md-nav__link">
+      vSphere High Availability
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-migrate-datastores/" title="Migrating Datastores" class="md-nav__link">
+      Migrating Datastores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-network-partition/" title="Recovery from a vSphere Network Partitioning Fault" class="md-nav__link">
+      Recovery from a vSphere Network Partitioning Fault
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vsphere-vmotion-support/" title="Storage DRS and vMotion Support" class="md-nav__link">
+      Storage DRS and vMotion Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../init-vsphere-rp/" title="Bootstrapping with Resource Pools" class="md-nav__link">
+      Bootstrapping with Resource Pools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-19" type="checkbox" id="nav-4-19">
+    
+    <label class="md-nav__link" for="nav-4-19">
+      Warden
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-19">
+        Warden
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../warden-cpi/" title="Usage" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-20" type="checkbox" id="nav-4-20">
+    
+    <label class="md-nav__link" for="nav-4-20">
+      Legacy Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-20">
+        Legacy Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deployment/" title="What is a Deployment?" class="md-nav__link">
+      What is a Deployment?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stemcell/" title="What is a Stemcell?" class="md-nav__link">
+      What is a Stemcell?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic-workflow/" title="Basic Workflow" class="md-nav__link">
+      Basic Workflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deployment-manifest/" title="Deployment Manifest v1" class="md-nav__link">
+      Deployment Manifest v1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bosh-cli/" title="CLI v1 Installation" class="md-nav__link">
+      CLI v1 Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sysadmin-commands/" title="CLI v1 Commands" class="md-nav__link">
+      CLI v1 Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../director-backup/" title="CLI v1 Backup / Restore" class="md-nav__link">
+      CLI v1 Backup / Restore
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Stemcells
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Stemcells
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stemcells/" title="Stemcells" class="md-nav__link">
+      Stemcells
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Releases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Releases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../releases/" title="Releases" class="md-nav__link">
+      Releases
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install " class="md-nav__link">
+    Install 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#release-notes" title="Release Notes " class="md-nav__link">
+    Release Notes 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-flags" title="Global Flags " class="md-nav__link">
+    Global Flags 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands " class="md-nav__link">
+    Commands 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments " class="md-nav__link">
+    Environments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" title="Session " class="md-nav__link">
+    Session 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stemcells" title="Stemcells " class="md-nav__link">
+    Stemcells 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-creation" title="Release creation " class="md-nav__link">
+    Release creation 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-blobs" title="Release blobs " class="md-nav__link">
+    Release blobs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" title="Releases " class="md-nav__link">
+    Releases 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configs" title="Configs " class="md-nav__link">
+    Configs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-config" title="Cloud config " class="md-nav__link">
+    Cloud config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-config" title="Runtime config " class="md-nav__link">
+    Runtime config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpi-config" title="CPI config " class="md-nav__link">
+    CPI config 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="Deployments " class="md-nav__link">
+    Deployments 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vms" title="VMs " class="md-nav__link">
+    VMs 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disks" title="Disks " class="md-nav__link">
+    Disks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" title="SSH " class="md-nav__link">
+    SSH 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errands" title="Errands " class="md-nav__link">
+    Errands 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" title="Tasks " class="md-nav__link">
+    Tasks 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshots" title="Snapshots " class="md-nav__link">
+    Snapshots 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-recovery" title="Deployment recovery " class="md-nav__link">
+    Deployment recovery 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#misc" title="Misc " class="md-nav__link">
+    Misc 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Commands</h1>
+                
+                <p class="note">Note: Applies to CLI v3.0.1+.</p>
+
+<p>The BOSH Command Line Interface (CLI) is what you use to run BOSH commands. CLI v2 is a new major version of CLI.</p>
+<hr />
+<h2 id="install">Install <a id="install"></a><a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Download the binary for your platform and place it on your <code class="codehilite">PATH</code>:</p>
+</li>
+<li>
+<p><a href="https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-3.0.1-darwin-amd64">bosh-cli-3.0.1-darwin-amd64</a> <span class="sha1">sha1: d2fea20210a47b8c8f1f7dbb27ffb5808d47ce87</span></p>
+</li>
+<li><a href="https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-3.0.1-linux-amd64">bosh-cli-3.0.1-linux-amd64</a> <span class="sha1">sha1: ccc893bab8b219e9e4a628ed044ebca6c6de9ca0</span></li>
+<li>
+<p><a href="https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-3.0.1-windows-amd64.exe">bosh-cli-3.0.1-windows-amd64.exe</a> <span class="sha1">sha1: 41c23c90cab9dc62fa0a1275dcaf64670579ed33</span> (Windows CLI support is partial)</p>
+<div class="codehilite"><pre><span></span>$ chmod +x ~/Downloads/bosh-cli-*
+$ sudo mv ~/Downloads/bosh-cli-* /usr/local/bin/bosh
+</pre></div>
+
+</li>
+<li>
+<p>Check <code class="codehilite">bosh</code> version to make sure it is properly installed:</p>
+<div class="codehilite"><pre><span></span>$ bosh -v
+version <span class="m">3</span>.0.1-712bfd7-2018-03-13T23:26:42Z
+</pre></div>
+
+<p>If the output does not begin with <code class="codehilite">version 2.0...</code> (or <code class="codehilite">3.0</code>) you are probably executing CLI v1 (Ruby based).</p>
+</li>
+<li>
+<p><a href="cli-env-deps.md">Install OS specified dependencies</a> for <code class="codehilite">bosh create-env</code> command</p>
+</li>
+</ol>
+<p>Alternatively, refer to <a href="https://github.com/cloudfoundry/homebrew-tap">cloudfoundry/homebrew-tap</a> to install CLI via Homebrew on OS X. We currently do not publish CLI via apt or yum repositories.</p>
+<hr />
+<h2 id="release-notes">Release Notes <a id="release-notes"></a><a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h2>
+<p>CLI release notes can be found <a href="https://github.com/cloudfoundry/bosh-cli/releases">on Github</a>.</p>
+<hr />
+<h2 id="global-flags">Global Flags <a id="global-flags"></a><a class="headerlink" href="#global-flags" title="Permanent link">&para;</a></h2>
+<p>See <a href="../cli-global-flags/">Global flags</a> for more details on how to enable different output formats, debug logging, etc.</p>
+<hr />
+<h2 id="commands">Commands <a id="cmds"></a><a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h3 id="environments">Environments <a id="env-mgmt"></a><a class="headerlink" href="#environments" title="Permanent link">&para;</a></h3>
+<p>See <a href="../cli-envs/">Environments</a>.</p>
+<ul>
+<li>
+<p><a id="environments"></a> <code class="codehilite">bosh environments</code> (Alias: <code class="codehilite">envs</code>)</p>
+<p>Lists aliased environments known to the CLI. Aliasing is done via <code class="codehilite">alias-env</code> command.</p>
+<div class="codehilite"><pre><span></span>$ bosh envs
+URL              Alias
+<span class="m">104</span>.154.171.255  gcp
+<span class="m">192</span>.168.56.6     vbox
+
+<span class="m">2</span> environments
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="create-env"></a> <code class="codehilite">bosh create-env manifest.yml [--state path] [-v ...] [-o ...] [--vars-store path]</code></p>
+<p>Creates single VM based on the manifest. Typically used to create a Director environment. <a href="https://bosh.io/docs/cli-ops-files.html">Operation files</a> and <a href="https://bosh.io/docs/cli-int.html">variables</a> can be provided to adjust and fill in manifest before doing a deploy.</p>
+<p><code class="codehilite">create-env</code> command replaces <code class="codehilite">bosh-init deploy</code> CLI command.</p>
+<div class="codehilite"><pre><span></span>$ bosh create-env ~/workspace/bosh-deployment/bosh.yml <span class="se">\</span>
+  --state state.json <span class="se">\</span>
+  --vars-store ./creds.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/cpi.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/outbound-network.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/bosh-lite.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/jumpbox-user.yml <span class="se">\</span>
+  -v <span class="nv">director_name</span><span class="o">=</span>vbox <span class="se">\</span>
+  -v <span class="nv">internal_ip</span><span class="o">=</span><span class="m">192</span>.168.56.6 <span class="se">\</span>
+  -v <span class="nv">internal_gw</span><span class="o">=</span><span class="m">192</span>.168.56.1 <span class="se">\</span>
+  -v <span class="nv">internal_cidr</span><span class="o">=</span><span class="m">192</span>.168.56.0/24 <span class="se">\</span>
+  -v <span class="nv">network_name</span><span class="o">=</span>vboxnet0 <span class="se">\</span>
+  -v <span class="nv">outbound_network_name</span><span class="o">=</span>NatNetwork
+</pre></div>
+
+</li>
+<li>
+<p><a id="alias-env"></a> <code class="codehilite">bosh alias-env name -e location [--ca-cert=path]</code></p>
+<p>Assigns a name to the created environment for easier access in subsequent CLI commands. Instead of specifying Director location and possibly a CA certificate, subsequent commands can just take given name via <code class="codehilite">--environment</code> flag (<code class="codehilite">-e</code>).</p>
+<div class="codehilite"><pre><span></span>$ bosh alias-env gcp -e bosh.corp.com
+$ bosh alias-env gcp -e <span class="m">10</span>.0.0.6 --ca-cert &lt;<span class="o">(</span>bosh int creds.yml --path /director_ssl/ca<span class="o">)</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="environment"></a> <code class="codehilite">bosh -e location environment</code> (Alias: <code class="codehilite">env</code>)</p>
+<p>Shows Director information in the deployment environment.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox env
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as <span class="s1">&#39;?&#39;</span>
+
+Name      vbox
+UUID      eeb27cc6-467e-4c1d-a8f9-f1a8de759f52
+Version   <span class="m">260</span>.5.0 <span class="o">(</span><span class="m">00000000</span><span class="o">)</span>
+CPI       warden_cpi
+Features  compiled_package_cache: disabled
+          dns: disabled
+          snapshots: disabled
+User      admin
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-env"></a> <code class="codehilite">bosh delete-env manifest.yml [--state path] [-v ...] [-o ...] [--vars-store path]</code></p>
+<p>Deletes previously created VM based on the manifest. Same flags provided to <code class="codehilite">create-env</code> command should be given to the <code class="codehilite">delete-env</code> command.</p>
+<p><code class="codehilite">delete-env</code> command replaces <code class="codehilite">bosh-init delete</code> CLI command.</p>
+<div class="codehilite"><pre><span></span>$ bosh delete-env ~/workspace/bosh-deployment/bosh.yml <span class="se">\</span>
+  --state state.json <span class="se">\</span>
+  --vars-store ./creds.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/cpi.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/outbound-network.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/bosh-lite.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/jumpbox-user.yml <span class="se">\</span>
+  -v <span class="nv">director_name</span><span class="o">=</span>vbox <span class="se">\</span>
+  -v <span class="nv">internal_ip</span><span class="o">=</span><span class="m">192</span>.168.56.6 <span class="se">\</span>
+  -v <span class="nv">internal_gw</span><span class="o">=</span><span class="m">192</span>.168.56.1 <span class="se">\</span>
+  -v <span class="nv">internal_cidr</span><span class="o">=</span><span class="m">192</span>.168.56.0/24 <span class="se">\</span>
+  -v <span class="nv">network_name</span><span class="o">=</span>vboxnet0 <span class="se">\</span>
+  -v <span class="nv">outbound_network_name</span><span class="o">=</span>NatNetwork
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="session">Session <a id="session-mgmt"></a><a class="headerlink" href="#session" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="log-in"></a> <code class="codehilite">bosh log-in</code> (Alias: <code class="codehilite">l</code>, <code class="codehilite">login</code>)</p>
+<p>Logs in given user into the Director.</p>
+<p>This command can only be used interactively. If non-interactive use is necessary (for example in scripts) please set <code class="codehilite">BOSH_CLIENT</code> and <code class="codehilite">BOSH_CLIENT_SECRET</code> environment variables instead of using this command. Note that if the Director is configured with UAA authentication you cannot use UAA users with BOSH_* environment variables but rather have to use UAA clients.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env l
+User <span class="o">()</span>: admin
+Password <span class="o">()</span>:
+</pre></div>
+
+</li>
+<li>
+<p><a id="log-out"></a> <code class="codehilite">bosh log-out</code> (Alias: <code class="codehilite">logout</code>)</p>
+<p>Logs out currently logged in user.</p>
+</li>
+</ul>
+<hr />
+<h3 id="stemcells">Stemcells <a id="stemcell-mgmt"></a><a class="headerlink" href="#stemcells" title="Permanent link">&para;</a></h3>
+<p>See <a href="../uploading-stemcells/">Uploading Stemcells</a>.</p>
+<ul>
+<li>
+<p><a id="stemcells"></a> <code class="codehilite">bosh -e my-env stemcells</code> (Alias: <code class="codehilite">ss</code>)</p>
+<p>Lists stemcells previously uploaded into the Director. Shows their names, versions and CIDs.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env ss
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as <span class="s1">&#39;?&#39;</span>
+
+Name                                         Version  OS             CPI  CID
+bosh-warden-boshlite-ubuntu-trusty-go_agent  <span class="m">3363</span>*    ubuntu-trusty  -    6cbb176a-6a43-42...
+~                                            <span class="m">3312</span>     ubuntu-trusty  -    43r3496a-4rt3-52...
+bosh-warden-boshlite-centos-7-go_agent       <span class="m">3363</span>*    centos-7       -    38yr83gg-349r-94...
+
+<span class="o">(</span>*<span class="o">)</span> Currently deployed
+
+<span class="m">3</span> stemcells
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="upload-stemcell"></a> <code class="codehilite">bosh -e my-env upload-stemcell location [--sha1=digest] [--fix]</code> (Alias: <code class="codehilite">us</code>)</p>
+<p>Uploads stemcell to the Director. Succeeds even if stemcell is already imported.</p>
+<p>Stemcell location may be local file system path or an HTTP/HTTPS URL.</p>
+<p><code class="codehilite">--fix</code> flag allows operator to replace previously uploaded stemcell with the same name and version to repair stemcells that might have been corrupted in the cloud.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env us ~/Downloads/bosh-stemcell-3468.17-warden-boshlite-ubuntu-trusty-go_agent.tgz
+$ bosh -e my-env us https://bosh.io/d/stemcells/bosh-stemcell-warden-boshlite-ubuntu-trusty-go_agent?v<span class="o">=</span><span class="m">3468</span>.17
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-stemcell"></a> <code class="codehilite">bosh -e my-env delete-stemcell name/version</code></p>
+<p>Deletes uploaded stemcell from the Director. Succeeds even if stemcell is not found.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env delete-stemcell bosh-warden-boshlite-ubuntu-trusty-go_agent/3468.17
+</pre></div>
+
+</li>
+<li>
+<p><a id="repack-stemcell"></a> <code class="codehilite">bosh repack-stemcell src.tgz dst.tgz [--name=name] [--version=ver] [--cloud-properties=json-string]</code></p>
+<p>Produces new stemcell tarball with updated properties such as name, version, and cloud properties.</p>
+<p>See <a href="../repack-stemcell/">Repacking stemcells</a> for details.</p>
+</li>
+</ul>
+<hr />
+<h3 id="release-creation">Release creation <a id="release-creation"></a><a class="headerlink" href="#release-creation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="init-release"></a> <code class="codehilite">bosh init-release [--git] [--dir=dir]</code></p>
+<p>Creates an empty release skeleton for a release in <code class="codehilite">dir</code>. By default <code class="codehilite">dir</code> is the current directory.</p>
+<p><code class="codehilite">--git</code> flag initializes release skeleton as a Git repository, adding appropriate <code class="codehilite"><span class="na">.gitignore</span></code> file.</p>
+<div class="codehilite"><pre><span></span>$ bosh init-release --git --dir release-dir
+$ <span class="nb">cd</span> release-dir
+</pre></div>
+
+</li>
+<li>
+<p><a id="generate-job"></a> <code class="codehilite">bosh generate-job name [--dir=dir]</code></p>
+<p>Creates an empty job skeleton for a release in <code class="codehilite">dir</code>. Includes bare <code class="codehilite">spec</code> and an empty <code class="codehilite">monit</code> file.</p>
+</li>
+<li>
+<p><a id="generate-package"></a> <code class="codehilite">bosh generate-package name [--dir=dir]</code></p>
+<p>Creates an empty package skeleton for a release in <code class="codehilite">dir</code>. Includes bare <code class="codehilite">spec</code> and an empty <code class="codehilite">packaging</code> file.</p>
+</li>
+<li>
+<p><a id="vendor-package"></a> <code class="codehilite">bosh vendor-package name src-dir [--dir=dir]</code> (v2.0.36+)</p>
+<p>Vendors a package from a different release into a release in <code class="codehilite">dir</code>. It includes <code class="codehilite">spec.lock</code> in the package directory so that CLI will reference specific package by its fingerprint when creating releases.</p>
+<p>See <a href="../package-vendoring/">Package vendoring</a> for details.</p>
+</li>
+<li>
+<p><a id="create-release"></a> <code class="codehilite">bosh create-release [--force] [--version=ver] [--timestamp-version] [--final] [--tarball=path] [--dir=dir]</code> (Alias: <code class="codehilite">cr</code>)</p>
+<p>Creates new version of a release stored in <code class="codehilite">dir</code></p>
+<ul>
+<li><code class="codehilite">--force</code> flag specifies to ignore uncommitted changes in the release directory; it should only be used when building dev releases</li>
+<li><code class="codehilite">--version</code> flag allows operator to provide custom release version</li>
+<li><code class="codehilite">--timestamp-version</code> flag will produce timestamp based dev release version</li>
+<li><code class="codehilite">--tarball</code> flag specifies destination of a release tarball; if not specified, release tarball will not be produced</li>
+<li><code class="codehilite">--sha2</code> flag to use SHA256 checksum</li>
+</ul>
+<p>While iterating on a release it's common to run <code class="codehilite">bosh create-release --force &amp;&amp; bosh -e my-env upload-release &amp;&amp; bosh -e my-env -d my-dep deploy manifest.yml</code> command sequence.</p>
+<p>In a CI pipeline it's common to use this command to create a release tarball and pass it into acceptance or end-to-end tests. Once release tarball goes through appropriate tests it can be finalized with a <code class="codehilite">finalize-release</code> command and shared with release consumers.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh create-release --force
+$ bosh create-release --timestamp-version
+$ bosh create-release --version <span class="m">9</span>+dev.10
+$ bosh create-release --tarball /tmp/my-release.tgz
+$ bosh create-release --final
+$ bosh create-release --version <span class="m">20</span> --final
+$ bosh create-release releases/zookeeper/zookeeper-3.yml --tarball /tmp/my-release.tgz
+</pre></div>
+
+</li>
+<li>
+<p><a id="finalize-release"></a> <code class="codehilite">bosh finalize-release release.tgz [--force] [--version=ver] [--dir=dir]</code></p>
+<p>Records contents of a release tarball as a final release with an optionally given version. Once <code class="codehilite"><span class="na">.final_builds</span></code> and <code class="codehilite">releases</code> directories are updated, it's strongly recommended to commit your changes to version control.</p>
+<p>Typically this command is used as a final step in the CI pipeline to save the final artifact once it passed appropriate tests.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh finalize-release /tmp/my-release.tgz
+$ bosh finalize-release /tmp/my-release.tgz --version <span class="m">20</span>
+$ git commit -am <span class="s1">&#39;Final release 20&#39;</span>
+$ git push origin master
+</pre></div>
+
+</li>
+<li>
+<p><a id="reset-release"></a> <code class="codehilite">bosh reset-release [--dir=dir]</code></p>
+<p>Removes temporary artifacts such as dev releases, blobs, etc. kept in the release directory <code class="codehilite">dir</code>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="release-blobs">Release blobs <a id="blob-mgmt"></a><a class="headerlink" href="#release-blobs" title="Permanent link">&para;</a></h3>
+<p>See <a href="../release-blobs/">Release Blobs</a> for a detailed workflow.</p>
+<ul>
+<li>
+<p><a id="blobs"></a> <code class="codehilite">bosh blobs</code></p>
+<p>Lists tracked blobs from <code class="codehilite">config/blobs.yml</code>. Shows uploaded and not-yet-uploaded blobs.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh blobs
+Path                               Size     Blobstore ID         Digest
+golang/go1.6.2.linux-amd64.tar.gz  <span class="m">81</span> MiB   f1833f76-ad8b-4b...  b8318b0...
+stress/stress-1.0.4.tar.gz         <span class="m">187</span> KiB  <span class="o">(</span><span class="nb">local</span><span class="o">)</span>              e1533bc...
+
+<span class="m">2</span> blobs
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="add-blob"></a> <code class="codehilite">bosh add-blob src-path dst-path</code></p>
+<p>Sarts tracking blob in <code class="codehilite">config/blobs.yml</code> for inclusion in packages.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh add-blob ~/Downloads/stress-1.0.4.tar.gz stress/stress-1.0.4.tar.gz
+</pre></div>
+
+</li>
+<li>
+<p><a id="remove-blob"></a> <code class="codehilite">bosh remove-blob blob-path</code></p>
+<p>Stops tracking blob in <code class="codehilite">config/blobs.yml</code>. Does not remove previously uploaded copies from the blobstore as older release versions may still want to reference it.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh remove-blob stress/stress-1.0.4.tar.gz
+</pre></div>
+
+</li>
+<li>
+<p><a id="upload-blob"></a> <code class="codehilite">bosh upload-blobs</code></p>
+<p>Uploads previously added blobs that were not yet uploaded to the blobstore. Updates <code class="codehilite">config/blobs.yml</code> with returned blobstore IDs. Before creating a final release it's strongly recommended to upload blobs so that other release contributors can rebuild a release from scratch.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh upload-blobs
+</pre></div>
+
+</li>
+<li>
+<p><a id="sync-blob"></a> <code class="codehilite">bosh sync-blobs</code></p>
+<p>Downloads blobs into <code class="codehilite">blobs/</code> based on <code class="codehilite">config/blobs.yml</code>.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> release-dir
+$ bosh sync-blobs
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="releases">Releases <a id="release-mgmt"></a><a class="headerlink" href="#releases" title="Permanent link">&para;</a></h3>
+<p>See <a href="../uploading-releases/">Uploading Releases</a>.</p>
+<ul>
+<li>
+<p><a id="releases"></a> <code class="codehilite">bosh -e my-env releases</code> (Alias: <code class="codehilite">rs</code>)</p>
+<p>Lists releases previously uploaded into the Director. Shows their names and versions.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env rs
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as client <span class="s1">&#39;admin&#39;</span>
+
+Name               Version   Commit Hash
+capi               <span class="m">1</span>.21.0*   716aa812
+cf-mysql           <span class="m">34</span>*       e0508b5
+cf-smoke-tests     <span class="m">11</span>*       a6dad6e
+cflinuxfs2-rootfs  <span class="m">1</span>.52.0*   4827ef51+
+consul             <span class="m">155</span>*      22515a98+
+diego              <span class="m">1</span>.8.1*    0cca668e
+dns                <span class="m">3</span>*        57e27da
+etcd               <span class="m">94</span>*       57c81e16
+garden-runc        <span class="m">1</span>.2.0*    2b3dedc5
+loggregator        <span class="m">78</span>*       773a3ba
+nats               <span class="m">15</span>*       d4dfc4c1+
+routing            <span class="m">0</span>.145.0*  dfb44c41+
+statsd-injector    <span class="m">1</span>.0.20*   552926d
+syslog             <span class="m">9</span>         ac2172f
+uaa                <span class="m">25</span>*       86ec7568
+
+<span class="o">(</span>*<span class="o">)</span> Currently deployed
+<span class="o">(</span>+<span class="o">)</span> Uncommitted changes
+
+<span class="m">15</span> releases
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="upload-release"></a> <code class="codehilite">bosh -e my-env upload-release [location] [--version=ver] [--sha1=digest] [--fix]</code> (Alias: <code class="codehilite">ur</code>)</p>
+<p>Uploads release to the Director. Succeeds even if release is already imported.</p>
+<p>Release location may be local file system path, HTTP/HTTPS URL or a git URL.</p>
+<p><code class="codehilite">--fix</code> flag allows replacement of previously uploaded release with the same name and version to repair releases that might have been corrupted.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env ur
+$ bosh -e my-env ur https://bosh.io/d/github.com/concourse/concourse?v<span class="o">=</span><span class="m">2</span>.7.3
+$ bosh -e my-env ur git+https://github.com/concourse/concourse --version <span class="m">2</span>.7.3
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-release"></a> <code class="codehilite">bosh -e my-env delete-release name/version</code></p>
+<p>Deletes uploaded release from the Director. Succeeds even if release is not found.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env delete-release cf-smoke-tests/94
+</pre></div>
+
+</li>
+<li>
+<p><a id="export-release"></a> <code class="codehilite">bosh -e my-env -d my-dep export-release name/version os/version [--dir=dir]</code></p>
+<p>Compiles and exports a release against a particular stemcell version.</p>
+<p>Requires to operate with a deployment so that compilation resources (VMs) are properly tracked.</p>
+<p>Destination directory default to the current directory.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env -d my-dep export-release cf-smoke-tests/94 ubuntu-trusty/3369
+</pre></div>
+
+</li>
+<li>
+<p><a id="inspect-release"></a> <code class="codehilite">bosh -e my-env inspect-release name/version</code></p>
+<p>Lists all jobs, job metadata (such as links), packages, and compiled packages associated with a release version.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e gcp-test inspect-release consul/155
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as client <span class="s1">&#39;admin&#39;</span>
+
+Job                                                                    Blobstore ID       Digest       Links Consumed    Links Provided
+acceptance-tests/943c6083581e623dc66c7d9126d8e5989c4c2b31              0f3cd013-1d3d-...  17e5e4fc...  -                 -
+consul-test-consumer-windows/6748c0675da2292c680da03e89b738a9d5818370  7461c74c-745d-...  9809861c...  -                 -
+consul-test-consumer/7263db87ba85eaf0dd41bd198359c8597e961839          8bde4572-8e8b-...  7b08b059...  -                 -
+consul_agent/b4872109282347700eaa884dcfe93f3a03dc22dd                  e41f705e-2cb7-...  a8db2c76...  - name: consul    - name: consul
+                                                                                                         type: consul      type: consul
+                                                                                                         optional: <span class="nb">true</span>
+consul_agent_windows/a0b91cb0aa1029734d77fcf064dafdb67f14ada6          3a8755d0-7a39-...  17f07ec0...  - name: consul    - name: consul
+                                                                                                         type: consul      type: consul
+                                                                                                         optional: <span class="nb">true</span>
+fake-dns-server/a1ea5f64de0860512470ace7ce2376aa9470f9b1               5bb53f17-eba9-...  0565f9af...  -                 -
+
+<span class="m">6</span> <span class="nb">jobs</span>
+
+Package                                                            Compiled <span class="k">for</span>          Blobstore ID            Digest
+acceptance-tests-windows/e36cef763e5cfd4e28738ad314807e6d1e13b960  <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              <span class="m">03589024</span>-2596-49fc-...  96eaaf4ba...
+acceptance-tests/9d56ac03d7410dcdfd96a8c96bbc79eb4b53c864          <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              79fb9ba7-cd23-4b93-...  e08ee88f5...
+confab-windows/52b117effcd95138eca94c789530bcd6499cff9d            <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              53d4b206-b064-462d-...  43f92c8d0...
+confab/b2ff0bbd68b7d600ecb1ffaf41f59af073e894fd                    <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              b93214eb-a816-4029-...  4b627d264...
+~                                                                  ubuntu-trusty/3363.9  f66fe541-8c21-4fe3-...  8e662c2e2...
+consul-windows/2a8e0b7ce1424d1d5efe5c7184791481a0c26424            <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              9516870b-801e-42ea-...  19db18127...
+consul/6049d3016cd34ac64ccbf7837b06b6db81942102                    <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              04aa38af-e883-4842-...  c42cacfc7...
+~                                                                  ubuntu-trusty/3363.9  ab4afda6-881e-46b1-...  27c1390fa...
+golang1.7-windows/1a80382e081cd429cf518f0c783f4e4172cac79e         <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              d7670210-7038-4749-...  b91caa06a...
+golang1.7/181f7537c2ec17ac2406d9f2eb3322fd80fa2a1c                 <span class="o">(</span><span class="nb">source</span><span class="o">)</span>              ac8aa36a-8965-46e9-...  ca440d716...
+~                                                                  ubuntu-trusty/3363.9  9d40794f-0c50-4d0c-...  9d6e29221...
+
+<span class="m">11</span> packages
+
+Succeeded
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="configs">Configs <a id="configs-mgmt"></a><a class="headerlink" href="#configs" title="Permanent link">&para;</a></h3>
+<p>See <a href="../configs/">Configs</a>.</p>
+<ul>
+<li>
+<p><a id="configs"></a> <code class="codehilite">bosh -e my-env configs [--type=my-type] [--name=my-name]</code></p>
+<p>Lists all the configs on the Director.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env configs
+Using environment <span class="s1">&#39;192.168.50.6&#39;</span> as client <span class="s1">&#39;admin&#39;</span>
+
+Type     Name
+cloud    default
+~        custom-vm-types
+cpi      default
+runtime  default
+
+<span class="m">3</span> configs
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="config"></a> <code class="codehilite">bosh -e my-env config [id] [--type=my-type] [--name=my-name]</code></p>
+<p>Either show config by <code class="codehilite">id</code> or by <code class="codehilite">name</code> and <code class="codehilite">type</code> on the Director.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env config --type<span class="o">=</span>my-type --name<span class="o">=</span>my-name
+$ bosh -e my-env config <span class="m">5</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="update-config"></a> <code class="codehilite">bosh -e my-env update-config config.yml --type=my-type [--name=my-name]</code></p>
+<p>Update config on the Director.</p>
+<ul>
+<li><code class="codehilite">--type</code> (required) flag allows to specify config type</li>
+<li><code class="codehilite">--name</code> flag allows to specify custom config name</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env update-config config.yml --type<span class="o">=</span>cloud
+$ bosh -e my-env update-config config.yml --type<span class="o">=</span>cloud --name<span class="o">=</span>network1
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-config"></a> <code class="codehilite">bosh -e my-env delete-config --type=my-type [--name=my-name]</code></p>
+<p>Delete config on the Director.</p>
+<ul>
+<li><code class="codehilite">--type</code> (required) flag allows to specify config type</li>
+<li><code class="codehilite">--name</code> flag allows to specify custom config name</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env delete-config --type<span class="o">=</span>my-type
+$ bosh -e my-env delete-config --type<span class="o">=</span>my-type --name<span class="o">=</span>my-name
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="cloud-config">Cloud config <a id="cloud-config-mgmt"></a><a class="headerlink" href="#cloud-config" title="Permanent link">&para;</a></h3>
+<p>See <a href="../cloud-config/">Cloud config</a>.</p>
+<ul>
+<li>
+<p><a id="cloud-config"></a> <code class="codehilite">bosh -e my-env cloud-config</code> (Alias: <code class="codehilite">cc</code>)</p>
+<p>Show current cloud config on the Director.</p>
+</li>
+<li>
+<p><a id="update-cloud-config"></a> <code class="codehilite">bosh -e my-env update-cloud-config config.yml [-v ...] [-o ...]</code> (Alias: <code class="codehilite">ucc</code>)</p>
+<p>Update current cloud config on the Director.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env ucc cc.yml
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="runtime-config">Runtime config <a id="runtime-config-mgmt"></a><a class="headerlink" href="#runtime-config" title="Permanent link">&para;</a></h3>
+<p>See <a href="../runtime-config/">Runtime config</a>.</p>
+<ul>
+<li>
+<p><a id="runtime-config"></a> <code class="codehilite">bosh -e my-env runtime-config</code> (Alias: <code class="codehilite">rc</code>)</p>
+<p>Show current runtime config on the Director.</p>
+</li>
+<li>
+<p><a id="update-runtime-config"></a> <code class="codehilite">bosh -e my-env update-runtime-config config.yml [-v ...] [-o ...]</code> (Alias: <code class="codehilite">urc</code>)</p>
+<p>Update current runtime config on the Director.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env urc runtime.yml
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="cpi-config">CPI config <a id="cpi-config-mgmt"></a><a class="headerlink" href="#cpi-config" title="Permanent link">&para;</a></h3>
+<p>See <a href="../cpi-config/">CPI config</a>.</p>
+<ul>
+<li>
+<p><a id="cpi-config"></a> <code class="codehilite">bosh -e my-env cpi-config</code></p>
+<p>Show current CPI config on the Director.</p>
+</li>
+<li>
+<p><a id="update-cpi-config"></a> <code class="codehilite">bosh -e my-env update-cpi-config config.yml [-v ...] [-o ...]</code></p>
+<p>Update current CPI config on the Director.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env update-cpi-config cpis.yml
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="deployments">Deployments <a id="deployment-mgmt"></a><a class="headerlink" href="#deployments" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="deployments"></a> <code class="codehilite">bosh -e my-env deployments</code> (Alias: <code class="codehilite">ds</code>)</p>
+<p>Lists deployments tracked by the Director. Shows their names, used releases and stemcells.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e my-env ds
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as client <span class="s1">&#39;admin&#39;</span>
+
+Name                                Release<span class="o">(</span>s<span class="o">)</span>                Stemcell<span class="o">(</span>s<span class="o">)</span>                                         Team<span class="o">(</span>s<span class="o">)</span>  Cloud Config
+cf                                  binary-buildpack/1.0.9    bosh-warden-boshlite-ubuntu-trusty-go_agent/3363.9  -        latest
+                                    capi/1.21.0
+                                    cf-mysql/34
+                                    cf-smoke-tests/11
+                                    cflinuxfs2-rootfs/1.52.0
+                                    consul/155
+                                    diego/1.8.1
+                                    etcd/94
+                                    garden-runc/1.2.0
+                                    loggregator/78
+                                    nats/15
+                                    routing/0.145.0
+                                    statsd-injector/1.0.20
+                                    uaa/25
+service-instance_0d4140a0-42b7-...  mysql/0.6.0               bosh-warden-boshlite-ubuntu-trusty-go_agent/3363.9  -        latest
+
+<span class="m">2</span> deployments
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="deployment"></a> <code class="codehilite">bosh -e my-env -d my-dep deployment</code> (Alias: <code class="codehilite">dep</code>)</p>
+<p>Shows general deployment information for a given deployment.</p>
+<p>Can be used to determine if Director has a deployment with a given name.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf dep
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as client <span class="s1">&#39;admin&#39;</span>
+
+Name  Release<span class="o">(</span>s<span class="o">)</span>              Stemcell<span class="o">(</span>s<span class="o">)</span>                                         Team<span class="o">(</span>s<span class="o">)</span>  Cloud Config
+cf    binary-buildpack/1.0.9  bosh-warden-boshlite-ubuntu-trusty-go_agent/3363.9  -        latest
+      capi/1.21.0
+      cf-mysql/34
+      cf-smoke-tests/11
+      uaa/25
+      dns/3
+      ...
+
+<span class="m">1</span> deployments
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="deploy"></a> <code class="codehilite">bosh -e my-env -d my-dep deploy manifest.yml [-v ...] [-o ...]</code></p>
+<p>Create or update specified deployment according to the provided manifest. Operation files and variables can be provided to adjust and fill in manifest before deploy begins.</p>
+<p>Currently name provided via <code class="codehilite">--deployment</code> (<code class="codehilite">-d</code>) flag must match name specified in the manifest.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf deploy cf.yml -v <span class="nv">system_domain</span><span class="o">=</span>sys.example.com -o large-footprint.yml
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-deployment"></a> <code class="codehilite">bosh -e my-env -d my-dep delete-deployment [--force]</code> (Alias: <code class="codehilite">deld</code>)</p>
+<p>Deletes specified deployment. If <code class="codehilite">--force</code> is provided, ignores variety of errors (from IaaS, blobstore, database) when deleting.</p>
+<p>Note that if you've deleted your deployment, not all resources may have been freed. For example "deleted" persistent disks will be deleted after a few days to avoid accidental data loss. See <a href="../persistent-disks/">Persistent and Orphaned Disks</a> for more details.</p>
+<p>Succeeds even if deployment is not found.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf deld
+$ bosh -e vbox -d cf deld --force
+</pre></div>
+
+</li>
+<li>
+<p><a id="instances"></a> <code class="codehilite">bosh -e my-env [-d my-dep] instances [--ps] [--details] [--vitals] [--failing]</code> (Alias: <code class="codehilite">is</code>)</p>
+<p>Lists all instances managed by the Director or in a single deployment. Show instance names, IPs, and VM and process health.</p>
+<ul>
+<li><code class="codehilite">--details</code> (<code class="codehilite">-i</code>) flag includes VM CID, persistent disk CIDs, and other instance level details</li>
+<li><code class="codehilite">--ps</code> flag includes per process health information</li>
+<li><code class="codehilite">--vitals</code> flag shows basic VM and process usage such RAM, CPU and disk.</li>
+<li><code class="codehilite">--failing</code> flag hides all healthy instances and processes leaving only non-healthy ones; useful for scripting</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox is -i
+$ bosh -e vbox is --ps --vitals
+$ bosh -e vbox -d cf is
+$ bosh -e vbox -d cf is --ps
+$ bosh -e vbox -d cf is --ps --vitals
+</pre></div>
+
+</li>
+<li>
+<p><a id="manifest"></a> <code class="codehilite">bosh -e my-env -d my-dep manifest</code> (Alias: <code class="codehilite">man</code>)</p>
+<p>Prints deployment manifest to <code class="codehilite">stdout</code>.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf man &gt; /tmp/manifest.yml
+</pre></div>
+
+</li>
+<li>
+<p><a id="recreate"></a> <code class="codehilite">bosh -e my-env -d my-dep recreate [group[/instance-id]] [--skip-drain] [--fix] [--canaries=] [--max-in-flight=] [--dry-run]</code></p>
+<p>Recreates VMs for specified instances. Follows typical instance lifecycle.</p>
+<ul>
+<li><code class="codehilite">--skip-drain</code> flag skips running drain scripts</li>
+<li><code class="codehilite">--fix</code> flag replaces unresponsive VMs</li>
+<li><code class="codehilite">--canaries=</code> flag overrides manifest values for <code class="codehilite">canaries</code></li>
+<li><code class="codehilite">--max-in-flight=</code> flag overrides manifest values for <code class="codehilite">max_in_flight</code></li>
+<li><code class="codehilite">--dry-run</code> flag runs through as many operations without altering deployment</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf recreate
+$ bosh -e vbox -d cf recreate --fix
+$ bosh -e vbox -d cf recreate diego-cell
+$ bosh -e vbox -d cf recreate diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0
+$ bosh -e vbox -d cf recreate diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0 --skip-drain
+$ bosh -e vbox -d cf recreate diego-cell --canaries<span class="o">=</span><span class="m">0</span> --max-in-flight<span class="o">=</span><span class="m">100</span>%
+</pre></div>
+
+</li>
+<li>
+<p><a id="restart"></a> <code class="codehilite">bosh -e my-env -d my-dep restart [group[/instance-id]] [--skip-drain] [--canaries=] [--max-in-flight=]</code></p>
+<p>Restarts jobs (processes) on specified instances. Does not affect VM state.</p>
+<ul>
+<li><code class="codehilite">--skip-drain</code> flag skips running drain scripts</li>
+<li><code class="codehilite">--canaries=</code> flag overrides manifest values for <code class="codehilite">canaries</code></li>
+<li><code class="codehilite">--max-in-flight=</code> flag overrides manifest values for <code class="codehilite">max_in_flight</code></li>
+</ul>
+</li>
+<li>
+<p><a id="start"></a> <code class="codehilite">bosh -e my-env -d my-dep start [group[/instance-id]] [--canaries=] [--max-in-flight=]</code></p>
+<p>Starts jobs (processes) on specified instances. Does not affect VM state.</p>
+<ul>
+<li><code class="codehilite">--canaries=</code> flag overrides manifest values for <code class="codehilite">canaries</code></li>
+<li><code class="codehilite">--max-in-flight=</code> flag overrides manifest values for <code class="codehilite">max_in_flight</code></li>
+</ul>
+</li>
+<li>
+<p><a id="stop"></a> <code class="codehilite">bosh -e my-env -d my-dep stop [group[/instance-id]] [--skip-drain] [--canaries=] [--max-in-flight=]</code></p>
+<p>Stops jobs (processes) on specified instances. Does not affect VM state unless <code class="codehilite">--hard</code> flag is specified.</p>
+<ul>
+<li><code class="codehilite">--hard</code> flag forces VM deletion (keeping persistent disk)</li>
+<li><code class="codehilite">--skip-drain</code> flag skips running drain scripts</li>
+<li><code class="codehilite">--canaries=</code> flag overrides manifest values for <code class="codehilite">canaries</code></li>
+<li><code class="codehilite">--max-in-flight=</code> flag overrides manifest values for <code class="codehilite">max_in_flight</code></li>
+</ul>
+</li>
+<li>
+<p><a id="ignore"></a> <code class="codehilite">bosh -e my-env -d my-dep ignore group/instance-id</code></p>
+<p>Ignores instance from being affected by other commands such as <code class="codehilite">bosh deploy</code>.</p>
+</li>
+<li>
+<p><a id="unignore"></a> <code class="codehilite">bosh -e my-env -d my-dep unignore group/instance-id</code></p>
+<p>Unignores instance from being affected by other commands such as <code class="codehilite">bosh deploy</code>.</p>
+</li>
+<li>
+<p><a id="logs"></a> <code class="codehilite">bosh -e my-env -d my-dep logs [group[/instance-id]] [--follow] ...</code></p>
+<p>Downloads logs from one or more instances.</p>
+<ul>
+<li><code class="codehilite">--dir=</code> flag specifies destination directory</li>
+<li><code class="codehilite">--job=</code> flag includes only specific jobs logs</li>
+<li><code class="codehilite">--only=</code> flag filters logs (comma-separated)</li>
+<li><code class="codehilite">--agent</code> flag includes only BOSH Agent logs</li>
+</ul>
+<p>Additional flags for following logs via SSH:</p>
+<ul>
+<li><code class="codehilite">--follow</code> (<code class="codehilite">-f</code>) flag to turn on log following</li>
+<li><code class="codehilite">--num</code> flag shows last number of lines immediately</li>
+<li><code class="codehilite">--quiet</code> (<code class="codehilite">-q</code>) flag suppresses printing of headers when multiple files are examined</li>
+<li><code class="codehilite">--gw-*</code> flags allow to configure SSH gateway configuration</li>
+</ul>
+<p>See <a href="../job-logs/">Location and use of logs</a> for details.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf logs diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0
+$ bosh -e vbox -d cf logs diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0 --job<span class="o">=</span>rep --job<span class="o">=</span>silkd
+$ bosh -e vbox -d cf logs -f
+$ bosh -e vbox -d cf logs -f --num<span class="o">=</span><span class="m">1000</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="events"></a> <code class="codehilite">bosh -e my-env [-d my-dep] events [--* ...]</code></p>
+<p>Lists events.</p>
+<p>See <a href="../events/">Events</a> for details.</p>
+<ul>
+<li><code class="codehilite">--before-id=</code> flag shows events with ID less than the given ID</li>
+<li><code class="codehilite">--before=</code> flag shows events before the given timestamp (ex: 2016-05-08 17:26:32)</li>
+<li><code class="codehilite">--after=</code> flag shows events after the given timestamp (ex: 2016-05-08 17:26:32)</li>
+<li><code class="codehilite">--task=</code> flag shows events with the given task ID</li>
+<li><code class="codehilite">--instance=</code> flag shows events with given instance</li>
+<li><code class="codehilite">--event-user=</code> flag shows events with given user</li>
+<li><code class="codehilite">--action=</code> flag shows events with given action</li>
+<li><code class="codehilite">--object-type=</code> flag shows events with given object type</li>
+<li><code class="codehilite">--object-id=</code> flag shows events with given object ID</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox events --instance diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0
+$ bosh -e vbox events --instance diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0 --task <span class="m">281</span>
+$ bosh -e vbox events -d my-dep
+$ bosh -e vbox events --before-id<span class="o">=</span><span class="m">1298284</span>
+$ bosh -e vbox events --before<span class="o">=</span><span class="s2">&quot;2016-05-08 17:26:32 UTC&quot;</span> --after<span class="o">=</span><span class="s2">&quot;2016-05-07 UTC&quot;</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="event"></a> <code class="codehilite">bosh -e my-env event id</code></p>
+<p>Shows single event details.</p>
+</li>
+<li>
+<p><a id="variables"></a> <code class="codehilite">bosh -e my-env -d my-dep variables</code> (Alias: <code class="codehilite">vars</code>)</p>
+<p>List variables referenced by the deployment.</p>
+</li>
+</ul>
+<hr />
+<h3 id="vms">VMs <a id="vm-mgmt"></a><a class="headerlink" href="#vms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="vms"></a> <code class="codehilite">bosh -e my-env [-d my-dep] vms [--vitals]</code></p>
+<p>Lists all VMs managed by the Director or VMs in a single deployment. Show instance names, IPs and VM CIDs.</p>
+<p><code class="codehilite">--vitals</code> flag shows basic VM usage such RAM, CPU and disk.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox vms
+$ bosh -e vbox -d cf vms
+$ bosh -e vbox -d cf vms --vitals
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-vm"></a> <code class="codehilite">bosh -e my-env -d my-dep delete-vm cid</code></p>
+<p>Deletes VM without going through typical instance lifecycle. Clears out VM reference from a Director database if referenced by any instance.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf delete-vm i-fs384238fjwjf8
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="disks">Disks <a id="disk-mgmt"></a><a class="headerlink" href="#disks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="disks"></a> <code class="codehilite">bosh -e my-env -d my-dep disks [--orphaned]</code></p>
+<p>Lists disks. Currently only supports <code class="codehilite">--orphaned</code> flag.</p>
+</li>
+<li>
+<p><a id="attach-disk"></a> <code class="codehilite">bosh -e my-env -d my-dep attach-disk group/instance-id disk-cid</code></p>
+<p>Attaches disk to an instance, replacing currently attached disk (if any).</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf attach-disk postgres/209c42e5-3c1a-432a-8445-ab8d7c9f69b0 vol-shw8f293f2f2
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-disk"></a> <code class="codehilite">bosh -e my-env -d my-dep delete-disk cid</code></p>
+<p>Deletes orphaned disk.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf delete-disk vol-shw8f293f2f2
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="ssh">SSH <a id="ssh-mgmt"></a><a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="ssh"></a> <code class="codehilite">bosh -e my-env -d my-dep ssh [destination] [-r] [-c=cmd] [--opts=opts] [--gw-* ...]</code></p>
+<p>SSH into one or more instances.</p>
+<ul>
+<li><code class="codehilite">--opts</code> flag allows operator to pass through options to <code class="codehilite">ssh</code>; useful for port forwarding</li>
+<li><code class="codehilite">--gw-*</code> flags allows configuration of SSH gateway</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># execute command on all instances in a deployment</span>
+$ bosh -e vbox -d cf ssh -c <span class="s1">&#39;uptime&#39;</span>
+
+<span class="c1"># execute command on one instance group</span>
+$ bosh -e vbox -d cf ssh diego-cell -c <span class="s1">&#39;uptime&#39;</span>
+
+<span class="c1"># execute command on a single instance</span>
+$ bosh -e vbox -d cf ssh diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0 -c <span class="s1">&#39;uptime&#39;</span>
+
+<span class="c1"># execute command with passwordless sudo</span>
+$ bosh -e vbox -d cf ssh diego-cell -c <span class="s1">&#39;sudo lsof -i|grep LISTEN&#39;</span>
+
+<span class="c1"># present output in a table by instance</span>
+$ bosh -e vbox -d cf ssh -c <span class="s1">&#39;uptime&#39;</span> -r
+
+<span class="c1"># port forward UAA port locally</span>
+$ bosh -e vbox -d cf ssh uaa/0 --opts <span class="s1">&#39; -L 8080:localhost:8080&#39;</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="scp"></a> <code class="codehilite">bosh -e my-env -d my-dep scp src/dst:[file] src/dst:[file] [-r] [--gw-* ...]</code></p>
+<p>SCP to/from one or more instances.</p>
+<ul>
+<li><code class="codehilite">--recursive</code> (<code class="codehilite">-r</code>) flag allow to copy directory recursively</li>
+<li><code class="codehilite">--gw-*</code> flags allow to configure gateway configuration</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># copy file from this machine to machines a deployment</span>
+$ bosh -e vbox -d cf scp ~/Downloads/script.sh :/tmp/script.sh
+$ bosh -e vbox -d cf scp ~/Downloads/script.sh diego-cell:/tmp/script.sh
+$ bosh -e vbox -d cf scp ~/Downloads/script.sh diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0:/tmp/script.sh
+$ bosh -e vbox -d cf scp ~/Downloads/script.ps1 windows_diego_cell:c:/temp/script/script.ps1
+
+<span class="c1"># copy file from remote machines in a deployment to this machine</span>
+$ bosh -e vbox -d cf scp :/tmp/script.sh ~/Downloads/script.sh
+$ bosh -e vbox -d cf scp diego-cell:/tmp/script.sh ~/Downloads/script.sh
+$ bosh -e vbox -d cf scp diego-cell/209c42e5-3c1a-432a-8445-ab8d7c9f69b0:/tmp/script.sh ~/Downloads/script.sh
+$ bosh -e vbox -d cf scp windows_diego_cell:c:/temp/script/script.ps1:~/Downloads/script.ps1
+
+<span class="c1"># copy files from each instance into instance specific local directory</span>
+$ bosh -e vbox -d cf scp diego-cell:/tmp/logs/ /tmp/logs/<span class="o">((</span>instance_id<span class="o">))</span>
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="errands">Errands <a id="errand-mgmt"></a><a class="headerlink" href="#errands" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="errands"></a> <code class="codehilite">bosh -e my-env -d my-dep errands</code> (Alias: <code class="codehilite">es</code>)</p>
+<p>Lists all errands defined by the deployment.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf es
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as <span class="s1">&#39;?&#39;</span>
+
+Using deployment <span class="s1">&#39;cf&#39;</span>
+
+Name
+smoke-tests
+
+<span class="m">1</span> errands
+
+Succeeded
+</pre></div>
+
+</li>
+<li>
+<p><a id="run-errand"></a> <code class="codehilite">bosh -e my-env -d my-dep run-errand name [--keep-alive] [--when-changed] [--download-logs] [--logs-dir=dir] [--instance=instance-group/instance-id]</code></p>
+<p>Runs errand job by name.</p>
+<ul>
+<li><code class="codehilite">--keep-alive</code> flag keeps VM around where errand was executing</li>
+<li><code class="codehilite">--when-changed</code> flag indicates whether to skip running an errand if it previously ran (successfully finished) and errand job configuration did not change</li>
+<li><code class="codehilite">--download-logs</code> flag indicates whether to download full errand logs to a directory specified by <code class="codehilite">--logs-dir</code> (defaults to the current directory)</li>
+<li><code class="codehilite">--instance=</code> flag select which instances to use for errand execution (v2.0.31+)</li>
+</ul>
+<p>See <a href="../errands/">Errands</a> for details.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf run-errand smoke-tests
+$ bosh -e vbox -d cf run-errand smoke-tests --keep-alive
+$ bosh -e vbox -d cf run-errand smoke-tests --when-changed
+
+<span class="c1"># execute errand on all instances that have colocated status errand</span>
+$ bosh -e vbox -d zookeeper run-errand status
+
+<span class="c1"># execute errand on one instance</span>
+$ bosh -e vbox -d zookeeper run-errand status --instance zookeeper/3e977542-d53e-4630-bc40-72011f853cb5
+
+<span class="c1"># execute errand on one instance within an instance group</span>
+<span class="c1"># (note that select instance may not necessarily be first based on its index)</span>
+$ bosh -e vbox -d zookeeper run-errand status --instance zookeeper/first
+
+<span class="c1"># execute errand on all instance in an instance group</span>
+$ bosh -e vbox -d zookeeper run-errand status --instance zookeeper
+
+<span class="c1"># execute errand on two instances</span>
+$ bosh -e vbox -d zookeeper run-errand status <span class="se">\</span>
+  --instance zookeeper/671d5b1d-0310-4735-8f58-182fdad0e8bc <span class="se">\</span>
+  --instance zookeeper/3e977542-d53e-4630-bc40-72011f853cb5
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="tasks">Tasks <a id="task-mgmt"></a><a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="tasks"></a> <code class="codehilite">bosh -e my-env tasks [--recent[=num]] [--all]</code> (Alias: <code class="codehilite">ts</code>)</p>
+<p>Lists active and previously ran tasks.</p>
+<ul>
+<li><code class="codehilite">--deployment</code> (<code class="codehilite">-d</code>) flag filters tasks by a deployment</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># currently active tasks</span>
+$ bosh -e vbox ts
+
+<span class="c1"># currently active tasks for my-dep deployment</span>
+$ bosh -e vbox -d my-dep ts
+Using environment <span class="s1">&#39;192.168.56.6&#39;</span> as <span class="s1">&#39;?&#39;</span>
+
+<span class="c1">#   State  Started At                    Last Activity At              User   Deployment   Description                   Result</span>
+
+<span class="m">27</span>  <span class="k">done</span>   Thu Feb <span class="m">16</span> <span class="m">19</span>:16:15 UTC <span class="m">2017</span>  Thu Feb <span class="m">16</span> <span class="m">19</span>:20:33 UTC <span class="m">2017</span>  admin  cockroachdb  create deployment             /deployments/cockroachdb
+<span class="m">26</span>  <span class="k">done</span>   Thu Feb <span class="m">16</span> <span class="m">18</span>:54:32 UTC <span class="m">2017</span>  Thu Feb <span class="m">16</span> <span class="m">18</span>:55:27 UTC <span class="m">2017</span>  admin  cockroachdb  delete deployment cockroachd  /deployments/cockroachdb
+...
+
+<span class="m">110</span> tasks
+
+Succeeded
+
+<span class="c1"># show last 30 tasks</span>
+$ bosh -e vbox ts -r --all
+
+<span class="c1"># show last 1000 tasks</span>
+$ bosh -e vbox ts -r<span class="o">=</span><span class="m">1000</span>
+</pre></div>
+
+</li>
+<li>
+<p><a id="task"></a> <code class="codehilite">bosh -e my-env task id [--debug] [--result] [--event] [--cpi]</code> (Alias: <code class="codehilite">t</code>)</p>
+<p>Shows single task details. Continues to follow task if it did not finish. <code class="codehilite">Ctrl^C</code> does not cancel task.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox t <span class="m">281</span>
+$ bosh -e vbox t <span class="m">281</span> --debug
+</pre></div>
+
+</li>
+<li>
+<p><a id="cancel-task"></a> <code class="codehilite">bosh -e my-env cancel-task id</code> (Alias: <code class="codehilite">ct</code>)</p>
+<p>Cancel task at its next checkpoint. Does not wait until task is cancelled.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox ct <span class="m">281</span>
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<h3 id="snapshots">Snapshots <a id="snapshot-mgmt"></a><a class="headerlink" href="#snapshots" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="snapshots"></a> <code class="codehilite">bosh -e my-env -d my-dep snapshots</code></p>
+<p>Lists disk snapshots for given deployment.</p>
+</li>
+<li>
+<p><a id="take-snapshot"></a> <code class="codehilite">bosh -e my-env -d my-dep take-snapshot [group/instance-id]</code></p>
+<p>Takes snapshot for an instance or an entire deployment.</p>
+</li>
+<li>
+<p><a id="delete-snapshot"></a> <code class="codehilite">bosh -e my-env -d my-dep delete-snapshot cid</code></p>
+<p>Deletes snapshot.</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d cf delete-snapshot snap-shw38ty83f2f2
+</pre></div>
+
+</li>
+<li>
+<p><a id="delete-snapshots"></a> <code class="codehilite">bosh -e my-env -d my-dep delete-snapshots</code></p>
+<p>Deletes snapshots for an entire deployment.</p>
+</li>
+</ul>
+<hr />
+<h3 id="deployment-recovery">Deployment recovery <a id="deployment-recovery"></a><a class="headerlink" href="#deployment-recovery" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="update-resurrection"></a> <code class="codehilite">bosh -e my-env update-resurrection on/off</code></p>
+<p>Enables or disables resurrection globally. This state is not reflected in the <code class="codehilite">bosh instances</code> command's <code class="codehilite">Resurrection</code> column.</p>
+<p>See <a href="../resurrector/">Automatic repair with Resurrector</a> for details.</p>
+</li>
+<li>
+<p><a id="cloud-check"></a> <code class="codehilite">bosh -e my-env -d my-dep cloud-check [--report] [--auto]</code> (Alias: <code class="codehilite">cck</code>)</p>
+<p>Checks for resource consistency and allows interactive repair.</p>
+<p>See <a href="../cck/">Manual repair with Cloud Check</a> for details.</p>
+</li>
+<li>
+<p><a id="locks"></a> <code class="codehilite">bosh -e my-env locks</code></p>
+<p>Lists current locks.</p>
+</li>
+</ul>
+<hr />
+<h3 id="misc">Misc <a id="misc"></a><a class="headerlink" href="#misc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a id="clean-up"></a> <code class="codehilite">bosh -e my-env clean-up [--all]</code></p>
+<p>Cleans up releases, stemcells, orphaned disks, and other unused resources.</p>
+<ul>
+<li><code class="codehilite">--all</code> flag forces cleanup for orphaned disks</li>
+</ul>
+</li>
+<li>
+<p><a id="help"></a> <code class="codehilite">bosh help</code></p>
+<p>Shows list of available commands and global options. Consider using <code class="codehilite">-h</code> flag for individual commands.</p>
+</li>
+<li>
+<p><a id="interpolate"></a> <code class="codehilite">bosh interpolate manifest.yml [-v ...] [-o ...] [--vars-store path] [--path op-path]</code> (Alias: <code class="codehilite">int</code>)</p>
+<p>Interpolates variables into a manifest sending result to stdout. <a href="../cli-ops-files/">Operation files</a> and <a href="../cli-int/">variables</a> can be provided to adjust and fill in manifest before doing a deploy.</p>
+<p><code class="codehilite">--path</code> flag can be used to extract portion of a YAML document.</p>
+<div class="codehilite"><pre><span></span>$ bosh int bosh-deployment/bosh.yml <span class="se">\</span>
+  --vars-store ./creds.yml <span class="se">\</span>
+  -o bosh-deployment/virtualbox/cpi.yml <span class="se">\</span>
+  -o bosh-deployment/virtualbox/outbound-network.yml <span class="se">\</span>
+  -o bosh-deployment/bosh-lite.yml <span class="se">\</span>
+  -o bosh-deployment/jumpbox-user.yml <span class="se">\</span>
+  -v <span class="nv">director_name</span><span class="o">=</span>vbox <span class="se">\</span>
+  -v <span class="nv">internal_ip</span><span class="o">=</span><span class="m">192</span>.168.56.6 <span class="se">\</span>
+  -v <span class="nv">internal_gw</span><span class="o">=</span><span class="m">192</span>.168.56.1 <span class="se">\</span>
+  -v <span class="nv">internal_cidr</span><span class="o">=</span><span class="m">192</span>.168.56.0/24 <span class="se">\</span>
+  -v <span class="nv">network_name</span><span class="o">=</span>vboxnet0 <span class="se">\</span>
+  -v <span class="nv">outbound_network_name</span><span class="o">=</span>NatNetwork
+
+$ bosh int creds.yml --path /admin_password
+skh32i7rdfji4387hg
+
+$ bosh int creds.yml --path /director_ssl/ca
+-----BEGIN CERTIFICATE-----
+...
+</pre></div>
+
+<p>Command can be used in a generic way to generate CA and leaf certificates.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">variables</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default_ca</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">certificate</span>
+  <span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">common_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ca</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">service_ssl</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">certificate</span>
+  <span class="l l-Scalar l-Scalar-Plain">options</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">ca</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default_ca</span>
+    <span class="l l-Scalar l-Scalar-Plain">common_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">((internal_ip))</span>
+    <span class="l l-Scalar l-Scalar-Plain">alternative_names</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">((internal_ip))</span><span class="p p-Indicator">]</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ bosh interpolate certs-tpl.yml -v <span class="nv">internal_ip</span><span class="o">=</span><span class="m">1</span>.2.3.4 --vars-store certs.yml --var-errs
+$ bosh interpolate certs.yml --path /service_ssl/ca
+$ bosh interpolate certs.yml --path /service_ssl/certificate
+$ bosh interpolate certs.yml --path /service_ssl/private_key
+</pre></div>
+
+</li>
+</ul>
+<hr />
+<p>Next: <a href="../cli-v2-diff/">Differences between CLI v2 vs v1</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tips/" title="Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Troubleshooting
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../cli-global-flags/" title="Global Flags" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Global Flags
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/cloudfoundry/bosh" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://cloudfoundry.slack.com/messages/C02HPPYQ2/" class="md-footer-social__link fa fa-slack"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
