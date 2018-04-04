@@ -2,11 +2,9 @@
 title: Index
 ---
 
-See [Recent Additions and Updates](recent.md).
-
 ## Introduction <a id="intro"></a>
 
-* [What is BOSH?](about.md)
+* What is BOSH?
     * [What problems does BOSH solve?](problems.md)
         * [Stemcell](stemcell.md)
         * [Release](release.md)
