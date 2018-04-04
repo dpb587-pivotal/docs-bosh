@@ -1,30 +1,29 @@
-site_name: BOSH Documentation
+site_name: Cloud Foundry BOSH
 pages:
 - About:
   - Welcome: index.md
-  - Goals of BOSH: goals-of-bosh.md
-  - Getting Help: getting-help.md
+  - Project Goals: goals-of-bosh.md
+  - Community: ecosystem/community.md
 - Installation:
-  - Installing the CLI: bosh-cli/guide/installation.md
-  - Installing CLI Dependencies: bosh-cli/guide/installing-env-dependencies.md
-  - Deploying the Director: bosh-deployment/guide/virtualbox/installation.md
+  - Installing the CLI: existing-docs/cli-v2-install.md
+  - Quick Start: existing-docs/quick-start.md
+  - Amazon Web Services: existing-docs/init-aws.md
+  - Google Cloud Platform: existing-docs/init-google.md
+  - Microsoft Azure: existing-docs/init-azure.md
+  - OpenStack: existing-docs/init-openstack.md
+  - SoftLayer: existing-docs/init-softlayer.md
+  - VirtualBox: existing-docs/bosh-lite.md
+  - VMware vCloud: existing-docs/init-vcloud.md
+  - VMware vSphere: existing-docs/init-vsphere.md
 - Guides:
-  - Core Concepts:
-    - Connecting to Director: bosh-cli/guide/using-environments.md
-    - Using Cloud Config: bosh-cli/guide/using-cloud-config.md
-    - Using Stemcells: bosh-cli/guide/using-stemcells.md
-    - Using Releases: bosh-cli/guide/using-releases.md
-    - Creating a Deployment: bosh-cli/guide/using-deployments.md
   - Deploying Software:
-#    - Changing a Deployment: todo.md
-#    - Scaling Instance Groups:
-#      - Scaling Vertically: todo.md
-#      - Scaling Horizontally: todo.md
-#    - Performing Upgrades:
-#      - Upgrading a Release: todo.md
-#      - Upgrading a Stemcell: todo.md
+    - Core Concepts:
+      - Updating Cloud Config: existing-docs/update-cloud-config.md
+      - Building a Manifest: existing-docs/deployment-basics.md
+      - Uploading Stemcells: existing-docs/uploading-stemcells.md
+      - Uploading Releases: existing-docs/uploading-releases.md
+      - Deploying: existing-docs/deploying.md
     - Using Persistent Disks:
-#      - Resizing Disks: todo.md
       - Manually Attaching Disks: existing-docs/persistent-disks.md
       - Orphan Disks: existing-docs/persistent-disks.md
       - Taking Snapshots: existing-docs/snapshots.md
@@ -34,24 +33,47 @@ pages:
       - Sharing Links: existing-docs/links.md
       - Manually Configuring Links: existing-docs/links-manual.md
     - Running Errands: existing-docs/errands.md
+    - VM Anti-Affinity: existing-docs/vm-anti-affinity.md
     - Troubleshooting:
       - Monitoring: existing-docs/monitoring.md
       - Process Monitoring with Monit: existing-docs/vm-monit.md
       - IaaS Reconciliation: existing-docs/cck.md
     - Migrating:
-      - Migrating to AZs: existing-docs/migrated-from.md
-  - Operating BOSH:
+      - To Availability Zones: existing-docs/migrated-from.md
+      - From the Ruby CLI: existing-docs/cli-v2-diff.md
+  - Packaging Software:
+    - Core Concepts:
+      - Creating a Release: existing-docs/create-release.md
+    - Using Links:
+      - Sharing Properties: existing-docs/links-properties.md
+    - Configuring the Blobstore:
+      - Release Blobstore: existing-docs/release-blobstore.md
+      - Using S3 & IAM Policies: existing-docs/s3-release-blobstore.md
+    - Working with Blobs: existing-docs/release-blobs.md
+    - Testing:
+      - Unit Testing Job Templates: existing-docs/job-templates.md
+    - Scheduled Processes: existing-docs/scheduled-procs.md
+    - Creating Compiled Releases: existing-docs/compiled-releases.md
+    - Using Errands: existing-docs/errands.md
+    - Configuring Processes:
+      - Recommended Property Types: existing-docs/props-common.md
+    - Packaging and Compiling:
+      - Creating Packages: existing-docs/packages.md
+      - Reusing Packages: existing-docs/package-vendoring.md
+    - Windows Compatibility:
+      - Overview: existing-docs/windows.md
+      - Sample Release: existing-docs/windows-sample-release.md
+  - Operating Director:
     - Monitoring:
       - Auditing Events: existing-docs/events.md
       - Reviewing Tasks: existing-docs/director-tasks.md
-      - Logging API Access with CEF: existing-docs/director-access-events.md
-    - Access Control:
+      - Logging API Access: existing-docs/director-access-events.md
+    - Securing:
       - Using Basic Users: existing-docs/director-users.md
       - Integrating with UAA:
         - Configuring Director: existing-docs/director-users-uaa.md
         - Using Teams: existing-docs/director-users-uaa-perms.md
-    - Auto-healing Capabilities: existing-docs/resurrector.md
-    - Using Health Monitor: existing-docs/hm-config.md
+      - Configuring SSL Certificates: existing-docs/director-certs.md
     - Configuring the Database:
       - Builtin PostgreSQL: existing-docs/director-configure-db.md
       - External MySQL: existing-docs/director-configure-db.md
@@ -59,176 +81,70 @@ pages:
       - Builtin DAV Server: existing-docs/director-configure-blobstore.md
       - Amazon S3: existing-docs/director-configure-blobstore.md
       - Google Cloud Storage: existing-docs/director-configure-blobstore.md
+    - Managing Releases: existing-docs/managing-releases.md
+    - Managing Stemcells: existing-docs/managing-stemcells.md
+    - Auto-healing Capabilities: existing-docs/resurrector.md
+    - Using Health Monitor: existing-docs/hm-config.md
+    - Common Addons: existing-docs/addons-common.md
+    - Integrating with CredHub:
+      - Variable Types: existing-docs/variable-types.md
     - Optional Features:
       - Explicit ARP Flushing: existing-docs/flush-arp.md
       - Removing Dev Tools from VMs: existing-docs/remove-dev-tools.md
       - Installing Certificates on VMs: existing-docs/trusted-certs.md
-  - Packaging Software:
-    - Overview: bosh/guide/release-author/overview.md
-    - Core Concepts:
-      - Creating a Release: bosh/guide/release-author/creating-a-release.md
-      - Creating a Job: bosh/guide/release-author/creating-a-job.md
-      - Creating Dev Releases: bosh/guide/release-author/creating-dev-releases.md
-      - Configuring with Job Properties: bosh/guide/release-author/using-job-properties.md
-      - Creating a Package: bosh/guide/release-author/creating-a-package.md
-      - Adding Blobs: bosh/guide/release-author/adding-blobs.md
-      - Creating Final Releases: bosh/guide/release-author/creating-final-releases.md
-    - Using Links:
-      - Sharing Properties: existing-docs/links-properties.md
-    - Configuring the Blobstore:
-      - Using S3 & IAM Policies: bosh/guide/release-author/using-s3-iam-policies.md
-    - Testing:
-      - Unit Testing Job Templates: existing-docs/job-templates.md
-    - Creating Compiled Releases: existing-docs/compiled-releases.md
-    - Vendoring External Packages: existing-docs/package-vendoring.md
-  - Composing YAML:
-    - Interpolating Variables: existing-docs/cli-int.md
-    - Creating Ops Files: existing-docs/cli-ops-files.md
-  - Multi-Cloud Support:
-    - Using CPI Config: existing-docs/cpi-config.md
-    - Using Multiple AWS Accounts: existing-docs/guide-multi-cpi-aws.md
+    - Troubleshooting: existing-docs/tips.md
+  - Using the CLI:
+    - Commands: existing-docs/cli-v2.md
+    - Global Flags: existing-docs/cli-global-flags.md
+    - Environments: existing-docs/cli-envs.md
+    - Tunneling: existing-docs/cli-tunnel.md
+    - Composing YAML:
+      - Interpolating Variables: existing-docs/cli-int.md
+      - Creating Ops Files: existing-docs/cli-ops-files.md
   - Advanced Networking:
-    - Tunneling with CLI: existing-docs/cli-tunnel.md
+    - Multi-Cloud Support:
+      - Using CPI Config: existing-docs/cpi-config.md
+      - Using AWS: existing-docs/guide-multi-cpi-aws.md
     - Using IPv6 on vSphere: existing-docs/guide-ipv6-on-vsphere.md
-  - Developing a CPI:
-    - Getting Started: existing-docs/build-cpi.md
-    - Agent Interactions: existing-docs/agent-cpi-interactions.md
+  - Advanced Bootstrapping:
+    - Using a Public IP: existing-docs/init-external-ip.md
+    - Enabling SSH Access: existing-docs/jumpbox.md
+    - Recovering a State File: bosh-cli/guide/recovering-env-state.md
   - In-depth Topics:
+    - Native DNS Support: existing-docs/dns.md
     - Components of BOSH: existing-docs/bosh-components.md
-    - Recovering create-env State: bosh-cli/guide/recovering-env-state.md
-  - Windows Compatibility:
-    - Overview: existing-docs/windows.md
-    - Sample Release: existing-docs/windows-sample-release.md
+    - Deploying Step by Step: existing-docs/deploying-step-by-step.md
+    - Agent Interactions: existing-docs/agent-cpi-interactions.md
+    - Virtual Machines:
+      - Structure of a VM: existing-docs/vm-struct.md
+      - Configuration Locations: existing-docs/vm-config.md
+      - Using Logs: existing-docs/job-logs.md
+      - Instance Metadata: existing-docs/instance-metadata.md
+  - Development:
+    - Building a CPI: existing-docs/build-cpi.md
+    - Building a Stemcell: existing-docs/build-stemcell.md
+    - Repacking Stemcells: existing-docs/repack-stemcell.md
+    - Target Personas: existing-docs/personas.md
 - Reference:
+  - Terminology: existing-docs/terminology.md
+  - Release Notes:
+    - Ubuntu Trusty Stemcell:
+      - 3541.x: bosh-linux-stemcell-builder/release-notes/3541.x.md
   - Deployment Config: existing-docs/manifest-v2.md
   - Director Cloud Config:
-    - Overview: bosh/reference/cloud-config/index.md
-    - Availability Zones: bosh/reference/cloud-config/azs.md
-    - Networks: bosh/reference/cloud-config/networks.md
-  - Director CPI Config: todo.md
+    - Usage: existing-docs/cloud-config.md
+    - Availability Zones: existing-docs/azs.md
+    - Networks: existing-docs/networks.md
   - Director HTTP API: existing-docs/director-api-v1.md
   - Director Runtime Config:
-    - Overview: bosh/reference/runtime-config/index.md
-    - Releases: bosh/reference/runtime-config/releases.md
-    - Addons: bosh/reference/runtime-config/addons.md
-    - Tags: bosh/reference/runtime-config/tags.md
-  - Command Line Interface:
-    - Global Options: bosh-cli/reference/global-options.md
-    - Variable Types: existing-docs/variable-types.md
-    - Commands:
-      - add-blob: bosh-cli/reference/command/add-blob.md
-      - alias-env: bosh-cli/reference/command/alias-env.md
-      - attach-disk: bosh-cli/reference/command/attach-disk.md
-      - blobs: bosh-cli/reference/command/blobs.md
-      - cancel-task: bosh-cli/reference/command/cancel-task.md
-      - clean-up: bosh-cli/reference/command/clean-up.md
-      - cloud-check: bosh-cli/reference/command/cloud-check.md
-      - cloud-config: bosh-cli/reference/command/cloud-config.md
-      - config: bosh-cli/reference/command/config.md
-      - configs: bosh-cli/reference/command/configs.md
-      - cpi-config: bosh-cli/reference/command/cpi-config.md
-      - create-env: bosh-cli/reference/command/create-env.md
-      - create-release: bosh-cli/reference/command/create-release.md
-      - delete-config: bosh-cli/reference/command/delete-config.md
-      - delete-deployment: bosh-cli/reference/command/delete-deployment.md
-      - delete-disk: bosh-cli/reference/command/delete-disk.md
-      - delete-env: bosh-cli/reference/command/delete-env.md
-      - delete-release: bosh-cli/reference/command/delete-release.md
-      - delete-snapshot: bosh-cli/reference/command/delete-snapshot.md
-      - delete-snapshots: bosh-cli/reference/command/delete-snapshots.md
-      - delete-stemcell: bosh-cli/reference/command/delete-stemcell.md
-      - delete-vm: bosh-cli/reference/command/delete-vm.md
-      - deploy: bosh-cli/reference/command/deploy.md
-      - deployment: bosh-cli/reference/command/deployment.md
-      - deployments: bosh-cli/reference/command/deployments.md
-      - diff-config: bosh-cli/reference/command/diff-config.md
-      - disks: bosh-cli/reference/command/disks.md
-      - environment: bosh-cli/reference/command/environment.md
-      - environments: bosh-cli/reference/command/environments.md
-      - errands: bosh-cli/reference/command/errands.md
-      - event: bosh-cli/reference/command/event.md
-      - events: bosh-cli/reference/command/events.md
-      - export-release: bosh-cli/reference/command/export-release.md
-      - finalize-release: bosh-cli/reference/command/finalize-release.md
-      - generate-job: bosh-cli/reference/command/generate-job.md
-      - generate-package: bosh-cli/reference/command/generate-package.md
-      - help: bosh-cli/reference/command/help.md
-      - ignore: bosh-cli/reference/command/ignore.md
-      - init-release: bosh-cli/reference/command/init-release.md
-      - inspect-release: bosh-cli/reference/command/inspect-release.md
-      - instances: bosh-cli/reference/command/instances.md
-      - interpolate: bosh-cli/reference/command/interpolate.md
-      - locks: bosh-cli/reference/command/locks.md
-      - log-in: bosh-cli/reference/command/log-in.md
-      - log-out: bosh-cli/reference/command/log-out.md
-      - logs: bosh-cli/reference/command/logs.md
-      - manifest: bosh-cli/reference/command/manifest.md
-      - orphan-disk: bosh-cli/reference/command/orphan-disk.md
-      - recreate: bosh-cli/reference/command/recreate.md
-      - releases: bosh-cli/reference/command/releases.md
-      - remove-blob: bosh-cli/reference/command/remove-blob.md
-      - repack-stemcell: bosh-cli/reference/command/repack-stemcell.md
-      - reset-release: bosh-cli/reference/command/reset-release.md
-      - restart: bosh-cli/reference/command/restart.md
-      - run-errand: bosh-cli/reference/command/run-errand.md
-      - runtime-config: bosh-cli/reference/command/runtime-config.md
-      - scp: bosh-cli/reference/command/scp.md
-      - sha1ify-release: bosh-cli/reference/command/sha1ify-release.md
-      - sha2ify-release: bosh-cli/reference/command/sha2ify-release.md
-      - snapshots: bosh-cli/reference/command/snapshots.md
-      - ssh: bosh-cli/reference/command/ssh.md
-      - start: bosh-cli/reference/command/start.md
-      - stemcells: bosh-cli/reference/command/stemcells.md
-      - stop: bosh-cli/reference/command/stop.md
-      - sync-blobs: bosh-cli/reference/command/sync-blobs.md
-      - take-snapshot: bosh-cli/reference/command/take-snapshot.md
-      - task: bosh-cli/reference/command/task.md
-      - tasks: bosh-cli/reference/command/tasks.md
-      - unignore: bosh-cli/reference/command/unignore.md
-      - update-cloud-config: bosh-cli/reference/command/update-cloud-config.md
-      - update-config: bosh-cli/reference/command/update-config.md
-      - update-cpi-config: bosh-cli/reference/command/update-cpi-config.md
-      - update-resurrection: bosh-cli/reference/command/update-resurrection.md
-      - update-runtime-config: bosh-cli/reference/command/update-runtime-config.md
-      - upload-blobs: bosh-cli/reference/command/upload-blobs.md
-      - upload-release: bosh-cli/reference/command/upload-release.md
-      - upload-stemcell: bosh-cli/reference/command/upload-stemcell.md
-      - variables: bosh-cli/reference/command/variables.md
-      - vendor-package: bosh-cli/reference/command/vendor-package.md
-      - vms: bosh-cli/reference/command/vms.md
-  - Cloud Provider Interface:
-    - API Reference:
-      - attach_disk: existing-docs/cpi-api-v1.md # attach_disk
-      - calculate_vm_cloud_properties: existing-docs/cpi-api-v1.md # calculate_vm_cloud_properties
-      - configure_networks: existing-docs/cpi-api-v1.md # configure_networks
-      - create_disk: existing-docs/cpi-api-v1.md # create_disk
-      - create_stemcell: existing-docs/cpi-api-v1.md # create_stemcell
-      - create_vm: existing-docs/cpi-api-v1.md # create_vm
-      - current_vm_id: existing-docs/cpi-api-v1.md # current_vm_id
-      - delete_disk: existing-docs/cpi-api-v1.md # delete_disk
-      - delete_snapshot: existing-docs/cpi-api-v1.md # delete_snapshot
-      - delete_stemcell: existing-docs/cpi-api-v1.md # delete_stemcell
-      - delete_vm: existing-docs/cpi-api-v1.md # delete_vm
-      - detach_disk: existing-docs/cpi-api-v1.md # detach_disk
-      - get_disks: existing-docs/cpi-api-v1.md # get_disks
-      - has_disk: existing-docs/cpi-api-v1.md # has_disk
-      - has_vm: existing-docs/cpi-api-v1.md # has_vm
-      - info: existing-docs/cpi-api-v1.md # info
-      - reboot_vm: existing-docs/cpi-api-v1.md # reboot_vm
-      - resize_disk: existing-docs/cpi-api-v1.md # resize_disk
-      - set_disk_metadata: existing-docs/cpi-api-v1.md # set_disk_metadata
-      - set_vm_metadata: existing-docs/cpi-api-v1.md # set_vm_metadata
-      - snapshot_disk: existing-docs/cpi-api-v1.md # snapshot_disk
+    - Usage: existing-docs/runtime-config.md
+  - Generic Configs: existing-docs/configs.md
+  - Cloud Provider Interface: existing-docs/cpi-api-v1.md
   - Release Management:
-    - Config:
-      - Overview: todo.md
-      - S3 Blobstore: bosh/reference/release/config/s3-blobstore.md
-      - GCS Blobstore: bosh/reference/release/config/gcs-blobstore.md
+    - Overview: existing-docs/release.md
+    - Release URLs: existing-docs/release-urls.md
     - Jobs:
-      - spec File: bosh/reference/release/jobs/spec.md
-      - Templates:
-        - Basic Templating: bosh/reference/release/jobs/templates/usage.md
-      - Scheduled Processes: existing-docs/scheduled-procs.md
+      - Usage: existing-docs/jobs.md
       - Update Lifecycle: existing-docs/job-lifecycle.md
       - Lifecycle Hooks:
         - Drain: existing-docs/drain.md
@@ -237,137 +153,57 @@ pages:
         - Post-deploy: existing-docs/post-deploy.md
     - Links:
       - Common Types: existing-docs/links-common-types.md
-    - Packages: todo.md
-  - Legacy Documentation:
-    - CLI v1 Commands: existing-docs/sysadmin-commands.md
-    - CLI v1 Backup / Restore: existing-docs/director-backup.md
-  - Glossary: reference/terminology.md
-- Cloud Providers:
-  - Overview: clouds/index.md
   - Amazon Web Services:
-    - Overview: bosh-aws-cpi-release/index.md
-    - Deploying the Director: existing-docs/init-aws.md
-    - CPI Configuration: bosh-aws-cpi-release/config.md
-    - Cloud Properties:
-      - Availability Zones: bosh-aws-cpi-release/resources/azs.md
-      - Persistent Disks: bosh-aws-cpi-release/resources/disks.md
-      - Networks: bosh-aws-cpi-release/resources/networks.md
-      - Virtual Machines: bosh-aws-cpi-release/resources/vms.md
-    - Guides:
-      - IAM Users: existing-docs/aws-iam-users.md
-      - IAM Profiles: existing-docs/aws-iam-instance-profiles.md
-      - Using Instance Storage: existing-docs/aws-instance-storage.md
-    - Common Errors: bosh-aws-cpi-release/common-errors.md
+    - Usage: existing-docs/aws-cpi.md
+    - IAM Users: existing-docs/aws-iam-users.md
+    - IAM Profiles: existing-docs/aws-iam-instance-profiles.md
+    - Using Instance Storage: existing-docs/aws-instance-storage.md
   - Google Cloud Platform:
     - Usage: existing-docs/google-cpi.md
-    - Deploying the Director: existing-docs/init-google.md
-    - Guides:
-      - Required Permissions: existing-docs/google-required-permissions.md
-#      - Troubleshooting: google-cpi.md #troubleshooting
+    - Required Permissions: existing-docs/google-required-permissions.md
   - Microsoft Azure:
     - Usage: existing-docs/azure-cpi.md
-    - Deploying the Director: existing-docs/init-azure.md
-    - Guides:
-      - Creating Resources: existing-docs/azure-resources.md
-#      - Troubleshooting: azure-cpi.md #troubleshooting
+    - Creating Resources: existing-docs/azure-resources.md
   - OpenStack:
     - Usage: existing-docs/openstack-cpi.md
-    - Deploying the Director: existing-docs/init-openstack.md
-    - Guides:
-      - Using Auto-anti-affinity: existing-docs/openstack-auto-anti-affinity.md
-      - Using Human-readable VM names: existing-docs/openstack-human-readable-vm-names.md
-      - Using Keystone API v2: existing-docs/openstack-keystonev2.md
-      - Using Light Stemcells: existing-docs/openstack-light-stemcells.md
-      - Using nova-networking: existing-docs/openstack-nova-networking.md
-      - Multi-homed VMs: existing-docs/openstack-multiple-networks.md
-      - Extended Registry configuration: existing-docs/openstack-registry.md
-      - Self-signed Endpoints: existing-docs/openstack-self-signed-endpoints.md
-#      - Troubleshooting: openstack-cpi.md #troubleshooting
-  - RackHD: existing-docs/rackhd-cpi.md
-#      - Troubleshooting: rackhd-cpi.md #troubleshooting
+    - Using Auto-anti-affinity: existing-docs/openstack-auto-anti-affinity.md
+    - Using Human-readable VM names: existing-docs/openstack-human-readable-vm-names.md
+    - Using Keystone API v2: existing-docs/openstack-keystonev2.md
+    - Using Light Stemcells: existing-docs/openstack-light-stemcells.md
+    - Using nova-networking: existing-docs/openstack-nova-networking.md
+    - Multi-homed VMs: existing-docs/openstack-multiple-networks.md
+    - Extended Registry configuration: existing-docs/openstack-registry.md
+    - Self-signed Endpoints: existing-docs/openstack-self-signed-endpoints.md
+  - RackHD:
+    - Usage: existing-docs/rackhd-cpi.md
   - SoftLayer:
     - Usage: existing-docs/softlayer-cpi.md
-    - Deploying the Director: existing-docs/init-softlayer.md
-#      - Troubleshooting: softlayer-cpi.md #troubleshooting
   - VirtualBox:
     - Usage: existing-docs/virtualbox-cpi.md
-    - Deploying the Director: existing-docs/bosh-lite.md
-#      - Troubleshooting: virtualbox-cpi.md #troubleshooting
   - VMware vCloud:
     - Usage: existing-docs/vcloud-cpi.md
-    - Deploying the Director: existing-docs/init-vcloud.md
-#      - Troubleshooting: vcloud-cpi.md #troubleshooting
   - VMware vSphere:
     - Usage: existing-docs/vsphere-cpi.md
-    - Deploying the Director: existing-docs/init-vsphere.md
-    - Guides:
-      - Recovery from an ESXi Host Failure: existing-docs/vsphere-esxi-host-failure.md
-      - vSphere High Availability: existing-docs/vsphere-ha.md
-      - Migrating Datastores: existing-docs/vsphere-migrate-datastores.md
-      - Recovery from a vSphere Network Partitioning Fault: existing-docs/vsphere-network-partition.md
-      - Storage DRS and vMotion Support: existing-docs/vsphere-vmotion-support.md
-#      - Troubleshooting: vsphere-cpi.md #troubleshooting
-  - Warden / Garden: existing-docs/warden-cpi.md
-#      - Troubleshooting: warden-cpi.md #troubleshooting
-- Ecosystem:
-  - Official Repositories: ecosystem/official-repositories.md
-  - Community Releases: ecosystem/releases.md
-  - Contributing to BOSH: ecosystem/contributing.md
-  - Additional Resources: ecosystem/additional-resources.md
-- Appendix:
-  - Forgotten Pages:
-    - dns.md: existing-docs/dns.md
-    - index.md: existing-docs/index.md
-    # - errands.md: existing-docs/errands.md
-    - build-stemcell.md: existing-docs/build-stemcell.md
-    - vm-config.md: existing-docs/vm-config.md
-    - personas.md: existing-docs/personas.md
-    - init.md: existing-docs/init.md
-    - init-external-ip.md: existing-docs/init-external-ip.md
-    - basic-workflow.md: existing-docs/basic-workflow.md
-    - tips.md: existing-docs/tips.md
-    - deploying-step-by-step.md: existing-docs/deploying-step-by-step.md
-    - director-certs.md: existing-docs/director-certs.md
-    - configs.md: existing-docs/configs.md
-    - vm-anti-affinity.md: existing-docs/vm-anti-affinity.md
-    - addons-common.md: existing-docs/addons-common.md
-    - vm-struct.md: existing-docs/vm-struct.md
-    - job-logs.md: existing-docs/job-logs.md
-    - instance-metadata.md: existing-docs/instance-metadata.md
-    - props-common.md: existing-docs/props-common.md
-    - packages.md: existing-docs/packages.md
-    - release-blobs.md: existing-docs/release-blobs.md
-    - release-blobstore.md: existing-docs/release-blobstore.md
-    - s3-release-blobstore.md: existing-docs/s3-release-blobstore.md
-    - repack-stemcell.md: existing-docs/repack-stemcell.md
-  - Absorbed Pages:
-    - stemcell.md: existing-docs/stemcell.md
-    - release.md: existing-docs/release.md
-    - cli-envs.md: existing-docs/cli-envs.md
-    - about.md: existing-docs/about.md
-    - problems.md: existing-docs/problems.md
-    - deploying.md: existing-docs/deploying.md
-    - runtime-config.md: existing-docs/runtime-config.md
-    - bosh-lite.md: existing-docs/bosh-lite.md
-    - azs.md: existing-docs/azs.md
-    - cloud-config.md: existing-docs/cloud-config.md
-    - deployment.md: existing-docs/deployment.md
-    - terminology.md: existing-docs/terminology.md
-    - update-cloud-config.md: existing-docs/update-cloud-config.md
-    - deployment-basics.md: existing-docs/deployment-basics.md
-    - uploading-stemcells.md: existing-docs/uploading-stemcells.md
-    - uploading-releases.md: existing-docs/uploading-releases.md
-    - managing-releases.md: existing-docs/managing-releases.md
-    - managing-stemcells.md: existing-docs/managing-stemcells.md
-    - networks.md: existing-docs/networks.md
-    - aws-cpi.md: existing-docs/aws-cpi.md
-    - jobs.md: existing-docs/jobs.md
-  - Abandoned Pages:
-    - recent.md: existing-docs/recent.md
-  - Legacy Pages:
-    - bosh-cli.md: existing-docs/bosh-cli.md
-    - deployment-manifest.md: existing-docs/deployment-manifest.md
-  - Generic Todo Page: todo.md
+    - Recovery from an ESXi Host Failure: existing-docs/vsphere-esxi-host-failure.md
+    - vSphere High Availability: existing-docs/vsphere-ha.md
+    - Migrating Datastores: existing-docs/vsphere-migrate-datastores.md
+    - Recovery from a vSphere Network Partitioning Fault: existing-docs/vsphere-network-partition.md
+    - Storage DRS and vMotion Support: existing-docs/vsphere-vmotion-support.md
+    - Bootstrapping with Resource Pools: existing-docs/init-vsphere-rp.md
+  - Warden:
+    - Usage: existing-docs/warden-cpi.md
+  - Legacy Documentation:
+    - What is a Deployment?: existing-docs/deployment.md
+    - What is a Stemcell?: existing-docs/stemcell.md
+    - Basic Workflow: existing-docs/basic-workflow.md
+    - Deployment Manifest v1: existing-docs/deployment-manifest.md
+    - CLI v1 Installation: existing-docs/bosh-cli.md
+    - CLI v1 Commands: existing-docs/sysadmin-commands.md
+    - CLI v1 Backup / Restore: existing-docs/director-backup.md
+- Stemcells:
+  - Stemcells: stemcells.md
+- Releases:
+  - Releases: releases.md
 theme:
   name: 'material'
   feature:

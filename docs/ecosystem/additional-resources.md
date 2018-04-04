@@ -3,7 +3,6 @@
 Here are a few resources that you might find useful for learning more about BOSH:
 
  * [Ultimate Guide to BOSH](https://ultimateguidetobosh.com/) - a great resource for learning more about BOSH concepts
- * [bosh.io/releases](https://bosh.io/releases) - community releases on [bosh.io](https://bosh.io/)
  * [GitHub Releases](https://github.com/search?q=%22bosh+release%22+archived%3Afalse+language%3AShell&type=Repositories&ref=advsearch&l=Shell) - a GitHub search for repositories related to BOSH releases
 
 !!! note
