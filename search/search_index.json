@@ -2,88 +2,43 @@
     "docs": [
         {
             "location": "/",
-            "text": "See \nRecent Additions and Updates\n.\n\n\nIntroduction \n\u00b6\n\n\n\n\nWhat is BOSH?\n\n\nWhat problems does BOSH solve?\n\n\nStemcell\n\n\nRelease\n\n\nDeployment\n\n\n\n\n\n\nComparison to other tools\n\n\n\n\n\n\nGeneral architecture\n\n\nPersonas\n\n\nTerminology\n\n\n\n\n\n\nInstall BOSH \n\u00b6\n\n\n\n\nCreate an environment\n\n\nOn Local machine (BOSH Lite)\n\n\nOn AWS\n\n\nExpose Director on a Public IP\n\n\nOn Azure\n\n\nOn OpenStack\n\n\nOn vSphere\n\n\nOn vCloud\n\n\nOn SoftLayer\n\n\nOn Google Compute Platform\n\n\nOn RackHD\n\n\n\n\n\n\n\n\n\n\nDeploy software with BOSH \n\u00b6\n\n\n\n\nDeploy workflow\n\n\nUpdate cloud config\n\n\nBuild deployment manifest\n\n\nUpload stemcells\n\n\nUpload releases\n\n\nDeploy\n\n\nRun one-off tasks\n\n\nUpdate deployment\n\n\n\n\n\n\n\n\nCLI v2+ \n\u00b6\n\n\n\n\nCommand reference\n\n\ncreate-env\n Dependencies\n\n\nDifferences between CLI v2+ vs v1\n\n\nGlobal Flags\n\n\nEnvironments\n\n\nOperations files\n\n\nVariable Interpolation\n\n\nTunneling\n\n\n\n\n\n\n\n\nRunning Director \n\u00b6\n\n\n\n\nTroubleshooting\n\n\nEvents\n\n\nDirector tasks\n\n\nManaging releases\n\n\nManaging stemcells\n\n\nUser management\n\n\nUAA Integration\n\n\nUAA Permissions\n\n\n\n\n\n\nCredHub Integration\n\n\nVariable Types\n\n\n\n\n\n\nBackup and restore\n\n\n\n\nMisc\n\u00b6\n\n\n\n\nDeploying step-by-step\n\n\nSSL certificate configuration\n\n\nRemoval of compilers\n\n\nAccess event logging\n\n\nExplicit ARP Flushing\n\n\nConfiguring external database\n\n\nConfiguring external blobstore\n\n\n\n\nDetailed deployment configuration \n\u00b6\n\n\n\n\nManifest v2 schema\n\n\nLinks\n\n\nLink properties\n\n\nManual linking\n\n\nRenaming/migrating instance groups\n\n\n\n\n\n\nPersistent and orphaned disks\n\n\nCustomizing persistent disk FS\n\n\n\n\n\n\nConfigs\n\n\nCloud config\n\n\nAZs\n\n\nNetworks\n\n\nVM anti-affinity\n\n\n\n\n\n\nRuntime config\n\n\nAddons\n\n\nCommon addons\n\n\n\n\n\n\nCPI config\n\n\nTrusted certificates\n\n\nNative DNS Support\n\n\n\n\nDetailed CPI configuration & troubleshooting \n\u00b6\n\n\n\n\nAWS\n\n\nUsing IAM instance profiles\n\n\nUsing instance storage\n\n\nCreating IAM users\n\n\n\n\n\n\nAzure\n\n\nCreating resources\n\n\n\n\n\n\nOpenStack\n\n\nUsing Auto-anti-affinity\n\n\nUsing Keystone v2 API\n\n\nUsing nova-networking\n\n\nExtended Registry configuration\n\n\nHuman-readable VM names\n\n\nValidating self-signed OpenStack endpoints\n\n\nMulti-homed VMs\n\n\nUsing Light Stemcells\n\n\n\n\n\n\nvSphere\n\n\nvSphere HA\n\n\nMigrating from one datastore to another\n\n\nStorage DRS and vMotion Support\n\n\n\n\n\n\nvCloud\n\n\nSoftLayer\n\n\nGoogle Compute Engine\n\n\nRequired service account permissions\n\n\n\n\n\n\nRackHD\n\n\nWarden/Garden\n\n\nVirtualBox\n\n\n\n\nHealth management of VMs and processes \n\u00b6\n\n\n\n\nMonitoring\n\n\nConfiguring Health Monitor\n\n\n\n\n\n\nProcess monitoring with Monit\n\n\nManual repair with Cloud Check\n\n\nAutomatic repair with Resurrector\n\n\nPersistent disk snapshotting\n\n\n\n\nVM configuration (looking inside a deployment) \n\u00b6\n\n\n\n\nStructure of a managed VM\n\n\nVM configuration locations\n\n\n\n\n\n\nLocation and use of logs\n\n\nInstance metadata\n\n\nDebugging issues with jobs\n\n\n\n\n\n\nGuides \n\u00b6\n\n\n\n\nIPv6 on vSphere\n\n\nMulti-CPI\n\n\nOn AWS\n\n\n\n\n\n\nPackage software with BOSH \n\u00b6\n\n\n\n\nWhat is a release?\n\n\nCreating a release\n\n\nTesting with dev releases\n\n\nCutting final releases\n\n\nCompiled releases\n\n\n\n\n\n\nWhat is a job?\n\n\nCreating a job\n\n\nJob Templates\n\n\n\n\n\n\nErrands\n\n\nProperties: Suggested configurations\n\n\nLinks: Common types\n\n\nJob lifecycle\n\n\nPre-start script\n\n\nPost-start script\n\n\nPost-deploy script\n\n\nDrain script\n\n\n\n\n\n\nScheduled processes\n\n\n\n\n\n\nReleases and Jobs in Windows\n\n\nReleases\n\n\nJobs\n\n\nSample BOSH Windows Release\n\n\n\n\n\n\nWhat is a package?\n\n\nCreating a package\n\n\nRelationship to release blobs\n\n\nVendoring packages\n\n\nRelease blobs\n\n\n\n\n\n\nHow do releases, jobs, and packages interact?\n\n\nManaging release repository\n\n\nRelease blobstore\n\n\nConfiguring S3 release blobstore\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExtend BOSH \n\u00b6\n\n\n\n\nDirector API v1\n\n\nWhat is a CPI?\n\n\nBuilding a CPI\n\n\nCPI API v1\n\n\nAgent-CPI interactions\n\n\n\n\n\n\nBuilding a stemcell\n\n\nRepacking Stemcells\n\n\n\n\n\n\n\n\n\n\nOther \n\u00b6\n\n\nCLI v1 (superseded by \nCLI v2\n) \n\u00b6\n\n\n\n\nInstall BOSH CLI v1\n\n\nCLI v1\n\n\n\n\nManifest v1 \n\u00b6\n\n\n\n\nManifest v1 schema",
+            "text": "BOSH is a project that unifies release engineering, deployment, and lifecycle management of small and large-scale cloud software. BOSH can provision and deploy software over hundreds of VMs. It also performs monitoring, failure recovery, and software updates with zero-to-minimal downtime.\n\n\nWhile BOSH was developed to deploy Cloud Foundry PaaS, it can also be used to deploy almost any other software (Hadoop, for instance). BOSH is particularly well-suited for large distributed systems. In addition, BOSH supports multiple Infrastructure as a Service (IaaS) providers like VMware vSphere, Google Cloud Platform, Amazon Web Services EC2, and OpenStack. There is a Cloud Provider Interface (CPI) that enables users to extend BOSH to support additional IaaS providers such as Apache CloudStack and VirtualBox.\n\n\nDownloads\n\u00b6\n\n\nCLI (v3.0.1)\n\u00b6\n\n\nThe \nbosh\n CLI\n is the command line tool used for interacting with all things BOSH.\n\n\n\n\n\n\n\n\nOperatig System\n\n\nBinary (SHA1)\n\n\n\n\n\n\n\n\n\n\nDarwin / macOS\n\n\nbosh-cli-3.0.1-darwin-amd64\n (\nd2fea20210a47b8c8f1f7dbb27ffb5808d47ce87\n)\n\n\n\n\n\n\nLinux\n\n\nbosh-cli-3.0.1-linux-amd64\n (\nccc893bab8b219e9e4a628ed044ebca6c6de9ca0\n)\n\n\n\n\n\n\nWindows\n\n\nbosh-cli-3.0.1-windows-amd64.exe\n (\n41c23c90cab9dc62fa0a1275dcaf64670579ed33\n)\n\n\n\n\n\n\n\n\nStemcells\n\u00b6\n\n\nStemcells\n are the base images of the virtual machines managed by BOSH.\n\n\nUbuntu Trusty (v3541.10)\n\u00b6\n\n\n\n\n\n\n\n\nInfrastructure\n\n\nVersion\n\n\nTarball          (SHA1)\n\n\n\n\n\n\n\n\n\n\nAmazon Web Services\n\n\n3541.10\n\n\nDownload\n (\n73313fececadd390c98a4dbde0c289f5b3bd795f\n)\nLight Download\n (\nc1f35b57d59639321e2662fd69c69918f3bffda5\n)\n\n\n\n\n\n\nGoogle Cloud Platform\n\n\n3541.10\n\n\nDownload\n (\n29623d3fe25371ed6d7b709510dadad77a3081b5\n)\nLight Download\n (\n842e8dce585a4f04bd461667f77d468903e452ea\n)\n\n\n\n\n\n\nMicrosoft Azure\n\n\n3541.10\n\n\nDownload\n (\n60a6561e0bfe48d92acd40e38708d061799103f4\n)\n\n\n\n\n\n\nOpenStack\n\n\n3541.10\n\n\nDownload\n (\nbcce3d6cef5e3882c214c078873793fd477db60d\n)\n\n\n\n\n\n\nOpenStack (raw)\n\n\n3541.10\n\n\nDownload\n (\n939bfa7ecf9787cefd00700c1f2baa58e6bd3e38\n)\n\n\n\n\n\n\nSoftLayer\n\n\n3541.9\n\n\nDownload\n (\nf613314947c292c1da1114a3e3e4837a2f736124\n)\n\n\n\n\n\n\nVMware vCloud\n\n\n3541.10\n\n\nDownload\n (\nb69b91b290b1af2e7cfb6d7ceb9b5c19602d0aed\n)\n\n\n\n\n\n\nVMware vSphere\n\n\n3541.10\n\n\nDownload\n (\n6c32b606c02d9732ab3540c4b74c9cd527328951\n)\n\n\n\n\n\n\nBOSH Lite Warden\n\n\n3541.10\n\n\nDownload\n (\n11c07b63953710d68b7f068e0ecb9cb8f7e64f6a\n)\n\n\n\n\n\n\n\n\nWindows 2016 (v1709.4)\n\u00b6\n\n\n\n\n\n\n\n\nInfrastructure\n\n\nVersion\n\n\nTarball          (SHA1)\n\n\n\n\n\n\n\n\n\n\nGoogle Cloud Platform\n\n\n1709.4\n\n\nLight Download\n (\nc45e200e532e41631d3a78a8b731cc83af103258\n)\n\n\n\n\n\n\nMicrosoft Azure\n\n\n1709.4\n\n\nLight Download\n (\n85f43f612e00b24230a3a180e7e7a9b6bf6be9ed\n)\n\n\n\n\n\n\n\n\nWindows 2012 (v1200.16)\n\u00b6\n\n\n\n\n\n\n\n\nInfrastructure\n\n\nVersion\n\n\nTarball          (SHA1)\n\n\n\n\n\n\n\n\n\n\nAmazon Web Services\n\n\n1200.16\n\n\nLight Download\n (\n0cd18b751db4862995ee0ef425e362ede4f8549c\n)\n\n\n\n\n\n\nGoogle Cloud Platform\n\n\n1200.16\n\n\nLight Download\n (\nf661fca64bab94cc4f1d3e117f0b39412a7bf237\n)\n\n\n\n\n\n\nMicrosoft Azure\n\n\n1200.16\n\n\nLight Download\n (\ne0db00dcd91f28234b897f0d874a934dfb6f0a53\n)\n\n\n\n\n\n\n\n\nCentOS 7 (v3541.10)\n\u00b6\n\n\n\n\n\n\n\n\nInfrastructure\n\n\nVersion\n\n\nTarball          (SHA1)\n\n\n\n\n\n\n\n\n\n\nAmazon Web Services\n\n\n3541.10\n\n\nDownload\n (\n73313fececadd390c98a4dbde0c289f5b3bd795f\n)\nLight Download\n (\nc1f35b57d59639321e2662fd69c69918f3bffda5\n)\n\n\n\n\n\n\nGoogle Cloud Platform\n\n\n3541.10\n\n\nDownload\n (\n29623d3fe25371ed6d7b709510dadad77a3081b5\n)\nLight Download\n (\n842e8dce585a4f04bd461667f77d468903e452ea\n)\n\n\n\n\n\n\nMicrosoft Azure\n\n\n3541.10\n\n\nDownload\n (\n60a6561e0bfe48d92acd40e38708d061799103f4\n)\n\n\n\n\n\n\nOpenStack\n\n\n3541.10\n\n\nDownload\n (\nbcce3d6cef5e3882c214c078873793fd477db60d\n)\n\n\n\n\n\n\nOpenStack (raw)\n\n\n3541.10\n\n\nDownload\n (\n939bfa7ecf9787cefd00700c1f2baa58e6bd3e38\n)\n\n\n\n\n\n\nVMware vCloud\n\n\n3541.10\n\n\nDownload\n (\nb69b91b290b1af2e7cfb6d7ceb9b5c19602d0aed\n)\n\n\n\n\n\n\nVMware vSphere\n\n\n3541.10\n\n\nDownload\n (\n6c32b606c02d9732ab3540c4b74c9cd527328951\n)\n\n\n\n\n\n\nBOSH Lite Warden\n\n\n3541.10\n\n\nDownload\n (\n11c07b63953710d68b7f068e0ecb9cb8f7e64f6a\n)",
             "title": "Welcome"
         },
         {
-            "location": "/#introduction",
-            "text": "What is BOSH?  What problems does BOSH solve?  Stemcell  Release  Deployment    Comparison to other tools    General architecture  Personas  Terminology",
-            "title": "Introduction "
-        },
-        {
-            "location": "/#install-bosh",
-            "text": "Create an environment  On Local machine (BOSH Lite)  On AWS  Expose Director on a Public IP  On Azure  On OpenStack  On vSphere  On vCloud  On SoftLayer  On Google Compute Platform  On RackHD",
-            "title": "Install BOSH "
-        },
-        {
-            "location": "/#deploy-software-with-bosh",
-            "text": "Deploy workflow  Update cloud config  Build deployment manifest  Upload stemcells  Upload releases  Deploy  Run one-off tasks  Update deployment",
-            "title": "Deploy software with BOSH "
-        },
-        {
-            "location": "/#cli-v2",
-            "text": "Command reference  create-env  Dependencies  Differences between CLI v2+ vs v1  Global Flags  Environments  Operations files  Variable Interpolation  Tunneling",
-            "title": "CLI v2+ "
-        },
-        {
-            "location": "/#running-director",
-            "text": "Troubleshooting  Events  Director tasks  Managing releases  Managing stemcells  User management  UAA Integration  UAA Permissions    CredHub Integration  Variable Types    Backup and restore",
-            "title": "Running Director "
-        },
-        {
-            "location": "/#misc",
-            "text": "Deploying step-by-step  SSL certificate configuration  Removal of compilers  Access event logging  Explicit ARP Flushing  Configuring external database  Configuring external blobstore",
-            "title": "Misc"
-        },
-        {
-            "location": "/#detailed-deployment-configuration",
-            "text": "Manifest v2 schema  Links  Link properties  Manual linking  Renaming/migrating instance groups    Persistent and orphaned disks  Customizing persistent disk FS    Configs  Cloud config  AZs  Networks  VM anti-affinity    Runtime config  Addons  Common addons    CPI config  Trusted certificates  Native DNS Support",
-            "title": "Detailed deployment configuration "
-        },
-        {
-            "location": "/#detailed-cpi-configuration-troubleshooting",
-            "text": "AWS  Using IAM instance profiles  Using instance storage  Creating IAM users    Azure  Creating resources    OpenStack  Using Auto-anti-affinity  Using Keystone v2 API  Using nova-networking  Extended Registry configuration  Human-readable VM names  Validating self-signed OpenStack endpoints  Multi-homed VMs  Using Light Stemcells    vSphere  vSphere HA  Migrating from one datastore to another  Storage DRS and vMotion Support    vCloud  SoftLayer  Google Compute Engine  Required service account permissions    RackHD  Warden/Garden  VirtualBox",
-            "title": "Detailed CPI configuration &amp; troubleshooting "
-        },
-        {
-            "location": "/#health-management-of-vms-and-processes",
-            "text": "Monitoring  Configuring Health Monitor    Process monitoring with Monit  Manual repair with Cloud Check  Automatic repair with Resurrector  Persistent disk snapshotting",
-            "title": "Health management of VMs and processes "
-        },
-        {
-            "location": "/#vm-configuration-looking-inside-a-deployment",
-            "text": "Structure of a managed VM  VM configuration locations    Location and use of logs  Instance metadata  Debugging issues with jobs",
-            "title": "VM configuration (looking inside a deployment) "
-        },
-        {
-            "location": "/#guides",
-            "text": "IPv6 on vSphere  Multi-CPI  On AWS",
-            "title": "Guides "
-        },
-        {
-            "location": "/#package-software-with-bosh",
-            "text": "What is a release?  Creating a release  Testing with dev releases  Cutting final releases  Compiled releases    What is a job?  Creating a job  Job Templates    Errands  Properties: Suggested configurations  Links: Common types  Job lifecycle  Pre-start script  Post-start script  Post-deploy script  Drain script    Scheduled processes    Releases and Jobs in Windows  Releases  Jobs  Sample BOSH Windows Release    What is a package?  Creating a package  Relationship to release blobs  Vendoring packages  Release blobs    How do releases, jobs, and packages interact?  Managing release repository  Release blobstore  Configuring S3 release blobstore",
-            "title": "Package software with BOSH "
-        },
-        {
-            "location": "/#extend-bosh",
-            "text": "Director API v1  What is a CPI?  Building a CPI  CPI API v1  Agent-CPI interactions    Building a stemcell  Repacking Stemcells",
-            "title": "Extend BOSH "
-        },
-        {
-            "location": "/#other",
+            "location": "/#downloads",
             "text": "",
-            "title": "Other "
+            "title": "Downloads"
         },
         {
-            "location": "/#cli-v1-superseded-by-cli-v2",
-            "text": "Install BOSH CLI v1  CLI v1",
-            "title": "CLI v1 (superseded by CLI v2) "
+            "location": "/#cli-v301",
+            "text": "The  bosh  CLI  is the command line tool used for interacting with all things BOSH.     Operatig System  Binary (SHA1)      Darwin / macOS  bosh-cli-3.0.1-darwin-amd64  ( d2fea20210a47b8c8f1f7dbb27ffb5808d47ce87 )    Linux  bosh-cli-3.0.1-linux-amd64  ( ccc893bab8b219e9e4a628ed044ebca6c6de9ca0 )    Windows  bosh-cli-3.0.1-windows-amd64.exe  ( 41c23c90cab9dc62fa0a1275dcaf64670579ed33 )",
+            "title": "CLI (v3.0.1)"
         },
         {
-            "location": "/#manifest-v1",
-            "text": "Manifest v1 schema",
-            "title": "Manifest v1 "
+            "location": "/#stemcells",
+            "text": "Stemcells  are the base images of the virtual machines managed by BOSH.",
+            "title": "Stemcells"
+        },
+        {
+            "location": "/#ubuntu-trusty-v354110",
+            "text": "Infrastructure  Version  Tarball          (SHA1)      Amazon Web Services  3541.10  Download  ( 73313fececadd390c98a4dbde0c289f5b3bd795f ) Light Download  ( c1f35b57d59639321e2662fd69c69918f3bffda5 )    Google Cloud Platform  3541.10  Download  ( 29623d3fe25371ed6d7b709510dadad77a3081b5 ) Light Download  ( 842e8dce585a4f04bd461667f77d468903e452ea )    Microsoft Azure  3541.10  Download  ( 60a6561e0bfe48d92acd40e38708d061799103f4 )    OpenStack  3541.10  Download  ( bcce3d6cef5e3882c214c078873793fd477db60d )    OpenStack (raw)  3541.10  Download  ( 939bfa7ecf9787cefd00700c1f2baa58e6bd3e38 )    SoftLayer  3541.9  Download  ( f613314947c292c1da1114a3e3e4837a2f736124 )    VMware vCloud  3541.10  Download  ( b69b91b290b1af2e7cfb6d7ceb9b5c19602d0aed )    VMware vSphere  3541.10  Download  ( 6c32b606c02d9732ab3540c4b74c9cd527328951 )    BOSH Lite Warden  3541.10  Download  ( 11c07b63953710d68b7f068e0ecb9cb8f7e64f6a )",
+            "title": "Ubuntu Trusty (v3541.10)"
+        },
+        {
+            "location": "/#windows-2016-v17094",
+            "text": "Infrastructure  Version  Tarball          (SHA1)      Google Cloud Platform  1709.4  Light Download  ( c45e200e532e41631d3a78a8b731cc83af103258 )    Microsoft Azure  1709.4  Light Download  ( 85f43f612e00b24230a3a180e7e7a9b6bf6be9ed )",
+            "title": "Windows 2016 (v1709.4)"
+        },
+        {
+            "location": "/#windows-2012-v120016",
+            "text": "Infrastructure  Version  Tarball          (SHA1)      Amazon Web Services  1200.16  Light Download  ( 0cd18b751db4862995ee0ef425e362ede4f8549c )    Google Cloud Platform  1200.16  Light Download  ( f661fca64bab94cc4f1d3e117f0b39412a7bf237 )    Microsoft Azure  1200.16  Light Download  ( e0db00dcd91f28234b897f0d874a934dfb6f0a53 )",
+            "title": "Windows 2012 (v1200.16)"
+        },
+        {
+            "location": "/#centos-7-v354110",
+            "text": "Infrastructure  Version  Tarball          (SHA1)      Amazon Web Services  3541.10  Download  ( 73313fececadd390c98a4dbde0c289f5b3bd795f ) Light Download  ( c1f35b57d59639321e2662fd69c69918f3bffda5 )    Google Cloud Platform  3541.10  Download  ( 29623d3fe25371ed6d7b709510dadad77a3081b5 ) Light Download  ( 842e8dce585a4f04bd461667f77d468903e452ea )    Microsoft Azure  3541.10  Download  ( 60a6561e0bfe48d92acd40e38708d061799103f4 )    OpenStack  3541.10  Download  ( bcce3d6cef5e3882c214c078873793fd477db60d )    OpenStack (raw)  3541.10  Download  ( 939bfa7ecf9787cefd00700c1f2baa58e6bd3e38 )    VMware vCloud  3541.10  Download  ( b69b91b290b1af2e7cfb6d7ceb9b5c19602d0aed )    VMware vSphere  3541.10  Download  ( 6c32b606c02d9732ab3540c4b74c9cd527328951 )    BOSH Lite Warden  3541.10  Download  ( 11c07b63953710d68b7f068e0ecb9cb8f7e64f6a )",
+            "title": "CentOS 7 (v3541.10)"
         },
         {
             "location": "/goals-of-bosh/",
