@@ -304,7 +304,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../goals-of-bosh/" title="Project Goals" class="md-nav__link">
+    <a href="../problems/" title="Project Goals" class="md-nav__link">
       Project Goals
     </a>
   </li>
@@ -316,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ecosystem/community/" title="Community" class="md-nav__link">
+    <a href="../community/" title="Community" class="md-nav__link">
       Community
     </a>
   </li>
@@ -949,6 +949,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step-1-create-job-skeletons" title="Step 1: Create Job Skeletons ## " class="md-nav__link">
+    Step 1: Create Job Skeletons ## 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-control-scripts" title="Create control scripts  ### " class="md-nav__link">
+    Create control scripts  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-monit-files" title="Update monit files  ### " class="md-nav__link">
+    Update monit files  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-job-specs" title="Update job specs  ### " class="md-nav__link">
+    Update job specs  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" title="Commit ### " class="md-nav__link">
+    Commit ### 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-2-make-dependency-graphs" title="Step 2: Make Dependency Graphs ## " class="md-nav__link">
     Step 2: Make Dependency Graphs ## 
   </a>
@@ -1174,7 +1215,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit" title="Commit ### " class="md-nav__link">
+  <a href="#commit_1" title="Commit ### " class="md-nav__link">
     Commit ### 
   </a>
   
@@ -1188,7 +1229,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit_1" title="Commit ### " class="md-nav__link">
+  <a href="#commit_2" title="Commit ### " class="md-nav__link">
     Commit ### 
   </a>
   
@@ -2226,18 +2267,6 @@
   <li class="md-nav__item">
     <a href="../jumpbox/" title="Enabling SSH Access" class="md-nav__link">
       Enabling SSH Access
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../bosh-cli/guide/recovering-env-state/" title="Recovering a State File" class="md-nav__link">
-      Recovering a State File
     </a>
   </li>
 
@@ -3713,6 +3742,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#step-1-create-job-skeletons" title="Step 1: Create Job Skeletons ## " class="md-nav__link">
+    Step 1: Create Job Skeletons ## 
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-control-scripts" title="Create control scripts  ### " class="md-nav__link">
+    Create control scripts  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-monit-files" title="Update monit files  ### " class="md-nav__link">
+    Update monit files  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-job-specs" title="Update job specs  ### " class="md-nav__link">
+    Update job specs  ### 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" title="Commit ### " class="md-nav__link">
+    Commit ### 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-2-make-dependency-graphs" title="Step 2: Make Dependency Graphs ## " class="md-nav__link">
     Step 2: Make Dependency Graphs ## 
   </a>
@@ -3938,7 +4008,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit" title="Commit ### " class="md-nav__link">
+  <a href="#commit_1" title="Commit ### " class="md-nav__link">
     Commit ### 
   </a>
   
@@ -3952,7 +4022,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commit_1" title="Commit ### " class="md-nav__link">
+  <a href="#commit_2" title="Commit ### " class="md-nav__link">
     Commit ### 
   </a>
   
@@ -4010,6 +4080,25 @@ Next, you iterate through Steps 1 through 6 until your dev release is
 satisfactory.
 Then you can do a final release.</p>
 <h3 id="create-the-release-directory"><a id="release-dir"></a>Create the release directory<a class="headerlink" href="#create-the-release-directory" title="Permanent link">&para;</a></h3>
+<p>To create the release directory, navigate into the workspace where you want the
+release to be, and run:</p>
+<p><code class="codehilite">bosh init-release --dir &lt;release_name&gt;</code></p>
+<p>You can add the <code class="codehilite">--git</code> option to initialize a git repository.
+Use dashes in the release name.
+Use underscores for all other filenames in the release.</p>
+<p>View the release with <code class="codehilite">tree</code>:</p>
+<div class="codehilite"><pre><span></span>$ tree .
+.
+├── blobs
+├── config
+│   └── blobs.yml
+├── <span class="nb">jobs</span>
+├── packages
+└── src
+
+<span class="m">5</span> directories, <span class="m">1</span> file
+</pre></div>
+
 <p>When deploying your release, BOSH places compiled code and other resources
 in the <code class="codehilite">/var/vcap/</code> directory tree, which BOSH creates on the job VMs.
 The four directories you just created, <code class="codehilite">jobs</code>, <code class="codehilite">packages</code>, <code class="codehilite">src</code>, and <code class="codehilite">blobs</code>,
@@ -4024,6 +4113,130 @@ a Git submodule or a Mercurial repo.</p>
 For releases with just a few jobs, going one step at a time is probably easiest.
 If you have a larger number of jobs, going one job at a time may be more efficient.</p>
 <hr />
+<h2 id="step-1-create-job-skeletons">Step 1: Create Job Skeletons ## <a id="job-skel"></a><a class="headerlink" href="#step-1-create-job-skeletons" title="Permanent link">&para;</a></h2>
+<p>Navigate into the release directory.</p>
+<p>For each job, create a job skeleton:</p>
+<p><code class="codehilite">bosh generate-job &lt;job_name&gt;</code></p>
+<p>In our example, we run <code class="codehilite">bosh generate-job</code> twice, once for the <code class="codehilite">web_ui</code> job,
+and once for the <code class="codehilite">bg_worker</code> job.</p>
+<p>View the job skeletons with <code class="codehilite">tree</code>:</p>
+<div class="codehilite"><pre><span></span>$ tree .
+.
+├── blobs
+├── config
+│   └── blobs.yml
+├── <span class="nb">jobs</span>
+│   ├── bg_worker
+│   │   ├── monit
+│   │   ├── spec
+│   │   └── templates
+│   └── web_ui
+│       ├── monit
+│       ├── spec
+│       └── templates
+├── packages
+└── src
+
+<span class="m">9</span> directories, <span class="m">5</span> files
+</pre></div>
+
+<h3 id="create-control-scripts">Create control scripts  ### <a id="control"></a><a class="headerlink" href="#create-control-scripts" title="Permanent link">&para;</a></h3>
+<p>Every job needs a way to start and stop.
+You provide that by writing a control script and updating the <code class="codehilite">monit</code> file.</p>
+<p>The control script:</p>
+<ul>
+<li>Includes a start command and a stop command.</li>
+<li>Is an ERB template stored in the <code class="codehilite">templates</code> directory for the relevant job.</li>
+</ul>
+<p>For each job, create a control script that configures the job to store logs in <code class="codehilite">/var/vcap/sys/log/JOB_NAME</code>. Save this script as <code class="codehilite">ctl.erb</code> in the <code class="codehilite">templates</code> directory for its job.</p>
+<p>The control script for the <code class="codehilite">web_ui</code> job looks like this:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">RUN_DIR</span><span class="o">=</span>/var/vcap/sys/run/web_ui
+<span class="nv">LOG_DIR</span><span class="o">=</span>/var/vcap/sys/log/web_ui
+<span class="nv">PIDFILE</span><span class="o">=</span><span class="si">${</span><span class="nv">RUN_DIR</span><span class="si">}</span>/pid
+
+<span class="k">case</span> <span class="nv">$1</span> in
+
+  start<span class="o">)</span>
+    mkdir -p <span class="nv">$RUN_DIR</span> <span class="nv">$LOG_DIR</span>
+    chown -R vcap:vcap <span class="nv">$RUN_DIR</span> <span class="nv">$LOG_DIR</span>
+
+    <span class="nb">echo</span> <span class="nv">$$</span> &gt; <span class="nv">$PIDFILE</span>
+
+    <span class="nb">cd</span> /var/vcap/packages/ardo_app
+
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/var/vcap/packages/ruby_1.9.3/bin:<span class="nv">$PATH</span>
+
+    <span class="nb">exec</span> /var/vcap/packages/ruby_1.9.3/bin/bundle <span class="nb">exec</span> <span class="se">\</span>
+      rackup -p &lt;%<span class="o">=</span> properties.web_ui.port %&gt; <span class="se">\</span>
+      &gt;&gt;  <span class="nv">$LOG_DIR</span>/web_ui.stdout.log <span class="se">\</span>
+      <span class="m">2</span>&gt;&gt; <span class="nv">$LOG_DIR</span>/web_ui.stderr.log
+
+    <span class="p">;;</span>
+
+  stop<span class="o">)</span>
+    <span class="nb">kill</span> -9 <span class="sb">`</span>cat <span class="nv">$PIDFILE</span><span class="sb">`</span>
+    rm -f <span class="nv">$PIDFILE</span>
+
+    <span class="p">;;</span>
+
+  *<span class="o">)</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Usage: ctl {start|stop}&quot;</span> <span class="p">;;</span>
+
+<span class="k">esac</span>
+</pre></div>
+
+<p>If your release needs templates other than the control script, create them now.</p>
+<h3 id="update-monit-files">Update monit files  ### <a id="monit"></a><a class="headerlink" href="#update-monit-files" title="Permanent link">&para;</a></h3>
+<p>The <code class="codehilite">monit</code> file:</p>
+<ul>
+<li>Specifies the process ID (pid) file for the job</li>
+<li>References each command provided by the templates for the job</li>
+<li>Specifies that the job belongs to the <code class="codehilite">vcap</code> group</li>
+</ul>
+<p>On a deployed release, a BOSH Agent runs on each job VM.
+BOSH communicates with the Agent, which in turn executes commands in the
+control script.
+The Agent does this using open source process monitoring software called
+<a href="http://mmonit.com/monit/">Monit</a>.</p>
+<p>The <code class="codehilite">monit</code> file for the <code class="codehilite">web_ui</code> job looks like this:</p>
+<div class="codehilite"><pre><span></span>check process web_ui
+  with pidfile /var/vcap/sys/run/web_ui/pid
+  start program &quot;/var/vcap/jobs/web_ui/bin/ctl start&quot;
+  stop program &quot;/var/vcap/jobs/web_ui/bin/ctl stop&quot;
+  group vcap
+</pre></div>
+
+<p>Update the <code class="codehilite">monit</code> file for each of your jobs.
+Use <code class="codehilite">/var/vcap</code> paths as shown in the example.</p>
+<p class="note"><strong>Note</strong>: BOSH requires a <code>monit</code> file for each job in a release. When developing a release, you can use an empty <code>monit</code> file to meet this requirement without having to first create a control script.</p>
+
+<h3 id="update-job-specs">Update job specs  ### <a id="job-specs"></a><a class="headerlink" href="#update-job-specs" title="Permanent link">&para;</a></h3>
+<p>At compile time, BOSH transforms templates into files, which it then replicates
+on the job VMs.</p>
+<p>The template names and file paths are among the metadata for each job that
+resides in the job <code class="codehilite">spec</code> file.</p>
+<p>In the job <code class="codehilite">spec</code> file, the <code class="codehilite">templates</code> block contains key/value pairs where:</p>
+<ul>
+<li>Each key is template name</li>
+<li>Each value is the path to the corresponding file on a job VM</li>
+</ul>
+<p>The file paths that you provide for templates are relative to
+the <code class="codehilite">/var/vcap/jobs/&lt;job_name&gt;</code> directory on the VM.
+For example, <code class="codehilite">bin/ctl</code> becomes <code class="codehilite">/var/vcap/jobs/&lt;job_name&gt;/bin/ctl</code> on the job VM.
+Using <code class="codehilite">bin</code> as the directory where these files go is a convention.</p>
+<p>The <code class="codehilite">templates</code> block of the updated <code class="codehilite">spec</code> files for the example jobs look
+like this:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">templates</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">ctl.erb</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bin/ctl</span>
+</pre></div>
+
+<p>For each job, update the <code class="codehilite">spec</code> file with template names.</p>
+<h3 id="commit">Commit ### <a id="commit-one"></a><a class="headerlink" href="#commit" title="Permanent link">&para;</a></h3>
+<p>You have now created one or more job skeletons; this is a good time to commit.</p>
+<p>If you used the <code class="codehilite">--git</code> option with <code class="codehilite">bosh init-release</code> (as recommended), the
+correct <code class="codehilite"><span class="na">.gitignore</span></code> file has been automatically created for you.</p>
 <hr />
 <h2 id="step-2-make-dependency-graphs">Step 2: Make Dependency Graphs ## <a id="graph"></a><a class="headerlink" href="#step-2-make-dependency-graphs" title="Permanent link">&para;</a></h2>
 <p>There are two kinds of dependencies in a BOSH release:</p>
@@ -4525,7 +4738,7 @@ the symbolic links to them in the <code class="codehilite">blobs</code> director
 </ol>
 <p>To upload your blobs, run:</p>
 <p><code class="codehilite">bosh upload-blobs</code></p>
-<h3 id="commit">Commit ### <a id="final-commit-two"></a><a class="headerlink" href="#commit" title="Permanent link">&para;</a></h3>
+<h3 id="commit_1">Commit ### <a id="final-commit-two"></a><a class="headerlink" href="#commit_1" title="Permanent link">&para;</a></h3>
 <p>The <code class="codehilite">bosh upload-blobs</code> command has now populated the <code class="codehilite">blobs.yml</code> file
 in the <code class="codehilite">config</code> directory with metadata for uploaded blobs.</p>
 <p>This is a good reason to commit.</p>
@@ -4535,7 +4748,7 @@ in the <code class="codehilite">config</code> directory with metadata for upload
 <p>BOSH prompts you for a release name, and assigns a whole-number version to the release.</p>
 <p>This is a good time to push your code to a shared repository to give others access to
 your final release.</p>
-<h3 id="commit_1">Commit ### <a id="final-release-commit"></a><a class="headerlink" href="#commit_1" title="Permanent link">&para;</a></h3>
+<h3 id="commit_2">Commit ### <a id="final-release-commit"></a><a class="headerlink" href="#commit_2" title="Permanent link">&para;</a></h3>
 <p>Do one more commit before you deploy!</p>
 <h3 id="deploy-the-final-release">Deploy the Final Release  ### <a id="final-release-deploy"></a><a class="headerlink" href="#deploy-the-final-release" title="Permanent link">&para;</a></h3>
 <p>Run:</p>
