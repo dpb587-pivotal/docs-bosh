@@ -10,14 +10,14 @@ The runtime config defines IaaS-agnostic configuration which applies to all depl
     Support for runtime configs was first introduced in [bosh/v255.4](https://github.com/cloudfoundry/bosh/releases/tag/stable-3213).
 
 
-## `releases[]`
+## `releases[]` {: #releases }
 
 Specifies the releases used by the addons.
 
  * *Required*
  * *Type*: Array of Objects
 
-> ### `name`
+> ### `name` {: #releases-name }
 >
 > Name of a release name used by an addon.
 >
@@ -25,7 +25,7 @@ Specifies the releases used by the addons.
 >  * *Type*: String
 >
 >
-> ### `version`
+> ### `version` {: #vreleases-ersion }
 >
 > The version of the release to use. Version *cannot* be `latest`; it must be specified explicitly.
 >
@@ -33,7 +33,7 @@ Specifies the releases used by the addons.
 >  * *Type*: String
 >
 >
-> ### `url`
+> ### `url` {: #releases-url }
 >
 > URL of a release to download. Works with CLI v2.
 >
@@ -41,7 +41,7 @@ Specifies the releases used by the addons.
 >  * *Type*: String
 >
 >
-> ### `sha1`
+> ### `sha1` {: #releases-sha1 }
 >
 > SHA1 of asset referenced via URL. Works with CLI v2.
 >
@@ -49,11 +49,11 @@ Specifies the releases used by the addons.
 >  * *Type*: String
 >
 
-## `addons[]`
+## `addons[]` {: #addons }
 
 Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 
-> ### `name`
+> ### `name` {: #addons-name }
 >
 > A unique name used to identify and reference the addon.
 >
@@ -61,7 +61,7 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 >  * *Type*: String
 >
 >
-> ### `jobs[]`
+> ### `jobs[]` {: #addons-jobs }
 >
 > Specifies the name and release of release jobs to be colocated.
 >
@@ -69,7 +69,7 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 >  * *Type*: Array of Objects
 >
 >
-> > #### `name`
+> > #### `name` {: #addons-jobs-name }
 > >
 > > The job name.
 > >
@@ -77,7 +77,7 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 > >  * *Type*: String
 > >
 > >
-> > #### `release`
+> > #### `release` {: #addons-jobs-release }
 > >
 > > The release where the job exists.
 > >
@@ -85,14 +85,14 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 > >  * *Type*: String
 > >
 > >
-> > #### `properties`
+> > #### `properties` {: #addons-jobs-properties }
 > >
 > > Specifies job properties. Properties allow the Director to configure jobs to a specific environment.
 > >
 > >  * *Optional*
 > >  * *Type*: Object
 >
-> ### `include`
+> ### `include` {: #addons-include }
 >
 > Specifies inclusion [placement rules](#placement-rules).
 >
@@ -100,7 +100,7 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 >  * *Type*: Object
 >  * *Since*: [bosh/v260](https://github.com/cloudfoundry/bosh/releases/tag/v260)
 >
-> ### `exclude`
+> ### `exclude` {: #addons-exclude }
 >
 > Specifies exclusion [placement rules](#placement-rules).
 >
@@ -109,7 +109,7 @@ Specifies the [addons](terminology.md#addon) to be applied to all deployments.
 >  * *Since*: [bosh/v260](https://github.com/cloudfoundry/bosh/releases/tag/v260)
 >
 
-## `tags`
+## `tags` {: #tags }
 
 Specifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy.
 
@@ -126,13 +126,13 @@ Specifies key value pairs to be sent to the CPI for VM tagging. Combined with de
 Filters which may be used with the `include` and `exclude` options.
 
 
-> ### `stemcell[]`
+> ### `stemcell[]` {: #placement-rules-stemcell }
 >
 >  * *Optional*
 >  * *Type*: Array of Objects
 >
 >
-> > #### `os`
+> > #### `os` {: #placement-rules-stemcell-os }
 > >
 > > Matches stemcell's operating system (e.g. `ubuntu-trusty`)
 > >
@@ -140,7 +140,7 @@ Filters which may be used with the `include` and `exclude` options.
 > >  * *Type*: string
 > >
 > >
-> ### `deployments[]`
+> ### `deployments[]` {: #placement-rules-deployments }
 >
 > Matches based on deployment names.
 >
@@ -148,13 +148,13 @@ Filters which may be used with the `include` and `exclude` options.
 >  * *Type*: Array of Strings
 >
 >
-> ### `jobs[]`
+> ### `jobs[]` {: #placement-rules-jobs }
 >
 >  * *Optional*
 >  * *Type*: Array of Objects
 >
 >
-> > #### `name`
+> > #### `name` {: #placement-rules-jobs-name }
 > >
 > > Matching job name.
 > >
@@ -162,7 +162,7 @@ Filters which may be used with the `include` and `exclude` options.
 > >  * *Type*: String
 > >
 > >
-> > #### `release`
+> > #### `release` {: #placement-rules-jobs-release }
 > >
 > > Matching release name.
 > >
@@ -170,7 +170,7 @@ Filters which may be used with the `include` and `exclude` options.
 > >  * *Type*: String
 > >
 > >
-> ### `networks[]`
+> ### `networks[]` {: #placement-rules-networks }
 >
 > Matches based on network names.
 >
