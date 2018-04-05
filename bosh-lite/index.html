@@ -68,6 +68,25 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
@@ -136,6 +155,30 @@
           
         
       </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/cloudfoundry/docs-bosh/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cloudfoundry/docs-bosh
+    </div>
+  </a>
+
+          </div>
+        </div>
       
     </div>
   </nav>
@@ -264,6 +307,28 @@
     </span>
     Cloud Foundry BOSH
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/cloudfoundry/docs-bosh/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cloudfoundry/docs-bosh
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -3468,6 +3533,8 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/bosh-lite.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
                 
                   <h1>VirtualBox</h1>
                 
@@ -3490,59 +3557,66 @@
 <li>
 <p>Install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></p>
 <p>Known working version:</p>
-<p>```shell
-$ VBoxManage --version
-5.1...
-````</p>
+<div class="codehilite"><pre><span></span>$ VBoxManage --version
+<span class="m">5</span>.1...
+</pre></div>
+
 <p>Note: If you encounter problems with VirtualBox networking try installing <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VM VirtualBox Extension Pack</a> as suggested by <a href="https://github.com/cloudfoundry/bosh-lite/issues/202">Issue 202</a>. Alternatively make sure you are on VirtualBox 5.1+ since previous versions had a <a href="https://github.com/concourse/concourse-lite/issues/9">network connectivity bug</a>.</p>
 </li>
 <li>
 <p>Install Director VM</p>
-<p>```shell
-$ git clone <a href="https://github.com/cloudfoundry/bosh-deployment">https://github.com/cloudfoundry/bosh-deployment</a> ~/workspace/bosh-deployment</p>
-<p>$ mkdir -p ~/deployments/vbox</p>
-<p>$ cd ~/deployments/vbox
-````</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/cloudfoundry/bosh-deployment ~/workspace/bosh-deployment
+
+$ mkdir -p ~/deployments/vbox
+
+$ <span class="nb">cd</span> ~/deployments/vbox
+</pre></div>
+
 <p>Below command will try automatically create/enable Host-only network 192.168.50.0/24 (<a href="https://github.com/cppforlife/bosh-virtualbox-cpi-release/blob/master/docs/networks-host-only.md">details</a>) and NAT network 'NatNetwork' with DHCP enabled (<a href="https://github.com/cppforlife/bosh-virtualbox-cpi-release/blob/master/docs/networks-nat-network.md">details</a>).</p>
-<p>```shell
-$ bosh create-env ~/workspace/bosh-deployment/bosh.yml \
-  --state ./state.json \
-  -o ~/workspace/bosh-deployment/virtualbox/cpi.yml \
-  -o ~/workspace/bosh-deployment/virtualbox/outbound-network.yml \
-  -o ~/workspace/bosh-deployment/bosh-lite.yml \
-  -o ~/workspace/bosh-deployment/bosh-lite-runc.yml \
-  -o ~/workspace/bosh-deployment/jumpbox-user.yml \
-  --vars-store ./creds.yml \
-  -v director_name="bosh-lite" \
-  -v internal_ip=192.168.50.6 \
-  -v internal_gw=192.168.50.1 \
-  -v internal_cidr=192.168.50.0/24 \
-  -v outbound_network_name=NatNetwork
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh create-env ~/workspace/bosh-deployment/bosh.yml <span class="se">\</span>
+  --state ./state.json <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/cpi.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/virtualbox/outbound-network.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/bosh-lite.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/bosh-lite-runc.yml <span class="se">\</span>
+  -o ~/workspace/bosh-deployment/jumpbox-user.yml <span class="se">\</span>
+  --vars-store ./creds.yml <span class="se">\</span>
+  -v <span class="nv">director_name</span><span class="o">=</span><span class="s2">&quot;bosh-lite&quot;</span> <span class="se">\</span>
+  -v <span class="nv">internal_ip</span><span class="o">=</span><span class="m">192</span>.168.50.6 <span class="se">\</span>
+  -v <span class="nv">internal_gw</span><span class="o">=</span><span class="m">192</span>.168.50.1 <span class="se">\</span>
+  -v <span class="nv">internal_cidr</span><span class="o">=</span><span class="m">192</span>.168.50.0/24 <span class="se">\</span>
+  -v <span class="nv">outbound_network_name</span><span class="o">=</span>NatNetwork
+</pre></div>
+
 </li>
 <li>
 <p>Alias and log into the Director</p>
-<p><code class="codehilite">``shell$ bosh alias-env vbox -e 192.168.50.6 --ca-cert &lt;(bosh int ./creds.yml --path /director_ssl/ca)$ export BOSH_CLIENT=admin$ export BOSH_CLIENT_SECRET=</code>bosh int ./creds.yml --path /admin_password`
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh alias-env vbox -e <span class="m">192</span>.168.50.6 --ca-cert &lt;<span class="o">(</span>bosh int ./creds.yml --path /director_ssl/ca<span class="o">)</span>
+$ <span class="nb">export</span> <span class="nv">BOSH_CLIENT</span><span class="o">=</span>admin
+$ <span class="nb">export</span> <span class="nv">BOSH_CLIENT_SECRET</span><span class="o">=</span><span class="sb">`</span>bosh int ./creds.yml --path /admin_password<span class="sb">`</span>
+</pre></div>
+
 </li>
 <li>
 <p>Confirm that it works</p>
-<p>```shell
-$ bosh -e vbox env
-Using environment '192.168.50.6' as '?'</p>
-<p>Name: ...
-User: admin</p>
-<p>Succeeded
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox env
+Using environment <span class="s1">&#39;192.168.50.6&#39;</span> as <span class="s1">&#39;?&#39;</span>
+
+Name: ...
+User: admin
+
+Succeeded
+</pre></div>
+
 </li>
 <li>
 <p>Optionally, set up a local route for <code class="codehilite">bosh ssh</code> commands or accessing VMs directly</p>
-<p>```shell
-$ sudo route add -net 10.244.0.0/16     192.168.50.6 # Mac OS X
-$ sudo ip route add   10.244.0.0/16 via 192.168.50.6 # Linux (using iproute2 suite)
-$ sudo route add -net 10.244.0.0/16 gw  192.168.50.6 # Linux (using DEPRECATED route command)
-$ route add           10.244.0.0/16     192.168.50.6 # Windows
-````</p>
+<div class="codehilite"><pre><span></span>$ sudo route add -net <span class="m">10</span>.244.0.0/16     <span class="m">192</span>.168.50.6 <span class="c1"># Mac OS X</span>
+$ sudo ip route add   <span class="m">10</span>.244.0.0/16 via <span class="m">192</span>.168.50.6 <span class="c1"># Linux (using iproute2 suite)</span>
+$ sudo route add -net <span class="m">10</span>.244.0.0/16 gw  <span class="m">192</span>.168.50.6 <span class="c1"># Linux (using DEPRECATED route command)</span>
+$ route add           <span class="m">10</span>.244.0.0/16     <span class="m">192</span>.168.50.6 <span class="c1"># Windows</span>
+</pre></div>
+
 </li>
 </ol>
 <hr />
@@ -3551,28 +3625,28 @@ $ route add           10.244.0.0/16     192.168.50.6 # Windows
 <ol>
 <li>
 <p>Update cloud config</p>
-<p>```shell
-$ bosh -e vbox update-cloud-config ~/workspace/bosh-deployment/warden/cloud-config.yml
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox update-cloud-config ~/workspace/bosh-deployment/warden/cloud-config.yml
+</pre></div>
+
 </li>
 <li>
 <p>Upload stemcell</p>
-<p>```shell
-$ bosh -e vbox upload-stemcell <a href="https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=3468.17">https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=3468.17</a> \
+<div class="codehilite"><pre><span></span>$ bosh -e vbox upload-stemcell https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v<span class="o">=</span><span class="m">3468</span>.17 <span class="se">\</span>
   --sha1 1dad6d85d6e132810439daba7ca05694cec208ab
-````</p>
+</pre></div>
+
 </li>
 <li>
 <p>Deploy example deployment</p>
-<p>```shell
-$ bosh -e vbox -d zookeeper deploy &lt;(wget -O- <a href="https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml">https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml</a>)
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d zookeeper deploy &lt;<span class="o">(</span>wget -O- https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml<span class="o">)</span>
+</pre></div>
+
 </li>
 <li>
 <p>Run Zookeeper smoke tests</p>
-<p>```shell
-$ bosh -e vbox -d zookeeper run-errand smoke-tests
-````</p>
+<div class="codehilite"><pre><span></span>$ bosh -e vbox -d zookeeper run-errand smoke-tests
+</pre></div>
+
 </li>
 </ol>
 <h2 id="tips">Tips <a id="tips"></a><a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>

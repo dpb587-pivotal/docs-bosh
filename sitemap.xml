@@ -5,19 +5,19 @@
         
     <url>
      <loc>/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/problems/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/community/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -27,61 +27,61 @@
         
     <url>
      <loc>/cli-v2-install/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/quick-start/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-aws/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-google/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-azure/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-openstack/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-softlayer/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/bosh-lite/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-vcloud/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/init-vsphere/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -143,7 +143,7 @@
         
     <url>
      <loc>/terminology/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -155,7 +155,7 @@
         
     <url>
      <loc>/manifest-v2/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -167,7 +167,7 @@
         
     <url>
      <loc>/director-api-v1/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -179,13 +179,13 @@
         
     <url>
      <loc>/configs/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/cpi-api-v1/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -267,7 +267,7 @@
         
     <url>
      <loc>/stemcells/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -277,7 +277,7 @@
         
     <url>
      <loc>/releases/</loc>
-     <lastmod>2018-04-04</lastmod>
+     <lastmod>2018-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
