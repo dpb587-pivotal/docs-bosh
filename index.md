@@ -2,7 +2,7 @@
 title: Index
 ---
 
-## Introduction <a id="intro"></a>
+## Introduction {: #intro }
 
 * What is BOSH?
     * [What problems does BOSH solve?](problems.md)
@@ -15,7 +15,7 @@ title: Index
 * [Terminology](terminology.md)
 
 ---
-## Install BOSH <a id="install"></a>
+## Install BOSH {: #install }
 
 * [Create an environment](init.md)
     * [On Local machine (BOSH Lite)](bosh-lite.md)
@@ -30,7 +30,7 @@ title: Index
     * [On RackHD](rackhd-cpi.md)
 
 ---
-## Deploy software with BOSH <a id="basic-deploy"></a>
+## Deploy software with BOSH {: #basic-deploy }
 
 * [Deploy workflow](basic-workflow.md)
     * [Update cloud config](update-cloud-config.md)
@@ -41,7 +41,7 @@ title: Index
     * Run one-off tasks
     * Update deployment
 
-### CLI v2+ <a id="cli-v2"></a>
+### CLI v2+ {: #cli-v2 }
 
 * [Command reference](cli-v2.md)
     * [`create-env` Dependencies](cli-env-deps.md)
@@ -52,7 +52,7 @@ title: Index
     * [Variable Interpolation](cli-int.md)
     * [Tunneling](cli-tunnel.md)
 
-### Running Director <a id="director-config"></a>
+### Running Director {: #director-config }
 
 * [Troubleshooting](tips.md)
 * [Events](events.md)
@@ -76,7 +76,7 @@ title: Index
 * [Configuring external database](director-configure-db.md)
 * [Configuring external blobstore](director-configure-blobstore.md)
 
-### Detailed deployment configuration <a id="deployment-config"></a>
+### Detailed deployment configuration {: #deployment-config }
 
 * [Manifest v2 schema](manifest-v2.md)
     * [Links](links.md)
@@ -97,7 +97,7 @@ title: Index
 * [Trusted certificates](trusted-certs.md)
 * [Native DNS Support](dns.md)
 
-### Detailed CPI configuration & troubleshooting <a id="cpi-config"></a>
+### Detailed CPI configuration & troubleshooting {: #cpi-config }
 
 * [AWS](aws-cpi.md)
     * [Using IAM instance profiles](aws-iam-instance-profiles.md)
@@ -126,7 +126,7 @@ title: Index
 * [Warden/Garden](warden-cpi.md)
 * [VirtualBox](virtualbox-cpi.md)
 
-### Health management of VMs and processes <a id="hm"></a>
+### Health management of VMs and processes {: #hm }
 
 * [Monitoring](monitoring.md)
     * [Configuring Health Monitor](hm-config.md)
@@ -135,7 +135,7 @@ title: Index
 * [Automatic repair with Resurrector](resurrector.md)
 * [Persistent disk snapshotting](snapshots.md)
 
-### VM configuration (looking inside a deployment) <a id="vm-config"></a>
+### VM configuration (looking inside a deployment) {: #vm-config }
 
 * [Structure of a managed VM](vm-struct.md)
     * [VM configuration locations](vm-config.md)
@@ -144,14 +144,14 @@ title: Index
 * Debugging issues with jobs
 
 ---
-## Guides <a id="guides"></a>
+## Guides {: #guides }
 
 * [IPv6 on vSphere](guide-ipv6-on-vsphere.md)
 * Multi-CPI
   * [On AWS](guide-multi-cpi-aws.md)
 
 ---
-## Package software with BOSH <a id="release"></a>
+## Package software with BOSH {: #release }
 
 * What is a release?
     * [Creating a release](create-release.md)
@@ -185,7 +185,7 @@ title: Index
         * [Configuring S3 release blobstore](s3-release-blobstore.md)
 
 ---
-## Extend BOSH <a id="extend"></a>
+## Extend BOSH {: #extend }
 
 * [Director API v1](director-api-v1.md)
 * What is a CPI?
@@ -196,13 +196,13 @@ title: Index
     * [Repacking Stemcells](repack-stemcell.md)
 
 ---
-## Other <a id="other"></a>
+## Other {: #other }
 
-### CLI v1 (superseded by [CLI v2](#cli-v2)) <a id="cli-v1"></a>
+### CLI v1 (superseded by [CLI v2](#cli-v2)) {: #cli-v1 }
 
 * [Install BOSH CLI v1](bosh-cli.md)
 * [CLI v1](sysadmin-commands.md)
 
-### Manifest v1 <a id="manifest-v1"></a>
+### Manifest v1 {: #manifest-v1 }
 
 * [Manifest v1 schema](deployment-manifest.md)

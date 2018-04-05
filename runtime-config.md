@@ -8,7 +8,7 @@ The Director has a way to specify global configuration for all VMs in all deploy
     Support for runtime configs was first introduced in [bosh/v255.4](https://github.com/cloudfoundry/bosh/releases/tag/stable-3213).
 
 
-## Updating and retrieving runtime config <a id='update'></a>
+## Updating and retrieving runtime config {: #update }
 
 To update runtime config on the Director use [`bosh update runtime-config`](sysadmin-commands.md#cloud-config) CLI command.
 
