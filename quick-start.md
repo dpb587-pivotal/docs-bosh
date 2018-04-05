@@ -62,3 +62,30 @@ Congratulations - BOSH is running! Now you're ready to [deploy](#deploy)
 
 
 ## Deploy
+
+Run through quick steps below or follow [deploy workflow](basic-workflow.md) that goes through the same steps but with more explanation.
+
+1. Update cloud config
+
+    ```shell
+    $ bosh -e vbox update-cloud-config ~/workspace/bosh-deployment/warden/cloud-config.yml
+    ```
+
+1. Upload stemcell
+
+    ```shell
+    $ bosh -e vbox upload-stemcell https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-trusty-go_agent?v=3468.17 \
+      --sha1 1dad6d85d6e132810439daba7ca05694cec208ab
+    ```
+
+1. Deploy example deployment
+
+    ```shell
+    $ bosh -e vbox -d zookeeper deploy <(wget -O- https://raw.githubusercontent.com/cppforlife/zookeeper-release/master/manifests/zookeeper.yml)
+    ```
+
+1. Run Zookeeper smoke tests
+
+    ```shell
+    $ bosh -e vbox -d zookeeper run-errand smoke-tests
+    ```
