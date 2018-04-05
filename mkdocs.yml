@@ -131,9 +131,6 @@ pages:
     - Target Personas: personas.md
 - Reference:
   - Terminology: terminology.md
-  - Release Notes:
-    - Ubuntu Trusty Stemcell:
-      - 3541.x: bosh-linux-stemcell-builder/release-notes/3541.x.md
   - Deployment Config: manifest-v2.md
   - Director Cloud Config:
     - Usage: cloud-config.md
@@ -157,6 +154,16 @@ pages:
         - Post-deploy: post-deploy.md
     - Links:
       - Common Types: links-common-types.md
+  - Legacy Documentation:
+    - What is a Deployment?: deployment.md
+    - What is a Stemcell?: stemcell.md
+    - Basic Workflow: basic-workflow.md
+    - Deployment Manifest v1: deployment-manifest.md
+    - CLI v1 Installation: bosh-cli.md
+    - CLI v1 Commands: sysadmin-commands.md
+    - CLI v1 Backup / Restore: director-backup.md
+
+  - "--- Cloud Providers": divider.md
   - Amazon Web Services:
     - Usage: aws-cpi.md
     - IAM Users: aws-iam-users.md
@@ -196,18 +203,12 @@ pages:
     - Bootstrapping with Resource Pools: init-vsphere-rp.md
   - Warden:
     - Usage: warden-cpi.md
-  - Legacy Documentation:
-    - What is a Deployment?: deployment.md
-    - What is a Stemcell?: stemcell.md
-    - Basic Workflow: basic-workflow.md
-    - Deployment Manifest v1: deployment-manifest.md
-    - CLI v1 Installation: bosh-cli.md
-    - CLI v1 Commands: sysadmin-commands.md
-    - CLI v1 Backup / Restore: director-backup.md
 - Stemcells:
   - Stemcells: stemcells.md
 - Releases:
   - Releases: releases.md
+# this hack avoids divider.md showing up in navigation and site search
+- "--- ": divider.md
 theme:
   name: material
   custom_dir: theme
@@ -223,6 +224,7 @@ markdown_extensions: # based on docs-cfcr
 - markdown.extensions.admonition
 - markdown.extensions.codehilite
 - markdown.extensions.def_list
+- markdown.extensions.attr_list
 - markdown.extensions.footnotes
 - markdown.extensions.meta
 - markdown.extensions.toc(permalink=true)
