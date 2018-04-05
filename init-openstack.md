@@ -4,7 +4,7 @@ title: Creating environment on OpenStack
 
 This document shows how to initialize new [environment](terminology.md#environment) on OpenStack.
 
-## {: #prepare-openstack }Step 1: Prepare an OpenStack environment
+## Step 1: Prepare an OpenStack environment {: #prepare-openstack }
 
 ### Prerequisites {: #prerequisites }
 
@@ -44,7 +44,7 @@ This document shows how to initialize new [environment](terminology.md#environme
         * Allocate a [floating IP address](#floating-ip).
 
 ---
-### {: #keypair }Create a Keypair
+### Create a Keypair {: #keypair }
 
 1. Select **Access & Security** from the left navigation panel.
 
@@ -63,7 +63,7 @@ This document shows how to initialize new [environment](terminology.md#environme
     ![image](images/micro-openstack/save-keypair.png)
 
 ---
-### {: #security-groups }Create and Configure Security Groups
+### Create and Configure Security Groups {: #security-groups }
 
 You must create and configure two Security Groups to restrict incoming network traffic to the BOSH VMs.
 
@@ -114,7 +114,7 @@ You must create and configure two Security Groups to restrict incoming network t
     </table>
 
 ---
-### {: #floating-ip }Allocate a floating IP address
+### Allocate a floating IP address {: #floating-ip }
 
 1. Select **Access & Security** from the left navigation panel.
 

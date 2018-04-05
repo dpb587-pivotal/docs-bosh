@@ -322,7 +322,7 @@ with your vSphere resource pool(s).
 
 * Support for specifying Datastore Clusters for ephemeral and persistent disks is available with vSphere CPI version v47 and above. For additional detais see [Release Notes for v47](https://github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release/releases/tag/v47)
 
-### {: #vms }VMs
+### VMs {: #vms }
 
 VMs have randomly generated cloud identifiers, in the format `"vm-#{SecureRandom.uuid}"`. They are stored on a datacenter as follows:
 
@@ -339,11 +339,11 @@ for cloud ids. The create_vm() CPI call returns the cid of the created VM, so it
 
 Although it's technically possible to use the instanceUuid on vSphere (much like how we use AWS instance ids), it's worth noting that this breaks backwards compatibility and would require a fairly hefty migration. This would open up the possibility of allowing an operator to move a VM out of its containing folder on a datacenter, as it would be possible to identify a VM independent of its inventory location.
 
-### {: #networks }Networks
+### Networks {: #networks }
 
 Networks are uniquely identified by datacenter and network name (which must be unique within the datacenter).
 
-### {: #datastores }Datastores
+### Datastores {: #datastores }
 
 Datastores are identified by their name and are matched by a regular expression that matches against that name. For example, consider the following datastores in folders:
 
@@ -365,7 +365,7 @@ Persistent disks are stored on datastores in the following paths:
 
 The vSphere CPI uses linked clones by default. Linked clones require the clone to be on the same datastore as the source so stemcells are automatically copied to each datastore that their clones will be on. These stemcells look like `sc-<uuid> / <datastore managed object id>` in the inventory. In the datastore browser the "/" will be quoted to "%2f".
 
-### {: #clusters }Clusters
+### Clusters {: #clusters }
 
 Each datacenter can have multiple clusters in the cloud properties.
 
@@ -387,7 +387,7 @@ During VM placement local datastores and shared datastores are not treated diffe
 
 When recreating an existing VM, the CPI tries to create it in a cluster and datastore that are near the largest of its existing persistent disks.
 
-### {: #datacenters }Datacenters
+### Datacenters {: #datacenters }
 
 The vSphere CPI only supports a single datacenter and errors if more than one is defined in the manifest. It is identified by name.
 

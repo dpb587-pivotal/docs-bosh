@@ -116,7 +116,7 @@ This section will guide you through how to configure the Google Cloud CPI and Di
 
 
 
-## {: #director-with-gcs-blobstore }Minimum permissions for GCS blobstore
+## Minimum permissions for GCS blobstore {: #director-with-gcs-blobstore }
 
 In addition to configuring the Google CPI and Director with the previous permissions, in order to allow them to use GCS blobstore you need to grant additional permissions.
 

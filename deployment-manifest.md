@@ -21,7 +21,7 @@ Contents of a deployment manifest:
 The examples below originate from a [sample deployment manifest](./sample-manifest.html).
 
 ---
-## {: #deployment }Deployment Identification
+## Deployment Identification {: #deployment }
 
 **name** [String, required]: The name of the deployment. A single Director can manage multiple deployments and distinguishes them by name.
 
@@ -36,7 +36,7 @@ director_uuid: cf8dc1fc-9c42-4ffc-96f1-fbad983a6ce6
 ```
 
 ---
-## {: #releases }Releases Block
+## Releases Block {: #releases }
 
 **releases** [Array, required]: The name and version of each release in the deployment.
 
@@ -50,7 +50,7 @@ releases:
 - {name: redis, version: 12}
 ```
 
-### {: #bosh-init-releases }Releases Block using URLs
+### Releases Block using URLs {: #bosh-init-releases }
 
 **releases** [Array, required]: The name, url and possibly SHA1 of each release in the deployment.
 
@@ -69,7 +69,7 @@ releases:
   url: file://bosh-aws-cpi-release-158.tgz
 ```
 
-### {: #bosh-releases-create }Releases Block using local release directory
+### Releases Block using local release directory {: #bosh-releases-create }
 
 **releases** [Array, required]: The name and local release directory of a release in the deployment.
 
@@ -87,7 +87,7 @@ releases:
 ```
 
 ---
-## {: #networks }Networks Block
+## Networks Block {: #networks }
 
 **networks** [Array, required]: Each sub-block listed in the Networks block specifies a network configuration that jobs can reference. There are three different network types: `manual`, `dynamic`, and `vip`.
 
@@ -104,7 +104,7 @@ See [networks](networks.md) for more details.
 - [See vCloud CPI network cloud properties](vcloud-cpi.md#networks)
 
 ---
-## {: #resource-pools }Resource Pools Block
+## Resource Pools Block {: #resource-pools }
 
 **resource_pools** [Array, required]: Specifies the [resource pools](./terminology.html#resource-pool) a deployment uses. A deployment manifest can describe multiple resource pools and uses unique names to identify and reference them.
 
@@ -163,7 +163,7 @@ resource_pools:
 - [See vCloud CPI resource pool cloud properties](vcloud-cpi.md#resource-pools)
 
 ---
-## {: #disk-pools }Disk Pools Block
+## Disk Pools Block {: #disk-pools }
 
 **disk_pools** [Array, required]: Specifies the [disk pools](./terminology.html#disk-pool) a deployment uses. A deployment manifest can describe multiple disk pools and uses unique names to identify and reference them.
 
@@ -192,7 +192,7 @@ disk_pools:
 - [See vCloud CPI disk pool cloud properties](vcloud-cpi.md#disk-pools)
 
 ---
-## {: #compilation }Compilation Block
+## Compilation Block {: #compilation }
 
 **compilation** [Hash, required]: Properties of compilation VMs.
 
@@ -214,7 +214,7 @@ compilation:
 ```
 
 ---
-## {: #update }Update Block
+## Update Block {: #update }
 
 **update** [Hash, required]: This specifies instance update properties. These properties control how BOSH updates job instances during the deployment.
 
@@ -243,7 +243,7 @@ update:
 ```
 
 ---
-## {: #jobs }Jobs Block
+## Jobs Block {: #jobs }
 
 **jobs** [Array, required]: Specifies the mapping between BOSH release [jobs](./terminology.html#job) and cloud instances. Jobs are defined in the BOSH release. The Jobs block defines how BOSH associates jobs with the VMs started by the IaaS. The most commonly used job properties are:
 
@@ -286,7 +286,7 @@ jobs:
 ```
 
 ---
-## {: #properties }Properties Block
+## Properties Block {: #properties }
 
 **properties** [Hash, optional]: Describes global properties and general configuration information.
 
@@ -311,7 +311,7 @@ properties:
     max_connections: 10
 ```
 
-### {: #properties }Job Property Precedence
+### Job Property Precedence {: #properties }
 
 1. BOSH applies the properties in the template spec file to the job.
 1. If an identically named property exists in the [Properties](#properties) block of the deployment manifest, the value of this property overrides the previous value.

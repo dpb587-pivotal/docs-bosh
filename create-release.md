@@ -19,14 +19,14 @@ The two jobs split up the functionality provided by single Ruby app,
 `ardo_app` (you can use simple [gist](https://gist.github.com/antonsoroko/974924e0692aa2171229dafa5f2561b2) as app).
 
 ---
-## {: #prep }Preparation ##
+## Preparation ## {: #prep }
 
 This section needs to be completed once.
 Next, you iterate through Steps 1 through 6 until your dev release is
 satisfactory.
 Then you can do a final release.
 
-### {: #release-dir }Create the release directory ###
+### Create the release directory ### {: #release-dir }
 
 To create the release directory, navigate into the workspace where you want the
 release to be, and run:

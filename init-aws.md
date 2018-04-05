@@ -4,7 +4,7 @@ title: Creating environment on AWS
 
 This document shows how to set up new [environment](terminology.md#environment) on Amazon Web Services (AWS).
 
-## {: #prepare-aws }Step 1: Prepare an AWS Account
+## Step 1: Prepare an AWS Account {: #prepare-aws }
 
 If you do not have an AWS account, [create one](http://goo.gl/MaAybK).
 
