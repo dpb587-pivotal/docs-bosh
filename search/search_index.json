@@ -1536,6 +1536,36 @@
             "title": "Using Health Monitor"
         },
         {
+            "location": "/runtime-config/",
+            "text": "The Director has a way to specify global configuration for all VMs in all deployments. The runtime config is a YAML file that defines IaaS agnostic configuration that applies to all deployments.\n\n\n\n\nInfo\n\n\nSupport for runtime configs was first introduced in \nbosh/v255.4\n.\n\n\n\n\nUpdating and retrieving runtime config \n\u00b6\n\n\nTo update runtime config on the Director use \nbosh update runtime-config\n CLI command.\n\n\n$ bosh update-runtime-config runtime.yml\n\n$ bosh runtime-config\nActing as user \n'admin'\n on \n'micro'\n\n\nreleases:\n- name: strongswan\n  version: \n6\n.0.0\n\naddons:\n- name: security\n  jobs:\n  - name: strongswan\n    release: strongswan\n    properties:\n      strongswan:\n        ca_cert: ...\n  - name: syslog_drain\n    release: syslog\n    properties:\n      syslog_drain_ips: \n[\n10\n.10.0.20\n]\n\n  include:\n    deployments: \n[\ndep1, dep2\n]\n...\n\n\n\n\nOnce runtime config is updated all deployments will be considered outdated. \nbosh deployments\n does not currently show that but we have plans to show that information. The Director will apply runtime config changes to each deployment during the next \nbosh deploy\n for that deployment.\n\n\nExamples\n\u00b6\n\n\nResource Tagging\n\u00b6\n\n\nFor example, if you were interested in your resources being tagged with \nbusiness_unit\n and \nemail_contact\n, you can use the \ntags\n section:\n\n\ntags\n:\n\n  \nbusiness_unit\n:\n \nmarketing\n\n  \nemail_contact\n:\n \nops@marketing.co.com\n\n\n\n\n\nRemoving Addons\n\u00b6\n\n\nTo remove all addons in a configuration, specify empty arrays:\n\n\nreleases\n:\n \n[]\n\n\naddons\n:\n \n[]\n\n\n\n\n\nSee Also\n\u00b6\n\n\n\n\nRuntime Config Schema\n\n\nMore Examples",
+            "title": "Overview"
+        },
+        {
+            "location": "/runtime-config/#updating-and-retrieving-runtime-config",
+            "text": "To update runtime config on the Director use  bosh update runtime-config  CLI command.  $ bosh update-runtime-config runtime.yml\n\n$ bosh runtime-config\nActing as user  'admin'  on  'micro' \n\nreleases:\n- name: strongswan\n  version:  6 .0.0\n\naddons:\n- name: security\n  jobs:\n  - name: strongswan\n    release: strongswan\n    properties:\n      strongswan:\n        ca_cert: ...\n  - name: syslog_drain\n    release: syslog\n    properties:\n      syslog_drain_ips:  [ 10 .10.0.20 ] \n  include:\n    deployments:  [ dep1, dep2 ] ...  Once runtime config is updated all deployments will be considered outdated.  bosh deployments  does not currently show that but we have plans to show that information. The Director will apply runtime config changes to each deployment during the next  bosh deploy  for that deployment.",
+            "title": "Updating and retrieving runtime config "
+        },
+        {
+            "location": "/runtime-config/#examples",
+            "text": "",
+            "title": "Examples"
+        },
+        {
+            "location": "/runtime-config/#resource-tagging",
+            "text": "For example, if you were interested in your resources being tagged with  business_unit  and  email_contact , you can use the  tags  section:  tags : \n   business_unit :   marketing \n   email_contact :   ops@marketing.co.com",
+            "title": "Resource Tagging"
+        },
+        {
+            "location": "/runtime-config/#removing-addons",
+            "text": "To remove all addons in a configuration, specify empty arrays:  releases :   []  addons :   []",
+            "title": "Removing Addons"
+        },
+        {
+            "location": "/runtime-config/#see-also",
+            "text": "Runtime Config Schema  More Examples",
+            "title": "See Also"
+        },
+        {
             "location": "/addons-common/",
             "text": "(See \nruntime config\n for an introduction to addons.)\n\n\nSyslog forwarding \n\u00b6\n\n\nNeed: Configure syslog on all machines to forward system logs to a remote location.\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nsyslog\n\n  \nversion\n:\n \n3\n\n\n\naddons\n:\n\n\n-\n \nname\n:\n \nlogs\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nsyslog_forwarder\n\n    \nrelease\n:\n \nsyslog\n\n  \nproperties\n:\n\n    \nsyslog\n:\n\n      \naddress\n:\n \nlogs4.papertrail.com\n\n      \ntransport\n:\n \ntcp\n\n      \nport\n:\n \n38559\n\n      \ntls_enabled\n:\n \ntrue\n\n      \npermitted_peer\n:\n \n\"*.papertrail.com\"\n\n      \nca_cert\n:\n \n|\n\n        \n-----BEGIN CERTIFICATE-----\n\n        \nMIIClTCCAf4CCQDc6hJtvGB8RjANBgkqhkiG9w0BAQUFADCBjjELMAk...\n\n        \n-----END CERTIFICATE-----\n\n\n\n\n\nSee \nsyslog_forwarder job\n.\n\n\n\n\nCustom SSH login banner \n\u00b6\n\n\nNote: This job work with 3232+ stemcell series due to how sshd is configured.\n\n\n\nNeed: Configure custom login banner to comply with organizational regulations.\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nos-conf\n\n  \nversion\n:\n \n3\n\n\n\naddons\n:\n\n\n-\n \nname\n:\n \nmisc\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nlogin_banner\n\n    \nrelease\n:\n \nos-conf\n\n  \nproperties\n:\n\n    \nlogin_banner\n:\n\n      \ntext\n:\n \n|\n\n        \nThis computer system is for authorized use only. All activity is logged and\n\n        \nregularly checked by system administrators. Individuals attempting to connect to,\n\n        \nport-scan, deface, hack, or otherwise interfere with any services on this system\n\n        \nwill be reported.\n\n\n\n\n\nSee \nlogin_banner job\n.\n\n\n\n\nCustom SSH users \n\u00b6\n\n\nWarning: This job does not remove users from the VM when user is removed from the manifest.\n\n\n\nNeed: Provide SSH access to all VMs for a third party automation system.\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nos-conf\n\n  \nversion\n:\n \n3\n\n\n\naddons\n:\n\n\n-\n \nname\n:\n \nmisc\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nuser_add\n\n    \nrelease\n:\n \nos-conf\n\n  \nproperties\n:\n\n    \nusers\n:\n\n    \n-\n \nname\n:\n \nnessus\n\n      \npublic_key\n:\n \n\"ssh-rsa\n \nAAAAB3NzaC1yc2EAQCyKb5nLZv...oYPkLlOGyAFLk6Id75Xr\n \nhostname\"\n\n    \n-\n \nname\n:\n \nteleport\n\n      \npublic_key\n:\n \n\"ssh-rsa\n \nAAAAB3NzaC1yc2dfgJKkb5nLZv...dkjfLlOGyAFLk6kfbgYG\n \nhostname\"\n\n\n\n\n\nSee \nuser_add job\n.",
             "title": "Common Addons"
@@ -3441,39 +3471,124 @@
             "title": "Request body schema"
         },
         {
-            "location": "/runtime-config/",
-            "text": "Note: This feature is available with bosh-release v255.4+.\n\n\n\nThe Director has a way to specify global configuration for all VMs in all deployments. The runtime config is a YAML file that defines IaaS agnostic configuration that applies to all deployments.\n\n\n\n\nUpdating and retrieving runtime config \n\u00b6\n\n\nTo update runtime config on the Director use \nbosh update runtime-config\n CLI command.\n\n\nNote: See \nexample runtime config\n below.\n\n\n\n$ bosh update-runtime-config runtime.yml\n\n$ bosh runtime-config\nActing as user \n'admin'\n on \n'micro'\n\n\nreleases:\n- name: strongswan\n  version: \n6\n.0.0\n\naddons:\n- name: security\n  jobs:\n  - name: strongswan\n    release: strongswan\n...\n\n\n\n\nOnce runtime config is updated all deployments will be considered outdated. \nbosh deployments\n does not currently show that but we have plans to show that information. The Director will apply runtime config changes to each deployment during the next \nbosh deploy\n for that deployment.\n\n\n\n\nExample \n\u00b6\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nstrongswan\n\n  \nversion\n:\n \n6.0.0\n\n\n\naddons\n:\n\n\n-\n \nname\n:\n \nsecurity\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nstrongswan\n\n    \nrelease\n:\n \nstrongswan\n\n    \nproperties\n:\n\n      \nstrongswan\n:\n\n        \nca_cert\n:\n \n...\n\n\n\n\n\nNote: To remove all addons, specify empty arrays as follows:\n\n\n\nreleases\n:\n \n[]\n\n\naddons\n:\n \n[]\n\n\n\n\n\n\n\nReleases Block \n\u00b6\n\n\nreleases\n [Array, required]: Specifies the releases used by the addons.\n\n\n\n\nname\n [String, required]: Name of a release name used by an addon.\n\n\nversion\n [String, required]: The version of the release to use. Version \ncannot\n be \nlatest\n; it must be specified explicitly.\n\n\nurl\n [String, optional]: URL of a release to download. Works with CLI v2. Example: \nhttps://bosh.io/d/github.com/cloudfoundry/syslog-release?v=11\n.\n\n\nsha1\n [String, optional]: SHA1 of asset referenced via URL. Works with CLI v2. Example: \n332ac15609b220a3fdf5efad0e0aa069d8235788\n.\n\n\n\n\nSee \nRelease URLs\n for more details.\n\n\nExample:\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nstrongswan\n\n  \nversion\n:\n \n6.0.0\n\n\n\n\n\nExample with a URL:\n\n\nreleases\n:\n\n\n-\n \nname\n:\n \nconcourse\n\n  \nversion\n:\n \n3.3.2\n\n  \nurl\n:\n \nhttps://bosh.io/d/github.com/concourse/concourse?v=3.3.2\n\n  \nsha1\n:\n \n2c876303dc6866afb845e728eab58abae8ff3be2\n\n\n\n\n\n\n\nAddons Block \n\u00b6\n\n\nOperators typically want to ensure that certain software runs on all VMs managed by the Director. Examples of such software are:\n\n\n\n\nsecurity agents like Tripwire, IPsec, etc.\n\n\nanti-viruses like McAfee\n\n\ncustom health monitoring agents like Datadog\n\n\nlogging agents like Loggregator's Metron\n\n\n\n\nAn addon is a release job that is colocated on all VMs managed by the Director.\n\n\naddons\n [Array, optional]: Specifies the \naddons\n to be applied to all deployments.\n\n\n\n\nname\n [String, required]: A unique name used to identify and reference the addon.\n\n\njobs\n [Array of hashes, requires]: Specifies the name and release of release jobs to be colocated.\n\n\nname\n [String, required]: The job name.\n\n\nrelease\n [String, required]: The release where the job exists.\n\n\nproperties\n [Hash, optional]: Specifies job properties. Properties allow the Director to configure jobs to a specific environment.\n\n\ninclude\n [Hash, optional]: Specifies inclusion \nplacement rules\n Available in bosh-release v260+.\n\n\nexclude\n [Hash, optional]: Specifies exclusion \nplacement rules\n. Available in bosh-release v260+.\n\n\n\n\nPlacement Rules for \ninclude\n and \nexclude\n Directives \n\u00b6\n\n\nAvailable rules:\n\n\n\n\nstemcell\n [Array of hashes, optional]\n\n\nos\n [String, required]: Matches stemcell's operating system. Example: \nubuntu-trusty\n\n\ndeployments\n [Array of strings, optional]: Matches based on deployment names.\n\n\njobs\n [Array of hashes, optional]\n\n\nname\n [String, required]: Matching job name.\n\n\nrelease\n [String, required]: Matching release name.\n\n\nnetworks\n [Array of strings, optional]: Matches based on network names. Available in bosh-release v262+.\n\n\n\n\nAll arrays within inclusion/exclusion rules use \nor\n operator.\n\n\nExample:\n\n\naddons\n:\n\n\n-\n \nname\n:\n \nsecurity\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nstrongswan\n\n    \nrelease\n:\n \nstrongswan\n\n    \nproperties\n:\n\n      \nstrongswan\n:\n\n        \nca_cert\n:\n \n...\n\n  \n-\n \nname\n:\n \nsyslog_drain\n\n    \nrelease\n:\n \nsyslog\n\n    \nproperties\n:\n\n      \nsyslog_drain_ips\n:\n \n[\n10.10.0.20\n]\n\n  \ninclude\n:\n\n    \ndeployments\n:\n \n[\ndep1\n,\n \ndep2\n]\n\n\n\n\n\nExample with \ninclude\n rules:\n\n\ninclude\n:\n\n  \ndeployments\n:\n \n[\ndep1\n,\n \ndep2\n]\n\n  \njobs\n:\n\n  \n-\n \nname\n:\n \nredis\n\n    \nrelease\n:\n \nredis-release\n\n  \nstemcell\n:\n\n  \n-\n \nos\n:\n \nubuntu-trusty\n\n\n\n\n\nSee \ncommon addons list\n for several examples.\n\n\n\n\nTags Block \n\u00b6\n\n\ntags\n [Hash, optional]: Specifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy. Available in bosh-release v260+.\n\n\nExample:\n\n\ntags\n:\n\n  \nbusiness_unit\n:\n \nmarketing\n\n  \nemail_contact\n:\n \nops@marketing.co.com",
-            "title": "Usage"
+            "location": "/runtime-config-schema/",
+            "text": "Runtime Config Schema\n\u00b6\n\n\nThe runtime config defines IaaS-agnostic configuration which applies to all deployments.\n\n\n\n\nInfo\n\n\nSupport for runtime configs was first introduced in \nbosh/v255.4\n.\n\n\n\n\nreleases[]\n\u00b6\n\n\nSpecifies the releases used by the addons.\n\n\n\n\nRequired\n\n\nType\n: Array of Objects\n\n\n\n\n\n\nname\n\u00b6\n\n\nName of a release name used by an addon.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nversion\n\u00b6\n\n\nThe version of the release to use. Version \ncannot\n be \nlatest\n; it must be specified explicitly.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nurl\n\u00b6\n\n\nURL of a release to download. Works with CLI v2.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nsha1\n\u00b6\n\n\nSHA1 of asset referenced via URL. Works with CLI v2.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\n\n\n\naddons[]\n\u00b6\n\n\nSpecifies the \naddons\n to be applied to all deployments.\n\n\n\n\nname\n\u00b6\n\n\nA unique name used to identify and reference the addon.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\njobs[]\n\u00b6\n\n\nSpecifies the name and release of release jobs to be colocated.\n\n\n\n\nRequired\n\n\nType\n: Array of Objects\n\n\n\n\n\n\nname\n\u00b6\n\n\nThe job name.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nrelease\n\u00b6\n\n\nThe release where the job exists.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nproperties\n\u00b6\n\n\nSpecifies job properties. Properties allow the Director to configure jobs to a specific environment.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\n\n\n\n\ninclude\n\u00b6\n\n\nSpecifies inclusion \nplacement rules\n.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\nSince\n: \nbosh/v260\n\n\n\n\nexclude\n\u00b6\n\n\nSpecifies exclusion \nplacement rules\n.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\nSince\n: \nbosh/v260\n\n\n\n\n\n\n\n\ntags\n\u00b6\n\n\nSpecifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\nSince\n: \nbosh/v260\n\n\n\n\n\n\nPlacement Rules\n\u00b6\n\n\nFilters which may be used with the \ninclude\n and \nexclude\n options.\n\n\n\n\nstemcell[]\n\u00b6\n\n\n\n\nOptional\n\n\nType\n: Array of Objects\n\n\n\n\n\n\nos\n\u00b6\n\n\nMatches stemcell's operating system (e.g. \nubuntu-trusty\n)\n\n\n\n\nRequired\n\n\nType\n: string\n\n\n\n\n\n\ndeployments[]\n\u00b6\n\n\nMatches based on deployment names.\n\n\n\n\nOptional\n\n\nType\n: Array of Strings\n\n\n\n\njobs[]\n\u00b6\n\n\n\n\nOptional\n\n\nType\n: Array of Objects\n\n\n\n\n\n\nname\n\u00b6\n\n\nMatching job name.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nrelease\n\u00b6\n\n\nMatching release name.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\n\n\nnetworks[]\n\u00b6\n\n\nMatches based on network names.\n\n\n\n\nOptional\n\n\nType\n: Array of Strings\n\n\nSince\n: \nbosh/v262",
+            "title": "Schema"
         },
         {
-            "location": "/runtime-config/#updating-and-retrieving-runtime-config",
-            "text": "To update runtime config on the Director use  bosh update runtime-config  CLI command.  Note: See  example runtime config  below.  $ bosh update-runtime-config runtime.yml\n\n$ bosh runtime-config\nActing as user  'admin'  on  'micro' \n\nreleases:\n- name: strongswan\n  version:  6 .0.0\n\naddons:\n- name: security\n  jobs:\n  - name: strongswan\n    release: strongswan\n...  Once runtime config is updated all deployments will be considered outdated.  bosh deployments  does not currently show that but we have plans to show that information. The Director will apply runtime config changes to each deployment during the next  bosh deploy  for that deployment.",
-            "title": "Updating and retrieving runtime config "
+            "location": "/runtime-config-schema/#runtime-config-schema",
+            "text": "The runtime config defines IaaS-agnostic configuration which applies to all deployments.   Info  Support for runtime configs was first introduced in  bosh/v255.4 .",
+            "title": "Runtime Config Schema"
         },
         {
-            "location": "/runtime-config/#example",
-            "text": "releases :  -   name :   strongswan \n   version :   6.0.0  addons :  -   name :   security \n   jobs : \n   -   name :   strongswan \n     release :   strongswan \n     properties : \n       strongswan : \n         ca_cert :   ...   Note: To remove all addons, specify empty arrays as follows:  releases :   []  addons :   []",
-            "title": "Example "
+            "location": "/runtime-config-schema/#releases",
+            "text": "Specifies the releases used by the addons.   Required  Type : Array of Objects",
+            "title": "releases[]"
         },
         {
-            "location": "/runtime-config/#releases-block",
-            "text": "releases  [Array, required]: Specifies the releases used by the addons.   name  [String, required]: Name of a release name used by an addon.  version  [String, required]: The version of the release to use. Version  cannot  be  latest ; it must be specified explicitly.  url  [String, optional]: URL of a release to download. Works with CLI v2. Example:  https://bosh.io/d/github.com/cloudfoundry/syslog-release?v=11 .  sha1  [String, optional]: SHA1 of asset referenced via URL. Works with CLI v2. Example:  332ac15609b220a3fdf5efad0e0aa069d8235788 .   See  Release URLs  for more details.  Example:  releases :  -   name :   strongswan \n   version :   6.0.0   Example with a URL:  releases :  -   name :   concourse \n   version :   3.3.2 \n   url :   https://bosh.io/d/github.com/concourse/concourse?v=3.3.2 \n   sha1 :   2c876303dc6866afb845e728eab58abae8ff3be2",
-            "title": "Releases Block "
+            "location": "/runtime-config-schema/#name",
+            "text": "Name of a release name used by an addon.   Required  Type : String",
+            "title": "name"
         },
         {
-            "location": "/runtime-config/#addons-block",
-            "text": "Operators typically want to ensure that certain software runs on all VMs managed by the Director. Examples of such software are:   security agents like Tripwire, IPsec, etc.  anti-viruses like McAfee  custom health monitoring agents like Datadog  logging agents like Loggregator's Metron   An addon is a release job that is colocated on all VMs managed by the Director.  addons  [Array, optional]: Specifies the  addons  to be applied to all deployments.   name  [String, required]: A unique name used to identify and reference the addon.  jobs  [Array of hashes, requires]: Specifies the name and release of release jobs to be colocated.  name  [String, required]: The job name.  release  [String, required]: The release where the job exists.  properties  [Hash, optional]: Specifies job properties. Properties allow the Director to configure jobs to a specific environment.  include  [Hash, optional]: Specifies inclusion  placement rules  Available in bosh-release v260+.  exclude  [Hash, optional]: Specifies exclusion  placement rules . Available in bosh-release v260+.",
-            "title": "Addons Block "
+            "location": "/runtime-config-schema/#version",
+            "text": "The version of the release to use. Version  cannot  be  latest ; it must be specified explicitly.   Required  Type : String",
+            "title": "version"
         },
         {
-            "location": "/runtime-config/#placement-rules-for-include-and-exclude-directives",
-            "text": "Available rules:   stemcell  [Array of hashes, optional]  os  [String, required]: Matches stemcell's operating system. Example:  ubuntu-trusty  deployments  [Array of strings, optional]: Matches based on deployment names.  jobs  [Array of hashes, optional]  name  [String, required]: Matching job name.  release  [String, required]: Matching release name.  networks  [Array of strings, optional]: Matches based on network names. Available in bosh-release v262+.   All arrays within inclusion/exclusion rules use  or  operator.  Example:  addons :  -   name :   security \n   jobs : \n   -   name :   strongswan \n     release :   strongswan \n     properties : \n       strongswan : \n         ca_cert :   ... \n   -   name :   syslog_drain \n     release :   syslog \n     properties : \n       syslog_drain_ips :   [ 10.10.0.20 ] \n   include : \n     deployments :   [ dep1 ,   dep2 ]   Example with  include  rules:  include : \n   deployments :   [ dep1 ,   dep2 ] \n   jobs : \n   -   name :   redis \n     release :   redis-release \n   stemcell : \n   -   os :   ubuntu-trusty   See  common addons list  for several examples.",
-            "title": "Placement Rules for include and exclude Directives "
+            "location": "/runtime-config-schema/#url",
+            "text": "URL of a release to download. Works with CLI v2.   Optional  Type : String",
+            "title": "url"
         },
         {
-            "location": "/runtime-config/#tags-block",
-            "text": "tags  [Hash, optional]: Specifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy. Available in bosh-release v260+.  Example:  tags : \n   business_unit :   marketing \n   email_contact :   ops@marketing.co.com",
-            "title": "Tags Block "
+            "location": "/runtime-config-schema/#sha1",
+            "text": "SHA1 of asset referenced via URL. Works with CLI v2.   Optional  Type : String",
+            "title": "sha1"
+        },
+        {
+            "location": "/runtime-config-schema/#addons",
+            "text": "Specifies the  addons  to be applied to all deployments.",
+            "title": "addons[]"
+        },
+        {
+            "location": "/runtime-config-schema/#name_1",
+            "text": "A unique name used to identify and reference the addon.   Required  Type : String",
+            "title": "name"
+        },
+        {
+            "location": "/runtime-config-schema/#jobs",
+            "text": "Specifies the name and release of release jobs to be colocated.   Required  Type : Array of Objects",
+            "title": "jobs[]"
+        },
+        {
+            "location": "/runtime-config-schema/#name_2",
+            "text": "The job name.   Required  Type : String",
+            "title": "name"
+        },
+        {
+            "location": "/runtime-config-schema/#release",
+            "text": "The release where the job exists.   Required  Type : String",
+            "title": "release"
+        },
+        {
+            "location": "/runtime-config-schema/#properties",
+            "text": "Specifies job properties. Properties allow the Director to configure jobs to a specific environment.   Optional  Type : Object",
+            "title": "properties"
+        },
+        {
+            "location": "/runtime-config-schema/#include",
+            "text": "Specifies inclusion  placement rules .   Optional  Type : Object  Since :  bosh/v260",
+            "title": "include"
+        },
+        {
+            "location": "/runtime-config-schema/#exclude",
+            "text": "Specifies exclusion  placement rules .   Optional  Type : Object  Since :  bosh/v260",
+            "title": "exclude"
+        },
+        {
+            "location": "/runtime-config-schema/#tags",
+            "text": "Specifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy.   Optional  Type : Object  Since :  bosh/v260",
+            "title": "tags"
+        },
+        {
+            "location": "/runtime-config-schema/#placement-rules",
+            "text": "Filters which may be used with the  include  and  exclude  options.",
+            "title": "Placement Rules"
+        },
+        {
+            "location": "/runtime-config-schema/#stemcell",
+            "text": "Optional  Type : Array of Objects",
+            "title": "stemcell[]"
+        },
+        {
+            "location": "/runtime-config-schema/#os",
+            "text": "Matches stemcell's operating system (e.g.  ubuntu-trusty )   Required  Type : string",
+            "title": "os"
+        },
+        {
+            "location": "/runtime-config-schema/#deployments",
+            "text": "Matches based on deployment names.   Optional  Type : Array of Strings",
+            "title": "deployments[]"
+        },
+        {
+            "location": "/runtime-config-schema/#jobs_1",
+            "text": "Optional  Type : Array of Objects",
+            "title": "jobs[]"
+        },
+        {
+            "location": "/runtime-config-schema/#name_3",
+            "text": "Matching job name.   Required  Type : String",
+            "title": "name"
+        },
+        {
+            "location": "/runtime-config-schema/#release_1",
+            "text": "Matching release name.   Required  Type : String",
+            "title": "release"
+        },
+        {
+            "location": "/runtime-config-schema/#networks",
+            "text": "Matches based on network names.   Optional  Type : Array of Strings  Since :  bosh/v262",
+            "title": "networks[]"
         },
         {
             "location": "/configs/",

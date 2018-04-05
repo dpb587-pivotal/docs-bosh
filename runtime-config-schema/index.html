@@ -36,7 +36,7 @@
     
     
       
-        <title>Release Blobs</title>
+        <title>Schema - Cloud Foundry BOSH</title>
       
     
     
@@ -95,7 +95,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#adding-a-blob" tabindex="1" class="md-skip">
+      <a href="#runtime-config-schema" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -121,7 +121,7 @@
                 Cloud Foundry BOSH
               </span>
               <span class="md-header-nav__topic">
-                Working with Blobs
+                Schema
               </span>
             
           
@@ -255,7 +255,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../terminology/" title="Reference" class="md-tabs__link">
+        <a href="../terminology/" title="Reference" class="md-tabs__link md-tabs__link--active">
           Reference
         </a>
       
@@ -542,12 +542,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Guides
@@ -935,12 +933,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
     
     <label class="md-nav__link" for="nav-3-2">
       Packaging Software
@@ -1076,66 +1072,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Working with Blobs
-      </label>
-    
-    <a href="./" title="Working with Blobs" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../release-blobs/" title="Working with Blobs" class="md-nav__link">
       Working with Blobs
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-blob" title="Adding a blob " class="md-nav__link">
-    Adding a blob 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#listing-blobs" title="Listing blobs " class="md-nav__link">
-    Listing blobs 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uploading-blobs" title="Uploading blobs " class="md-nav__link">
-    Uploading blobs 
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-blobs" title="Removing blobs " class="md-nav__link">
-    Removing blobs 
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -2317,10 +2258,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Reference
@@ -2492,10 +2435,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
     
     <label class="md-nav__link" for="nav-4-6">
       Director Runtime Config
@@ -2511,11 +2456,232 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../runtime-config-schema/" title="Schema" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Schema
+      </label>
+    
+    <a href="./" title="Schema" class="md-nav__link md-nav__link--active">
       Schema
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#releases" title="releases[]" class="md-nav__link">
+    releases[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" title="version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" title="url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1" title="sha1" class="md-nav__link">
+    sha1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addons" title="addons[]" class="md-nav__link">
+    addons[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" title="jobs[]" class="md-nav__link">
+    jobs[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release" title="release" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="properties" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include" title="include" class="md-nav__link">
+    include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude" title="exclude" class="md-nav__link">
+    exclude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" title="tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placement-rules" title="Placement Rules" class="md-nav__link">
+    Placement Rules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stemcell" title="stemcell[]" class="md-nav__link">
+    stemcell[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os" title="os" class="md-nav__link">
+    os
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="deployments[]" class="md-nav__link">
+    deployments[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs_1" title="jobs[]" class="md-nav__link">
+    jobs[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_3" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release_1" title="release" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networks" title="networks[]" class="md-nav__link">
+    networks[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -3539,35 +3705,199 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-a-blob" title="Adding a blob " class="md-nav__link">
-    Adding a blob 
+  <a href="#releases" title="releases[]" class="md-nav__link">
+    releases[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" title="version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" title="url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha1" title="sha1" class="md-nav__link">
+    sha1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addons" title="addons[]" class="md-nav__link">
+    addons[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" title="jobs[]" class="md-nav__link">
+    jobs[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release" title="release" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="properties" class="md-nav__link">
+    properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include" title="include" class="md-nav__link">
+    include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude" title="exclude" class="md-nav__link">
+    exclude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" title="tags" class="md-nav__link">
+    tags
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#listing-blobs" title="Listing blobs " class="md-nav__link">
-    Listing blobs 
+  <a href="#placement-rules" title="Placement Rules" class="md-nav__link">
+    Placement Rules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stemcell" title="stemcell[]" class="md-nav__link">
+    stemcell[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#os" title="os" class="md-nav__link">
+    os
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#uploading-blobs" title="Uploading blobs " class="md-nav__link">
-    Uploading blobs 
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" title="deployments[]" class="md-nav__link">
+    deployments[]
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#removing-blobs" title="Removing blobs " class="md-nav__link">
-    Removing blobs 
+        
+          <li class="md-nav__item">
+  <a href="#jobs_1" title="jobs[]" class="md-nav__link">
+    jobs[]
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_3" title="name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release_1" title="release" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networks" title="networks[]" class="md-nav__link">
+    networks[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3587,81 +3917,160 @@
             <article class="md-content__inner md-typeset">
               
   
+    <div class="bosh-schema">
+  
   
                 
-                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/release-blobs.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/runtime-config-schema.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Working with Blobs</h1>
-                
-                <p class="note">Note: Examples use CLI v2.</p>
-
-<p>A package may need to reference blobs (binary large objects) in addition to referencing other source files. For example when building a package for PostgreSQL server you may want to include <code class="codehilite">postgresql-9.6.1.tar.gz</code> from <code class="codehilite">https://www.postgresql.org/ftp/source/</code>. Typically it's not recommended to check in blobs directly into a Git repository because Git cannot efficiently track changes to such files. CLI provides a way to manage blobs in a reasonable manner with several commands:</p>
-<div class="codehilite"><pre><span></span>$ bosh -h<span class="p">|</span>grep blob
-  add-blob               Add blob
-  blobs                  List blobs
-  remove-blob            Remove blob
-  sync-blobs             Sync blobs
-  upload-blobs           Upload blobs
-</pre></div>
-
-<h2 id="adding-a-blob">Adding a blob <a id="adding-blob"></a><a class="headerlink" href="#adding-a-blob" title="Permanent link">&para;</a></h2>
-<p>Package can reference blobs via <code class="codehilite">files</code> directive in a package spec just like as other source files.</p>
-<div class="codehilite"><pre><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cockroachdb</span>
-<span class="l l-Scalar l-Scalar-Plain">files</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cockroach-latest.linux-amd64.tgz</span>
-</pre></div>
-
-<p>Creating a release with above configuration causes following error:</p>
-<div class="codehilite"><pre><span></span>$ bosh create-release --force
-Building a release from directory <span class="s1">&#39;/Users/user/workspace/cockroachdb-release&#39;</span>:
-  - Constructing packages from directory:
-      - Reading package from <span class="s1">&#39;/Users/user/workspace/cockroachdb-release/packages/cockroachdb&#39;</span>:
-          Collecting package files:
-            Missing files <span class="k">for</span> pattern <span class="s1">&#39;cockroach-latest.linux-amd64.tgz&#39;</span>
-</pre></div>
-
-<p>CLI expects to find <code class="codehilite">cockroach-latest.linux-amd64.tgz</code> in either <code class="codehilite">blobs</code> or <code class="codehilite">src</code> directory. Since it's a blob it should not be in <code class="codehilite">src</code> directory but rather added with the following command:</p>
-<div class="codehilite"><pre><span></span>$ bosh add-blob ~/Downloads/cockroach-latest.linux-amd64.tgz cockroach-latest.linux-amd64.tgz
-</pre></div>
-
-<p><code class="codehilite">add-blob</code> command:</p>
+                <h1 id="runtime-config-schema">Runtime Config Schema<a class="headerlink" href="#runtime-config-schema" title="Permanent link">&para;</a></h1>
+<p>The runtime config defines IaaS-agnostic configuration which applies to all deployments.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Support for runtime configs was first introduced in <a href="https://github.com/cloudfoundry/bosh/releases/tag/stable-3213">bosh/v255.4</a>.</p>
+</div>
+<h2 id="releases"><code class="codehilite">releases[]</code><a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
+<p>Specifies the releases used by the addons.</p>
 <ul>
-<li>copies file into <code class="codehilite">blobs</code> directory (which should be in <code class="codehilite"><span class="na">.gitignore</span></code>)</li>
-<li>updates <code class="codehilite">config/blobs.yml</code> to start tracking blobs</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: Array of Objects</li>
+</ul>
+<blockquote>
+<h3 id="name"><code class="codehilite">name</code><a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
+<p>Name of a release name used by an addon.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="version"><code class="codehilite">version</code><a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<p>The version of the release to use. Version <em>cannot</em> be <code class="codehilite">latest</code>; it must be specified explicitly.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="url"><code class="codehilite">url</code><a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
+<p>URL of a release to download. Works with CLI v2.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="sha1"><code class="codehilite">sha1</code><a class="headerlink" href="#sha1" title="Permanent link">&para;</a></h3>
+<p>SHA1 of asset referenced via URL. Works with CLI v2.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String
+</li>
+</ul>
+</blockquote>
+<h2 id="addons"><code class="codehilite">addons[]</code><a class="headerlink" href="#addons" title="Permanent link">&para;</a></h2>
+<p>Specifies the <a href="../terminology/#addon">addons</a> to be applied to all deployments.</p>
+<blockquote>
+<h3 id="name_1"><code class="codehilite">name</code><a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h3>
+<p>A unique name used to identify and reference the addon.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="jobs"><code class="codehilite">jobs[]</code><a class="headerlink" href="#jobs" title="Permanent link">&para;</a></h3>
+<p>Specifies the name and release of release jobs to be colocated.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: Array of Objects</li>
+</ul>
+<blockquote>
+<h4 id="name_2"><code class="codehilite">name</code><a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h4>
+<p>The job name.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="release"><code class="codehilite">release</code><a class="headerlink" href="#release" title="Permanent link">&para;</a></h4>
+<p>The release where the job exists.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="properties"><code class="codehilite">properties</code><a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<p>Specifies job properties. Properties allow the Director to configure jobs to a specific environment.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+</ul>
+</blockquote>
+<h3 id="include"><code class="codehilite">include</code><a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
+<p>Specifies inclusion <a href="#placement-rules">placement rules</a>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+<li><em>Since</em>: <a href="https://github.com/cloudfoundry/bosh/releases/tag/v260">bosh/v260</a></li>
+</ul>
+<h3 id="exclude"><code class="codehilite">exclude</code><a class="headerlink" href="#exclude" title="Permanent link">&para;</a></h3>
+<p>Specifies exclusion <a href="#placement-rules">placement rules</a>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+<li><em>Since</em>: <a href="https://github.com/cloudfoundry/bosh/releases/tag/v260">bosh/v260</a>
+</li>
+</ul>
+</blockquote>
+<h2 id="tags"><code class="codehilite">tags</code><a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
+<p>Specifies key value pairs to be sent to the CPI for VM tagging. Combined with deployment level tags during the deploy.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+<li><em>Since</em>: <a href="https://github.com/cloudfoundry/bosh/releases/tag/v260">bosh/v260</a></li>
 </ul>
 <hr />
-<h2 id="listing-blobs">Listing blobs <a id="listing-blobs"></a><a class="headerlink" href="#listing-blobs" title="Permanent link">&para;</a></h2>
-<p>To list currently tracked blobs use <code class="codehilite">bosh blobs</code> command:</p>
-<div class="codehilite"><pre><span></span>$ bosh blobs
-Path                              Size    Blobstore ID                          SHA1
-cockroach-latest.linux-amd64.tgz  <span class="m">15</span> MiB  <span class="o">(</span><span class="nb">local</span><span class="o">)</span>                               469004231a9ed1d87de798f12fe2f49cc6ff1d2f
-go1.7.4.linux-amd64.tar.gz        <span class="m">80</span> MiB  7e6431ba-f2c6-4e80-6a16-cd5cd8722b57  2e5baf03d1590e048c84d1d5b4b6f2540efaaea1
-
-<span class="m">2</span> blobs
-
-Succeeded
-</pre></div>
-
-<p>Blobs that have not been uploaded to release blobstore will be marked as <code class="codehilite">local</code> until they are uploaded.</p>
-<hr />
-<h2 id="uploading-blobs">Uploading blobs <a id="saving-blobs"></a><a class="headerlink" href="#uploading-blobs" title="Permanent link">&para;</a></h2>
-<p>Blobs should be saved into release blobstore before cutting a new final release so that others can rebuild a release at a future time.</p>
-<p><code class="codehilite">bosh upload-blobs</code> command:</p>
+<h2 id="placement-rules">Placement Rules<a class="headerlink" href="#placement-rules" title="Permanent link">&para;</a></h2>
+<p>Filters which may be used with the <code class="codehilite">include</code> and <code class="codehilite">exclude</code> options.</p>
+<blockquote>
+<h3 id="stemcell"><code class="codehilite">stemcell[]</code><a class="headerlink" href="#stemcell" title="Permanent link">&para;</a></h3>
 <ul>
-<li>uploads all local blobs to release blobstore</li>
-<li>updates <code class="codehilite">config/blobs.yml</code> with blobstore IDs</li>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Array of Objects</li>
 </ul>
-<p><code class="codehilite">config/blobs.yml</code> should be checked into a Git repository.</p>
-<hr />
-<h2 id="removing-blobs">Removing blobs <a id="removing-blobs"></a><a class="headerlink" href="#removing-blobs" title="Permanent link">&para;</a></h2>
-<p>Once a blob is no longer needed by a package it can be stopped being tracked.</p>
-<p><code class="codehilite">bosh remove-blob</code> command:</p>
+<blockquote>
+<h4 id="os"><code class="codehilite">os</code><a class="headerlink" href="#os" title="Permanent link">&para;</a></h4>
+<p>Matches stemcell's operating system (e.g. <code class="codehilite">ubuntu-trusty</code>)</p>
 <ul>
-<li>removes blob from <code class="codehilite">config/blobs.yml</code></li>
-<li>does NOT remove blob from release blobstore so that new releases can be created from older revisions</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: string</li>
 </ul>
+</blockquote>
+<h3 id="deployments"><code class="codehilite">deployments[]</code><a class="headerlink" href="#deployments" title="Permanent link">&para;</a></h3>
+<p>Matches based on deployment names.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Array of Strings</li>
+</ul>
+<h3 id="jobs_1"><code class="codehilite">jobs[]</code><a class="headerlink" href="#jobs_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Array of Objects</li>
+</ul>
+<blockquote>
+<h4 id="name_3"><code class="codehilite">name</code><a class="headerlink" href="#name_3" title="Permanent link">&para;</a></h4>
+<p>Matching job name.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="release_1"><code class="codehilite">release</code><a class="headerlink" href="#release_1" title="Permanent link">&para;</a></h4>
+<p>Matching release name.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+</blockquote>
+<h3 id="networks"><code class="codehilite">networks[]</code><a class="headerlink" href="#networks" title="Permanent link">&para;</a></h3>
+<p>Matches based on network names.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Array of Strings</li>
+<li><em>Since</em>: <a href="https://github.com/cloudfoundry/bosh/releases/tag/v262">bosh/v262</a></li>
+</ul>
+</blockquote>
                 
                   
                 
@@ -3684,7 +4093,7 @@ Succeeded
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../s3-release-blobstore/" title="Using S3 & IAM Policies" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../director-api-v1/" title="Director HTTP API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -3693,19 +4102,19 @@ Succeeded
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using S3 & IAM Policies
+                Director HTTP API
               </span>
             </div>
           </a>
         
         
-          <a href="../job-templates/" title="Unit Testing Job Templates" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../configs/" title="Generic Configs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Unit Testing Job Templates
+                Generic Configs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
