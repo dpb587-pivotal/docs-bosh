@@ -88,7 +88,9 @@ pages:
     - Managing Stemcells: managing-stemcells.md
     - Auto-healing Capabilities: resurrector.md
     - Using Health Monitor: hm-config.md
-    - Common Addons: addons-common.md
+    - Using Runtime Config:
+      - Overview: runtime-config.md
+      - Common Addons: addons-common.md
     - Integrating with CredHub:
       - Variable Types: variable-types.md
     - Optional Features:
@@ -139,7 +141,7 @@ pages:
     - Networks: networks.md
   - Director HTTP API: director-api-v1.md
   - Director Runtime Config:
-    - Usage: runtime-config.md
+    - Schema: runtime-config-schema.md
   - Generic Configs: configs.md
   - Cloud Provider Interface: cpi-api-v1.md
   - Release Management:
@@ -207,13 +209,16 @@ pages:
 - Releases:
   - Releases: releases.md
 theme:
-  name: 'material'
+  name: material
+  custom_dir: theme
   feature:
     tabs: true
   palette:
     primary: blue
     accent: blue
   logo: images/logo.png
+extra_css:
+  - 'stylesheets/extra.css'
 markdown_extensions: # based on docs-cfcr
 - markdown.extensions.admonition
 - markdown.extensions.codehilite
