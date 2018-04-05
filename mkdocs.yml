@@ -131,7 +131,9 @@ pages:
     - Target Personas: personas.md
 - Reference:
   - Terminology: terminology.md
-  - Deployment Config: manifest-v2.md
+  - Deployment Config:
+    - Schema (UI Test Before): manifest-v2.md
+    - Schema (UI Test After): manifest-v2-schema.md
   - Director Cloud Config:
     - Usage: cloud-config.md
     - Availability Zones: azs.md
