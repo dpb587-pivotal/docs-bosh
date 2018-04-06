@@ -171,6 +171,7 @@ pages:
     - IAM Users: aws-iam-users.md
     - IAM Profiles: aws-iam-instance-profiles.md
     - Using Instance Storage: aws-instance-storage.md
+    - Troubleshooting: aws-cpi-troubleshooting.md
   - Google Cloud Platform:
     - Usage: google-cpi.md
     - Required Permissions: google-required-permissions.md
