@@ -36,7 +36,7 @@
     
     
       
-        <title>AWS CPI</title>
+        <title>Usage - Cloud Foundry BOSH</title>
       
     
     
@@ -4228,9 +4228,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#azs" title="AZs" class="md-nav__link">
-    AZs
+  <a href="#azs" title="Availability Zones" class="md-nav__link">
+    Availability Zones
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability_zone" title="availability_zone" class="md-nav__link">
+    availability_zone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4239,19 +4252,293 @@
     Networks
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-pools" title="Resource Pools / VM Types" class="md-nav__link">
-    Resource Pools / VM Types
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networks-subnet" title="subnet" class="md-nav__link">
+    subnet
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networks-security_groups" title="security_groups[]" class="md-nav__link">
+    security_groups[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-pools" title="Disk Pools / Disk Types" class="md-nav__link">
-    Disk Pools / Disk Types
+  <a href="#resource-pools" title="Virtual Machines" class="md-nav__link">
+    Virtual Machines
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-instance_type" title="instance_type" class="md-nav__link">
+    instance_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-availability_zone" title="availability_zone" class="md-nav__link">
+    availability_zone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-security_groups" title="security_groups[]" class="md-nav__link">
+    security_groups[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-key_name" title="key_name" class="md-nav__link">
+    key_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-spot_bid_price" title="spot_bid_price" class="md-nav__link">
+    spot_bid_price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-spot_ondemand_fallback" title="spot_ondemand_fallback" class="md-nav__link">
+    spot_ondemand_fallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-elbs" title="elbs[]" class="md-nav__link">
+    elbs[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-lb_target_groups" title="lb_target_groups[]" class="md-nav__link">
+    lb_target_groups[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-iam_instance_profile" title="iam_instance_profile" class="md-nav__link">
+    iam_instance_profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-placement_group" title="placement_group" class="md-nav__link">
+    placement_group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-tenancy" title="tenancy" class="md-nav__link">
+    tenancy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-auto_assign_public_ip" title="auto_assign_public_ip" class="md-nav__link">
+    auto_assign_public_ip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes" title="advertised_routes[]" class="md-nav__link">
+    advertised_routes[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes-table_id" title="table_id" class="md-nav__link">
+    table_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes-destination" title="destination" class="md-nav__link">
+    destination
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-raw_instance_storage" title="raw_instance_storage" class="md-nav__link">
+    raw_instance_storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-source_dest_check" title="source_dest_check" class="md-nav__link">
+    source_dest_check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk" title="ephemeral_disk" class="md-nav__link">
+    ephemeral_disk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-use_instance_storage" title="use_instance_storage" class="md-nav__link">
+    use_instance_storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk" title="root_disk" class="md-nav__link">
+    root_disk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-pools" title="Persistent Disks" class="md-nav__link">
+    Persistent Disks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4260,19 +4547,81 @@
     Global Configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloud-config" title="Example Cloud Config" class="md-nav__link">
-    Example Cloud Config
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-credentials_source" title="credentials_source" class="md-nav__link">
+    credentials_source
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#errors" title="Errors" class="md-nav__link">
-    Errors
+        
+          <li class="md-nav__item">
+  <a href="#global-access_key_id" title="access_key_id" class="md-nav__link">
+    access_key_id
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-secret_access_key" title="secret_access_key" class="md-nav__link">
+    secret_access_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_key_name" title="default_key_name" class="md-nav__link">
+    default_key_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_security_groups" title="default_security_groups" class="md-nav__link">
+    default_security_groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_iam_instance_profile" title="default_iam_instance_profile" class="md-nav__link">
+    default_iam_instance_profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-region" title="region" class="md-nav__link">
+    region
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-max_retries" title="max_retries" class="md-nav__link">
+    max_retries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4339,6 +4688,24 @@
     <a href="../aws-instance-storage/" title="Using Instance Storage"
         class="md-nav__link">
       Using Instance Storage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+
+
+
+
+  <li class="md-nav__item">
+    <a href="../aws-cpi-troubleshooting/" title="Troubleshooting"
+        class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -5309,9 +5676,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#azs" title="AZs" class="md-nav__link">
-    AZs
+  <a href="#azs" title="Availability Zones" class="md-nav__link">
+    Availability Zones
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability_zone" title="availability_zone" class="md-nav__link">
+    availability_zone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5320,19 +5700,293 @@
     Networks
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-pools" title="Resource Pools / VM Types" class="md-nav__link">
-    Resource Pools / VM Types
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networks-subnet" title="subnet" class="md-nav__link">
+    subnet
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networks-security_groups" title="security_groups[]" class="md-nav__link">
+    security_groups[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-pools" title="Disk Pools / Disk Types" class="md-nav__link">
-    Disk Pools / Disk Types
+  <a href="#resource-pools" title="Virtual Machines" class="md-nav__link">
+    Virtual Machines
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vm-instance_type" title="instance_type" class="md-nav__link">
+    instance_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-availability_zone" title="availability_zone" class="md-nav__link">
+    availability_zone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-security_groups" title="security_groups[]" class="md-nav__link">
+    security_groups[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-key_name" title="key_name" class="md-nav__link">
+    key_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-spot_bid_price" title="spot_bid_price" class="md-nav__link">
+    spot_bid_price
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-spot_ondemand_fallback" title="spot_ondemand_fallback" class="md-nav__link">
+    spot_ondemand_fallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-elbs" title="elbs[]" class="md-nav__link">
+    elbs[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-lb_target_groups" title="lb_target_groups[]" class="md-nav__link">
+    lb_target_groups[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-iam_instance_profile" title="iam_instance_profile" class="md-nav__link">
+    iam_instance_profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-placement_group" title="placement_group" class="md-nav__link">
+    placement_group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-tenancy" title="tenancy" class="md-nav__link">
+    tenancy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-auto_assign_public_ip" title="auto_assign_public_ip" class="md-nav__link">
+    auto_assign_public_ip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes" title="advertised_routes[]" class="md-nav__link">
+    advertised_routes[]
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes-table_id" title="table_id" class="md-nav__link">
+    table_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-advertised_routes-destination" title="destination" class="md-nav__link">
+    destination
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-raw_instance_storage" title="raw_instance_storage" class="md-nav__link">
+    raw_instance_storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-source_dest_check" title="source_dest_check" class="md-nav__link">
+    source_dest_check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk" title="ephemeral_disk" class="md-nav__link">
+    ephemeral_disk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-ephemeral_disk-use_instance_storage" title="use_instance_storage" class="md-nav__link">
+    use_instance_storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk" title="root_disk" class="md-nav__link">
+    root_disk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-size" title="size" class="md-nav__link">
+    size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pools-root_disk-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-pools" title="Persistent Disks" class="md-nav__link">
+    Persistent Disks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-type" title="type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-iops" title="iops" class="md-nav__link">
+    iops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-pools-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5341,19 +5995,81 @@
     Global Configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloud-config" title="Example Cloud Config" class="md-nav__link">
-    Example Cloud Config
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-credentials_source" title="credentials_source" class="md-nav__link">
+    credentials_source
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#errors" title="Errors" class="md-nav__link">
-    Errors
+        
+          <li class="md-nav__item">
+  <a href="#global-access_key_id" title="access_key_id" class="md-nav__link">
+    access_key_id
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-secret_access_key" title="secret_access_key" class="md-nav__link">
+    secret_access_key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_key_name" title="default_key_name" class="md-nav__link">
+    default_key_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_security_groups" title="default_security_groups" class="md-nav__link">
+    default_security_groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-default_iam_instance_profile" title="default_iam_instance_profile" class="md-nav__link">
+    default_iam_instance_profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-region" title="region" class="md-nav__link">
+    region
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-max_retries" title="max_retries" class="md-nav__link">
+    max_retries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-encrypted" title="encrypted" class="md-nav__link">
+    encrypted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-kms_key_arn" title="kms_key_arn" class="md-nav__link">
+    kms_key_arn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5373,6 +6089,8 @@
             <article class="md-content__inner md-typeset">
               
   
+    <div class="bosh-schema">
+  
   
                 
                   <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/aws-cpi.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
@@ -5381,284 +6099,329 @@
                   <h1>Usage</h1>
                 
                 <p>This topic describes cloud properties for different resources created by the AWS CPI.</p>
-<h2 id="azs">AZs<a class="headerlink" href="#azs" title="Permanent link">&para;</a></h2>
-<p>Schema for <code class="codehilite">cloud_properties</code> section:</p>
+<h2 id="azs">Availability Zones<a class="headerlink" href="#azs" title="Permanent link">&para;</a></h2>
+<h3 id="availability_zone"><code class="codehilite">availability_zone</code><a class="headerlink" href="#availability_zone" title="Permanent link">&para;</a></h3>
+<p>Availability zone to use for creating instances. Example: <code class="codehilite">us-east-1a</code>.</p>
 <ul>
-<li><strong>availability_zone</strong> [String, required]: Availability zone to use for creating instances. Example: <code class="codehilite">us-east-1a</code>.</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
 </ul>
-<p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">azs</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z1</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">availability_zone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">us-east-1a</span>
-</pre></div>
-
-<hr />
 <h2 id="networks">Networks<a class="headerlink" href="#networks" title="Permanent link">&para;</a></h2>
-<p>Schema for <code class="codehilite">cloud_properties</code> section used by dynamic network or manual network subnet:</p>
+<p>Schema for <code class="codehilite">cloud_properties</code> section used by dynamic network or manual network subnet.</p>
+<h3 id="networks-subnet"><code class="codehilite">subnet</code><a class="headerlink" href="#networks-subnet" title="Permanent link">&para;</a></h3>
+<p>Subnet ID in which the instance will be created. Example: <code class="codehilite">subnet-9be6c3f7</code>.</p>
 <ul>
-<li><strong>subnet</strong> [String, required]: Subnet ID in which the instance will be created. Example: <code class="codehilite">subnet-9be6c3f7</code>.</li>
-<li><strong>security_groups</strong> [Array, optional]: Array of <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Security Groups</a>, by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence: <code class="codehilite">vm_types</code>, followed by <code class="codehilite">networks</code>, followed by <code class="codehilite">default_security_groups</code>.</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
 </ul>
-<p>Example of manual network:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
-  <span class="l l-Scalar l-Scalar-Plain">subnets</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">range</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.0.0/24</span>
-    <span class="l l-Scalar l-Scalar-Plain">gateway</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.0.1</span>
-    <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">subnet</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">subnet-9be6c3f7</span>
-      <span class="l l-Scalar l-Scalar-Plain">security_groups</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">bosh</span><span class="p p-Indicator">]</span>
-</pre></div>
-
-<p>Example of dynamic network:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">dynamic</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">subnet</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">subnet-9be6c6gh</span>
-</pre></div>
-
-<p>Example of vip network:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vip</span>
-</pre></div>
-
-<hr />
-<h2 id="resource-pools">Resource Pools / VM Types<a class="headerlink" href="#resource-pools" title="Permanent link">&para;</a></h2>
+<h3 id="networks-security_groups"><code class="codehilite">security_groups[]</code><a class="headerlink" href="#networks-security_groups" title="Permanent link">&para;</a></h3>
+<p>Array of <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html">Security Groups</a>, by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence: <code class="codehilite">vm_types</code>, followed by <code class="codehilite">networks</code>, followed by <code class="codehilite">default_security_groups</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h2 id="resource-pools">Virtual Machines<a class="headerlink" href="#resource-pools" title="Permanent link">&para;</a></h2>
 <p>Schema for <code class="codehilite">cloud_properties</code> section:</p>
+<h3 id="vm-instance_type"><code class="codehilite">instance_type</code><a class="headerlink" href="#vm-instance_type" title="Permanent link">&para;</a></h3>
+<p>Type of the <a href="http://aws.amazon.com/ec2/instance-types/">instance</a>. Example: <code class="codehilite">m3.medium</code>.</p>
 <ul>
-<li><strong>instance_type</strong> [String, required]: Type of the <a href="http://aws.amazon.com/ec2/instance-types/">instance</a>. Example: <code class="codehilite">m3.medium</code>.</li>
-<li><strong>availability_zone</strong> [String, required]: Availability zone to use for creating instances. Example: <code class="codehilite">us-east-1a</code>.</li>
-<li><strong>security_groups</strong> [Array, optional]: See description under <a href="#networks">networks</a>. Available in v46+.</li>
-<li><strong>key_name</strong> [String, optional]: Key pair name. Defaults to key pair name specified by <code class="codehilite">default_key_name</code> in global CPI settings. Example: <code class="codehilite">bosh</code>.</li>
-<li><strong>spot_bid_price</strong> [Float, optional]: Bid price in dollars for <a href="http://aws.amazon.com/ec2/purchasing-options/spot-instances/">AWS spot instance</a>. Using this option will slow down VM creation. Example: <code class="codehilite">0.03</code>.</li>
-<li><strong>spot_ondemand_fallback</strong> [Boolean, optional]: Set to <code class="codehilite">true</code> to use an on demand instance if a spot instance is not available during VM creation. Defaults to <code class="codehilite">false</code>. Available in v36.</li>
-<li><strong>elbs</strong> [Array, optional]: Array of ELB names that should be attached to created VMs. Example: <code class="codehilite">[prod-elb]</code>. Default is <code class="codehilite">[]</code>.</li>
-<li><strong>lb_target_groups</strong> [Array, optional]: Array of Load Balancer Target Groups to which created VMs should be attached. Example: <code class="codehilite">[prod-group1, prod-group2]</code>. Default is <code class="codehilite">[]</code>. Available in v63 or newer.</li>
-<li><strong>iam_instance_profile</strong> [String, optional]: Name of an <a href="../aws-iam-instance-profiles/">IAM instance profile</a>. Example: <code class="codehilite">director</code>.</li>
-<li><strong>placement_group</strong> [String, optional]: Name of a <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">placement group</a>. Example: <code class="codehilite">my-group</code>.</li>
-<li><strong>tenancy</strong> [String, optional]: VM <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/dedicated-instance.html">tenancy</a> configuration. Example: <code class="codehilite">dedicated</code>. Default is <code class="codehilite">default</code>.</li>
-<li><strong>auto_assign_public_ip</strong> [Boolean, optional]: Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an <a href="../networks/#vip">Elastic IP</a> instead for a persistent address. Defaults to <code class="codehilite">false</code>. Available in v55+.</li>
-<li><strong>advertised_routes</strong> [Array, optional]: Creates routes in an <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">AWS Route Table</a> with the created BOSH VM as the target. Requires IAM action <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">CreateRoute</span></code>, <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">DescribeRouteTables</span></code>, <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">ReplaceRoute</span></code>.</li>
-<li><strong>table_id</strong> [String, required]: ID of the route table in which to create the route (e.g. <code class="codehilite">rt-abcdef123</code>).</li>
-<li><strong>destination</strong> [String, required]: Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.</li>
-<li><strong>raw_instance_storage</strong> [Boolean, optional]: Exposes all available <a href="../aws-instance-storage/">instance storage via labeled disks</a>. Defaults to <code class="codehilite">false</code>.</li>
-<li><strong>source_dest_check</strong> [Boolean, optional]: Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to <code class="codehilite">false</code>, the instance does <em>not</em> need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to <code class="codehilite">true</code>. Requires IAM action <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">ModifyInstanceAttribute</span></code>. Available in v59+.</li>
-<li><strong>ephemeral_disk</strong> [Hash, optional]: EBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.<ul>
-<li><strong>size</strong> [Integer, required]: Specifies the disk size in megabytes.</li>
-<li><strong>type</strong> [String, optional]: Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.<ul>
-<li><code class="codehilite">standard</code> stands for EBS magnetic drives</li>
-<li><code class="codehilite">gp2</code> stands for EBS general purpose drives (SSD)</li>
-<li><code class="codehilite">io1</code> stands for EBS provisioned IOPS drives (SSD)</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
 </ul>
-</li>
-<li><strong>iops</strong> [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.<ul>
-<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
-<li>Required when <code class="codehilite">io1</code> type drive is specified.</li>
-</ul>
-</li>
-<li><strong>encrypted</strong> [Boolean, optional] Enables encryption for the EBS backed ephemeral disk. An error is raised, if the <code class="codehilite">instance_type</code> does not support it. Since v53. Defaults to <code class="codehilite">false</code>. Overrides the global <code class="codehilite">encrypted</code> property.</li>
-<li><strong>kms_key_arn</strong> [String, optional] The ARN of an Amazon KMS key to use when encrypting the disk.</li>
-<li><strong>use_instance_storage</strong> [Boolean, optional] Forces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used <code class="codehilite">instance_type</code> does not have instance storage. Cannot be combined with any other option under <code class="codehilite">ephemeral_disk</code> or with <code class="codehilite">raw_instance_storage</code>. Since v53. Defaults to <code class="codehilite">false</code>.</li>
-</ul>
-</li>
-<li><strong>root_disk</strong> [Hash, optional]: EBS backed root disk of custom size.<ul>
-<li><strong>size</strong> [Integer, required]: Specifies the disk size in megabytes.</li>
-<li><strong>type</strong> [String, optional]: Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.<ul>
-<li><code class="codehilite">standard</code> stands for EBS magnetic drives</li>
-<li><code class="codehilite">gp2</code> stands for EBS general purpose drives (SSD)</li>
-</ul>
-</li>
-<li><strong>iops</strong> [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.<ul>
-<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
-<li>Required when <code class="codehilite">io1</code> type drive is specified.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Example of an <code class="codehilite">m3.medium</code> instance:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">resource_pools</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">stemcell</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bosh-aws-xen-hvm-ubuntu-trusty-go_agent</span>
-    <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">latest</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">instance_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">m3.medium</span>
-    <span class="l l-Scalar l-Scalar-Plain">availability_zone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">us-east-1a</span>
-</pre></div>
-
-<hr />
-<h2 id="disk-pools">Disk Pools / Disk Types<a class="headerlink" href="#disk-pools" title="Permanent link">&para;</a></h2>
-<p>Schema for <code class="codehilite">cloud_properties</code> section:</p>
+<h3 id="resource-pools-availability_zone"><code class="codehilite">availability_zone</code><a class="headerlink" href="#resource-pools-availability_zone" title="Permanent link">&para;</a></h3>
+<p>Availability zone to use for creating instances. Example: <code class="codehilite">us-east-1a</code>.</p>
 <ul>
-<li><strong>type</strong> [String, optional]: Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.</li>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-security_groups"><code class="codehilite">security_groups[]</code><a class="headerlink" href="#resource-pools-security_groups" title="Permanent link">&para;</a></h3>
+<p>See description under <a href="#networks">networks</a>. Available in v46+.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-key_name"><code class="codehilite">key_name</code><a class="headerlink" href="#resource-pools-key_name" title="Permanent link">&para;</a></h3>
+<p>Key pair name. Defaults to key pair name specified by <code class="codehilite">default_key_name</code> in global CPI settings. Example: <code class="codehilite">bosh</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-spot_bid_price"><code class="codehilite">spot_bid_price</code><a class="headerlink" href="#resource-pools-spot_bid_price" title="Permanent link">&para;</a></h3>
+<p>Bid price in dollars for <a href="http://aws.amazon.com/ec2/purchasing-options/spot-instances/">AWS spot instance</a>. Using this option will slow down VM creation. Example: <code class="codehilite">0.03</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Float</li>
+</ul>
+<h3 id="resource-pools-spot_ondemand_fallback"><code class="codehilite">spot_ondemand_fallback</code><a class="headerlink" href="#resource-pools-spot_ondemand_fallback" title="Permanent link">&para;</a></h3>
+<p>Set to <code class="codehilite">true</code> to use an on demand instance if a spot instance is not available during VM creation. Defaults to <code class="codehilite">false</code>. Available in v36.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="resource-pools-elbs"><code class="codehilite">elbs[]</code><a class="headerlink" href="#resource-pools-elbs" title="Permanent link">&para;</a></h3>
+<p>Array of ELB names that should be attached to created VMs. Example: <code class="codehilite">[prod-elb]</code>. Default is <code class="codehilite">[]</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-lb_target_groups"><code class="codehilite">lb_target_groups[]</code><a class="headerlink" href="#resource-pools-lb_target_groups" title="Permanent link">&para;</a></h3>
+<p>Array of Load Balancer Target Groups to which created VMs should be attached. Example: <code class="codehilite">[prod-group1, prod-group2]</code>. Default is <code class="codehilite">[]</code>. Available in v63 or newer.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-iam_instance_profile"><code class="codehilite">iam_instance_profile</code><a class="headerlink" href="#resource-pools-iam_instance_profile" title="Permanent link">&para;</a></h3>
+<p>Name of an <a href="../aws-iam-instance-profiles/">IAM instance profile</a>. Example: <code class="codehilite">director</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-placement_group"><code class="codehilite">placement_group</code><a class="headerlink" href="#resource-pools-placement_group" title="Permanent link">&para;</a></h3>
+<p>Name of a <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">placement group</a>. Example: <code class="codehilite">my-group</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-tenancy"><code class="codehilite">tenancy</code><a class="headerlink" href="#resource-pools-tenancy" title="Permanent link">&para;</a></h3>
+<p>VM <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/dedicated-instance.html">tenancy</a> configuration. Example: <code class="codehilite">dedicated</code>. Default is <code class="codehilite">default</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="resource-pools-auto_assign_public_ip"><code class="codehilite">auto_assign_public_ip</code><a class="headerlink" href="#resource-pools-auto_assign_public_ip" title="Permanent link">&para;</a></h3>
+<p>Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an <a href="../networks/#vip">Elastic IP</a> instead for a persistent address. Defaults to <code class="codehilite">false</code>. Available in v55+.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="resource-pools-advertised_routes"><code class="codehilite">advertised_routes[]</code><a class="headerlink" href="#resource-pools-advertised_routes" title="Permanent link">&para;</a></h3>
+<p>Creates routes in an <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">AWS Route Table</a> with the created BOSH VM as the target. Requires IAM action <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">CreateRoute</span></code>, <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">DescribeRouteTables</span></code>, <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">ReplaceRoute</span></code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+</ul>
+<blockquote>
+<h4 id="resource-pools-advertised_routes-table_id"><code class="codehilite">table_id</code><a class="headerlink" href="#resource-pools-advertised_routes-table_id" title="Permanent link">&para;</a></h4>
+<p>ID of the route table in which to create the route (e.g. <code class="codehilite">rt-abcdef123</code>).</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="resource-pools-advertised_routes-destination"><code class="codehilite">destination</code><a class="headerlink" href="#resource-pools-advertised_routes-destination" title="Permanent link">&para;</a></h4>
+<p>Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+</blockquote>
+<h3 id="resource-pools-raw_instance_storage"><code class="codehilite">raw_instance_storage</code><a class="headerlink" href="#resource-pools-raw_instance_storage" title="Permanent link">&para;</a></h3>
+<p>Exposes all available <a href="../aws-instance-storage/">instance storage via labeled disks</a>. Defaults to <code class="codehilite">false</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="resource-pools-source_dest_check"><code class="codehilite">source_dest_check</code><a class="headerlink" href="#resource-pools-source_dest_check" title="Permanent link">&para;</a></h3>
+<p>Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to <code class="codehilite">false</code>, the instance does <em>not</em> need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to <code class="codehilite">true</code>. Requires IAM action <code class="codehilite"><span class="n">ec2</span><span class="o">:</span><span class="n">ModifyInstanceAttribute</span></code>. Available in v59+.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="resource-pools-ephemeral_disk"><code class="codehilite">ephemeral_disk</code><a class="headerlink" href="#resource-pools-ephemeral_disk" title="Permanent link">&para;</a></h3>
+<p>EBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+</ul>
+<blockquote>
+<h4 id="resource-pools-ephemeral_disk-size"><code class="codehilite">size</code><a class="headerlink" href="#resource-pools-ephemeral_disk-size" title="Permanent link">&para;</a></h4>
+<p>Specifies the disk size in megabytes.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: Integer</li>
+</ul>
+<h4 id="resource-pools-ephemeral_disk-type"><code class="codehilite">type</code><a class="headerlink" href="#resource-pools-ephemeral_disk-type" title="Permanent link">&para;</a></h4>
+<p>Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.</p>
+<ul>
 <li><code class="codehilite">standard</code> stands for EBS magnetic drives</li>
 <li><code class="codehilite">gp2</code> stands for EBS general purpose drives (SSD)</li>
-<li><code class="codehilite">io1</code> stands for EBS provisioned IOPS drives (SSD)</li>
-<li><strong>iops</strong> [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.</li>
-<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
-<li>Required when <code class="codehilite">io1</code> type drive is specified.</li>
-<li><strong>encrypted</strong> [Boolean, optional]: Turns on <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS volume encryption</a> for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to <code class="codehilite">false</code>. Overrides the global <code class="codehilite">encrypted</code> property.</li>
-<li><strong>kms_key_arn</strong> [String, optional]: Encrypts the disk using an encryption key stored in the <a href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>. The format of the ID is <code class="codehilite">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code>. Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global <code class="codehilite">kms_key_arn</code> property. If, no global <code class="codehilite">kms_key_arn</code> is set will use your account's default <code class="codehilite">aws/ebs</code> encryption key.</li>
+<li>
+<p><code class="codehilite">io1</code> stands for EBS provisioned IOPS drives (SSD)</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: String</li>
 </ul>
-<p>EBS volumes are created in the availability zone of an instance that volume will be attached.</p>
-<p>Example of 10GB disk:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">disk_pools</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">disk_size</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10_240</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gp2</span>
-</pre></div>
-
-<hr />
+<h4 id="resource-pools-ephemeral_disk-iops"><code class="codehilite">iops</code><a class="headerlink" href="#resource-pools-ephemeral_disk-iops" title="Permanent link">&para;</a></h4>
+<p>Specifies the number of I/O operations per second to provision for the drive.</p>
+<ul>
+<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
+<li>
+<p>Required when <code class="codehilite">io1</code> type drive is specified.</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: Integer</li>
+</ul>
+<h4 id="resource-pools-ephemeral_disk-encrypted"><code class="codehilite">encrypted</code><a class="headerlink" href="#resource-pools-ephemeral_disk-encrypted" title="Permanent link">&para;</a></h4>
+<p>Enables encryption for the EBS backed ephemeral disk. An error is raised, if the <code class="codehilite">instance_type</code> does not support it. Since v53. Defaults to <code class="codehilite">false</code>. Overrides the global <code class="codehilite">encrypted</code> property.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h4 id="resource-pools-ephemeral_disk-kms_key_arn"><code class="codehilite">kms_key_arn</code><a class="headerlink" href="#resource-pools-ephemeral_disk-kms_key_arn" title="Permanent link">&para;</a></h4>
+<p>The ARN of an Amazon KMS key to use when encrypting the disk.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="resource-pools-ephemeral_disk-use_instance_storage"><code class="codehilite">use_instance_storage</code><a class="headerlink" href="#resource-pools-ephemeral_disk-use_instance_storage" title="Permanent link">&para;</a></h4>
+<p>Forces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used <code class="codehilite">instance_type</code> does not have instance storage. Cannot be combined with any other option under <code class="codehilite">ephemeral_disk</code> or with <code class="codehilite">raw_instance_storage</code>. Since v53. Defaults to <code class="codehilite">false</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+</blockquote>
+<h3 id="resource-pools-root_disk"><code class="codehilite">root_disk</code><a class="headerlink" href="#resource-pools-root_disk" title="Permanent link">&para;</a></h3>
+<p>EBS backed root disk of custom size.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Object</li>
+</ul>
+<blockquote>
+<h4 id="resource-pools-root_disk-size"><code class="codehilite">size</code><a class="headerlink" href="#resource-pools-root_disk-size" title="Permanent link">&para;</a></h4>
+<p>Specifies the disk size in megabytes.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: Integer</li>
+</ul>
+<h4 id="resource-pools-root_disk-type"><code class="codehilite">type</code><a class="headerlink" href="#resource-pools-root_disk-type" title="Permanent link">&para;</a></h4>
+<p>Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.</p>
+<ul>
+<li><code class="codehilite">standard</code> stands for EBS magnetic drives</li>
+<li>
+<p><code class="codehilite">gp2</code> stands for EBS general purpose drives (SSD)</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: String</li>
+</ul>
+<h4 id="resource-pools-root_disk-iops"><code class="codehilite">iops</code><a class="headerlink" href="#resource-pools-root_disk-iops" title="Permanent link">&para;</a></h4>
+<p>Specifies the number of I/O operations per second to provision for the drive.</p>
+<ul>
+<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
+<li>
+<p>Required when <code class="codehilite">io1</code> type drive is specified.</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: Integer</li>
+</ul>
+</blockquote>
+<h2 id="disk-pools">Persistent Disks<a class="headerlink" href="#disk-pools" title="Permanent link">&para;</a></h2>
+<p>EBS volumes are created in the availability zone of an instance that volume will be attached. Schema for <code class="codehilite">cloud_properties</code> section:</p>
+<h3 id="disk-pools-type"><code class="codehilite">type</code><a class="headerlink" href="#disk-pools-type" title="Permanent link">&para;</a></h3>
+<p>Type of the <a href="http://aws.amazon.com/ebs/details/">disk</a>: <code class="codehilite">standard</code>, <code class="codehilite">gp2</code>. Defaults to <code class="codehilite">gp2</code>.</p>
+<ul>
+<li><code class="codehilite">standard</code> stands for EBS magnetic drives</li>
+<li><code class="codehilite">gp2</code> stands for EBS general purpose drives (SSD)</li>
+<li>
+<p><code class="codehilite">io1</code> stands for EBS provisioned IOPS drives (SSD)</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="disk-pools-iops"><code class="codehilite">iops</code><a class="headerlink" href="#disk-pools-iops" title="Permanent link">&para;</a></h3>
+<p>Specifies the number of I/O operations per second to provision for the drive.</p>
+<ul>
+<li>Only valid for <code class="codehilite">io1</code> type drive.</li>
+<li>
+<p>Required when <code class="codehilite">io1</code> type drive is specified.</p>
+</li>
+<li>
+<p><em>Optional</em></p>
+</li>
+<li><em>Type</em>: Integer</li>
+</ul>
+<h3 id="disk-pools-encrypted"><code class="codehilite">encrypted</code><a class="headerlink" href="#disk-pools-encrypted" title="Permanent link">&para;</a></h3>
+<p>Turns on <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS volume encryption</a> for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to <code class="codehilite">false</code>. Overrides the global <code class="codehilite">encrypted</code> property.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="disk-pools-kms_key_arn"><code class="codehilite">kms_key_arn</code><a class="headerlink" href="#disk-pools-kms_key_arn" title="Permanent link">&para;</a></h3>
+<p>Encrypts the disk using an encryption key stored in the <a href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>. The format of the ID is <code class="codehilite">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code>. Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global <code class="codehilite">kms_key_arn</code> property. If, no global <code class="codehilite">kms_key_arn</code> is set will use your account's default <code class="codehilite">aws/ebs</code> encryption key.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
 <h2 id="global">Global Configuration<a class="headerlink" href="#global" title="Permanent link">&para;</a></h2>
 <p>The CPI can only talk to a single AWS region.</p>
-<p>Schema:</p>
+<h3 id="global-credentials_source"><code class="codehilite">credentials_source</code><a class="headerlink" href="#global-credentials_source" title="Permanent link">&para;</a></h3>
+<p>Selects credentials source between credentials provided in this configuration, or from an <a href="../aws-iam-instance-profiles/">IAM instance profile</a>. Default: <code class="codehilite">static</code>.</p>
 <ul>
-<li><strong>credentials_source</strong> [String, optional]: Selects credentials source between credentials provided in this configuration, or from an <a href="../aws-iam-instance-profiles/">IAM instance profile</a>. Default: <code class="codehilite">static</code>.</li>
-<li><strong>access_key_id</strong> [String, optional]: Accesss Key ID. Example: <code class="codehilite">AKI...</code>.</li>
-<li><strong>secret_access_key</strong> [String, optional]: Secret Access Key. Example: <code class="codehilite">0kwh...</code>.</li>
-<li><strong>default_key_name</strong> [String, required]: Name of the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pair</a> that will be applied to all created VMs. Example: <code class="codehilite">bosh</code></li>
-<li><strong>default_security_groups</strong> [Array, required]: See description under <a href="#networks">networks</a>.</li>
-<li><strong>default_iam_instance_profile</strong> [String, optional]: Name of the <a href="../aws-iam-instance-profiles/">IAM instance profile</a> that will be applied to all created VMs. Example: <code class="codehilite">director</code>.</li>
-<li><strong>region</strong> [String, required]: AWS region name. Example: <code class="codehilite">us-east-1</code></li>
-<li><strong>max_retries</strong> [Integer, optional]: The maximum number of times AWS service errors (500) and throttling errors (<code class="codehilite">AWS::EC2::Errors::RequestLimitExceeded</code>) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.</li>
-<li><strong>encrypted</strong> [Boolean, optional]: Turns on <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS volume encryption</a> for all VM's root (system), ephemeral and persistent disks. Defaults to <code class="codehilite">false</code>. Available in v67+.</li>
-<li><strong>kms_key_arn</strong> [String, optional]: Encrypts the disks using an encryption key stored in the <a href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>. The format of the ID is <code class="codehilite">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code>. Be sure to use the Key ID, not the Alias. If this property is omitted and <code class="codehilite">encrypted</code> is <code class="codehilite">true</code>, the disks will be encrypted using your account's default <code class="codehilite">aws/ebs</code> encryption key. Available in v67+.</li>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
 </ul>
-<p>See <a href="https://bosh.io/jobs/cpi?source=github.com/cloudfoundry-incubator/bosh-aws-cpi-release">all configuration options</a>.</p>
-<p>Example with hard-coded credentials:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">properties</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">aws</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">access_key_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ACCESS-KEY-ID</span>
-    <span class="l l-Scalar l-Scalar-Plain">secret_access_key</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET-ACCESS-KEY</span>
-    <span class="l l-Scalar l-Scalar-Plain">default_key_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bosh</span>
-    <span class="l l-Scalar l-Scalar-Plain">default_security_groups</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">bosh</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">region</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">us-east-1</span>
-</pre></div>
-
-<p>Example when <a href="../aws-iam-instance-profiles/">IAM instance profiles</a> are used:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">properties</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">aws</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">credentials_source</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">env_or_profile</span>
-    <span class="l l-Scalar l-Scalar-Plain">default_key_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bosh</span>
-    <span class="l l-Scalar l-Scalar-Plain">default_security_groups</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">bosh</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">default_iam_instance_profile</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">deployed-vm</span>
-    <span class="l l-Scalar l-Scalar-Plain">region</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">us-east-1</span>
-</pre></div>
-
-<hr />
-<h2 id="cloud-config">Example Cloud Config<a class="headerlink" href="#cloud-config" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">azs</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z1</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">availability_zone</span><span class="p p-Indicator">:</span> <span class="nv">us-east-1a</span><span class="p p-Indicator">}</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z2</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">availability_zone</span><span class="p p-Indicator">:</span> <span class="nv">us-east-1b</span><span class="p p-Indicator">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">vm_types</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">instance_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">t2.micro</span>
-    <span class="l l-Scalar l-Scalar-Plain">ephemeral_disk</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">size</span><span class="p p-Indicator">:</span> <span class="nv">3000</span><span class="p p-Indicator">,</span> <span class="nv">type</span><span class="p p-Indicator">:</span> <span class="nv">gp2</span><span class="p p-Indicator">}</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">large</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">instance_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">m3.large</span>
-    <span class="l l-Scalar l-Scalar-Plain">ephemeral_disk</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">size</span><span class="p p-Indicator">:</span> <span class="nv">30000</span><span class="p p-Indicator">,</span> <span class="nv">type</span><span class="p p-Indicator">:</span> <span class="nv">gp2</span><span class="p p-Indicator">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">disk_types</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">disk_size</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">type</span><span class="p p-Indicator">:</span> <span class="nv">gp2</span><span class="p p-Indicator">}</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">large</span>
-  <span class="l l-Scalar l-Scalar-Plain">disk_size</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">50_000</span>
-  <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">type</span><span class="p p-Indicator">:</span> <span class="nv">gp2</span><span class="p p-Indicator">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">manual</span>
-  <span class="l l-Scalar l-Scalar-Plain">subnets</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">range</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.0.0/24</span>
-    <span class="l l-Scalar l-Scalar-Plain">gateway</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.0.1</span>
-    <span class="l l-Scalar l-Scalar-Plain">az</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z1</span>
-    <span class="l l-Scalar l-Scalar-Plain">static</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">10.10.0.62</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">dns</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">10.10.0.2</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">subnet</span><span class="p p-Indicator">:</span> <span class="nv">subnet-f2744a86</span><span class="p p-Indicator">}</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">range</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.64.0/24</span>
-    <span class="l l-Scalar l-Scalar-Plain">gateway</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10.10.64.1</span>
-    <span class="l l-Scalar l-Scalar-Plain">az</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z2</span>
-    <span class="l l-Scalar l-Scalar-Plain">static</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">10.10.64.121</span><span class="p p-Indicator">,</span> <span class="nv">10.10.64.122</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">dns</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="nv">10.10.0.2</span><span class="p p-Indicator">]</span>
-    <span class="l l-Scalar l-Scalar-Plain">cloud_properties</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nv">subnet</span><span class="p p-Indicator">:</span> <span class="nv">subnet-eb8bd3ad</span><span class="p p-Indicator">}</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vip</span>
-  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vip</span>
-
-<span class="l l-Scalar l-Scalar-Plain">compilation</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">workers</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
-  <span class="l l-Scalar l-Scalar-Plain">reuse_compilation_vms</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="l l-Scalar l-Scalar-Plain">az</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">z1</span>
-  <span class="l l-Scalar l-Scalar-Plain">vm_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">large</span>
-  <span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
-</pre></div>
-
-<hr />
-<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Stemcell does not contain an AMI for this region (us-west-2c)
-</pre></div>
-
-<p>Make sure that <code class="codehilite">region</code> specified in global CPI configuration is one of the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions">official AWS regions</a>. AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)</p>
-<div class="codehilite"><pre><span></span>Network vpc-a09e18c5 is not attached to any internet gateway
-</pre></div>
-
-<p>You need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.</p>
-<div class="codehilite"><pre><span></span>The subnet ID &#39;subnet-c3051fad&#39; does not exist
-</pre></div>
-
-<p>Make sure that the <code class="codehilite">region</code> specified in the global CPI configuration matches the region where your specified subnet resides.</p>
-<div class="codehilite"><pre><span></span>Signature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)
-</pre></div>
-
-<p>This error is usually caused by out-of-sync system time. Use <code class="codehilite">ntpdate</code> to sync the clock on the machine where BOSH CLI is run: <code class="codehilite">sudo ntpdate pool.ntp.org</code>. Alternatively make sure that <code class="codehilite">ntpd</code> is correctly configured and running.</p>
-<div class="codehilite"><pre><span></span>resource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26
-</pre></div>
-
-<p>This error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.</p>
-<div class="codehilite"><pre><span></span>Specifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch
-</pre></div>
-
-<p>Make sure that each manual network subnet has <code class="codehilite">cloud_properties</code> key and its contents include <code class="codehilite">subnet</code> key with the AWS Subnet ID. (You may have accidentally specified <code class="codehilite">cloud_properties</code> on the network itself.)</p>
-<div class="codehilite"><pre><span></span>Arguments are not correct
-</pre></div>
-
-<p>This error may be raised when:
-- <code class="codehilite">instance_type</code> is missing from the compilation or one of the resource pools' <code class="codehilite">cloud_properties</code> section
-- the deployment job instance is not assigned a static IP</p>
-<div class="codehilite"><pre><span></span>Address 10.10.16.251 is in use.
-</pre></div>
-
-<p>This error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.</p>
-<div class="codehilite"><pre><span></span>When specifying a security group you must specify a group id for each item.
-</pre></div>
-
-<p>Make sure all security groups in the CPI configuration and networks' <code class="codehilite">cloud_properties</code> sections are specified in the same format, as IDs (e.g. <code class="codehilite">sg-384fher</code>) or names (e.g. <code class="codehilite">cf-public</code>).</p>
-<div class="codehilite"><pre><span></span>You are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...
-</pre></div>
-
-<p>See <a href="../aws-iam-instance-profiles/#errors">IAM instance profiles errors</a>.</p>
-<div class="codehilite"><pre><span></span>Non-Windows instances with a virtualization type of &#39;hvm&#39; are currently not supported for this instance type.
-</pre></div>
-
-<p>You cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.</p>
-<div class="codehilite"><pre><span></span>AWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.
-</pre></div>
-
-<p>AWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of <code class="codehilite">aws.max_retries</code> to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.</p>
-<hr />
-<p>Next: <a href="../aws-iam-instance-profiles/">Using IAM instance profiles</a></p>
+<h3 id="global-access_key_id"><code class="codehilite">access_key_id</code><a class="headerlink" href="#global-access_key_id" title="Permanent link">&para;</a></h3>
+<p>Accesss Key ID. Example: <code class="codehilite">AKI...</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="global-secret_access_key"><code class="codehilite">secret_access_key</code><a class="headerlink" href="#global-secret_access_key" title="Permanent link">&para;</a></h3>
+<p>Secret Access Key. Example: <code class="codehilite">0kwh...</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="global-default_key_name"><code class="codehilite">default_key_name</code><a class="headerlink" href="#global-default_key_name" title="Permanent link">&para;</a></h3>
+<p>Name of the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Key Pair</a> that will be applied to all created VMs. Example: <code class="codehilite">bosh</code></p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="global-default_security_groups"><code class="codehilite">default_security_groups</code><a class="headerlink" href="#global-default_security_groups" title="Permanent link">&para;</a></h3>
+<p>See description under <a href="#networks">networks</a>.</p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: Array</li>
+</ul>
+<h3 id="global-default_iam_instance_profile"><code class="codehilite">default_iam_instance_profile</code><a class="headerlink" href="#global-default_iam_instance_profile" title="Permanent link">&para;</a></h3>
+<p>Name of the <a href="../aws-iam-instance-profiles/">IAM instance profile</a> that will be applied to all created VMs. Example: <code class="codehilite">director</code>.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="global-region"><code class="codehilite">region</code><a class="headerlink" href="#global-region" title="Permanent link">&para;</a></h3>
+<p>AWS region name. Example: <code class="codehilite">us-east-1</code></p>
+<ul>
+<li><em>Required</em></li>
+<li><em>Type</em>: String</li>
+</ul>
+<h3 id="global-max_retries"><code class="codehilite">max_retries</code><a class="headerlink" href="#global-max_retries" title="Permanent link">&para;</a></h3>
+<p>The maximum number of times AWS service errors (500) and throttling errors (<code class="codehilite">AWS::EC2::Errors::RequestLimitExceeded</code>) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Integer</li>
+</ul>
+<h3 id="global-encrypted"><code class="codehilite">encrypted</code><a class="headerlink" href="#global-encrypted" title="Permanent link">&para;</a></h3>
+<p>Turns on <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS volume encryption</a> for all VM's root (system), ephemeral and persistent disks. Defaults to <code class="codehilite">false</code>. Available in v67+.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: Boolean</li>
+</ul>
+<h3 id="global-kms_key_arn"><code class="codehilite">kms_key_arn</code><a class="headerlink" href="#global-kms_key_arn" title="Permanent link">&para;</a></h3>
+<p>Encrypts the disks using an encryption key stored in the <a href="https://aws.amazon.com/kms/">AWS Key Management Service (KMS)</a>. The format of the ID is <code class="codehilite">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code>. Be sure to use the Key ID, not the Alias. If this property is omitted and <code class="codehilite">encrypted</code> is <code class="codehilite">true</code>, the disks will be encrypted using your account's default <code class="codehilite">aws/ebs</code> encryption key. Available in v67+.</p>
+<ul>
+<li><em>Optional</em></li>
+<li><em>Type</em>: String</li>
+</ul>
                 
                   
                 

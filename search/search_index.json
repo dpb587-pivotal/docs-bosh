@@ -4807,43 +4807,258 @@
         },
         {
             "location": "/aws-cpi/",
-            "text": "This topic describes cloud properties for different resources created by the AWS CPI.\n\n\nAZs\n\u00b6\n\n\nSchema for \ncloud_properties\n section:\n\n\n\n\navailability_zone\n [String, required]: Availability zone to use for creating instances. Example: \nus-east-1a\n.\n\n\n\n\nExample:\n\n\nazs\n:\n\n\n-\n \nname\n:\n \nz1\n\n  \ncloud_properties\n:\n\n    \navailability_zone\n:\n \nus-east-1a\n\n\n\n\n\n\n\nNetworks\n\u00b6\n\n\nSchema for \ncloud_properties\n section used by dynamic network or manual network subnet:\n\n\n\n\nsubnet\n [String, required]: Subnet ID in which the instance will be created. Example: \nsubnet-9be6c3f7\n.\n\n\nsecurity_groups\n [Array, optional]: Array of \nSecurity Groups\n, by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence: \nvm_types\n, followed by \nnetworks\n, followed by \ndefault_security_groups\n.\n\n\n\n\nExample of manual network:\n\n\nnetworks\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ntype\n:\n \nmanual\n\n  \nsubnets\n:\n\n  \n-\n \nrange\n:\n \n10.10.0.0/24\n\n    \ngateway\n:\n \n10.10.0.1\n\n    \ncloud_properties\n:\n\n      \nsubnet\n:\n \nsubnet-9be6c3f7\n\n      \nsecurity_groups\n:\n \n[\nbosh\n]\n\n\n\n\n\nExample of dynamic network:\n\n\nnetworks\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ntype\n:\n \ndynamic\n\n  \ncloud_properties\n:\n\n    \nsubnet\n:\n \nsubnet-9be6c6gh\n\n\n\n\n\nExample of vip network:\n\n\nnetworks\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ntype\n:\n \nvip\n\n\n\n\n\n\n\nResource Pools / VM Types\n\u00b6\n\n\nSchema for \ncloud_properties\n section:\n\n\n\n\ninstance_type\n [String, required]: Type of the \ninstance\n. Example: \nm3.medium\n.\n\n\navailability_zone\n [String, required]: Availability zone to use for creating instances. Example: \nus-east-1a\n.\n\n\nsecurity_groups\n [Array, optional]: See description under \nnetworks\n. Available in v46+.\n\n\nkey_name\n [String, optional]: Key pair name. Defaults to key pair name specified by \ndefault_key_name\n in global CPI settings. Example: \nbosh\n.\n\n\nspot_bid_price\n [Float, optional]: Bid price in dollars for \nAWS spot instance\n. Using this option will slow down VM creation. Example: \n0.03\n.\n\n\nspot_ondemand_fallback\n [Boolean, optional]: Set to \ntrue\n to use an on demand instance if a spot instance is not available during VM creation. Defaults to \nfalse\n. Available in v36.\n\n\nelbs\n [Array, optional]: Array of ELB names that should be attached to created VMs. Example: \n[prod-elb]\n. Default is \n[]\n.\n\n\nlb_target_groups\n [Array, optional]: Array of Load Balancer Target Groups to which created VMs should be attached. Example: \n[prod-group1, prod-group2]\n. Default is \n[]\n. Available in v63 or newer.\n\n\niam_instance_profile\n [String, optional]: Name of an \nIAM instance profile\n. Example: \ndirector\n.\n\n\nplacement_group\n [String, optional]: Name of a \nplacement group\n. Example: \nmy-group\n.\n\n\ntenancy\n [String, optional]: VM \ntenancy\n configuration. Example: \ndedicated\n. Default is \ndefault\n.\n\n\nauto_assign_public_ip\n [Boolean, optional]: Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an \nElastic IP\n instead for a persistent address. Defaults to \nfalse\n. Available in v55+.\n\n\nadvertised_routes\n [Array, optional]: Creates routes in an \nAWS Route Table\n with the created BOSH VM as the target. Requires IAM action \nec2\n:\nCreateRoute\n, \nec2\n:\nDescribeRouteTables\n, \nec2\n:\nReplaceRoute\n.\n\n\ntable_id\n [String, required]: ID of the route table in which to create the route (e.g. \nrt-abcdef123\n).\n\n\ndestination\n [String, required]: Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.\n\n\nraw_instance_storage\n [Boolean, optional]: Exposes all available \ninstance storage via labeled disks\n. Defaults to \nfalse\n.\n\n\nsource_dest_check\n [Boolean, optional]: Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to \nfalse\n, the instance does \nnot\n need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to \ntrue\n. Requires IAM action \nec2\n:\nModifyInstanceAttribute\n. Available in v59+.\n\n\nephemeral_disk\n [Hash, optional]: EBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.\n\n\nsize\n [Integer, required]: Specifies the disk size in megabytes.\n\n\ntype\n [String, optional]: Type of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\nstandard\n stands for EBS magnetic drives\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\nio1\n stands for EBS provisioned IOPS drives (SSD)\n\n\n\n\n\n\niops\n [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.\n\n\nOnly valid for \nio1\n type drive.\n\n\nRequired when \nio1\n type drive is specified.\n\n\n\n\n\n\nencrypted\n [Boolean, optional] Enables encryption for the EBS backed ephemeral disk. An error is raised, if the \ninstance_type\n does not support it. Since v53. Defaults to \nfalse\n. Overrides the global \nencrypted\n property.\n\n\nkms_key_arn\n [String, optional] The ARN of an Amazon KMS key to use when encrypting the disk.\n\n\nuse_instance_storage\n [Boolean, optional] Forces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used \ninstance_type\n does not have instance storage. Cannot be combined with any other option under \nephemeral_disk\n or with \nraw_instance_storage\n. Since v53. Defaults to \nfalse\n.\n\n\n\n\n\n\nroot_disk\n [Hash, optional]: EBS backed root disk of custom size.\n\n\nsize\n [Integer, required]: Specifies the disk size in megabytes.\n\n\ntype\n [String, optional]: Type of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\nstandard\n stands for EBS magnetic drives\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\n\n\n\n\niops\n [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.\n\n\nOnly valid for \nio1\n type drive.\n\n\nRequired when \nio1\n type drive is specified.\n\n\n\n\n\n\n\n\n\n\n\n\nExample of an \nm3.medium\n instance:\n\n\nresource_pools\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \nnetwork\n:\n \ndefault\n\n  \nstemcell\n:\n\n    \nname\n:\n \nbosh-aws-xen-hvm-ubuntu-trusty-go_agent\n\n    \nversion\n:\n \nlatest\n\n  \ncloud_properties\n:\n\n    \ninstance_type\n:\n \nm3.medium\n\n    \navailability_zone\n:\n \nus-east-1a\n\n\n\n\n\n\n\nDisk Pools / Disk Types\n\u00b6\n\n\nSchema for \ncloud_properties\n section:\n\n\n\n\ntype\n [String, optional]: Type of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\nstandard\n stands for EBS magnetic drives\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\nio1\n stands for EBS provisioned IOPS drives (SSD)\n\n\niops\n [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.\n\n\nOnly valid for \nio1\n type drive.\n\n\nRequired when \nio1\n type drive is specified.\n\n\nencrypted\n [Boolean, optional]: Turns on \nEBS volume encryption\n for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to \nfalse\n. Overrides the global \nencrypted\n property.\n\n\nkms_key_arn\n [String, optional]: Encrypts the disk using an encryption key stored in the \nAWS Key Management Service (KMS)\n. The format of the ID is \nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\n. Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global \nkms_key_arn\n property. If, no global \nkms_key_arn\n is set will use your account's default \naws/ebs\n encryption key.\n\n\n\n\nEBS volumes are created in the availability zone of an instance that volume will be attached.\n\n\nExample of 10GB disk:\n\n\ndisk_pools\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ndisk_size\n:\n \n10_240\n\n  \ncloud_properties\n:\n\n    \ntype\n:\n \ngp2\n\n\n\n\n\n\n\nGlobal Configuration\n\u00b6\n\n\nThe CPI can only talk to a single AWS region.\n\n\nSchema:\n\n\n\n\ncredentials_source\n [String, optional]: Selects credentials source between credentials provided in this configuration, or from an \nIAM instance profile\n. Default: \nstatic\n.\n\n\naccess_key_id\n [String, optional]: Accesss Key ID. Example: \nAKI...\n.\n\n\nsecret_access_key\n [String, optional]: Secret Access Key. Example: \n0kwh...\n.\n\n\ndefault_key_name\n [String, required]: Name of the \nKey Pair\n that will be applied to all created VMs. Example: \nbosh\n\n\ndefault_security_groups\n [Array, required]: See description under \nnetworks\n.\n\n\ndefault_iam_instance_profile\n [String, optional]: Name of the \nIAM instance profile\n that will be applied to all created VMs. Example: \ndirector\n.\n\n\nregion\n [String, required]: AWS region name. Example: \nus-east-1\n\n\nmax_retries\n [Integer, optional]: The maximum number of times AWS service errors (500) and throttling errors (\nAWS::EC2::Errors::RequestLimitExceeded\n) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.\n\n\nencrypted\n [Boolean, optional]: Turns on \nEBS volume encryption\n for all VM's root (system), ephemeral and persistent disks. Defaults to \nfalse\n. Available in v67+.\n\n\nkms_key_arn\n [String, optional]: Encrypts the disks using an encryption key stored in the \nAWS Key Management Service (KMS)\n. The format of the ID is \nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\n. Be sure to use the Key ID, not the Alias. If this property is omitted and \nencrypted\n is \ntrue\n, the disks will be encrypted using your account's default \naws/ebs\n encryption key. Available in v67+.\n\n\n\n\nSee \nall configuration options\n.\n\n\nExample with hard-coded credentials:\n\n\nproperties\n:\n\n  \naws\n:\n\n    \naccess_key_id\n:\n \nACCESS-KEY-ID\n\n    \nsecret_access_key\n:\n \nSECRET-ACCESS-KEY\n\n    \ndefault_key_name\n:\n \nbosh\n\n    \ndefault_security_groups\n:\n \n[\nbosh\n]\n\n    \nregion\n:\n \nus-east-1\n\n\n\n\n\nExample when \nIAM instance profiles\n are used:\n\n\nproperties\n:\n\n  \naws\n:\n\n    \ncredentials_source\n:\n \nenv_or_profile\n\n    \ndefault_key_name\n:\n \nbosh\n\n    \ndefault_security_groups\n:\n \n[\nbosh\n]\n\n    \ndefault_iam_instance_profile\n:\n \ndeployed-vm\n\n    \nregion\n:\n \nus-east-1\n\n\n\n\n\n\n\nExample Cloud Config\n\u00b6\n\n\nazs\n:\n\n\n-\n \nname\n:\n \nz1\n\n  \ncloud_properties\n:\n \n{\navailability_zone\n:\n \nus-east-1a\n}\n\n\n-\n \nname\n:\n \nz2\n\n  \ncloud_properties\n:\n \n{\navailability_zone\n:\n \nus-east-1b\n}\n\n\n\nvm_types\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ncloud_properties\n:\n\n    \ninstance_type\n:\n \nt2.micro\n\n    \nephemeral_disk\n:\n \n{\nsize\n:\n \n3000\n,\n \ntype\n:\n \ngp2\n}\n\n\n-\n \nname\n:\n \nlarge\n\n  \ncloud_properties\n:\n\n    \ninstance_type\n:\n \nm3.large\n\n    \nephemeral_disk\n:\n \n{\nsize\n:\n \n30000\n,\n \ntype\n:\n \ngp2\n}\n\n\n\ndisk_types\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ndisk_size\n:\n \n3000\n\n  \ncloud_properties\n:\n \n{\ntype\n:\n \ngp2\n}\n\n\n-\n \nname\n:\n \nlarge\n\n  \ndisk_size\n:\n \n50_000\n\n  \ncloud_properties\n:\n \n{\ntype\n:\n \ngp2\n}\n\n\n\nnetworks\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \ntype\n:\n \nmanual\n\n  \nsubnets\n:\n\n  \n-\n \nrange\n:\n \n10.10.0.0/24\n\n    \ngateway\n:\n \n10.10.0.1\n\n    \naz\n:\n \nz1\n\n    \nstatic\n:\n \n[\n10.10.0.62\n]\n\n    \ndns\n:\n \n[\n10.10.0.2\n]\n\n    \ncloud_properties\n:\n \n{\nsubnet\n:\n \nsubnet-f2744a86\n}\n\n  \n-\n \nrange\n:\n \n10.10.64.0/24\n\n    \ngateway\n:\n \n10.10.64.1\n\n    \naz\n:\n \nz2\n\n    \nstatic\n:\n \n[\n10.10.64.121\n,\n \n10.10.64.122\n]\n\n    \ndns\n:\n \n[\n10.10.0.2\n]\n\n    \ncloud_properties\n:\n \n{\nsubnet\n:\n \nsubnet-eb8bd3ad\n}\n\n\n-\n \nname\n:\n \nvip\n\n  \ntype\n:\n \nvip\n\n\n\ncompilation\n:\n\n  \nworkers\n:\n \n5\n\n  \nreuse_compilation_vms\n:\n \ntrue\n\n  \naz\n:\n \nz1\n\n  \nvm_type\n:\n \nlarge\n\n  \nnetwork\n:\n \ndefault\n\n\n\n\n\n\n\nErrors\n\u00b6\n\n\nStemcell does not contain an AMI for this region (us-west-2c)\n\n\n\n\nMake sure that \nregion\n specified in global CPI configuration is one of the \nofficial AWS regions\n. AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)\n\n\nNetwork vpc-a09e18c5 is not attached to any internet gateway\n\n\n\n\nYou need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.\n\n\nThe subnet ID 'subnet-c3051fad' does not exist\n\n\n\n\nMake sure that the \nregion\n specified in the global CPI configuration matches the region where your specified subnet resides.\n\n\nSignature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)\n\n\n\n\nThis error is usually caused by out-of-sync system time. Use \nntpdate\n to sync the clock on the machine where BOSH CLI is run: \nsudo ntpdate pool.ntp.org\n. Alternatively make sure that \nntpd\n is correctly configured and running.\n\n\nresource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26\n\n\n\n\nThis error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.\n\n\nSpecifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch\n\n\n\n\nMake sure that each manual network subnet has \ncloud_properties\n key and its contents include \nsubnet\n key with the AWS Subnet ID. (You may have accidentally specified \ncloud_properties\n on the network itself.)\n\n\nArguments are not correct\n\n\n\n\nThis error may be raised when:\n- \ninstance_type\n is missing from the compilation or one of the resource pools' \ncloud_properties\n section\n- the deployment job instance is not assigned a static IP\n\n\nAddress 10.10.16.251 is in use.\n\n\n\n\nThis error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.\n\n\nWhen specifying a security group you must specify a group id for each item.\n\n\n\n\nMake sure all security groups in the CPI configuration and networks' \ncloud_properties\n sections are specified in the same format, as IDs (e.g. \nsg-384fher\n) or names (e.g. \ncf-public\n).\n\n\nYou are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...\n\n\n\n\nSee \nIAM instance profiles errors\n.\n\n\nNon-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.\n\n\n\n\nYou cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.\n\n\nAWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.\n\n\n\n\nAWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of \naws.max_retries\n to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.\n\n\n\n\nNext: \nUsing IAM instance profiles",
+            "text": "This topic describes cloud properties for different resources created by the AWS CPI.\n\n\nAvailability Zones\n\u00b6\n\n\navailability_zone\n\u00b6\n\n\nAvailability zone to use for creating instances. Example: \nus-east-1a\n.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nNetworks\n\u00b6\n\n\nSchema for \ncloud_properties\n section used by dynamic network or manual network subnet.\n\n\nsubnet\n\u00b6\n\n\nSubnet ID in which the instance will be created. Example: \nsubnet-9be6c3f7\n.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nsecurity_groups[]\n\u00b6\n\n\nArray of \nSecurity Groups\n, by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence: \nvm_types\n, followed by \nnetworks\n, followed by \ndefault_security_groups\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nVirtual Machines\n\u00b6\n\n\nSchema for \ncloud_properties\n section:\n\n\ninstance_type\n\u00b6\n\n\nType of the \ninstance\n. Example: \nm3.medium\n.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\navailability_zone\n\u00b6\n\n\nAvailability zone to use for creating instances. Example: \nus-east-1a\n.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nsecurity_groups[]\n\u00b6\n\n\nSee description under \nnetworks\n. Available in v46+.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nkey_name\n\u00b6\n\n\nKey pair name. Defaults to key pair name specified by \ndefault_key_name\n in global CPI settings. Example: \nbosh\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nspot_bid_price\n\u00b6\n\n\nBid price in dollars for \nAWS spot instance\n. Using this option will slow down VM creation. Example: \n0.03\n.\n\n\n\n\nOptional\n\n\nType\n: Float\n\n\n\n\nspot_ondemand_fallback\n\u00b6\n\n\nSet to \ntrue\n to use an on demand instance if a spot instance is not available during VM creation. Defaults to \nfalse\n. Available in v36.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nelbs[]\n\u00b6\n\n\nArray of ELB names that should be attached to created VMs. Example: \n[prod-elb]\n. Default is \n[]\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nlb_target_groups[]\n\u00b6\n\n\nArray of Load Balancer Target Groups to which created VMs should be attached. Example: \n[prod-group1, prod-group2]\n. Default is \n[]\n. Available in v63 or newer.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\niam_instance_profile\n\u00b6\n\n\nName of an \nIAM instance profile\n. Example: \ndirector\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nplacement_group\n\u00b6\n\n\nName of a \nplacement group\n. Example: \nmy-group\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\ntenancy\n\u00b6\n\n\nVM \ntenancy\n configuration. Example: \ndedicated\n. Default is \ndefault\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nauto_assign_public_ip\n\u00b6\n\n\nAssigns a public IP address to the created VM. This IP is ephemeral and may change; use an \nElastic IP\n instead for a persistent address. Defaults to \nfalse\n. Available in v55+.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nadvertised_routes[]\n\u00b6\n\n\nCreates routes in an \nAWS Route Table\n with the created BOSH VM as the target. Requires IAM action \nec2\n:\nCreateRoute\n, \nec2\n:\nDescribeRouteTables\n, \nec2\n:\nReplaceRoute\n.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\n\n\n\n\ntable_id\n\u00b6\n\n\nID of the route table in which to create the route (e.g. \nrt-abcdef123\n).\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\ndestination\n\u00b6\n\n\nDestination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\n\n\nraw_instance_storage\n\u00b6\n\n\nExposes all available \ninstance storage via labeled disks\n. Defaults to \nfalse\n.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nsource_dest_check\n\u00b6\n\n\nSpecifies whether the instance must be the source or destination of any traffic it sends or receives. If set to \nfalse\n, the instance does \nnot\n need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to \ntrue\n. Requires IAM action \nec2\n:\nModifyInstanceAttribute\n. Available in v59+.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nephemeral_disk\n\u00b6\n\n\nEBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\n\n\n\n\nsize\n\u00b6\n\n\nSpecifies the disk size in megabytes.\n\n\n\n\nRequired\n\n\nType\n: Integer\n\n\n\n\ntype\n\u00b6\n\n\nType of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\n\n\nstandard\n stands for EBS magnetic drives\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\n\n\nio1\n stands for EBS provisioned IOPS drives (SSD)\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: String\n\n\n\n\niops\n\u00b6\n\n\nSpecifies the number of I/O operations per second to provision for the drive.\n\n\n\n\nOnly valid for \nio1\n type drive.\n\n\n\n\nRequired when \nio1\n type drive is specified.\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: Integer\n\n\n\n\nencrypted\n\u00b6\n\n\nEnables encryption for the EBS backed ephemeral disk. An error is raised, if the \ninstance_type\n does not support it. Since v53. Defaults to \nfalse\n. Overrides the global \nencrypted\n property.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nkms_key_arn\n\u00b6\n\n\nThe ARN of an Amazon KMS key to use when encrypting the disk.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nuse_instance_storage\n\u00b6\n\n\nForces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used \ninstance_type\n does not have instance storage. Cannot be combined with any other option under \nephemeral_disk\n or with \nraw_instance_storage\n. Since v53. Defaults to \nfalse\n.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\n\n\nroot_disk\n\u00b6\n\n\nEBS backed root disk of custom size.\n\n\n\n\nOptional\n\n\nType\n: Object\n\n\n\n\n\n\nsize\n\u00b6\n\n\nSpecifies the disk size in megabytes.\n\n\n\n\nRequired\n\n\nType\n: Integer\n\n\n\n\ntype\n\u00b6\n\n\nType of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\n\n\nstandard\n stands for EBS magnetic drives\n\n\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: String\n\n\n\n\niops\n\u00b6\n\n\nSpecifies the number of I/O operations per second to provision for the drive.\n\n\n\n\nOnly valid for \nio1\n type drive.\n\n\n\n\nRequired when \nio1\n type drive is specified.\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: Integer\n\n\n\n\n\n\nPersistent Disks\n\u00b6\n\n\nEBS volumes are created in the availability zone of an instance that volume will be attached. Schema for \ncloud_properties\n section:\n\n\ntype\n\u00b6\n\n\nType of the \ndisk\n: \nstandard\n, \ngp2\n. Defaults to \ngp2\n.\n\n\n\n\nstandard\n stands for EBS magnetic drives\n\n\ngp2\n stands for EBS general purpose drives (SSD)\n\n\n\n\nio1\n stands for EBS provisioned IOPS drives (SSD)\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: String\n\n\n\n\niops\n\u00b6\n\n\nSpecifies the number of I/O operations per second to provision for the drive.\n\n\n\n\nOnly valid for \nio1\n type drive.\n\n\n\n\nRequired when \nio1\n type drive is specified.\n\n\n\n\n\n\nOptional\n\n\n\n\nType\n: Integer\n\n\n\n\nencrypted\n\u00b6\n\n\nTurns on \nEBS volume encryption\n for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to \nfalse\n. Overrides the global \nencrypted\n property.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nkms_key_arn\n\u00b6\n\n\nEncrypts the disk using an encryption key stored in the \nAWS Key Management Service (KMS)\n. The format of the ID is \nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\n. Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global \nkms_key_arn\n property. If, no global \nkms_key_arn\n is set will use your account's default \naws/ebs\n encryption key.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nGlobal Configuration\n\u00b6\n\n\nThe CPI can only talk to a single AWS region.\n\n\ncredentials_source\n\u00b6\n\n\nSelects credentials source between credentials provided in this configuration, or from an \nIAM instance profile\n. Default: \nstatic\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\naccess_key_id\n\u00b6\n\n\nAccesss Key ID. Example: \nAKI...\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nsecret_access_key\n\u00b6\n\n\nSecret Access Key. Example: \n0kwh...\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\ndefault_key_name\n\u00b6\n\n\nName of the \nKey Pair\n that will be applied to all created VMs. Example: \nbosh\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\ndefault_security_groups\n\u00b6\n\n\nSee description under \nnetworks\n.\n\n\n\n\nRequired\n\n\nType\n: Array\n\n\n\n\ndefault_iam_instance_profile\n\u00b6\n\n\nName of the \nIAM instance profile\n that will be applied to all created VMs. Example: \ndirector\n.\n\n\n\n\nOptional\n\n\nType\n: String\n\n\n\n\nregion\n\u00b6\n\n\nAWS region name. Example: \nus-east-1\n\n\n\n\nRequired\n\n\nType\n: String\n\n\n\n\nmax_retries\n\u00b6\n\n\nThe maximum number of times AWS service errors (500) and throttling errors (\nAWS::EC2::Errors::RequestLimitExceeded\n) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.\n\n\n\n\nOptional\n\n\nType\n: Integer\n\n\n\n\nencrypted\n\u00b6\n\n\nTurns on \nEBS volume encryption\n for all VM's root (system), ephemeral and persistent disks. Defaults to \nfalse\n. Available in v67+.\n\n\n\n\nOptional\n\n\nType\n: Boolean\n\n\n\n\nkms_key_arn\n\u00b6\n\n\nEncrypts the disks using an encryption key stored in the \nAWS Key Management Service (KMS)\n. The format of the ID is \nXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX\n. Be sure to use the Key ID, not the Alias. If this property is omitted and \nencrypted\n is \ntrue\n, the disks will be encrypted using your account's default \naws/ebs\n encryption key. Available in v67+.\n\n\n\n\nOptional\n\n\nType\n: String",
             "title": "Usage"
         },
         {
             "location": "/aws-cpi/#azs",
-            "text": "Schema for  cloud_properties  section:   availability_zone  [String, required]: Availability zone to use for creating instances. Example:  us-east-1a .   Example:  azs :  -   name :   z1 \n   cloud_properties : \n     availability_zone :   us-east-1a",
-            "title": "AZs"
+            "text": "",
+            "title": "Availability Zones"
+        },
+        {
+            "location": "/aws-cpi/#availability_zone",
+            "text": "Availability zone to use for creating instances. Example:  us-east-1a .   Required  Type : String",
+            "title": "availability_zone"
         },
         {
             "location": "/aws-cpi/#networks",
-            "text": "Schema for  cloud_properties  section used by dynamic network or manual network subnet:   subnet  [String, required]: Subnet ID in which the instance will be created. Example:  subnet-9be6c3f7 .  security_groups  [Array, optional]: Array of  Security Groups , by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence:  vm_types , followed by  networks , followed by  default_security_groups .   Example of manual network:  networks :  -   name :   default \n   type :   manual \n   subnets : \n   -   range :   10.10.0.0/24 \n     gateway :   10.10.0.1 \n     cloud_properties : \n       subnet :   subnet-9be6c3f7 \n       security_groups :   [ bosh ]   Example of dynamic network:  networks :  -   name :   default \n   type :   dynamic \n   cloud_properties : \n     subnet :   subnet-9be6c6gh   Example of vip network:  networks :  -   name :   default \n   type :   vip",
+            "text": "Schema for  cloud_properties  section used by dynamic network or manual network subnet.",
             "title": "Networks"
         },
         {
+            "location": "/aws-cpi/#networks-subnet",
+            "text": "Subnet ID in which the instance will be created. Example:  subnet-9be6c3f7 .   Required  Type : String",
+            "title": "subnet"
+        },
+        {
+            "location": "/aws-cpi/#networks-security_groups",
+            "text": "Array of  Security Groups , by name or ID, to apply to all VMs placed on this network. Security groups can be specified as follows, ordered by greatest precedence:  vm_types , followed by  networks , followed by  default_security_groups .   Optional  Type : String",
+            "title": "security_groups[]"
+        },
+        {
             "location": "/aws-cpi/#resource-pools",
-            "text": "Schema for  cloud_properties  section:   instance_type  [String, required]: Type of the  instance . Example:  m3.medium .  availability_zone  [String, required]: Availability zone to use for creating instances. Example:  us-east-1a .  security_groups  [Array, optional]: See description under  networks . Available in v46+.  key_name  [String, optional]: Key pair name. Defaults to key pair name specified by  default_key_name  in global CPI settings. Example:  bosh .  spot_bid_price  [Float, optional]: Bid price in dollars for  AWS spot instance . Using this option will slow down VM creation. Example:  0.03 .  spot_ondemand_fallback  [Boolean, optional]: Set to  true  to use an on demand instance if a spot instance is not available during VM creation. Defaults to  false . Available in v36.  elbs  [Array, optional]: Array of ELB names that should be attached to created VMs. Example:  [prod-elb] . Default is  [] .  lb_target_groups  [Array, optional]: Array of Load Balancer Target Groups to which created VMs should be attached. Example:  [prod-group1, prod-group2] . Default is  [] . Available in v63 or newer.  iam_instance_profile  [String, optional]: Name of an  IAM instance profile . Example:  director .  placement_group  [String, optional]: Name of a  placement group . Example:  my-group .  tenancy  [String, optional]: VM  tenancy  configuration. Example:  dedicated . Default is  default .  auto_assign_public_ip  [Boolean, optional]: Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an  Elastic IP  instead for a persistent address. Defaults to  false . Available in v55+.  advertised_routes  [Array, optional]: Creates routes in an  AWS Route Table  with the created BOSH VM as the target. Requires IAM action  ec2 : CreateRoute ,  ec2 : DescribeRouteTables ,  ec2 : ReplaceRoute .  table_id  [String, required]: ID of the route table in which to create the route (e.g.  rt-abcdef123 ).  destination  [String, required]: Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.  raw_instance_storage  [Boolean, optional]: Exposes all available  instance storage via labeled disks . Defaults to  false .  source_dest_check  [Boolean, optional]: Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to  false , the instance does  not  need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to  true . Requires IAM action  ec2 : ModifyInstanceAttribute . Available in v59+.  ephemeral_disk  [Hash, optional]: EBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.  size  [Integer, required]: Specifies the disk size in megabytes.  type  [String, optional]: Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .  standard  stands for EBS magnetic drives  gp2  stands for EBS general purpose drives (SSD)  io1  stands for EBS provisioned IOPS drives (SSD)    iops  [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.  Only valid for  io1  type drive.  Required when  io1  type drive is specified.    encrypted  [Boolean, optional] Enables encryption for the EBS backed ephemeral disk. An error is raised, if the  instance_type  does not support it. Since v53. Defaults to  false . Overrides the global  encrypted  property.  kms_key_arn  [String, optional] The ARN of an Amazon KMS key to use when encrypting the disk.  use_instance_storage  [Boolean, optional] Forces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used  instance_type  does not have instance storage. Cannot be combined with any other option under  ephemeral_disk  or with  raw_instance_storage . Since v53. Defaults to  false .    root_disk  [Hash, optional]: EBS backed root disk of custom size.  size  [Integer, required]: Specifies the disk size in megabytes.  type  [String, optional]: Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .  standard  stands for EBS magnetic drives  gp2  stands for EBS general purpose drives (SSD)    iops  [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.  Only valid for  io1  type drive.  Required when  io1  type drive is specified.       Example of an  m3.medium  instance:  resource_pools :  -   name :   default \n   network :   default \n   stemcell : \n     name :   bosh-aws-xen-hvm-ubuntu-trusty-go_agent \n     version :   latest \n   cloud_properties : \n     instance_type :   m3.medium \n     availability_zone :   us-east-1a",
-            "title": "Resource Pools / VM Types"
+            "text": "Schema for  cloud_properties  section:",
+            "title": "Virtual Machines"
+        },
+        {
+            "location": "/aws-cpi/#vm-instance_type",
+            "text": "Type of the  instance . Example:  m3.medium .   Required  Type : String",
+            "title": "instance_type"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-availability_zone",
+            "text": "Availability zone to use for creating instances. Example:  us-east-1a .   Required  Type : String",
+            "title": "availability_zone"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-security_groups",
+            "text": "See description under  networks . Available in v46+.   Optional  Type : String",
+            "title": "security_groups[]"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-key_name",
+            "text": "Key pair name. Defaults to key pair name specified by  default_key_name  in global CPI settings. Example:  bosh .   Optional  Type : String",
+            "title": "key_name"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-spot_bid_price",
+            "text": "Bid price in dollars for  AWS spot instance . Using this option will slow down VM creation. Example:  0.03 .   Optional  Type : Float",
+            "title": "spot_bid_price"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-spot_ondemand_fallback",
+            "text": "Set to  true  to use an on demand instance if a spot instance is not available during VM creation. Defaults to  false . Available in v36.   Optional  Type : Boolean",
+            "title": "spot_ondemand_fallback"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-elbs",
+            "text": "Array of ELB names that should be attached to created VMs. Example:  [prod-elb] . Default is  [] .   Optional  Type : String",
+            "title": "elbs[]"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-lb_target_groups",
+            "text": "Array of Load Balancer Target Groups to which created VMs should be attached. Example:  [prod-group1, prod-group2] . Default is  [] . Available in v63 or newer.   Optional  Type : String",
+            "title": "lb_target_groups[]"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-iam_instance_profile",
+            "text": "Name of an  IAM instance profile . Example:  director .   Optional  Type : String",
+            "title": "iam_instance_profile"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-placement_group",
+            "text": "Name of a  placement group . Example:  my-group .   Optional  Type : String",
+            "title": "placement_group"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-tenancy",
+            "text": "VM  tenancy  configuration. Example:  dedicated . Default is  default .   Optional  Type : String",
+            "title": "tenancy"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-auto_assign_public_ip",
+            "text": "Assigns a public IP address to the created VM. This IP is ephemeral and may change; use an  Elastic IP  instead for a persistent address. Defaults to  false . Available in v55+.   Optional  Type : Boolean",
+            "title": "auto_assign_public_ip"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-advertised_routes",
+            "text": "Creates routes in an  AWS Route Table  with the created BOSH VM as the target. Requires IAM action  ec2 : CreateRoute ,  ec2 : DescribeRouteTables ,  ec2 : ReplaceRoute .   Optional  Type : Object",
+            "title": "advertised_routes[]"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-advertised_routes-table_id",
+            "text": "ID of the route table in which to create the route (e.g.  rt-abcdef123 ).   Required  Type : String",
+            "title": "table_id"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-advertised_routes-destination",
+            "text": "Destination CIDR for the route. All traffic with a destination within this CIDR will be routed through the created BOSH VM.   Required  Type : String",
+            "title": "destination"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-raw_instance_storage",
+            "text": "Exposes all available  instance storage via labeled disks . Defaults to  false .   Optional  Type : Boolean",
+            "title": "raw_instance_storage"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-source_dest_check",
+            "text": "Specifies whether the instance must be the source or destination of any traffic it sends or receives. If set to  false , the instance does  not  need to be the source or destination. Used for network address translation (NAT) boxes, frequently to communicate between VPCs. Defaults to  true . Requires IAM action  ec2 : ModifyInstanceAttribute . Available in v59+.   Optional  Type : Boolean",
+            "title": "source_dest_check"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk",
+            "text": "EBS backed ephemeral disk of custom size. Default disk size is either the size of first instance storage disk, if the instance_type offers it, or 10GB. Before v53: Used EBS only if instance storage is not large enough or not available for selected instance type.   Optional  Type : Object",
+            "title": "ephemeral_disk"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-size",
+            "text": "Specifies the disk size in megabytes.   Required  Type : Integer",
+            "title": "size"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-type",
+            "text": "Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .   standard  stands for EBS magnetic drives  gp2  stands for EBS general purpose drives (SSD)   io1  stands for EBS provisioned IOPS drives (SSD)    Optional   Type : String",
+            "title": "type"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-iops",
+            "text": "Specifies the number of I/O operations per second to provision for the drive.   Only valid for  io1  type drive.   Required when  io1  type drive is specified.    Optional   Type : Integer",
+            "title": "iops"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-encrypted",
+            "text": "Enables encryption for the EBS backed ephemeral disk. An error is raised, if the  instance_type  does not support it. Since v53. Defaults to  false . Overrides the global  encrypted  property.   Optional  Type : Boolean",
+            "title": "encrypted"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-kms_key_arn",
+            "text": "The ARN of an Amazon KMS key to use when encrypting the disk.   Optional  Type : String",
+            "title": "kms_key_arn"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-ephemeral_disk-use_instance_storage",
+            "text": "Forces the usage of instance storage as ephemeral disk backing. Will raise an error, if the used  instance_type  does not have instance storage. Cannot be combined with any other option under  ephemeral_disk  or with  raw_instance_storage . Since v53. Defaults to  false .   Optional  Type : Boolean",
+            "title": "use_instance_storage"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-root_disk",
+            "text": "EBS backed root disk of custom size.   Optional  Type : Object",
+            "title": "root_disk"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-root_disk-size",
+            "text": "Specifies the disk size in megabytes.   Required  Type : Integer",
+            "title": "size"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-root_disk-type",
+            "text": "Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .   standard  stands for EBS magnetic drives   gp2  stands for EBS general purpose drives (SSD)    Optional   Type : String",
+            "title": "type"
+        },
+        {
+            "location": "/aws-cpi/#resource-pools-root_disk-iops",
+            "text": "Specifies the number of I/O operations per second to provision for the drive.   Only valid for  io1  type drive.   Required when  io1  type drive is specified.    Optional   Type : Integer",
+            "title": "iops"
         },
         {
             "location": "/aws-cpi/#disk-pools",
-            "text": "Schema for  cloud_properties  section:   type  [String, optional]: Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .  standard  stands for EBS magnetic drives  gp2  stands for EBS general purpose drives (SSD)  io1  stands for EBS provisioned IOPS drives (SSD)  iops  [Integer, optional]: Specifies the number of I/O operations per second to provision for the drive.  Only valid for  io1  type drive.  Required when  io1  type drive is specified.  encrypted  [Boolean, optional]: Turns on  EBS volume encryption  for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to  false . Overrides the global  encrypted  property.  kms_key_arn  [String, optional]: Encrypts the disk using an encryption key stored in the  AWS Key Management Service (KMS) . The format of the ID is  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX . Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global  kms_key_arn  property. If, no global  kms_key_arn  is set will use your account's default  aws/ebs  encryption key.   EBS volumes are created in the availability zone of an instance that volume will be attached.  Example of 10GB disk:  disk_pools :  -   name :   default \n   disk_size :   10_240 \n   cloud_properties : \n     type :   gp2",
-            "title": "Disk Pools / Disk Types"
+            "text": "EBS volumes are created in the availability zone of an instance that volume will be attached. Schema for  cloud_properties  section:",
+            "title": "Persistent Disks"
+        },
+        {
+            "location": "/aws-cpi/#disk-pools-type",
+            "text": "Type of the  disk :  standard ,  gp2 . Defaults to  gp2 .   standard  stands for EBS magnetic drives  gp2  stands for EBS general purpose drives (SSD)   io1  stands for EBS provisioned IOPS drives (SSD)    Optional   Type : String",
+            "title": "type"
+        },
+        {
+            "location": "/aws-cpi/#disk-pools-iops",
+            "text": "Specifies the number of I/O operations per second to provision for the drive.   Only valid for  io1  type drive.   Required when  io1  type drive is specified.    Optional   Type : Integer",
+            "title": "iops"
+        },
+        {
+            "location": "/aws-cpi/#disk-pools-encrypted",
+            "text": "Turns on  EBS volume encryption  for this persistent disk. VM root and ephemeral disk are not encrypted. Defaults to  false . Overrides the global  encrypted  property.   Optional  Type : Boolean",
+            "title": "encrypted"
+        },
+        {
+            "location": "/aws-cpi/#disk-pools-kms_key_arn",
+            "text": "Encrypts the disk using an encryption key stored in the  AWS Key Management Service (KMS) . The format of the ID is  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX . Be sure to use the Key ID, not the Alias. If omitted the disk will be encrypted using the global  kms_key_arn  property. If, no global  kms_key_arn  is set will use your account's default  aws/ebs  encryption key.   Optional  Type : String",
+            "title": "kms_key_arn"
         },
         {
             "location": "/aws-cpi/#global",
-            "text": "The CPI can only talk to a single AWS region.  Schema:   credentials_source  [String, optional]: Selects credentials source between credentials provided in this configuration, or from an  IAM instance profile . Default:  static .  access_key_id  [String, optional]: Accesss Key ID. Example:  AKI... .  secret_access_key  [String, optional]: Secret Access Key. Example:  0kwh... .  default_key_name  [String, required]: Name of the  Key Pair  that will be applied to all created VMs. Example:  bosh  default_security_groups  [Array, required]: See description under  networks .  default_iam_instance_profile  [String, optional]: Name of the  IAM instance profile  that will be applied to all created VMs. Example:  director .  region  [String, required]: AWS region name. Example:  us-east-1  max_retries  [Integer, optional]: The maximum number of times AWS service errors (500) and throttling errors ( AWS::EC2::Errors::RequestLimitExceeded ) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.  encrypted  [Boolean, optional]: Turns on  EBS volume encryption  for all VM's root (system), ephemeral and persistent disks. Defaults to  false . Available in v67+.  kms_key_arn  [String, optional]: Encrypts the disks using an encryption key stored in the  AWS Key Management Service (KMS) . The format of the ID is  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX . Be sure to use the Key ID, not the Alias. If this property is omitted and  encrypted  is  true , the disks will be encrypted using your account's default  aws/ebs  encryption key. Available in v67+.   See  all configuration options .  Example with hard-coded credentials:  properties : \n   aws : \n     access_key_id :   ACCESS-KEY-ID \n     secret_access_key :   SECRET-ACCESS-KEY \n     default_key_name :   bosh \n     default_security_groups :   [ bosh ] \n     region :   us-east-1   Example when  IAM instance profiles  are used:  properties : \n   aws : \n     credentials_source :   env_or_profile \n     default_key_name :   bosh \n     default_security_groups :   [ bosh ] \n     default_iam_instance_profile :   deployed-vm \n     region :   us-east-1",
+            "text": "The CPI can only talk to a single AWS region.",
             "title": "Global Configuration"
         },
         {
-            "location": "/aws-cpi/#cloud-config",
-            "text": "azs :  -   name :   z1 \n   cloud_properties :   { availability_zone :   us-east-1a }  -   name :   z2 \n   cloud_properties :   { availability_zone :   us-east-1b }  vm_types :  -   name :   default \n   cloud_properties : \n     instance_type :   t2.micro \n     ephemeral_disk :   { size :   3000 ,   type :   gp2 }  -   name :   large \n   cloud_properties : \n     instance_type :   m3.large \n     ephemeral_disk :   { size :   30000 ,   type :   gp2 }  disk_types :  -   name :   default \n   disk_size :   3000 \n   cloud_properties :   { type :   gp2 }  -   name :   large \n   disk_size :   50_000 \n   cloud_properties :   { type :   gp2 }  networks :  -   name :   default \n   type :   manual \n   subnets : \n   -   range :   10.10.0.0/24 \n     gateway :   10.10.0.1 \n     az :   z1 \n     static :   [ 10.10.0.62 ] \n     dns :   [ 10.10.0.2 ] \n     cloud_properties :   { subnet :   subnet-f2744a86 } \n   -   range :   10.10.64.0/24 \n     gateway :   10.10.64.1 \n     az :   z2 \n     static :   [ 10.10.64.121 ,   10.10.64.122 ] \n     dns :   [ 10.10.0.2 ] \n     cloud_properties :   { subnet :   subnet-eb8bd3ad }  -   name :   vip \n   type :   vip  compilation : \n   workers :   5 \n   reuse_compilation_vms :   true \n   az :   z1 \n   vm_type :   large \n   network :   default",
-            "title": "Example Cloud Config"
+            "location": "/aws-cpi/#global-credentials_source",
+            "text": "Selects credentials source between credentials provided in this configuration, or from an  IAM instance profile . Default:  static .   Optional  Type : String",
+            "title": "credentials_source"
         },
         {
-            "location": "/aws-cpi/#errors",
-            "text": "Stemcell does not contain an AMI for this region (us-west-2c)  Make sure that  region  specified in global CPI configuration is one of the  official AWS regions . AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)  Network vpc-a09e18c5 is not attached to any internet gateway  You need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.  The subnet ID 'subnet-c3051fad' does not exist  Make sure that the  region  specified in the global CPI configuration matches the region where your specified subnet resides.  Signature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)  This error is usually caused by out-of-sync system time. Use  ntpdate  to sync the clock on the machine where BOSH CLI is run:  sudo ntpdate pool.ntp.org . Alternatively make sure that  ntpd  is correctly configured and running.  resource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26  This error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.  Specifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch  Make sure that each manual network subnet has  cloud_properties  key and its contents include  subnet  key with the AWS Subnet ID. (You may have accidentally specified  cloud_properties  on the network itself.)  Arguments are not correct  This error may be raised when:\n-  instance_type  is missing from the compilation or one of the resource pools'  cloud_properties  section\n- the deployment job instance is not assigned a static IP  Address 10.10.16.251 is in use.  This error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.  When specifying a security group you must specify a group id for each item.  Make sure all security groups in the CPI configuration and networks'  cloud_properties  sections are specified in the same format, as IDs (e.g.  sg-384fher ) or names (e.g.  cf-public ).  You are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...  See  IAM instance profiles errors .  Non-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.  You cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.  AWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.  AWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of  aws.max_retries  to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.   Next:  Using IAM instance profiles",
-            "title": "Errors"
+            "location": "/aws-cpi/#global-access_key_id",
+            "text": "Accesss Key ID. Example:  AKI... .   Optional  Type : String",
+            "title": "access_key_id"
+        },
+        {
+            "location": "/aws-cpi/#global-secret_access_key",
+            "text": "Secret Access Key. Example:  0kwh... .   Optional  Type : String",
+            "title": "secret_access_key"
+        },
+        {
+            "location": "/aws-cpi/#global-default_key_name",
+            "text": "Name of the  Key Pair  that will be applied to all created VMs. Example:  bosh   Required  Type : String",
+            "title": "default_key_name"
+        },
+        {
+            "location": "/aws-cpi/#global-default_security_groups",
+            "text": "See description under  networks .   Required  Type : Array",
+            "title": "default_security_groups"
+        },
+        {
+            "location": "/aws-cpi/#global-default_iam_instance_profile",
+            "text": "Name of the  IAM instance profile  that will be applied to all created VMs. Example:  director .   Optional  Type : String",
+            "title": "default_iam_instance_profile"
+        },
+        {
+            "location": "/aws-cpi/#global-region",
+            "text": "AWS region name. Example:  us-east-1   Required  Type : String",
+            "title": "region"
+        },
+        {
+            "location": "/aws-cpi/#global-max_retries",
+            "text": "The maximum number of times AWS service errors (500) and throttling errors ( AWS::EC2::Errors::RequestLimitExceeded ) should be retried. There is an exponential backoff in between retries, so the more retries the longer it can take to fail. Defaults to 2.   Optional  Type : Integer",
+            "title": "max_retries"
+        },
+        {
+            "location": "/aws-cpi/#global-encrypted",
+            "text": "Turns on  EBS volume encryption  for all VM's root (system), ephemeral and persistent disks. Defaults to  false . Available in v67+.   Optional  Type : Boolean",
+            "title": "encrypted"
+        },
+        {
+            "location": "/aws-cpi/#global-kms_key_arn",
+            "text": "Encrypts the disks using an encryption key stored in the  AWS Key Management Service (KMS) . The format of the ID is  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX . Be sure to use the Key ID, not the Alias. If this property is omitted and  encrypted  is  true , the disks will be encrypted using your account's default  aws/ebs  encryption key. Available in v67+.   Optional  Type : String",
+            "title": "kms_key_arn"
         },
         {
             "location": "/aws-iam-users/",
@@ -4879,6 +5094,71 @@
             "location": "/aws-instance-storage/",
             "text": "Note: This feature is available with bosh-aws-cpi v32+ and only for releases deployed with ? stemcells.\n\n\n\nCertain \ninstance types\n have access to instance storage. All BOSH managed VMs have to store some ephemeral data such as release jobs, packages, logs and other scratch data. First instance storage disk is used if possible; otherwise, a separate EBS volume is created as an ephemeral disk.\n\n\nApplications may need access to all instance storage disks. In that case separate EBS volume will always be created to store ephemeral data. To enable access to all instance storage disks add \nraw_instance_storage\n:\n \ntrue\n:\n\n\nresource_pools\n:\n\n\n-\n \nname\n:\n \ndefault\n\n  \nnetwork\n:\n \ndefault\n\n  \nstemcell\n:\n\n    \nname\n:\n \nbosh-aws-xen-hvm-ubuntu-trusty-go_agent\n\n    \nversion\n:\n \nlatest\n\n  \ncloud_properties\n:\n\n    \ninstance_type\n:\n \nd2.2xlarge\n\n    \nraw_instance_storage\n:\n \ntrue\n\n\n\n\n\nWith multiple disks attached, the Agent partitions and labels instance storage disks with label \nraw-ephemeral-*\n so that release jobs can easily find and use them:\n\n\n$ ls -la /dev/disk/by-partlabel/raw-ephemeral-*\nlrwxrwxrwx \n1\n root root \n12\n Oct  \n5\n \n03\n:09 /dev/disk/by-partlabel/raw-ephemeral-0 -> ../../xvdba1\nlrwxrwxrwx \n1\n root root \n12\n Oct  \n5\n \n03\n:09 /dev/disk/by-partlabel/raw-ephemeral-1 -> ../../xvdbb1\n\n\n\n\n\n\nBack to Table of Contents\n\n\nPrevious: \nUsing IAM instance profiles",
             "title": "Using Instance Storage"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/",
+            "text": "Incorrect Region\n\u00b6\n\n\n\n\nStemcell does not contain an AMI for this region (us-west-2c)\n\n\n\n\nMake sure that your \nregion\n is one of the \nofficial AWS regions\n. AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)\n\n\nElastic IP Requires an Internet Gateway\n\u00b6\n\n\n\n\nNetwork vpc-a09e18c5 is not attached to any internet gateway\n\n\n\n\nYou need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.\n\n\nIncorrect Subnet\n\u00b6\n\n\n\n\nThe subnet ID 'subnet-c3051fad' does not exist\n\n\n\n\nMake sure that the \nregion\n matches the region where your specified subnet resides.\n\n\nIncorrect System Time\n\u00b6\n\n\n\n\nSignature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)\n\n\n\n\nThis error is usually caused by out-of-sync system time. Use \nntpdate\n to sync the clock on the machine where BOSH CLI is run: \nsudo ntpdate pool.ntp.org\n. Alternatively make sure that \nntpd\n is correctly configured and running.\n\n\nMultiple VMs Using an Elastic IP\n\u00b6\n\n\n\n\nresource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26\n\n\n\n\nThis error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.\n\n\nMissing Subnet\n\u00b6\n\n\n\n\nSpecifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch\n\n\n\n\nMake sure that each manual network subnet has \ncloud_properties\n key and its contents include \nsubnet\n key with the AWS Subnet ID. (You may have accidentally specified \ncloud_properties\n on the network itself.)\n\n\nIncorrect Arguments\n\u00b6\n\n\n\n\nArguments are not correct\n\n\n\n\nThis error may be raised when:\n\n\n\n\ninstance_type\n is missing from the compilation or one of the resource pools' \ncloud_properties\n section\n\n\nthe deployment job instance is not assigned a static IP\n\n\n\n\nAddress is In Use\n\u00b6\n\n\n\n\nAddress 10.10.16.251 is in use.\n\n\n\n\nThis error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.\n\n\nConsistent Security Groups\n\u00b6\n\n\n\n\nWhen specifying a security group you must specify a group id for each item.\n\n\n\n\nMake sure all security groups in the CPI configuration and networks' \ncloud_properties\n sections are specified in the same format, as IDs (e.g. \nsg-384fher\n) or names (e.g. \ncf-public\n).\n\n\nInsufficient IAM Permissions\n\u00b6\n\n\n\n\nYou are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...\n\n\n\n\nSee \nIAM instance profiles errors\n.\n\n\nUnsupported Instance Type Virtualization\n\u00b6\n\n\n\n\nNon-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.\n\n\n\n\nYou cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.\n\n\nAPI Throttling\n\u00b6\n\n\n\n\nAWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.\n\n\n\n\nAWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of \naws.max_retries\n to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.",
+            "title": "Troubleshooting"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#incorrect-region",
+            "text": "Stemcell does not contain an AMI for this region (us-west-2c)   Make sure that your  region  is one of the  official AWS regions . AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)",
+            "title": "Incorrect Region"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#elastic-ip-requires-an-internet-gateway",
+            "text": "Network vpc-a09e18c5 is not attached to any internet gateway   You need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.",
+            "title": "Elastic IP Requires an Internet Gateway"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#incorrect-subnet",
+            "text": "The subnet ID 'subnet-c3051fad' does not exist   Make sure that the  region  matches the region where your specified subnet resides.",
+            "title": "Incorrect Subnet"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#incorrect-system-time",
+            "text": "Signature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)   This error is usually caused by out-of-sync system time. Use  ntpdate  to sync the clock on the machine where BOSH CLI is run:  sudo ntpdate pool.ntp.org . Alternatively make sure that  ntpd  is correctly configured and running.",
+            "title": "Incorrect System Time"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#multiple-vms-using-an-elastic-ip",
+            "text": "resource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26   This error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.",
+            "title": "Multiple VMs Using an Elastic IP"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#missing-subnet",
+            "text": "Specifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch   Make sure that each manual network subnet has  cloud_properties  key and its contents include  subnet  key with the AWS Subnet ID. (You may have accidentally specified  cloud_properties  on the network itself.)",
+            "title": "Missing Subnet"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#incorrect-arguments",
+            "text": "Arguments are not correct   This error may be raised when:   instance_type  is missing from the compilation or one of the resource pools'  cloud_properties  section  the deployment job instance is not assigned a static IP",
+            "title": "Incorrect Arguments"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#address-is-in-use",
+            "text": "Address 10.10.16.251 is in use.   This error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.",
+            "title": "Address is In Use"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#consistent-security-groups",
+            "text": "When specifying a security group you must specify a group id for each item.   Make sure all security groups in the CPI configuration and networks'  cloud_properties  sections are specified in the same format, as IDs (e.g.  sg-384fher ) or names (e.g.  cf-public ).",
+            "title": "Consistent Security Groups"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#insufficient-iam-permissions",
+            "text": "You are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...   See  IAM instance profiles errors .",
+            "title": "Insufficient IAM Permissions"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#unsupported-instance-type-virtualization",
+            "text": "Non-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.   You cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.",
+            "title": "Unsupported Instance Type Virtualization"
+        },
+        {
+            "location": "/aws-cpi-troubleshooting/#api-throttling",
+            "text": "AWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.   AWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of  aws.max_retries  to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.",
+            "title": "API Throttling"
         },
         {
             "location": "/google-cpi/",

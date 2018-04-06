@@ -36,7 +36,7 @@
     
     
       
-        <title>Creating BOSH Packages</title>
+        <title>Troubleshooting - Cloud Foundry BOSH</title>
       
     
     
@@ -95,7 +95,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#prerequisite" tabindex="1" class="md-skip">
+      <a href="#incorrect-region" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -121,7 +121,7 @@
                 Cloud Foundry BOSH
               </span>
               <span class="md-header-nav__topic">
-                Creating Packages
+                Troubleshooting
               </span>
             
           
@@ -255,7 +255,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../terminology/" title="Reference" class="md-tabs__link">
+        <a href="../terminology/" title="Reference" class="md-tabs__link md-tabs__link--active">
           Reference
         </a>
       
@@ -655,17 +655,15 @@
 
 
 
-  
 
 
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
 
     
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3"
-          type="checkbox" id="nav-3" checked />
+          type="checkbox" id="nav-3" />
     
 
     
@@ -1265,17 +1263,15 @@
 
 
 
-  
 
 
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
 
     
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2"
-          type="checkbox" id="nav-3-2" checked />
+          type="checkbox" id="nav-3-2" />
     
 
     
@@ -1674,17 +1670,15 @@
 
 
 
-  
 
 
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
 
     
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-10"
-          type="checkbox" id="nav-3-2-10" checked />
+          type="checkbox" id="nav-3-2-10" />
     
 
     
@@ -1708,74 +1702,15 @@
 
 
 
-  
 
 
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
-        type="checkbox" id="toc" />
-
-    
-    
-
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Creating Packages
-      </label>
-    
-    <a href="./" title="Creating Packages"
-        class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../packages/" title="Creating Packages"
+        class="md-nav__link">
       Creating Packages
     </a>
-
-    
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
-    Prerequisite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-a-package-spec" title="Edit a Package Spec" class="md-nav__link">
-    Edit a Package Spec
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-packaging-script" title="Create a Packaging Script" class="md-nav__link">
-    Create a Packaging Script
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
-
-
 
         
           
@@ -3390,15 +3325,17 @@
 
 
 
+  
 
 
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4"
-          type="checkbox" id="nav-4" />
+          type="checkbox" id="nav-4" checked />
     
 
     
@@ -4220,15 +4157,17 @@
 
 
 
+  
 
 
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 
     
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-11"
-          type="checkbox" id="nav-4-11" />
+          type="checkbox" id="nav-4-11" checked />
     
 
     
@@ -4324,15 +4263,137 @@
 
 
 
+  
 
 
 
-  <li class="md-nav__item">
-    <a href="../aws-cpi-troubleshooting/" title="Troubleshooting"
-        class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc"
+        type="checkbox" id="toc" />
+
+    
+    
+
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Troubleshooting
+      </label>
+    
+    <a href="./" title="Troubleshooting"
+        class="md-nav__link md-nav__link--active">
       Troubleshooting
     </a>
+
+    
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-region" title="Incorrect Region" class="md-nav__link">
+    Incorrect Region
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elastic-ip-requires-an-internet-gateway" title="Elastic IP Requires an Internet Gateway" class="md-nav__link">
+    Elastic IP Requires an Internet Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-subnet" title="Incorrect Subnet" class="md-nav__link">
+    Incorrect Subnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-system-time" title="Incorrect System Time" class="md-nav__link">
+    Incorrect System Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-vms-using-an-elastic-ip" title="Multiple VMs Using an Elastic IP" class="md-nav__link">
+    Multiple VMs Using an Elastic IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-subnet" title="Missing Subnet" class="md-nav__link">
+    Missing Subnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-arguments" title="Incorrect Arguments" class="md-nav__link">
+    Incorrect Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#address-is-in-use" title="Address is In Use" class="md-nav__link">
+    Address is In Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistent-security-groups" title="Consistent Security Groups" class="md-nav__link">
+    Consistent Security Groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insufficient-iam-permissions" title="Insufficient IAM Permissions" class="md-nav__link">
+    Insufficient IAM Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-instance-type-virtualization" title="Unsupported Instance Type Virtualization" class="md-nav__link">
+    Unsupported Instance Type Virtualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-throttling" title="API Throttling" class="md-nav__link">
+    API Throttling
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
+
+
 
         
       </ul>
@@ -5301,22 +5362,85 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
-    Prerequisite
+  <a href="#incorrect-region" title="Incorrect Region" class="md-nav__link">
+    Incorrect Region
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-a-package-spec" title="Edit a Package Spec" class="md-nav__link">
-    Edit a Package Spec
+  <a href="#elastic-ip-requires-an-internet-gateway" title="Elastic IP Requires an Internet Gateway" class="md-nav__link">
+    Elastic IP Requires an Internet Gateway
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-packaging-script" title="Create a Packaging Script" class="md-nav__link">
-    Create a Packaging Script
+  <a href="#incorrect-subnet" title="Incorrect Subnet" class="md-nav__link">
+    Incorrect Subnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-system-time" title="Incorrect System Time" class="md-nav__link">
+    Incorrect System Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-vms-using-an-elastic-ip" title="Multiple VMs Using an Elastic IP" class="md-nav__link">
+    Multiple VMs Using an Elastic IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-subnet" title="Missing Subnet" class="md-nav__link">
+    Missing Subnet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incorrect-arguments" title="Incorrect Arguments" class="md-nav__link">
+    Incorrect Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#address-is-in-use" title="Address is In Use" class="md-nav__link">
+    Address is In Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistent-security-groups" title="Consistent Security Groups" class="md-nav__link">
+    Consistent Security Groups
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insufficient-iam-permissions" title="Insufficient IAM Permissions" class="md-nav__link">
+    Insufficient IAM Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-instance-type-virtualization" title="Unsupported Instance Type Virtualization" class="md-nav__link">
+    Unsupported Instance Type Virtualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-throttling" title="API Throttling" class="md-nav__link">
+    API Throttling
   </a>
   
 </li>
@@ -5339,96 +5463,75 @@
   
   
                 
-                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/packages.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/cloudfoundry/docs-bosh/edit/master/aws-cpi-troubleshooting.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Creating Packages</h1>
+                  <h1>Troubleshooting</h1>
                 
-                <p>A package is a component of a BOSH release that contains a packaging <code class="codehilite">spec</code> file and a packaging script.
-Each package also references source code or pre-compiled software that you store in the <code class="codehilite">src</code> directory of a BOSH <a href="../create-release.html">release<br />
-directory</a>.</p>
-<p>You build BOSH packages in a BOSH release directory. Your release might contain one or more packages.
-This topic describes how to create a BOSH package that includes either source code or pre-compiled software.</p>
-<p>The information and procedures in this topic form <a href="../create-release.html#pkg-skeletons">Step 3: Create Package Skeletons</a> of the Creating a Release topic. Refer to that topic to understand where BOSH packaging fits in the context of creating a BOSH release.</p>
-<h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
-<p>Create a release directory. Refer to the <a href="../create-release.html#release-dir">Create a Release Directory</a> section in the Creating
-a BOSH Release topic.</p>
-<h2 id="edit-a-package-spec">Edit a Package Spec<a class="headerlink" href="#edit-a-package-spec" title="Permanent link">&para;</a></h2>
-<p>You specify package contents in the package <code class="codehilite">spec</code> file. BOSH automatically creates this file as a template with the following
-sections when you run the <code class="codehilite">bosh generate package PACKAGE_NAME</code> command:</p>
+                <h2 id="incorrect-region">Incorrect Region<a class="headerlink" href="#incorrect-region" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Stemcell does not contain an AMI for this region (us-west-2c)</p>
+</blockquote>
+<p>Make sure that your <a href="../aws-cpi/#options-region"><code class="codehilite">region</code></a> is one of the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions">official AWS regions</a>. AWS regions typically end with a number, so in the example above region is erroneously specified (it's set to an AZ since each region is divided into multiple AZ which end with a letter.)</p>
+<h2 id="elastic-ip-requires-an-internet-gateway">Elastic IP Requires an Internet Gateway<a class="headerlink" href="#elastic-ip-requires-an-internet-gateway" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Network vpc-a09e18c5 is not attached to any internet gateway</p>
+</blockquote>
+<p>You need to create and attach an internet gateway to your VPC so that VMs can connect to the Internet.</p>
+<h2 id="incorrect-subnet">Incorrect Subnet<a class="headerlink" href="#incorrect-subnet" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>The subnet ID 'subnet-c3051fad' does not exist</p>
+</blockquote>
+<p>Make sure that the <a href="../aws-cpi/#options-region"><code class="codehilite">region</code></a> matches the region where your specified subnet resides.</p>
+<h2 id="incorrect-system-time">Incorrect System Time<a class="headerlink" href="#incorrect-system-time" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Signature expired: 20141106T010406Z is now earlier than 20141106T011252Z (20141106T011752Z - 5 min.)</p>
+</blockquote>
+<p>This error is usually caused by out-of-sync system time. Use <code class="codehilite">ntpdate</code> to sync the clock on the machine where BOSH CLI is run: <code class="codehilite">sudo ntpdate pool.ntp.org</code>. Alternatively make sure that <code class="codehilite">ntpd</code> is correctly configured and running.</p>
+<h2 id="multiple-vms-using-an-elastic-ip">Multiple VMs Using an Elastic IP<a class="headerlink" href="#multiple-vms-using-an-elastic-ip" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>resource eipalloc-6a45950f is already associated with associate-id eipassoc-427beb26</p>
+</blockquote>
+<p>This error indicates that elastic IP specified in the manifest to be associated to the VM is in use by another VM. Check AWS console and decide whether other VM should be deleted to make elastic IP available for use.</p>
+<h2 id="missing-subnet">Missing Subnet<a class="headerlink" href="#missing-subnet" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Specifying an IP address is only valid for VPC instances and thus requires a subnet in which to launch</p>
+</blockquote>
+<p>Make sure that each manual network subnet has <code class="codehilite">cloud_properties</code> key and its contents include <code class="codehilite">subnet</code> key with the AWS Subnet ID. (You may have accidentally specified <code class="codehilite">cloud_properties</code> on the network itself.)</p>
+<h2 id="incorrect-arguments">Incorrect Arguments<a class="headerlink" href="#incorrect-arguments" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Arguments are not correct</p>
+</blockquote>
+<p>This error may be raised when:</p>
 <ul>
-<li><code class="codehilite">name</code>: Defines the package name.</li>
-<li><code class="codehilite">dependencies</code>: <strong>(Optional)</strong> Defines a list of other packages that this package depends on.</li>
-<li><code class="codehilite">files</code>: Defines a list of files that this package contains. You can define this list explicitly or through pattern-matching.  </li>
+<li><code class="codehilite">instance_type</code> is missing from the compilation or one of the resource pools' <code class="codehilite">cloud_properties</code> section</li>
+<li>the deployment job instance is not assigned a static IP</li>
 </ul>
-<p>To edit a package spec file:</p>
-<ol>
-<li>Identify all compile-time dependencies.
-    A compile-time dependency occurs when a package depends on another package.
-    For more information, refer to the <a href="../create-release.html#graph">Make  Dependency Graphs</a> section of the Creating a BOSH
-Release topic.</li>
-<li>Run <code class="codehilite">bosh generate package PACKAGE_NAME</code> for each compile-time dependency.</li>
-<li>
-<p>Copy all files that the package requires to the <code class="codehilite">src</code> directory of the BOSH release directory.</p>
-<p>Typically, these files are source code. If you are including pre-compiled software, copy a compressed file that contains the
-pre-compiled binary.</p>
-</li>
-<li>
-<p>Edit each package spec file as follows:</p>
-<ul>
-<li>Add the names of the files for that package.</li>
-<li>Add the names of any compile-time dependencies to each package spec file. Use <code class="codehilite">[]</code> to indicate an empty array if a package
-has no compile-time dependencies.</li>
-</ul>
-<p>The example shows an edited Ruby spec file with dependencies and file names.
-Ruby 1.9.3 has a compile-time dependency on libyaml_0.1.4, and the ruby_1.9.3 source code consists of three files.</p>
-<p>Example Ruby package spec file:</p>
-</li>
-</ol>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ruby_1.9.3</span>
-
-<span class="l l-Scalar l-Scalar-Plain">dependencies</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">libyaml_0.1.4</span>
-
-<span class="l l-Scalar l-Scalar-Plain">files</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ruby_1.9.3/ruby-1.9.3-p484.tar.gz</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ruby_1.9.3/rubygems-1.8.24.tgz</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ruby_1.9.3/bundler-1.2.1.gem</span>
-</pre></div>
-
-<h2 id="create-a-packaging-script">Create a Packaging Script<a class="headerlink" href="#create-a-packaging-script" title="Permanent link">&para;</a></h2>
-<p>BOSH automatically creates a packaging script file template when you run the <code class="codehilite">bosh generate package PACKAGE_NAME</code> command. Each
-packaging script in a package must include a symlink in the format <code class="codehilite">/var/vcap/packages/&lt;package name&gt;</code> for each dependency and
-deliver all compiled code to <code class="codehilite">BOSH_INSTALL_TARGET</code>. Store the script in the <code class="codehilite">packages/&lt;package name&gt;/packaging</code> directory.</p>
-<p><p class="note"><strong>Note</strong>: If your package contains source code, the script must compile the code and deliver it to
-<code>BOSH_INSTALL_TARGET</code>. If your package contains pre-compiled software, the script must extract the binary from the compressed file and copy it to <code>BOSH_INSTALL_TARGET</code>.</p>
-<p><p class="note"><strong>Note</strong>: If your package contains pre-compiled software, record the operating system that the pre-compiled software requires. Because a pre-compiled binary runs only on a specific operating system, any deployment using a package containing pre-compiled software requires a stemcell that contains that operating system.</p></p>
-<p>Example Ruby packaging script:</p>
-<div class="codehilite"><pre><span></span><span class="nb">set</span> -e -x
-
-tar xzf ruby_1.9.3/ruby-1.9.3-p484.tar.gz
-<span class="nb">pushd</span> ruby-1.9.3-p484
-  ./configure <span class="se">\</span>
-   --prefix<span class="o">=</span><span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</span><span class="si">}</span> <span class="se">\</span>
-   --disable-install-doc <span class="se">\</span>
-   --with-opt-dir<span class="o">=</span>/var/vcap/packages/libyaml_0.1.4
-
-   make
-   make install
-<span class="nb">popd</span>
-
-tar zxvf ruby_1.9.3/rubygems-1.8.24.tgz
-<span class="nb">pushd</span> rubygems-1.8.24
-  <span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</span><span class="si">}</span>/bin/ruby setup.rb
-<span class="nb">popd</span>
-
-<span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</span><span class="si">}</span>/bin/gem install ruby_1.9.3/bundler-1.2.1.gem --no-ri --no-rdoc
-</pre></div>
-
-<p>Example script referencing pre-compiled code:</p>
-<div class="codehilite"><pre><span></span>tar zxf myfile.tar.gz
-cp -a myfile <span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</span><span class="si">}</span>
-</pre></div>
+<h2 id="address-is-in-use">Address is In Use<a class="headerlink" href="#address-is-in-use" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Address 10.10.16.251 is in use.</p>
+</blockquote>
+<p>This error indicates that unknown VM took up the IP that the Director is trying to assign to a new VM. Either let the Director know to not use this IP by including it in the reserved section of a subnet in your manual network, or make that IP available by terminating the unknown VM.</p>
+<h2 id="consistent-security-groups">Consistent Security Groups<a class="headerlink" href="#consistent-security-groups" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>When specifying a security group you must specify a group id for each item.</p>
+</blockquote>
+<p>Make sure all security groups in the CPI configuration and networks' <code class="codehilite">cloud_properties</code> sections are specified in the same format, as IDs (e.g. <code class="codehilite">sg-384fher</code>) or names (e.g. <code class="codehilite">cf-public</code>).</p>
+<h2 id="insufficient-iam-permissions">Insufficient IAM Permissions<a class="headerlink" href="#insufficient-iam-permissions" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>You are not authorized to perform this operation. Encoded authorization failure message: vHU-KncL6Yo4pG5J9p...</p>
+</blockquote>
+<p>See <a href="../aws-iam-instance-profiles/#errors">IAM instance profiles errors</a>.</p>
+<h2 id="unsupported-instance-type-virtualization">Unsupported Instance Type Virtualization<a class="headerlink" href="#unsupported-instance-type-virtualization" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Non-Windows instances with a virtualization type of 'hvm' are currently not supported for this instance type.</p>
+</blockquote>
+<p>You cannot use HVM stemcells with certain instance types. Review which instance type is specified in a referenced resource pool.</p>
+<h2 id="api-throttling">API Throttling<a class="headerlink" href="#api-throttling" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>AWS::EC2::Errors::RequestLimitExceeded Request limit exceeded.</p>
+</blockquote>
+<p>AWS API is throttling the number of request in your account. You can reduce the number of threads running in BOSH, or increase the value of <code class="codehilite">aws.max_retries</code> to let the AWS client library perform retries in a exponential backoff. Note that the more retries, the longer will take to fail.</p>
                 
                   
                 
@@ -5451,7 +5554,7 @@ cp -a myfile <span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</spa
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../props-common/" title="Recommended Property Types" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../aws-instance-storage/" title="Using Instance Storage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -5460,19 +5563,19 @@ cp -a myfile <span class="si">${</span><span class="nv">BOSH_INSTALL_TARGET</spa
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Recommended Property Types
+                Using Instance Storage
               </span>
             </div>
           </a>
         
         
-          <a href="../package-vendoring/" title="Reusing Packages" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../google-cpi/" title="Usage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Reusing Packages
+                Usage
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
