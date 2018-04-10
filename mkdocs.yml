@@ -206,10 +206,6 @@ pages:
     - Bootstrapping with Resource Pools: init-vsphere-rp.md
   - Warden:
     - Usage: warden-cpi.md
-- Stemcells:
-  - Stemcells: stemcells.md
-- Releases:
-  - Releases: releases.md
 # this hack avoids divider.md showing up in navigation and site search
 - "--- ": divider.md
 theme:

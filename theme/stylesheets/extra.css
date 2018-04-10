@@ -29,3 +29,18 @@
   margin-top: 3.2rem;
   text-transform: none;
 }
+
+.bosh-schema dl {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  position: relative;
+}
+
+.bosh-schema dd {
+  margin: 0 0 .25em 6em
+}
+
+.bosh-schema dt {
+  font-style: italic;
+  position: absolute;
+}
