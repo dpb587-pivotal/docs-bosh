@@ -196,22 +196,19 @@ EBS backed ephemeral disk of custom size. Default disk size is either the size o
 >
 > Type of the [disk](http://aws.amazon.com/ebs/details/): `standard`, `gp2`. Defaults to `gp2`.
 >
->  * `standard` stands for EBS magnetic drives
->  * `gp2` stands for EBS general purpose drives (SSD)
->  * `io1` stands for EBS provisioned IOPS drives (SSD)
->
 >  * *Optional*
 >  * *Type*: String
+>  * *Values*:
+>     * `standard` stands for EBS magnetic drives
+>     * `gp2` stands for EBS general purpose drives (SSD)
+>     * `io1` stands for EBS provisioned IOPS drives (SSD)
 >
 >
 > #### `iops` {: #resource-pools-ephemeral_disk-iops }
 >
 > Specifies the number of I/O operations per second to provision for the drive.
 >
->  * Only valid for `io1` type drive.
->  * Required when `io1` type drive is specified.
->
->  * *Optional*
+>  * Required and only valid when using `type` of `io1`
 >  * *Type*: Integer
 >
 >
@@ -259,21 +256,19 @@ EBS backed root disk of custom size.
 >
 > Type of the [disk](http://aws.amazon.com/ebs/details/): `standard`, `gp2`. Defaults to `gp2`.
 >
->  * `standard` stands for EBS magnetic drives
->  * `gp2` stands for EBS general purpose drives (SSD)
->
 >  * *Optional*
 >  * *Type*: String
+>  * *Values*:
+>     * `standard` stands for EBS magnetic drives
+>     * `gp2` stands for EBS general purpose drives (SSD)
+>     * `io1` stands for EBS provisioned IOPS drives (SSD)
 >
 >
 > #### `iops` {: #resource-pools-root_disk-iops }
 >
 > Specifies the number of I/O operations per second to provision for the drive.
 >
->  * Only valid for `io1` type drive.
->  * Required when `io1` type drive is specified.
->
->  * *Optional*
+>  * Required and only valid when using `type` of `io1`
 >  * *Type*: Integer
 
 
@@ -286,22 +281,23 @@ EBS volumes are created in the availability zone of an instance that volume will
 
 Type of the [disk](http://aws.amazon.com/ebs/details/): `standard`, `gp2`. Defaults to `gp2`.
 
- * `standard` stands for EBS magnetic drives
- * `gp2` stands for EBS general purpose drives (SSD)
- * `io1` stands for EBS provisioned IOPS drives (SSD)
+Use
+:    Required and only valid when using `type` of `io1`
 
- * *Optional*
- * *Type*: String
+Type
+:    String
+
+Values
+:      `standard` - EBS magnetic drives
+:      `gp2` - EBS general purpose drives (SSD)
+:      `io1` - EBS provisioned IOPS drives (SSD)
 
 
 ### `iops` {: #disk-pools-iops}
 
 Specifies the number of I/O operations per second to provision for the drive.
 
- * Only valid for `io1` type drive.
- * Required when `io1` type drive is specified.
-
- * *Optional*
+ * Required and only valid when using `type` of `io1`
  * *Type*: Integer
 
 
